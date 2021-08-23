@@ -1,0 +1,44 @@
+- 6d6d6d - Lt. Ori go
+- 1b1b1b - Cyber P500
+- bd0ad9 - Cyber P400
+- d9d9d9 - Cyber P800
+- aed99e - Lt. Alice Serg
+- d9b2d9 - Cyber P500
+- 7e7c00 - Cyber P500
+- 0ad919 - Cyber P400
+- 0a11d9 - Cyber P800
+- d7d32a - Ajack
+- d9100b - Lt. Anatolij Kir
+- b3002d - Cyber P200
+- d9b56c - Lt. Suu Lim
+- d96c0a - Lt. Ori Go
+- 2bd4d9 - Cyber P500
+
+
+00 80 3F
+00 00 80
+3F 24 00
+00 00 D7
+D3 2A FF
+D9100B
+FF 0A D9
+19 FF 0A
+11 D9 FF
+D9 6C 0A
+FF 2B D4
+D9 FF B3
+00 2D FF
+BD 0A D9
+FF D9 D9
+D9 FF 6D
+6D 6D FF
+1B 1B 1B
+FF 7E 7C
+00 FF D9
+B5 6C FF
+AE D9 9E
+FF D9 B2
+D9 FF 85
+89 D9 FF
+01 00 00
+00 FF FF

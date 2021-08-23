@@ -1,0 +1,10 @@
+REGEDIT4
+
+[HKEY_CURRENT_USER\Software\Topware\Earth 2150\BaseGame\Network\EarthNet]
+"AddressIP"="\"EarthNet - TopWare\"\"netserver.earth2150.com:17101\""
+
+[HKEY_CURRENT_USER\Software\Topware\TheMoonProject\BaseGame\Network\EarthNet]
+"AddressIP"="\"EarthNet - TopWare\"\"netserver.earth2150.com:17101\""
+
+[HKEY_CURRENT_USER\Software\Reality Pump\LostSouls\BaseGame\Network\EarthNet]
+"AddressIP"="\"EarthNet - TopWare\"\"netserver.earth2150.com:17101\""

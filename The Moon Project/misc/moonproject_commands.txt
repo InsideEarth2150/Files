@@ -1,0 +1,251 @@
+i've been messing around with these, trying to find and figure out as many as i can for about 4 hours straight a day for the past 4 days, i'm done for now and just want to play the game again
+____________________________________________________________________
+
+to see the current value of a particular function, type just the function without any value
+some commands without defined values appear to be able to take negative numbers as well
+
+
+console.help *[search term]* - don't know what exactly the function of this is or is supposed to be, but putting asterisks around whatever you enter will show all commands with that combination of letters/numbers/symbols; was used to find everything here
+
+graph.speedyclock [0,1] - dramatically speeds up the day/night cycle visually, ingame time of day remains the same;
+useful for checking results on commands that affect shadows and fog
+
+graph.fog.smooth [0,10] - determines the smoothness of "fog of war" fog
+
+graph.fog.a1
+graph.fog.a2
+graph.fog.a3
+graph.fog.a4
+graph.fog.a5
+graph.fog.b1
+graph.fog.b2
+graph.fog.b3
+graph.fog.b4
+graph.fog.b5
+graph.fog.c1
+graph.fog.c2
+graph.fog.c3
+graph.fog.c4
+graph.fog.c5 - these confused me, but from messing with them, they appear to control fog density at different intensities, with graph.fog.b# affecting it the most (tiny value changes can completely fill or void the world of fog) and graph.fog.c# affecting it the least (value changes in the tens don't seem to do much) and graph.fog.a# being somewhere in between
+
+alternatively, i did notice that b# didn't seem to do anything if a# were 0, and c# didn't seem to produce fog at all, only a haze, so it's possible that a# controls intensity of fog, b# controls presence of fog, c# control visibility
+
+however, only 2 and 3 appear to do anything, 1, 4, and 5 didnt produce any noticeable changes;
+upon further testing, i noticed that, despite turning a2 and a3 to zero, there was still fog when i zoomed out really far that only appeared at particular times of day, which did disappear from changing the a and b 1, 4, and 5 values, so each one may be tied to a particular time of day;
+this is as much as i've figured out of spending a total of around 3 hours dedicated to this fog crap across the past 3 days, and i've now realized that i don't really care about the fog anymore, changing a2 and a3 to 0 will remove 99% of fog and that's all i need to know
+
+
+graph.fog.a
+graph.fog.b
+graph.fog.c - these values cannot be changed directly (if you type a number, it won't actually change); these are affected by the 2 and 3 values of the respective letter and can only be changed by modifying those values, probably meant to be a numerical/mathematical representation of the current state of the weather fog
+
+graph.resources [0,1] - enable/disable visibility of resources
+
+graph.mesh [0,1] - enable/disable everything that isn't terrain
+
+graph.texture.reload.all - presumably reloads all textures (using causes a brief 1 second freeze)
+
+graph.texture.reload.objects - presumably same as above, except probably doesn't reload terrain and hud textures
+
+graph.textures [0,1] - enable/disable all textures and fonts; keep in mind that because it disables fonts YOU WILL NOT BE ABLE TO SEE WHAT YOU ARE TYPING!
+
+graph.web [0,1] - enable/disable waynode net (can be done with 'left alt+g' by default, but you need to hold that, this is permanent)
+
+graph.drawdistance - seems to display the current draw distance, specifically the total distance of what the game is rendering based on where the camera is looking (this game seems to have occlusion culling, so this may have been put in as a way to make sure it was working)
+
+game.settime [0,255] - set the ingame time
+
+gamerate [0,160] - set ingame speed, default is 20; can be done in increments of 5 with numpad + and - by default; typing this in without a value will not display it's current value; setting gamerate to 0 WILL CRASH THE GAME!
+
+graphrate [0,160] - set refresh rate, default is 20; does not affect gamerate; typing this in without a value will not display it's current value; setting graphrate to 0 WILL CRASH THE GAME!
+
+graphminrate [0,160] - presumably the minimum refresh rate, but doesn't seem to do anything; typing this in without a value will not display it's current value
+
+graph.view.covers [0,1] - enables/disables some sort of slightly hazy transparent cover over the gameplay area (everywhere there isn't a panel) and cutting off or completely covering the console and any windowed menu (end mission box, options, etc.), hud element (compass, time), or tooltip that goes over the game area, however units, buildings, side panels, and the mission globe in campaign can still be interacted with, the console still works, and [y]es, [n]o, and [o]k hotkeys still work for briefings and mission end prompts;
+on splitview mode, adds a colored tint to the inactive screens, red for main, green for top secondary, blue for bottom secondary;
+even though the console still works, due to it blocking the console, YOU WILL NOT BE ABLE TO SEE WHAT YOU ARE TYPING!;
+as a casual player that has only played the campaign and a bit of skirmish, i think it's completely asinine, but i could see some potential in it for those people who want as few unnecessary distractions as possible
+
+graph.limited.view [0,1] - enables/disables the view angle and zoom limits set in the console;
+when disabled, it appears that graph.viewangle.min is 0, graph.viewangle.max is 5, graph.zoom.min is 0, and graph.zoom.max is 150
+
+graph.viewangle.max - the lower bound of the angle of the camera (as it moves towards the ground);
+while it accepts values up to 1000000 and maybe more, 5 appears to be the limit (about level with ground if camera not blocked by terrain)
+
+graph.viewangle.min - the upper bound of the angle of the camera (as it moves towards the sky), with 0 allowing a top-down view and 1.4 locking it against the ground;
+higher numbers will typically put the camera into some weird position in the terrain, under it, or flip the world upside-down, and putting even greater numbers seems to roll it back around;
+for fun, setting viewangle.max to 10 and viewangle.min to 5 gets you a camera that can flip upside-down without glitching into the terrain (at least as far as I can tell)
+
+graph.zoom.min - the lower bound of the zoom of the camera (towards the ground);
+while you can put negative numbers, the terrain will always block the camera, making 0 the effective limit
+
+graph.zoom.max - the upper bound of the zoom of the camera (upwards);
+putting this lower than the graph.zoom.min setting will lock the camera at the graph.zoom.min value;
+while it appears you can set this however high you want without issue (max i tried was 5000), anything above 150 is useless from any practical standpoint, and you're just liable to crash your game due to rendering too much, too far away
+
+graph.viewangle.a - doesn't appear to do anything until the value is over 7, at which point, if you move the camera down, it will snap it to some nearby spot;
+also affects graph.viewangle.auto;
+noticed the 'auto zoom' option for the first time, and when enabling that, this becomes 20
+
+graph.viewangle.auto - appears to have multiple settings, all of which bug out the camera: 0 is off, 1 bugged the camera out, 2 bugged the camera out, 3 bugged the camera out and crashed the game;
+seems to be affected by graph.viewangle.a, as setting that to 5 made setting 2 crash the game and setting 3 crash the game even faster;
+noticed the 'auto zoom' option for the first time, and when enabling that, this becomes 1
+
+graph.zoom.a - setting this higher than 0.3 makes the camera snap and zoom in directly over where it's focused, with higher values making it zoom in further and further;
+noticed the 'auto zoom' option for the first time, and when enabling that, this becomes 1
+
+animbutton.useconsole [0,1] - enables/disables the settings set in the console for the spinning vehicle/building models used as icons
+
+animbutton.x - modify left/right position
+animbutton.y - modify up/down position
+animbutton.z - modify forward/backward position
+animbutton.alpha - modify left/right angle
+animbutton.beta - modify up/down angle
+animbutton.speedalpha - modify left/right rotation speed
+animbutton.speedbeta - modify front/back rotation speed
+animbutton.speedphi - modify roll speed
+- these allow you to modify the attributes of the spinning vehicle/building models used as icons; note that because vehicle and building models are different sizes but have the same size box, it is simply impossible to get all of them at roughly the same size in the boxes the way they are by default (i'm assuming that the models were each individually sized by the devs), below was the best i could pull off:
+
+animbutton.z 6
+animbutton.y 0.4
+animbutton.x 0
+animbutton.beta 0.7
+animbutton.speedalpha 0.03 <-- gives a normal rotation speed for 144 refresh rate
+(this was done with ED icons, didn't have time/patience to try it with others)
+
+graph.mesh.perspective [0.01, 20.0] - affects the scale of all of the spinning vehicle/building models
+
+graph.avi [0,1] - enables/disables what i can only assume is meant to be a psuedo-screen capture, in the form of rapid full ingame resolution .bmp screenshots that predictably tank performance;
+screenshots are saved with other screenshots, however screenshots taken with this command running a labeled "avi###.bmp";
+for me, capture rate was about 2 screenshots a second, might be quicker with a beefier cpu
+
+graph.bed.bright [0,1] - completely removes underwater fog, making water completely clear to the bottom;
+have not tested with lava, but i'm going to assume it probably does nothing
+
+graph.terrain [0,1] - enables/disables terrain 
+
+graph.sunlightangle [0,64] - determines how offset the sun is on its path during the day;
+at 0 it takes a straight path across the middle of the sky, at higher numbers, the sun becomes increasingly offset to the south;
+note that at 64, the terrain rapidly flickers
+
+graph.mesh.spots [0,1] - enable/disable all vehicle headlights, building spotlights, and light cones, however vehicles and buildings do still emit light
+
+graph.mesh.light [0.0,1.0] - determines the how bright some dynamic objects (some building doors, mounted weapons, etc.) become from light sources (not sunlight), 0 making objects near pitchblack at night;
+one of the few commands i found that i modified for my autoexec.con (set to 1) as i didn't see why you wouldn't want a light source to light up a door and maxing it out doesn't appear to have any obvious side effects
+
+graph.mesh.light.distance [0.0,1.0] - it seems to kind of affect how far away headlights and spotlights are seen, albeit indirectly: putting it to 0 removes the lights completely (light cones are still there), but putting it any higher than it's default 0.1 makes the lights start clipping through things, both vehicles and buildings
+
+graph.mesh.light.mul [0.0,10.0] - affects how bright light sources are, with 0 being equivalent to lights being off
+
+graph.mesh.spot.mul [0.0,1.0] - affects the intensity of the light cones, with 0 removing them completely
+
+graph.mesh.spotflare.mul [0.0,1.0] - affects the intensity of headlights/spotlights, with 0 turning them into some sort of cool blackhole looking inverted light
+
+graph.banners [0,1] - enables/disables 16 squares in the upper left hand corner, most of which are black, some of which have the ucs, ed, and/or lc logos in them;
+i'm guessing this is showing all of the banners that are loaded in the game at that moment
+
+graph.cursor.size [0,256] - set the size of the cursor
+
+graph.cursor.force [-1,100] - changes the cursor to one of verious types of contextual ones (such as attack, lay bridge, repair, etc.), makes cursor static (doesn't change contextually);
+it seems some numbers don't have any data attached to them, so the cursor disappears, but it is still there and usable;
+some numbers immediately crash the game
+
+graph.rain [0,1] - enable/disable rainfall (sound still plays)
+
+graph.rain.length [0.0,10.0] - affects the length of the raindrops;
+turn to 1 for something a little more realistic looking, change to 10 for super dramatic anime-looking rain
+
+graph.freeze [0,1] - unsurprisingly freezes the screen;
+surprisingly everything keeps going, with hud elements overwriting eachother constantly and the console font corrupting itself, becoming vertical lines;
+because the console's font is corrupted now, in addition to constantly overlaying and freezing over itself, YOU WILL NOT BE ABLE TO SEE WHAT YOU ARE TYPING!
+
+graph.cloud.shadows [0,1] - enable/disable the soft shadow that comes over the terrain during weather
+
+graph.objectshadows [0,1] - enable/disable shadows of units
+
+graph.strangeshadow [0,1] - replaces the shadows of all buildings and terrain objects with black squares (foliage) or gaudy neon green, blue placeholder textures (buildings, ruins)
+
+graph.shadow.ship [0.0,1.0] - i think it affects the size and angle of shadows cast by ships, but it's really hard to tell because i couldn't get a ship close enough to land to cast a shadow;
+after fiddling with a ship more, i'm pretty sure it's the angle
+
+graph.shadows [0,1] - enable/disable terrain shadows (there is still some shading on the terrain, but it definitely gets rid of something)
+
+graph.shadowintensity [0.0,1.0] - affects how dark shadows set by buildings and ruins are, with 0 making the shadows disappear
+
+graph.snow [0,1] - enable/disable snowfall
+
+graph.mesh.snow [0,1] - enable/disable snow on top of buildings and vehicles
+
+graph.limit - not sure what this does, but setting it to between 0.001 and 0 starts doing some funny things with the mission globe and spinning models, setting it to 0 snaps the camera against the ground everytime you try to rotate it
+
+graph.mouse.pointer [0,1] - enable/disable cursor, everything works the same, you just can't see where you're pointing (except dragging boes around units doesn't work)
+
+interface.reversemouse [0,1] - enable/disable reversing the left,right mouse buttons (same as the reverse mouse button in the menu)
+
+graph.placementtest [0,1] - enable/disable a bunch of squares in the upper-right hand corner that, judging by where they are and the name of the command, is meant to help center the screen
+
+graph.quake [0,1] - didn't bother going through the hassle of starting a game and getting an earthquake generator to test this (i got shit to do and places to be) because i'm 99% sure this enables/disables earthquake generator visual effects
+
+graph.showsidecolor [0,1] - enabling this retextures all units and buildings on the map to each teams' respective color, yellow for neutral structures (ruins, walls, bridges, etc.);
+i find this one very intriguing, especially for it's potential to make tracking things in competitive games easier
+
+graph.screenshot - takes a screenshot
+
+graph.s1
+graph.s2
+graph.s1b
+graph.s2b - by default these are all [0.015640];
+it seems like it may simultaneously shift the individual positions of dynamic interface elements(anything that reacts in some way upon being interacted with): what i mean is the positions of the individual elements are moved, but only in their own local areas, causing them to become cutoff, disappear, or begin repeating;
+in any case, kinda hard to tell because changing them to anything else messes up just about everything that could be messed up: compass, fonts, map, panels, windows, tooltips, even the main menu and videos are screwed all the way up, only things left intact are the time and panels;
+note that because it completely screws up the font in the console, YOU WILL NOT BE ABLE TO SEE WHAT YOU ARE TYPING!;
+mess with it if you want, but i'd refrain from it: nothing good can come of it, and being unable to see what you're typing in the console makes it nigh impossible to undo
+
+graph.tunnels [0,1] - enable/disable tunnels
+
+graph.tunnels.wall [0,1] - enable/disable inner tunnel wall
+
+graph.tunnels.wall.transparent [0,1] - enable/disable outer tunnel wall
+
+graph.tunnels.forbidden [0,1] - enable/disable underground solid rock
+
+graph.vsync [0,1] - enable/disable vsync
+
+interface.wheelzoomfactor [1,100] - affects how far a click of the mouse wheel will zoom in/out, with 1 zooming in/out 100 units per wheel click (if you're graph.zoom.max is set to 500, it will only take at most 5 clicks in either direction to reach the zoom limit);
+when setting it to one, i seemed to break my zoom, with the min zoom being around 100 despite the graph.zoom.min being 5, however i fixed it by putting my graph.zoom.max below my graph.zoom.min to force it down;
+while negative numbers are not normally possible, mixsets forces it to -60 in order to invert the zoom control
+
+graph.x1
+graph.x2 - affects the position of the minimap, by default graph.x1 is [0] and graph.x2 [-0.5];
+x1 affects the upper-left corner, x2 affects the lower-right corner, positive numbers moving it lower-right, negative numbers moving it upper-left, as a result it can only be moved diagonally up-left, down-right;
+x1 and x2 must be the same (at least within 1 value of each other), having the numbers different causes the minimap to become either stretched or compressed, corrupting the picture, with higher differences resulting in greater corruption of the minimap
+
+graph.x1b
+graph.x2b - affects the position of the interface as a whole: to clarify, unlike graph.s*, which far as i could tell moved the position of the interface elements within their own local area, graph.x#b moves the entire interface as a single unit (compass, console, panels, time, etc. all shift in unison), by default graph.x1b is [0] and graph.x2b is [0];
+x1b affects the upper-left corner, x2b affects the lower-right corner, positive numbers moving it lower-right, negative numbers moving it upper-left, as a result it can only be moved diagonally up-left, down-right;
+x1 and x2 must be roughly the same (at least within 5 value of each other), having the numbers different causes the entire interface and console to become either stretched or compressed, with higher differences resulting in it being corrupted to the point of being illegible;
+note that because the console is affected too, having too great a difference will result in you NOT BEING ABLE TO SEE WHAT YOU ARE TYPING!;
+
+
+commands that don't appear to do anything, and that i can't imagine what they would do
+
+graph.oldmap [default = 1] - presumably makes the game use an older minimap... don't know what that means, since i'm pretty sure eftbp, tmp, and ls all use the same style of minimap
+
+graph.katmai [default = 1] - searched it up on google, got a national park and wildlife preserve in alaska
+
+graph.lights [default = 1] - this should enable/disable lights period, but it doesn't, so fuck if i know what the hell else it could be
+
+graph.smooth.textures [default = 1] - textures don't look any different after turning it off, even after using graph.texture.reload.all
+
+graph.showreloading [default = 0] - i would understand why this is off if it did anything while it was on
+
+graph.smooth.shades [default = 1] - i'm not even sure what a smooth shadow would be, and apparently neither is the game
+
+graph.extra.reload [default = 0] - i'd guess it affects resupply speed, but i didn't notice anything different at 100
+
+graph.extra.kajtek [default = 0] - lolwut;
+apprently kajtek is polish for something along the lines of "young male child"
+
+graph.tunnels.ceiling [default = 0] - tunnels don't have ceilings, and this doesn't change that
+
+
+

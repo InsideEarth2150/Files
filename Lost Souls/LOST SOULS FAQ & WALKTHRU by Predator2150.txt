@@ -1,0 +1,2443 @@
+    __________________
+     _  _   _  ___
+    |_ /_\ |_|  |  |_|
+    |_ | | | \  |  | |
+    2     1    5     0
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+    _   __  ___
+|  | | |__   |
+|_ |_|  __|  |
+     __   _          __
+    |__  | | | | |  |__
+     __| |_| |_| |_  __|
+
+
+Earth 2150: Lost Souls
+FAQ and Walktrough
+
+Version 0.75      31/07/2004
+Predator2150      Predator2150@megamail.pt
+
+
+===========================================================================
+              ______________
+             [Copyright Laws]
+              ¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+This FAQ is Copyright 2003/2004 Predator2150. You are not authorized in any
+circunstances to modify the contents of this FAQ. Use of the FAQ for
+personal profit is strictly prohibited.
+
+If you wish to post my FAQ in your website you must mail me before posting
+it. I will then give you permission and add your website to the Credits
+section. You'll also get updates via e-mail. If for some reason you fail to
+get the update, go to www.gamefaqs.com where the latest version of this FAQ
+is always avaliable. As mentioned above, you must leave the FAQ completely
+unchanged.
+
+
+===========================================================================
+                ________
+               [Contents]
+                ¯¯¯¯¯¯¯¯
+
+1.  Introduction/Patch Info
+2.  Version History
+3.  Story
+4.  Controls
+5.  The Races
+  5.A  Eurasian Dinasty
+  5.B  Lunar Corporation
+  5.C  United Civilized States
+6.  Singleplayer Tips
+7.  Walktroughs
+  7.A  ED Walktrough
+   7.A0  ED Main Base
+   7.A1  Mission 1: Finland
+   7.A2  Mission 2: Korea
+   7.A3  Mission 3: Iran
+   7.A4  Mission 4: Bulgaria
+   7.A5  Mission 5: Russia
+   7.A6  Mission 6: Dam, Part I
+   7.A7  Mission 7: Dam, Part II
+   7.A8  Mission 8: China
+   7.A9  Mission 9: France
+   7.A10  Mission 10: Czechoslovakia
+  7.B  LC Walktrough
+   7.B0  LC Main Base, Scandinavia
+   7.B1  Mission 1: Research Base ESCAPE, Poland
+   7.B2  Mission 2: Research Base ESCAPE, Poland (2)
+   7.B3  Mission 3: Mission "Strike Back", Ukraine
+   7.B4  Mission 4: Operation "Hello America", Spain
+   7.B5  Mission 5: Operation "Hello America", USA
+   7.B6  Mission 6: Operation "Hello America", USA (2)
+   7.B7  Mission 7: Operation "ION", China
+   7.B8  Mission 8: Operation "ION", USA
+   7.B9  Mission 9: Operation "ION", USA (2)
+   7.B10  Mission 10: "PROTECT ESCAPE", Germany
+  7.C  UCS Walktrough [UC]
+8.  Multiplayer [I]
+  8.A  Multiplayer Tips/Strategies [UC]
+  8.B  IPX
+  8.C  EarthNet
+9.  Editor [UC] [NC]
+10.  Frequently Asked Questions
+11.  Bugs/Secrets
+12.  Credits
+
+
+[UC] - Under Construction
+[I] - Incomplete
+[NC] - Need Contributors
+
+
+===========================================================================
+                _______________________
+          1.   [Introduction/Patch Info]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+I made this Earth 2150: Lost Souls FAQ as a hobbie to spend some of my free
+time. After requesting for a FAQ for this game and waiting for about a
+month, i decided to make one myself, since nobody else seemed to want to.
+I might make some occasional grammar misktakes, since my mother language is
+not English, but Portuguese.
+So, please mail mail me if you find a spelling mistake, have any questions,
+requests, tips or strategies. My e-mail is right at the top of the FAQ, you
+can't miss it. When you mail me, please put the topic as something like
+"Lost Souls FAQ" so i can easily recognize it from the rest of the mails.
+
+I got this game in a unusual way. My favorite PC games magazine (MegaScore)
+offers a complete game every month, very old games like Grand Theft Auto,
+but in June i noticed that they were offering Lost Souls. Being fammiliar
+to the Earth 2150 series, i immediately bought the magazine. (only cost
+me 5€!)
+
+
+***Patch Info***
+The v2.0 patch is avaliable at some game sites and can be  found at:
+http://www.earth2150.com/ls/download.htm
+
+Be advised that this FAQ was entirely written using the 2.0 version (for
+the exception of the ED campaigns) so it's absolutely recommended that you
+download the patch if you haven't started the game yet or are planning
+to follow this FAQ to the letter. I also tell you that it is highly
+advised to restart a campaign after installing the patch, so if you are in
+the middle of a campaign, finish it first.
+
+
+Here's what the patch does:
+
+!!!WARNING:
+After the installation of the patch, old accounts (local) and savegames
+can not be used anymore!
+
+Multiplayer
+
+- Multiplayer games between The Moon Project and Lost Souls are possible
+now!
+
+ED
+
+- Laser is stronger vs. buildings
+- Stealth-research takes longer to complete
+- Heavy Rockets do more damage and have more ammo (Aircrafts+Surface)
+- Heavy Rocket research time lowered
+- Minelayer can only carry shield 1
+- Mines do more damage
+- Rocket Control Center (MDW) recharges itself like Plasma MDW
+- Rocket Control Center (MDW) is more expensive
+- Rocket Control Center and it's silos have more armor and hitpoints
+- Bomber research takes longer
+- Pamir 3 can carry shieldgenerator 100
+- Scout added (is not able to reveal shadowed units!)
+- Stationary Artillery is more expensive and weaker
+- Stationary Artillery research placed behind defensive buildings
+- SDI building added, can defend against Plasma MDW
+- Research building is a bit cheaper
+- Gruz digs slower
+- Research of light air units takes longer
+- Research of light Ion takes longer
+- Wolga got more hitpoints, but is now also more expensive
+- Mobile Artillery's fire speed lowered and is more expensive
+- Mobile Artillery's research time increased
+- Hitpoints of small towers increased
+- Buildings have less ammo
+- Weapon facilities have 25 Prozent armor
+- Repairer research time lowered (Building capture unit remains the same)
+- Earthquake generator building time lowered
+- Shield 1&2 costs adjusted
+
+LC
+
+- Heavy Rockets do more damage and have more ammo (Aircrafts+Surface)
+- Heavy Rocket research time lowered
+- Mining Upgrade added (earns 10 Prozent more)
+- Xylit is a single research
+- Xylit costs around 2500 CR lowered
+- Batteries cost 1000 CR
+- Weather Control Centre has armor and is cheaper
+- Solar drops 100 Prozent faster
+- Electrocannon UPG does more damage
+- Nests can use Detector and Regenerators
+- Only Lunar 3 can use Shieldgenerator
+- Lunar 3 can use Shieldgenerator 500
+- Lunar is a bit slower
+- Lunar, Moon and FG cost around 100 CR more
+- Plasma Projector as a research added
+- Crater has more hitpoints
+- Crusher has longer build time and costs more
+- Heavy Sonic has lower build time and costs more
+- Light Sonic has lower build time
+- New Hope as a new research behind Moon 3 added
+- FatGirl has a bit longer research time
+- Stationary Artillery is more expensive and weaker
+- Stationary Artillery reasearch placed behind defensive buildings
+- Guardian now costs 1000 CR
+- Defender has now 800 hitpoints and 75 Prozent armor
+- SDI is faster and can defend against Plasma MDW
+- SDI costs more
+- SDI has 25 Prozent armor
+- Phobos has more hitpoints
+- Phobos with uncover shadow feature must be researched
+- Solar and Xylit have limited Power range
+- Research of light air units takes longer
+- Mobile Artillery is now a single research
+- Bomber research take longer
+- Hitpoints of Nests increased
+- Buildings have less ammo
+- Weaponfacilities have 25 Prozent armor
+- Regenerator research time lowered (Building capture unit remains the
+same)
+- Shield UPG: Regenerator II is added in research-three
+- Earthquake generator building time lowered
+- Shield 1&2 costs adjusted
+
+UCS
+
+- Radar Tower added (is included in the first Shadow research)
+- Research of Radar is faster (Shadow research time remains the same)
+- Towers and Buildings can use light cannon
+- Heavy Cannon do more damage
+- Light Cannon has less ammo
+- Tiger 3 can use Shieldgenerator 100
+- Scout added (is not able to reveal shadowed units!)
+- Heavy Grenade shoots slower, has less range and costs more
+- Light Grenade shoots slower, does more damage and hits better
+- Light Grenade Cannon has more ammo
+- Minelayer can use only Shield 1
+- Mines do more damage
+- Heavy Rockets do more damage and have more ammo (Aircrafts+Surface)
+- Heavy Rocket research time lowered
+- Light Rockets of Panther/Jaguar are better
+- Research Centers are cheaper
+- Plasma Control Center is more expensive and takes longer to research
+- Aircraft plasma takes longer to research and got a bit weaker
+- SDI is faster and can defend against Plasma MDW
+- SDI costs more
+- SDI has 25 Prozent armor
+- Stationary Artillery is more expensive and weaker
+- Stationary Artillery reasearch placed behind defensive buildings
+- Salamander has less hitpoints, costs more and can use Shield 1
+- AA Plasma has less research time
+- Harvester II costs more
+- Air Harvester III research behind behind Harvester II
+- Bomber research takes longer
+- Hitpoints of small towers increased
+- Buildings have less ammo
+- Weaponfacilities have 25 Prozent armor
+- Repairer research time lowered (Building capture unit remains the same)
+- Earthquake generator building time lowered
+- Shield 1&2 costs adjusted
+
+Admitted Bugs
+
+- The silo gate of ED MDW don't open
+- The Rocket silos named with Plasmacannon
+- You can't select a shortcut for the Harvester Upgrade
+- The Scout must be added manually
+
+
+===========================================================================
+                _______________
+          2.   [Version History]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+0.25 - 16/07/2003
+
+Added:
+ Introduction
+ Story
+ Controls
+ Races
+  ED
+  LC
+  UCS
+ Singleplayer Tips
+ ED Walktrough
+  Missions 0-2
+ Frequently Asked Questions
+ Credits
+
+---------------------------------------------------------------------------
+
+0.30 - 17/07/2003
+
+Added:
+ Multiplayer
+  IPX
+  EarthNet
+
+Updated:
+ Singleplayer Tips
+ ED Mission 2
+ Frequently Asked Questions
+ Credits
+
+Corrected:
+ Minor spellcheck
+
+---------------------------------------------------------------------------
+
+0.35 - 21/07/2003
+
+Added:
+ ED Missions 3-6
+
+Updated:
+ Credits
+
+Corrected:
+ EarthNet
+
+---------------------------------------------------------------------------
+
+0.60 - 24/07/2003
+
+Added:
+ ED Mission 7
+ LC Walktrough
+  Missions 0-5
+
+Updated:
+ Credits
+
+---------------------------------------------------------------------------
+
+0.65 - 29/07/2003
+
+Added:
+ LC Missions 6-7
+
+Removed:
+ Part of ED Walktrough
+
+Updated:
+ ED Mission 7
+ Singleplayer Tips
+ Credits
+
+---------------------------------------------------------------------------
+
+0.68 - 07/08/2003
+
+Added:
+ ED Missions 8-9
+ Dificulty Levels for all missions
+
+Updated:
+ Credits
+
+Corrected:
+ Minor spellcheck
+
+---------------------------------------------------------------------------
+
+0.70 - 18/08/2003
+
+Added:
+ ED Mission 10
+ Bugs/Secrets
+
+Updated:
+ Frequently Asked Questions
+
+Corrected:
+ Minor spellcheck
+
+---------------------------------------------------------------------------
+
+0.75 - 31/07/2004
+
+Added:
+ LC Missions 8-10
+
+Updated:
+ Introduction/Patch Info
+ Controls
+ Races
+  ED
+  LC
+  UCS
+ Singleplayer Tips
+ LC Missions 1-7
+ EarthNet
+ Bugs/Secrets
+ Credits
+
+Corrected:
+ Major spellcheck
+
+
+===========================================================================
+                _____
+          3.   [Story]
+                ¯¯¯¯¯
+Years of wars between the United Civilized States and the Eurasian Dinasty
+had led to disastrous consequences troughout the planet Earth.
+Like this was not enough, when the ED used nuclear warheads to destroy a
+UCS base in the North Pole, the effect of the nuclear explosions caused the
+Earth to change orbit right towards the Sun. Glaciers melt, the sea rose
+to a threatening level, and meteors buried entire parts of the Earth.
+Scientists in the Lunar Corporation soon realized the catastrophic events
+that were about to happen. Since the Moon follows the Earth's orbit they
+would also be pushed towards the Sun.
+Soon, UCS and ED scientists realized this too. The only hope left for
+these races was to escape the doomed planet.
+All races started to work on projects that would able them to escape
+Earth. However, even in times like this they refused to ally and make a
+single project for all of the world's population. Perhaps that project
+would be too big to function properly. So they started fighting for the
+Earth's resources to finance their own projects.
+All races succeded in completing their projects and the majority of the
+world's population was able to escape the dommed planet. The people left
+behind were to become known as the LOST SOULS.
+However, they would not give up so easily. They tried to scrape the last
+of the Earth's resources in a desperate attempt to escape the pending
+catastrophe...
+
+
+===========================================================================
+                ________
+          4.   [Controls]
+                ¯¯¯¯¯¯¯¯
+You can bind your controls by starting a game, selecting "Options" from the
+menu, and then selecting "Keyboard". Although i recommend the default
+configuration, you are free to change it to your liking.
+
+You should play the tutorial to learn the basics of the game. However, the
+tutorial doesn't teach you some keys you should also know, so that's why
+i'm here to explain them.
+
+
+F3 - I don't know if the tutorial talks about this key, but it enables you
+to install weapons and shields in the buildings you own. It also has a
+button on the Upper-right corner that when clicked, gives Large Shields to
+all of your buildings.
+
+F9 - Shows the range of your power plants. (This does not work for the LC,
+but they have a far bigger range)
+
+Num Lock - Pauses the game. Looks like it's impossible to bind it to the
+Pause key so the developers decided to put it in this key. Pausing is
+incredible useful as you can still give orders when paused and will give
+you the ability to issue orders as fast as the computer. Imagine that a
+Plasma Bomber from the UCS comes and tries to drop a plasma bomb on your
+only power plant. Your defenses aren't fast enough to wipe him out, so
+what you do is pause the game, calmly go to the F3 menu and buy a shield
+for the power plant. The bomb will fall and the shield will absorb the
+damage, and your defenses will eliminate that pesky bomber without having
+to loose power to your whole base, which could have cost you the base. As
+a final note, you should be always paused while doing something that
+doesn't require time advancing, like giving orders to build the base. In
+multiplayer, only the host has authority to use this command.
+
+Numpad +/-/* - You can control time by using these keys. Numpad + will
+accelerate time, so each time you press it, time will go faster. Numpad -
+functions the same way, but instead of accelerating time, it slows it
+down. Numpad * resets the time to it's original speed. You can use these
+controls to speed up time when you're not doing anything or to slow down
+when you want to give multiple orders in a short time when fighting an
+enemy. In multiplayer, only the host has authority to use these commands.
+
+Caps Lock - By holding this key down the selected unit will enter Quick
+Recording Mode. This is another very useful key especially for ED and UCS.
+You will notice that when you give 2 building orders to a construction unit
+it will erase the older one. To avoid this you can hold Caps Lock so you
+can give a list of things to do to a Gruz or Mammoth (something like
+building a power plant, 2 weapon prod. centers and a supply depot) and the
+unit will build all the building one by one without having to wait for it
+to finish one so you can order it to build another. This also works for
+giving a platoon a list of targets and to give a recon unit waipoints to
+patrol.
+
+Num Enter - When having a building project selected, pressing this key will
+turn the project 90º degrees right so the building can be positioned in a 
+different direction.
+
+Space Bar - Takes your camera to the last event. What this means is, if you
+hear a platoon saying "We're under attack!" press space bar and the camera
+will instantly move to the platoon that is under attack. This also works
+for most voice messages you can hear like "Construction complete." or "The
+Transporter has arrived.".
+
+Control - You can select multiple units or platoons by clicking them with
+the Control key held.
+
+Assigning Groups - You can assign groups to have a better coordination of
+your military forces. WARNING: Don't confuse groups with platoons, they are
+different things. A platoon changes behaviour of units, a group doesn't.
+To assign a group, press Control + 1-9 keys at the same time. Then, to
+select the group, just press the number key you used to make the group. You
+can also assign a group to a platoon.
+
+
+===========================================================================
+                _________
+          5.   [The Races]
+                ¯¯¯¯¯¯¯¯¯
+As you may already know there are 3 races in this game, the ED (Eurasian
+Dinasty), the UCS (United Civilized States) and the LC (Lunar Corporation).
+They are very different from each other, but the ED and UCS have some
+similarities, like needing a builder unit, having minelayers and other
+things.
+The 3 sections below will discuss the 3 races and the most effective
+configurations for them.
+Feel free to mail me with your opinions. My e-mail is at the top of this
+FAQ.
+
+
+===========================================================================
+                ________________
+          5.A  [Eurasian Dinasty]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+These are considered the bad guys of the story. They are responsible for
+the pending destruction of the planet Earth.
+The ED is the most primitive of the races. Most of it's technology is
+based in 20th century and their armies are made of tanks with with cannons
+and rocket launchers. However don't underestimate this race since it
+still has some surprises at hand.
+The units aren't the most effective of the game and the defense building
+aren't that effective too, but nuclear missiles and bombs are still in use
+on the ED and can be devastating. They also have the strongest navy of all
+races. The resource excraction method isn't the most easy to set up but
+extracts rather quickly if the mine and the refinery are very close to each
+other. Their power plants are nothing special, they deliver power to a
+small area and you can channel power if you put them close enough to each
+other. Those power plants are nuclear but they don't trigger any nuclear
+explosion when are destroyed. Why? Looks like the ED invented an automatic
+defense system. Wonder why the UCS didn't found out this...
+
+Good unit configurations:
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+- Ural with 2 120mm cannons + Rocket Launchers (Main Battle Platoon)
+
+- Ural with 2 Nuclear Rocket Lauchers (Long range artillery)
+
+- Ural with 2 Artillery Cannons (Medium range artillery)
+
+- Han with Bomb Bay (Air Support)
+
+Good defensive structure configurations:
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+- Heavy tower with 120mm Cannon + AA gun + 105mm Cannon
+
+- Heavy tower with Heavy Rocket Launcher + 2 105mm Cannons
+
+NOTE: I don't use laser cannons because although they are pretty useful in
+the beginning of the campaign, as soon as enemies start getting shields and
+heavy weaponry not even the heavy laser cannon stands a chance. Cannons are
+also much more useful because they don't have to rip trough shields and
+they are much more useful to destroy defensive buildings since they have a
+very large range.
+
+The ED is a good race for an experienced player, who can hold off his
+enemies until he gets his nuclear silos up, then all hell breaks loose!
+Heheh, buildings flying trough the air in pieces! :P
+
+
+===========================================================================
+                _________________
+          5.B  [Lunar Corporation]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+The LC would be considered the good guys of the story. They had nothing to
+do with the disaster and they fight only to escape death.
+I will risk saying the LC are the most technologically advanced. They had
+not any army at the start of the war, but were able to invent some new
+weapons that would make them stand a chance against the well-trained armies
+of the UCS and ED.
+The LC has some powerful units like the Thunderer with sonic cannons and
+the Crusher is not bad either, but they also have a unit called the Crion
+which seems to be a little hidden.(not avaliable on Research Tree, only on
+Research Center menu) The Crion plasma artillery launcher is the most
+powerful energy weapon in the game, burning down shields in seconds and
+ripping trough the toughest armor like it was butter. (hum... i didn't
+exagerate a little in there, did i? :)
+Their defense buildings aren't that great and that laser wall just sucks.
+Just blow up a transmitter and a huge hole opens up!
+They don't have a navy, and wouldn't make sense either since the vehicles
+float both on land and water.
+The easiest resource extraction method belongs to the LC, consisting only
+of installing the mine and leave it there, so easy because the energy of
+the LC distributes itself trough most of the map.
+Since we are talking about power, I HATE LC POWER MANAGEMENT! :\ Why?
+Because just to get the damn power working, you need to get a solar power
+plant, then put a bunch of solar panels around it, then you need to get
+some batteries to store energy to the night. And it's so easy to tear it
+all apart! Why the hell do they care so much about the environment? The
+planet is gonna blow up, damnit!
+Oh, just to finish, a great aspect of the LC is that all buildings
+regenerate health if they are not doing anything.
+
+Good unit configurations:
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+- Crusher With 2 Heavy Electro-CannonS + 2 Plasma Projectors (Main Battle
+Platoon)
+
+- Super Fighter with 2 AA Rocket Launchers (Aircraft Anti-air support)
+
+- Thunderer with Heavy Rocket Launchers (Aircraft Support)
+
+- Crion with Plasma Artillery (Artillery support)
+
+- 3 Phobos with regen for HP and shield, and detector (Extra Support group)
+
+Good defensive structure configurations:
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+- Guardian with 2 Heavy Electro-Cannons + 2 AA Rocket Launchers
+
+- Main Base with 2 Heavy Electro-Cannons + 2 Plasma Projectors + 2 AA
+Rocket Launchers
+
+The LC is great for a newbie, since everything regenerates quickly and 
+don't have to worry with minelayers and stuff like that. Plus, building
+is very simplified since you don't need builders around. However, i'm not
+saying that a good player would be bad with it.
+
+
+===========================================================================
+                _______________________
+          5.C  [United Civilized States]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Although not the bad guys, if it weren't for them fighting the ED, this
+catastrophe would never have happened.
+The UCS army is based mostly in 2-legged robots with a few exceptions.
+They have the toughest vehicles in the game and their weapons also dish
+out ALOT of damage, thanks to the plasma cannon, which is a great weapon
+both for units and buildings, even with shields.
+The UCS also have the toughest defense buildings.(seems they are toughest
+in everything, doesn't it?) The fortress can hold 4 weapon placements
+much like the Main Base of the LC, but is much more effective due to the
+heavy plasma cannons it can support. They also have anti-tank barriers
+that are much like the ED's walls, although i think the tank barriers are
+weaker. Now for the bad aspects, the UCS navy is much weaker than the ED
+navy. (The ED navy can have long-range rocket launchers, 120mm cannons and
+artillery on their Leviathans) They also have a crappy resource extraction
+method which consists of a refinery and a bunch of harvesters. This doesn't
+seem bad, but if you have lots of harversters, they'll crowd the resource
+area and they won't have space to move from the resources to the refinery,
+thus making the resources come VERY slowly. The UCS have those huge power
+plants that give 400 power and also have transmitters to channel the power
+to another areas. While it seems useful, losing a transmitter might cost
+you one of your bases, so just in case, i make a power plant in every base,
+THEN i connect them to other bases if i need more power. The UCS also have
+shadow technology which can make all units in range invisible to the enemy.
+Very good for ambushes and surprise attacks.
+
+Good unit configurations:
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+- Jaguar with Heavy Plasma Cannon + Plasma Cannon + Shadow Gen. (Main
+Battle Platoon)
+
+- Cargo Salamander with AA Plasma (Anti-air Support)
+
+- Dragon with Plasma Bomb Bay (Air Support)
+
+Jaguar with Heavy Grenade Launcher + Shadow Gen. (Artillery Support)
+
+Good defensive structure configurations:
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Fortress with 2 Heavy Plasma Cannons + 2 AA Plasma Cannons
+
+The UCS should be a good race to any player since it's very balanced,
+combining good defense with good attack units.
+
+
+===========================================================================
+                _________________
+          6.   [Singleplayer Tips]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+- In some missions, the enemy has limited resources. Defend your base until
+their resources get depleted and only attack at that time. Destroying the
+base will be much easier. BUT, in other missions, the enemy has unit
+injections that keep getting bigger and bigger and bigger... you get the
+point. With these kind of missions, destroy the base as quickly as you can
+or you'll have a horde of pissed off enemies crushing your base! :P
+
+- Never leave units or buildings in the mission area. There's no time limit
+for Earth's destruction, unlike the original Earth 2150, so take your time
+to evacuate everything.
+
+- Building a complete base in a mission area is a waste of your precious
+resources. A mission base only needs a Landing Base, a Power Plant, a
+Supply Depot and defense. Sometimes an HQ is nice too.
+
+- It's possible to sell buildings both in the main base and the mission
+base. When a mission is complete, sell all buildings on the mission base
+except the landing zone to get some of your resources back. (You get 50%
+of the resources back when you sell.)
+
+- Only have 3 Research Centers. More than that is a waste of resources.
+
+- The Earthquake Generator is a very good weapon to attack an enemy
+computer since the AI doesn't build tunnel entrances.
+
+- Every time you finish a mission, build up some platoons if you haven't
+any from the last mission. Who knows if you'll need an army on the
+battlefield as soon as you start.
+
+- When you finish a mission and still have resources on the mission, you
+can just end it and the resources will be transfered automatically.
+(Thanks to Mark Thompson for this tip.)
+
+- The "Defense" function in the Headquarters increases your defense by
+maximizing range of weapons. This is the only useful function for the HQ in
+the campaign. (Thanks to Michael Lo for this tip.)
+
+- When entering tunnels, only take units that fire energy-type weapons.
+Conventional weapons can't receive ammo loads since the supplier can't get
+down there. All energy weapons regenerate ammo automatically.
+
+===========================================================================
+                ___________
+          7.   [Walktroughs]
+                ¯¯¯¯¯¯¯¯¯¯¯
+The following walktroughs offer strategies, tips and hints for the campaign
+mode. It will obviously contain major spoilers and campaign events. Reading
+them could ruin your fun of playing the campaigns, so, if you don't want
+that to happen, don't read ahead. The walktroughs are all based on Easy
+dificulty. Even in this difficulty, the AI is pretty tough, with the unit
+injections and all. In the campaign on Normal mode, the computer also gets
+a Main Base, thus making the missions very harder.
+You should play the game in the following order: ED-LC-UCS. Unlike the
+original Earth 2150, Lost Souls has its campaigns connected to each other,
+so to better understand the story, you should play the game in the above
+order.
+When i talk about building a platoon, it generally means about 10-15 units,
+unless otherwise especified.
+You are more than welcome to tell me about good strategies you found for
+the missions. Just be as specific as possible.
+
+
+===========================================================================
+                _____________
+          7.A  [ED Walktrough]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯
+In the ED campaign you play the role of General Federov, receiving your
+orders directly from Czar Vladimir II. Don't follow his orders blindly,
+trust me :) You'll understand what i just said later on the campaign.
+
+Abbreviations:
+MB - Main Base
+MA - Mission Area
+PP - Power Plant
+WPC - Weapons Production Center
+VPC - Vehicle Production Center
+SD - Supply Depot
+HT - Heavy Tower
+LZ - Landing Zone
+20mm - 20mm Machine Gun
+105mm - 105mm Cannon
+R - Rocket Launcher 
+L - Laser Cannon
+I - Ion Cannon
+AA - AA gun
+120mm - 120mm cannon
+hR - Heavy Rocket Launcher
+hL - Heavy Laser Cannon
+hI - Heavy Ion Cannon
+B - Bomb Bay
+ART - Artillery
+NG - Noise Generator
+
+Curiosity: If you ever played F-22 Lightning 3, you'll notice that there's
+a ED night music very similar to one from that game. (Ednight_3.mp2)
+
+---------------------------------------------------------------------------
+NOTE: I had some problems with the ED campaign. In Mission 6, apparentely
+the video was corrupted making my computer crash while in the middle of the
+video. Strangely enough, i found no way of stopping the video before it
+crashed. If you have the same problem,  go to your game folder and look for
+a folder named "Video". Now make a backup of the files ED_M05.wd1 and
+ED_M06.wd1. Now rename ED_M06.wd1 to ED_M05.wd1 and vice-versa. Now you
+will have Mission 5 playing Video 6 and Mission 6 player Video 5. Enter the
+game and start mission 6. You will see the video from the last mission and
+when its over save the game and return to your files folder. Overwrite the
+videos with the backups you made earlier. Now the game should be just like
+before and you will be able to play Mission 6.
+**********MAJOR SPOILER**********
+I found out that you can play the videos by running them with Windows Media
+Player. This can be used to see the end of Video 6, but if the player reads
+the damaged part it will crash the player.
+*********************************
+
+NOTE: Mission 1 and 2 have been done with the 1.0 version of the game. The
+rest of the missions have been done with the 1.1 version.
+---------------------------------------------------------------------------
+
+
+===========================================================================
+                ____________
+          7.A0 [ED Main Base]
+                ¯¯¯¯¯¯¯¯¯¯¯¯
+Alright General Fedorov, from now on, i will be your personal military
+tactical advisor, by order of the General Command.
+Let's take a look at your MB... Jesus Christ, that place is a dump! Begin
+by building 5 L Siberias and 5 20mm Siberias. While you wait for them to
+complete, build another mine and start extracting ore. Use the HTs to
+destroy as many wreckage as you can. (press "A" and then target the
+wreckage) We're gonna need that space. After finishing that task, sell all
+the HTs. Some of your units should now be complete. Use them to destroy
+the rest of the wreckage. Now, order the Gruz to make 3 additional WPCs.
+(South of the sold HTs is just fine) We're done with the MB.
+You can now procced to the first mission.
+
+
+===========================================================================
+                __________________
+          7.A1 [Mission 1: Finland]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Dificulty Level: Easy
+
+Procced to the northeast corner of the map. Eventually, you'll end up at
+the LC base. Rip a hole trough the base always heading west. At the
+northwestern corner of the map there are Repair and Ammo artifacts that
+constantly respawn. Destroy the whole base, and consider destroying the
+guardians from a safe distance. When you have done, build up a base with
+a WPC, VPC and a SD. Get 2 Boyars. Now, let's get that ore. There are 2
+deposits, one on the LC base  location, and other directly east. Extract
+them both. If you haven't lost too many units you will be able to hold off
+the LC with the units you already have. Just put them in a line in front of
+your base. When your quota reaches 50000, you complete the mission.
+
+
+===========================================================================
+                ________________
+          7.A2 [Mission 2: Korea]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Dificulty Level: Average
+
+So you start with a Gruz. First thing to do, connect your MB to your
+MA by building a LZ. Now go to your MB and you should notice a large 
+helicopter above another LZ. This is the Ukraine, your transporter of units
+and resources between your bases. Get those Siberias you made at the start
+of the campaign inside the Ukraine and send it to the MA. Now get some PPs
+up, and start a mining operation with that ton of resources. Now make a SD
+and get some boyars from your MB and put them to work. You'll notice that
+most of your bases will be a LZ, PPs and a SD, plus defense, from now on.
+It will be necessary to equip your  buildings with hRs. To improve even
+more your defense, consider building small towers. Go to your MB and make
+some STEALTHs L. You also have a research for Helicopter Rocket Launcher if
+you're interested. If you find yourself not doing anything use the Ukraine
+to transport ore from the MA to the MB, to avoid doing that at the end of
+the missions, which can be really boring. You can also use the minelayer to
+put mines at west and south of your MB. --WARNING: You can't produce
+minelayers yet, and that's the only one you have, so don't let it get
+destroyed. You'll need him further in this mission.-- --NOTE: Rearming a
+minelayer costs money.-- When your STEALTHs L are ready send them to the
+MA. --NOTE: At night, a STEALTH with lights on will be unable to cloak.
+Turn his lights off to enable cloaking. Having lights turned off at night
+results in a decrease in speed and enemy detection.-- Now it's time to
+grill those pesky robots! And they won't even see who's grilling them!!
+Now we need a support platoon to the STEALTHs L. Build a bunch of
+STEALTHs R. (10 is fine) You should now hold position until the enemies
+attack decrease dramatically. That's because the enemy's resources are
+depleted. (You can skip this part but it will be much harder to take out
+the bases.) Southwest of your base is a UCS outpost. The Boyar is a good
+recon unit so use it if necessary. Now have the STEALTHs L enter the
+outpost and heat up the power plant until it explodes. Destroy all small
+towers as well since they don't need power. Now you can have your
+STEALTHs R to destroy the rest as they are much faster. Why didn't you
+use STEALTHs R right at the start? Well, because the laser cannon is a
+energy weapon, so it regenerates ammo by it self. If you were attacking
+with STEALTHs R then they got out of ammo, the Boyar would come just to
+be shot down by air defenses. When you get rid of the outpost, go South of
+it and cross the bridge. After crossing that bridge, keep getting South
+until you see another bridge. (it's west of the UCS base) There's a tiny
+outpost here. Wipe it out. After that bridge, keep going east towards the
+UCS base. You should see another outpost just before it. Have the
+STEALTHs L take out the transmitter and the STEALTHs R to do the rest.
+Now comes the hard part. The UCS base is filled with mines all over the
+place! Go get the minelayer wherever it is. Now you'll have to make
+hit 'n' run tactics. The minelayer has a detector in front of it that
+detects enemy mines and detonates them. Use the minelayer very carefully
+and if it gets destroyed load the game. You can also use Fake TTs to
+detonate the mines but they cost 50 and 50/per mine is a little expensive.
+--NOTE: The Minelayer can only detonate mines in front of him but
+his radar detects mines at much bigger distances, so you can use this to
+make a safe way to your STEALTHs-- I came to the point where i had to
+sacrifice some STEALTHs to open up a way to the power plant. Once you
+destroy that one things get alot easier. Beware, there's a spider radar
+north of that power plant, close to another power plant, which you also
+have to destroy. To destroy the spider radar, only use one STEALTH L,
+because if you take them all your whole platoon will be massacrated. The
+spider radar has no shields, so will be quick to eliminate. Your STEALTH
+is doomed tough, even without radars it can't cloak on the aim of various
+UCS guns. After destroying that 2 power plants, there should be even other
+one at east. When all power plants and small towers are destroyed,
+detonating mines and destroying the base should be piece of cake. When
+all buildings on the _MAP_ are destroyed, you pass the mission. Don't
+forget to evacuate all units before you finish the mission. You should now
+have about 250000 resources in your base.
+
+
+===========================================================================
+                _______________
+          7.A3 [Mission 3: Iran]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Dificulty Level: Easy
+
+After receiving the briefing, quickly destroy the LC threat. Now you should
+receive some repairers and a Gruz. Build an LZ and repair all the buildings
+in the base. You can now make Kruszchevs. They are very good with 120mm and
+Rs. Make a platoon of them in your MB or MA as you also have alot of WPCs
+in the MA. (A platoon should be always bwteen 10 and 15 units for better
+coordination.) There will be aircraft attacking from the Northwest, and
+ground units from South and East. Be sure to cover those sectors with
+pillboxes and consider putting some defense around the orange buildings
+too. Get the mines to work and some Boyars on the SD. Also, bring all
+military units from your MB to help protect the area. If you still have
+some STEALTHs from the last mission, you can use them to explore the area.
+Defend the MA until the time expires. Now you must deliver those trucks to
+the Southwest corner of the map. If you had unit transporters, this would
+be piece of cake, but since you haven't let's get to work. Those Kruszchevs
+you made at the start, get them to the south of the base with the other
+platoon of Kruszchevs you had right at the start. There's a valley here
+which is where you need to go. It goes right to the LC base, but just
+before it, there should be a way south, which is where you need to go. It
+should look like this:
+
+        LC Base
+         |
+         |
+        / \
+        \  \
+      _  \  \    MA
+   __/ \  \  \    |
+  |     \  \  \   |
+  |      \_/   \_/
+  |           
+Objective
+
+Go trough the valley with your Kruszchevs and the trucks behind them until
+you reach your objective with the trucks. Get the Kruszchevs back to the LZ
+and send all of your units to the MB. Sell the base and evacuate the
+resources. You can also evacuate the trucks as they'll make good recon
+units in the next missions. You should now have about 400000 resources in
+your base.
+
+                 
+===========================================================================
+                ___________________
+          7.A4 [Mission 4: Bulgaria]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Dificulty Level: Hard
+
+Alright, be very quick establishing your defense, send ALL units on the MB
+and build alot of pillboxes, heavy towers and a SD, because the UCS are
+coming, and they'll come hard. Building some Caspians AA isn't a bad ideia
+too. Once you have a platoon on the MA, quickly procced South of the base
+and look for a bridge. Destroy it so the UCS ground tanks won't devastate
+your base. There's another bridge that also needs to be taken out. It's
+Southwest of the bridge you just destroyed. (Just follow the river) You
+can also choose to mine the bridge areas but that won't stop the UCS for
+much time. There's ALOT of resources right East of your base, so be sure
+to extract them. Consider producing Urals and Hans HR aren't bad either.
+All your buildings should be armed with 120mm and HR, and some AA too.
+Since you destroyed the bridges, the UCS can't come with Jaguars and
+they'll acumulate at the shore of the river. If you go too much South, you
+might catch with grenade, so stay as far as possible from the river. You
+should now hold position until you made yourself an army. Be sure to build
+STEALTHs I, as they will also prove very useful for a boost to your
+credits. If you survive enough time, you'll notice the UCS attacks stop.
+The UCS base just went bankrupt :) But you have a huge problem now, you
+can't attack the enemy becaust there's this massive army that acumulated
+on the other side of the river. Yes, if you haven't destroyed the bridges,
+you would have to defend yourself against that! You can't take out the
+units with 120mm because they have grenades, and can't take them out with
+STEALTHs either because they have radars. You could always get a squad of
+Hans and try to destroy the radars, but this is rather dificult to 
+accomplish. You could also do Hit 'n' Run, but i came up with a better,
+although expensive ideia. Get some minelayers and a Gruz the the little
+bridge that hasn't any enemies near. The goal here is to rebuild the bridge
+and lure the enemies to your base causing them to fall on a trap. To do
+this, put mines from the bridge to your base where you think the UCS will
+go trough. Now with the Gruz, build some HTs near the bridge to destroy
+any weak enemies that aren't worth going trough the mines. Now you should
+also have a platoon of Urals or Hans to intercept any enemies that get
+lucky with the mines. Now, to make this even more effective, put a platoon
+of STEALTHs I near the bridge with the HTs. They will disable any
+unshielded units while the HTs finish them off. If you manage to capture
+some units in the proccess, even better. Now you should have a very
+effective deathtrap. Rebuild the bridge with the Gruz and and get it to
+a safe place. The enemy might have to be lured. To do this, get a Boyar,
+and approach the UCS units, then run away. This must be done slowly enough
+for the units to lock on the Boyar, and fast enough not to loose it. If
+you do it right the UCS will start following the Boyar, so put it in your
+base. The AI will soon notice that there's a way to reach the base (the
+bridge you just rebuilt) and go right into the trap. Now the massacre
+begins!!! The HTs probably won't last long against the grenade launchers
+but use the STEALTHs I to increase their survival time. Eventually you'll
+loose the towers and when a radars comes in, your STEALTHs will be spotted.
+You can now retreat to the base, further luring the enemy into the trap,
+or you can disable as much units as you can so you can then capture them.
+The choice is yours. Most of the army will be massacrated, and if a robot
+manages to get halfway done, wipe him out with your Urals/Hans. You might
+also see harvesters which when captured, will make good money recycled.
+After this, taking out the base will be piece of cake. Note that the UCS
+will still receive Plasma Panthers from time to time. You can now choose
+to wipe out the base or capture it and sell it. There won't be much, if any
+radars on the base so feel free to use your STEALTHs I but leave some of
+them in the bridge in case some Panthers manage to get there. When you
+destroy all UCS structures, you pass the mission. You should now have about
+300000 resources in your base.
+
+
+===========================================================================
+                _________________
+          7.A5 [Mission 5: Russia]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Dificulty Level: Average
+
+Ok, let's get that platoon moving towards the rebel base. You won't find
+any enemies along the way, so don't need to worry. When you arrive, watch
+the small cutscene. It seems the General Command is betraying us! Help
+defend the base against enemy troops. Now with the Gruz, build both
+resource locations and and the right one, build a PP, a LZ and a SD. Leave
+your platoon helping your new ally. You don't need absolutely any defense
+on your bases since the enemy concentrates on your ally. Build some defense
+around his base to help protect him and bring units from the MB. Wait for
+the enemy base to stop sending units and then attack him with your platoons
+of Urals. Remember that 120mm have alot of range and can shoot down
+defenses without getting shot at. You can also use the usual STEALTHs I to
+capture enemies if you want, but destroying the enemy base is much quicker.
+When all enemy building are down, you pass the mission. You should now
+have about 450000 resources in your base.
+
+
+===========================================================================
+                ______________________
+          7.A6 [Mission 6: Dam, Part I]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Dificulty Level: Average
+
+In this mission you must escort at least 2 trucks to the dam so they can
+blow it up. You start with a base already extracting resources. Build a LZ
+and a SD. Then build build many HTs covering the West and South sides of
+your base. Also arm the WPCs. The enemy will be coming by air on the West,
+and tanks from the little entrance in the South. Sometimes, tanks also come
+from West. Bring units from the MB and build some if necessary. All you
+have to do is hold the base with minimal casualties until the mines finish
+extracting resources. Getting your minelayers to work on South of the base
+will further improve your defense.  About 20 minutes after the mission
+start, you'll finish extracting resources. Meanwhile, use a recon unit to
+explore West of your base. You'll eventualy find a resource deposit. Start
+a mining operation there. Your base should be getting alot of punishment
+and about to be overrun. If you can't hold them off, sell all non-military
+buildings and leave only PPs and armed buildings. Now construct a base on
+the new ore deposit and evacuate all troops there. The enemy will waste
+many minutes trying to take out the remaining defense, giving you time to
+build up. Build lots of HTs to defend the new base. When they finish and
+find out your new base, you'll be ready for them. The AI has a tendency to
+go around walls so you could use them too. Defend the base until the units
+stop coming and head South with 1 or more platoons. Take out the base from
+a safe range. Now there's another base on the other side of the dam. This
+one is harder, since it's filled with mines. Bring your minelayers and
+destroy the mines as you advance. When you are done with the bases, bring
+the TNTs to the dam. You'll notice that there are 2 places where the dam
+is larger. That's where you'll put the TNTs. Before you do this, evacuate
+everything, just leaving 2 TNTs, because you are forced to leave the
+mission as soon as you put the trucks in place. When 2 trucks are
+positioned at the larger spots on the dam, you pass the mission. You should
+now have about 550000 resources in your base.
+
+
+===========================================================================
+                _______________________
+          7.A7 [Mission 7: Dam, Part II]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Dificulty Level: Hard
+
+In this mission you must defend your bases for a period of time. You can't
+access your MB, but there are plenty of resources all over the map. You
+have a main base at the Northeast, a secondary base at Southeast and 2
+production complexes on the left side of the map. The Southwest Production
+complex will be the first to be attacked. In this mission all you have to
+do is concentrate your forces where are resources. The Northeast base
+should be very well defended, as it will take lots of damage from ED units.
+The Southeast base will be swarmed by UCS at 25:00. Be sure to collect all
+resources and sell non-military buildings by that time. Also, before the
+UCS attack, build up a base on the Southwest of the map, where are the
+resources. That will be your new main base, since it's in a very easy place
+to defend. Put radars on the Southeast base since UCS will use Shadow.
+As the other bases finish with resources, sell them and bring the units to
+your new base but leave military buildings active to keep enemies
+distracted while you develop the new base defenses. Now all you have to do
+is hold on in that spot until the timer reaches 0. Build a recylcer and
+recylce any units you don't need anymore. (ZK Taigas for example) It 
+shouldn't be very hard to hold off the base. There's a strategy to help you
+out.
+           |
+wwwwwwwwwww|wwww   w = Wall
+P P P P P P|P P    P = Pillbox
+ __________|w      HT = Heavy Tower
+ |HTwHTwHTwHT      |_ = Enemies Route
+ |
+
+With this, enemy units will have to pass trough to get to your base getting
+caught in a deadly crossfire. The AI just puts a waypoint in the center of
+your base so the enemies will fall on the trap. The pillboxes should be
+armed with hRs to damage the enemy at long range and the HTs with 120mm to
+finish them off if they enter the trap. Now just hold the base for a while.
+When the timer reaches 0, enemy attacks will stop, but the mission won't
+end. I didn't understood this for a while, until i was told that all
+enemies on map had to be eliminated.
+
+---------------------------------------------------------------------------
+Mark Thompson wrote:
+
+After the clock has run down and the last attack has happened on your base,
+send a couple of STEALTH Radar's to the far south east corner and to the
+middle of the west side of the map. You will find a couple of groups of
+stealth enemy mechs and 'copters. Use stealth vehicles to destroy these and
+the mission will end. However, you need to sell your base and recycle all
+your own troops before completing the mission as your funds are transfered
+to your main base when you end the mission.
+
+Hope this helps. I look forward to the updated walkthrough!
+---------------------------------------------------------------------------
+Some of this information is incorrect. The helicopters are found at the
+west center border togheter with some Urals. The Jaguars are very expensive
+to build, so they give lots of money when recycled. You can capture them as
+i did, with STEALTHs I, or just destroy them all. It's your call. When
+you're done with the Jaguars, procced to the Urals. If you captured a
+Jaguar with a Shadow Generator this will be extremely easy. Capture or
+destroy, you decide again. Now you should have the End Mission icon active.
+Recycle every unit and sell all buildings as the resources  will end up in
+your base.
+
+
+===========================================================================
+                ________________
+          7.A8 [Mission 8: China]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Dificulty Level: Very Hard
+
+---------------------------------------------------------------------------
+Before starting the mission, have 1 platoon of Urals and 1 of Hans hR ready
+to go to the battlefield.
+---------------------------------------------------------------------------
+
+This mission is so hard that it is dificult to explain it, but i'll try.
+The timer is fake so don't worry about it. It really makes you fail an
+objective, but it's not necessary to complete the mission. The reason for
+this to happen is because the  launching pads are a decoy, and don't
+contain space shuttles, so it would be ridiculous to loose a mission for
+not capturing shuttles that aren't even there! Having a fake timer doesn't
+mean you are free to do things slowly. The faster this mission is done,
+better. There are tons of resources, but they won't even compensate to
+what you are about to spend! First of all, go to the Southeast corner of
+map and build a LZ, 4 PPs, a SD and a wall of HTs. Yes, a wall, and don't
+leave a single hole. These HTs should be as armed as possible. I upgraded
+them with lasers and AA, since lasers are better than 120mm when there are
+lots of them. Bring your Hans and get them to the edge of the map. Order
+them to attack when a helicopter comes and is out of your AA's range. Have
+the Urals get there too just in case. Now you have to hold off the enemy
+until the timer reaches 2 days, which won't be easy. If anything gets
+destroyed, quickly replace it. Have several repairers working on the HTs
+if they take damage. You might also want to know a tactic to have a very
+powerful shield. This only works on buildings. To do it, buy a small shield
+and when it gets used up, buy a medium one, and when that one goes off too,
+buy a large one. It costs you the same amount of buying the large one right
+away and gives your buildings much more shield capacity. If you survive,
+you'll notice enemies will come much less times. You can choose to extract
+resources right away or leave that to the end of the mission, which will be
+easier. Build 5 STEALTHs I and research Artillery if you haven't already.
+Advance with your Urals if they are equiped with 120mm or hR. If they are,
+your targets are the enemy buildings North of your base, on the bridge.
+Slowly destroy the buildings from range. (This is much easier with
+artillery, so you might wait until you have the tech) When the research
+ends, build a platoon of 10 Urals ART and get them to join the other Urals
+if they haven't been massacrated yet. If you haven't sent them, send them
+now with your new Urals. When everything on the bridge is destroyed, you
+will have a problem supplying your tanks with ammo once you go ahead. 
+There's a large AA column  at the North center of the map. You can either
+try to take them out with Hans hR from a range, or you can send the
+STEALTHs I. If you choose the second, your Urals will have to advance and
+clear a path to the STEALTHs since there's a Radar in the vicinity. The
+target AA's your Hans/STEALTH's must destroy are spread on the big
+mountain on the North of the map. Make sure they are all destroyed before
+advancing with the Urals. Doing this while defending from waves of enemy
+attacks will almost be impossible to accomplish. Make sure your defense
+stays up. If you succed in destroying/disabling all the AA's, your Urals
+got green signal to advance. Destroy the base at the Northeast corner and
+procced West. There are mines there so you might want to take a minelayer
+with you. You'll eventually come across another base. There's a
+Headquarters in that one and it should be one of your primary targets,
+since it is in the "Defense" function, giving the enemy weapons more range.
+Destroy the base and procced further West. If you got this far without
+losing your platoons, congratulations! If it's destroyed or badly damaged,
+build other 2, one with hL or 120mm and other with artillery. When they are
+built, procced further West and you'll eventually spot the Launching pads.
+Leave them for now, but destroy the Small tower behind them, and watch your
+fire if you use artillery. None of the pink buildings may be lost. Keep
+pushing further West to the final enemy base. Since you coming from the
+back, it won't be much hard, unless you have enemy units to engage. If you
+get overwelmed with enemy Urals, don't be afraid to give them some of your
+artillery firepower! Continue West and then South to a last outpost that
+you also have to take out. Beware, the enemy units respawn nearby. Once
+you destroyed all buildings in your way, go look for the ones that weren't
+in your way. This mission needs all buildings destroyed and it might be
+very hard to find them all. Just use a large amount of suppliers and 
+hopefully you'll find them. Next, you need to convert all the pink
+buildings to your side with grabbers or ionization and capture. After this,
+this hard mission is complete. Don't forget to sell the Launching Pads,
+they are worth a fortune.
+
+
+===========================================================================
+                _________________
+          7.A9 [Mission 9: France]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Dificulty Level: Hard
+
+---------------------------------------------------------------------------
+Before starting the mission, have 1 platoon of Urals 120mm and 2 of Hans hR
+ready to go to the battlefield.
+---------------------------------------------------------------------------
+
+The first objective is to get the Radars to the plateau. Seems easy to
+accomplish, but there's a bunch of Defenders in your way. Send out the
+Urals first until almost every Defender has locked on them. Now send your
+Radars to the plateau. They should make it in one piece. If nothing
+happens, move your Radars around in the plateau, the trigger only seems to
+activate in a certain location. Now you should have a Gruz. Build up some
+defense a little Northwest of the upper mine deposit, so if a enemy unit
+comes to attack your lower mines, it has to come trough the defenses. Begin
+extraction. (you should have tons of ZK taiga Transporters unless you
+recycled them) Your Urals hL and Radars are condemned to die if they stay
+there, so use them to destroy the Defenders. If they succed, return them to
+the base under construction. Build a LZ, a SD, a VPC and a Radar near the
+defense. You should have 4 repairers near the defense, so build them in the
+VPC if you haven't any on the MB. If you didn't clear the Defenders with
+the hL, bring your Urals 120mm and destroy them. Return them to base to
+help the defense. When the LC syops attacking with aircraft, they are out
+of resources. From now on, all defense should be based on 120mm. Now, bring
+your 2 platoons of Hans and position them to the left side of the plateau,
+where there's water. Unit injections will always pass this way, unless they
+are attracted by something. They don't have ANY anti-aircraft equipment, not
+even 20mm! That's why it's good to attack them with the choppers. You won't
+be able to destroy them all, so it's not a bad idea to build a artillery in
+base to repel concentrated groups. Build some STEALTHs NG and put them on
+the way to your base so you can bombard incoming enemies from long range.
+Just remember that the artillery shells take their time to reach the
+destination so fire ahead of the units so the shell falls when they are
+passing trough it. After some tries, you'll sure get the hang of it. Now
+that your defense is up, it's time to get agressive! Wait for a unit
+injection to come and get destroyed and rush with your Gruz to the plateau.
+Build up some PPs, and build a wall of HT's and other of pillboxes
+covering the plateau's entrance. (You can use the same scheme used in
+"Dam, Part II") Now you own the plateau. Why is it so important? Because
+with artillery, you have artillery range to the majority of the enemy base.
+The artillery should be built as North on the plateau as possible, but
+don't exaggerate or the Crions will be able to shoot at it. Now use 
+STEALTHs NG to reveal enemy buildings and destroy them. In a small amount
+of time the base will half the size. It's also a good idea to use the
+artillery to fire at the water left of the plateau when the units are
+passing trough. You may have to build an additional SD on the plateau to
+resupply your artillery and defense in the plateau. When your artillery
+targets are all out of range, use the Hans to destroy all power plants you
+encounter. (There are lots of Xyrex Power Plants on the Northeast part of
+the map) If you do it right, all those buildings around the target HQ
+should be offline. Use your Hans to take out any units nearby and wait for
+the next unit injection. While you wait, build a ZK Taiga Grabber and send
+it to the plateau. Destroy the unit injection and rush your Grabber to the
+HQ. (Go trough the left side, it's safer) Capture the HQ and your mission
+is accomplished. Sell all buildings and evacuate all units.
+
+===========================================================================
+                __________________________
+          7.A10[Mission 10: Czechoslovakia]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Dificulty Level: Hard
+
+---------------------------------------------------------------------------
+Before starting the mission, have several platoons of Hans hR ready to go
+to the battlefield. The more you have, the easier the mission is.
+---------------------------------------------------------------------------
+
+As one should expect, this mission is pretty hard, but if you made it
+trough to China, you'll probably pass it. Unit injections will be HUGE and
+the enemy will have enough resources to build 1000+ units. 2 deposits are
+badly protected and could be captured to reduce the incoming units. You
+see that hill right of your base near the SDs? Get your Gruz there and
+from that hill to West, build up a line of HTs and other of pillboxes.
+Leave some holes to ensure your repairers can get trough and that the LC
+will attack by that side. Each of the HTs should be armed with a 120mm and
+2 AA guns. Pillboxes should be armed with Large Shields and hRs. Make sure
+to supply enough power to your defense. Start mining on your base and bring
+every military unit you have on your MB to the MA. You should also bring
+many suppliers and repairers. Your base defense should also have 2
+artillery launchers to destroy incoming concentrated platoons. Now, you
+could build up a dozen of Nuclear Silos and destroy the enemy that way, but
+most of the LC base is covered with SDI Defense Centers, which shoot down
+incoming missiles. You could also use massive bombing runs, but the LC
+defenses mostly consist of AARs and anti-missiles. It might seem that it is
+wise to use ground units, but the unit injections will crush you very
+quickly if you don't see them coming. So you got Hans hR, for the simple
+reason that when the LC runs out of resources, all units won't have
+anti-air equipment, and you can outrange AARs from stationary defenses. So
+you have to wait until the LC runs out of resources. This process can be
+accelerated by taking over the ore outposts outside the LC main base. The
+upper one will be the first one to be extracted, but the unit injection
+will probably head that way first. This doesn't happen with the Southeast
+outpost, so you are strongly advised to capture it and extract as soon as
+possible to ensure the LC won't get it. To know when the LC runs out of
+resources take a look at one of the 2 outposts if the LC has one, and check
+if there are still resources in that area, or just wait until the LC units
+come in waves of Thunderers hS, Crushers hE and Crions. Now the only thing
+you have to do is to use your Hans to destroy the base. Order them to Hold
+position so they won't run into the AAR's range. Recommended you start from
+below so your units won't go trough active defenses when returning to base
+for ammo. To improve your defense, have some helicopters or STEALTHs ahead
+of your base and launch artillery shells from a longer distance. You can
+also use the Hans to soften up the LC attacks. Keep destroying the base as
+you go North (it's advised to leave nothing standing) and you will
+eventually find a hill surrounded by water and with some wierd Control
+Centers on it. The unit injection will respawn East of that hill. You can
+build some Hans B and order them to stay in that area so when the unit
+injection respaws, they will have raining nuclear bombs falling on them.
+As you destroy power plants, you deactivate more defensive buildings,
+making it possible to attack with Hans B, concentrate on shutting the power
+down. The rest of the mission will be pretty easy. You must destroy all
+buildings AND units in order to complete the mission. And that's it, ED
+campaign complete! Good job, General!
+
+
+
+===========================================================================
+                _____________
+          7.B  [LC Walktrough]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯
+On the LC campaign, you play the role of a new recruit. Let's show them
+what a recruit is capable of!
+
+Abbreviations:
+MB - Main Base
+MA - Mission Area
+SPP - Solar Power Plant
+SB - Solar Battery
+XPP - Xyrex Power Plant
+MBB - Main Base (Building)
+ASD - Aerial Supply Depot
+LZ - Landing Zone
+20mm - 20mm Machine Gun
+R - Rocket Launcher 
+E - Electro Cannon
+S - Sonic Cannon
+AAR - AA Rocket
+P - Plasma Projector
+hR - Heavy Rocket Launcher
+hE - Heavy Electro Cannon
+hS - Heavy Sonic Cannon
+
+Curiosity: If you ever played Mankind, a massive multiplayer game, you'll
+notice that there's a LC night music very similar to one from that game.
+(Lcnight_3.mp2)
+
+---------------------------------------------------------------------------
+NOTE: All of the missions of the LC campaign have been done with the 2.0
+version of the game.
+---------------------------------------------------------------------------
+
+
+===========================================================================
+                _________________________
+          7.B0 [LC Main Base, Scandinavia]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Start up by selling all NESTs, Defenders and Guardians. Build a mine or
+two on the ore deposit. Sell the laser walls near the LZ too. Now build 2
+MBBs somewhere on the map, it really doesn't matter where. That should be
+all.
+
+
+===========================================================================
+                _______________________________________
+          7.B1 [Mission 1: Research Base ESCAPE, Poland]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Dificulty Level: Very Easy
+
+Objectives:
+- Repel enemy attack
+- Defend Base
+
+This mission is very easy. You don't even need the MB. Build some Moons R
+and arm your MBBs. Uprading your platoons to Fat Girls is also a good
+thing to do. You should also build Defenders R around the Research
+Centers, about 3, and other 3 defending the power. Now just kill every
+ED unit that approaches your base. Don't worry with the advanced outposts,
+they'll destroy most of the units without any assistance. When enemies
+attack your base, bear in mind that they prioritize units, so run with
+your units around to lure them into your defenses. If the ED manages to
+take out the guardians in a sector, you can destroy the bridge so they
+are forced to come from a protected side. If after the attack nothing
+happens from a long time, look for units, you must destroy them all
+before procceding to the second objective. Successfully repel 6 ED
+attacks and the mission is complete.
+
+Resources on Base: 75950
+Time Taken: 48:02
+
+
+===========================================================================
+                ___________________________________________
+          7.B2 [Mission 2: Research Base ESCAPE, Poland (2)]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+---------------------------------------------------------------------------
+Before starting the mission, research Fat Girls, guided rockets, rocket
+launcher upgrade 2, upgrade shields, and get Plasma projectors if you have
+version 2.0.
+---------------------------------------------------------------------------
+
+Dificulty Level: Average
+
+Objectives:
+- Destroy ED Base
+
+Begin by building 2 detectors and putting them on both sides of the base.
+With version 2.0 you can also put detectors on NESTs, which are harder to
+take down. Get Defenders to protect the right side of the base, too.
+Upgrade all of your Defenders to Rockets, and use the ones just Northwest
+of your base to destroy the bridge. You should also destroy the bridges
+where your 2 advanced outposts are. (to the North of your base) Research
+the new Fat Girls. Get some units to the MA to help defend it. When the
+researches are complete, start producing Fat Girls R. You should know that
+the enemy has TONS of resources on his side and already starts with his
+defense up so this map isn't gonna be easy, especially with your limited
+technology. Helicopters will be coming from the North and tanks from West
+and East of your base. STEALTHs will also come, so that's why you made
+those detectors. If one of them is destroyed, immediately replace it. Way
+up North of your base and both outposts, there's a large resource deposit. 
+This will be your first objective. Have 15 Fat Girls R. (if you have other
+military units, the unit limit won't let you get 15, so just link up with
+the rest of your forces) Now build 1 Phobos of each class (research
+upgrades recommended) and have them escort the platoon. This will be your
+main, and only attack force. bIt's important to have the most units as
+possible in this platoon, so Defenders should be the only thing keeping
+ED units out of your base. Now move the platoon to the farthest outpost.
+As enemies approach the platoon, you'll notice how quickly they get
+decimated with the massive amount of rockets your units launch. They will
+eat a lot of ammo so it's wise to have 2 ASDs with 4 Mercuries in each.
+One important thing to learn when you only have one platoon is to be
+careful. Although it can inflict massive amounts of damage they are far
+from being invulnerable. When you get near the resource deposit try to
+lure as less units as you can at a time. You could easily get outnumbered
+if you just send your units in there. One effective way to lure some units
+is to attack the outpost South of the deposit. When you see units coming,
+gain enough distance with the outpost so it won't fire on you, and engage
+the ED units. Repeat the process until there are only a few enemies left.
+Now mop up the rest of the forces, and don't forget to raze the outpost.
+Set up Defenders R around the deposit (3 at West, 1 at South, 1 at North)
+and build some mines to begin extraction. You'll need a SPP and a SB if
+you have version 2.0. Now you should have an easier time. ED forces will
+split, attacking both your base and the mining operation. The second one
+will get attacked more frequently so you should leave the platoon there.
+Be sure to put it behind the defenses, since the AI just loves to go for
+your units. Now, explore the map. Detectors do a good job on this,
+specially if you upgrade them. You should notice that almost every bridge
+has an ED outpost. The destruction of these are vital to the completion of
+the mission. Plus, if you were to attack the ED base first, these
+scattered outposts would sure shoot down your suppliers. When you finish
+destroying the outposts, most of your units will probably have high
+experience. This will make the Fat Girls much more effective, and prove
+to be valuable when taking down the ED base defenses. Anyway, when you
+are sure that there isn't a single outpost standing, procced to the main
+base. A good idea would be to come from the East, and slowly rip your way
+the the enemy suppy depots, causing rockets to be completey useless when
+they run out of ammo. Be sure to use the Fat Girls range. Get the frontal
+ones in range of a target, and let them fire on the enemy structures,
+attracting enemy units. When these come, they'll be destroyed by the rear
+Fat Girls that had been conserving ammo. While you are destroying the ED
+base, try not to loose any unit, always retreat the entire platoon if one
+of your units is at 25% health. Pillboxes will take much of your time if
+they still have ammo, so try to hit 'n' run the nearby power. When the
+you raze the ED base, look for any outpost you may have missed. When you
+destroy all buildings in the map, the mission is complete.
+
+Resources on Base: 266750
+Time Taken: 2:43:47
+
+
+===========================================================================
+                _________________________________________
+          7.B3 [Mission 3: Mission "Strike Back", Ukraine]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Dificulty Level: Average
+
+Objectives:
+- Destroy artillery positions
+- Destroy 3 ED Bases
+
+In this mission, you'll have to be extremely fast destroying the artillery
+positions, as the ED won't give you much time before starting the attacks.
+Also remember that there are artifacts at the Northwest corner of the map
+for ammo. Start out by getting your New Hopes and Moon E to go South until
+they find a forest just North of an artillery position. Now, rip a hole
+trough the forest with your plasma cannons until you get to the artillery.
+Destroy them but be sure to stay away from the small towers range. If a
+unit or two appears, destroy them too. Now you should have something like
+this:
+
+
+            A1        U = Units
+      U               A = Artillery
+            A2        DA = Destroyed artillery
+
+   A4  DA3
+
+Now get your units back to the forest they opened up and procced to
+Artillery position 2. There is a small patch of trees just West of the
+southern artillery. This avoids having to pass trough the ED defenses.
+Shoot them all trough the wall. Now only Artillery position 1 and 4 should
+be active. It's time to get suicidal!! There's an active artillery on
+position 1 that fires at everything that approaches. If you try to use
+your New Hopes, they'll end buried in an artillery shell crater. So let's
+get creative! If the artillery fires back, why don't make it fire against
+it self? Get all shielded units you can, since they'll have to pass trough
+a laser tower. Now get them running to the artillery like crazy. You'll
+probably loose all of your shielded units with the blasts, but if
+you get there with at least one unit, just park it right next to the
+artillery and it will fire causing 3 artilleries to go down. If some units
+survive, then use them to destroy the remaining ones and escape by opening
+a hole in the wall. If no shielded unit survives, you'll have to use your
+New Hopes, come from up avoiding the laser towers and finish off that last
+artillery. Now the only artillery position remaing is 4. If you wasted all
+shielded units you should still have 3 Fat Girls and 3 Moons. Get them to
+a platoon and enter the forest you used to clean up position 3. Destroy
+everything in your way to get there. Your New Hopes have gained experience
+and will have safe range against the small towers. Now open fire at the
+artillery. After all of it is destroyed, you can build a base. If you were
+too slow, you're probably being swarmed with units by now. If you were
+fast, then you'll have a much easier time. The layout of your base is very
+important in this mission, since you can't build defending structures.
+Build an LZ and power up. Now build an ASD South of the other buildings,
+and equip it with Rockets.  Research AA rockets and building grabber.
+Those units from the last attack, they'll defend the base.  Bring a platoon
+to to the MA (those highly experienced Fat Girls from the previous mission)
+which will be your attack platoon. Also bring that Phobos support group.
+(regen, detector) Be sure to get some Mercuries working at the ASD and
+advance with your platoon to the Northeast. There is 1 of 3 ED bases in
+there. It's important to leave the Phobos group just a little behind
+beacause the ED aquired AA guns and 1 shot will kill a Phobos. Do the same
+as usual, using the rockets range to slowly destroy the the base defenses,
+while you get constantly attacked by units. Not much else i can say here.
+When you're done, go to the Southwestern corner of the map, where you will
+find another base. This one is hard to access by land since it has a
+mountain covering it, but there are at least 2 entrances. I recommend you
+use the one on the North mountains. If you can't find the entrances, just
+order your units to go to the other side and they will eventually find a
+way in. When you find the base, do the same you have done with the first
+one. Remember not to leave a single structure standing. Now the third and
+final base is on the Southeastern corner of the map. It's as east as the
+others to take out, so i guess you won't have problems, with the
+expections of walls and trenches that the ED built, that can be a little
+annoying. Once you are done with all 3 bases, the mission should be
+complete. If not, you either let an ED structure alive or the enemy
+rebuilt his base somewhere. Look for these bases where the previous ones
+were (southeast, southwest and northeast corners) and also on the
+artillery positions. When you finish your building hunting, you complete
+the mission.
+
+Resources on Base: 236625
+Time Taken: 2:00:13
+
+
+===========================================================================
+                ___________________________________________
+          7.B4 [Mission 4: Operation "Hello America", Spain]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+Dificulty Level: Easy
+
+Objectives:
+- Destroy the ED Base
+- Destroy the UCS Base
+- Capture the HQ of the UCS in their base
+
+Weeee!!! The ED base is down!! Ohhh!!! Our base is down!! Look, there's a
+laser wall still standing! Now seriously, Rebuild quickly and bring the
+Fat Girl platoon to the MA. The buildings you should build are a SPP, a
+SB, and an ASD all near the resources. Now build 2 or 3 mines to extract
+the resources nearby. Also notice that the ED base was full of resources
+too. Get them and send the platoon to cover the area. Research the Crater,
+Heavy-Electro and the Guardian. You'll want to build some Guardians as
+soon as the research completes since plasma bombers will try to attack
+your base, so arm those guardians with AA, and don't forget the shields!
+Those bombers will always appear from the South to your mines, so that's
+where you should put the Guardians. Also put some Guardians hE to the
+west of your base, since that is where the ground units will be coming
+from. Now that your base is capable of defending itself you should arm
+the advanced mining operation. Build 3 guardians in there and your
+platoon is free to attack. Be warned though, the UCS are a far more
+deadly threat than the ED units you have been facing so far. In this
+mission you'll get a unit limit boost, so i suggest you use it. So instead
+of sending just the Fat Girl platoon and the support Phobos, build another
+platoon of Craters hE R. With 2 platoons, you can add some more strategy
+to your attacks. The range of the rockets from the Fat Girls will destroy
+all buildings with ease from a safe distance, while your Craters can kill
+any unit. By the time the Craters are ready, you should start thinking
+about attacking the UCS base. Aside from the 2 platoons and support group,
+you will also need a Moon Grabber and a Unit Transporter for this mission.
+Send your Craters and Fat Girls to the North of the UCS base, and raze all
+towers in range. The UCS will order every unit to attack you so use both
+platoons to destroy incoming units. Now remember something, LC units are
+hovercrafts, so they can float on water. Since the UCS base is mostly
+covered by water, you can use this to your advantage. In this mission the
+UCS won't have any method to attack you on water so it will be like a safe
+haven for your units to heal. Also, most power plants are near the shore,
+so you can destroy them to shut down the defenses. However, there is a
+problem with using water. If you put your units Southwest of the UCS base,
+the suppliers will have to cross the defenses. The best place i found to
+initiate the attack is at the Southeastern corner of the base. Your
+suppliers won't die, there is only a couple fortresses defending, and the
+only annoying thing are the tank barriers. Slowly advance to the beach
+with your Fat Girls, while your Craters make sure there are no units to
+threaten them. Once your units are back on land, the UCS won't show much
+more resistance. Don't destroy all yet, you must leave the HQ intact. You
+can order your units to Hold Fire when you get near the HQ, but you have
+to disperse and regroup your platoons. When you finish destroying the base
+and there is only the HQ standing, use your unit transporter to carry the
+Moon Grabber to the HQ. Be sure to retreat all units from the base and
+leave only the grabber there. Now capture the building and watch the
+cutscene. I discovered that the developers missed something here. If you
+defend the HQ with 6 Guardian AA before you capture it, the bombers will
+be destroyed and you'll be stuck on the cutscene. Guess the developers
+forgot about this. When the HQ is destroyed, sell all buildings and
+evacuate units. Let's go to America!
+
+Resources on Base: 303300
+Time Taken: 2:22:41
+
+
+===========================================================================
+                _________________________________________
+          7.B5 [Mission 5: Operation "Hello America", USA]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+---------------------------------------------------------------------------
+Before starting the mission, research all Heavy Rocket upgrades if you
+haven't already.
+---------------------------------------------------------------------------
+
+Dificulty Level: Hard
+
+Objectives:
+- Spy the UCS bases
+- Construct a base
+- Defend Allies and destroy enemy UCS base
+
+Start the mission by researching all Crusher upgrades. Take your Craters
+Northeast and find a yellow UCS base. Don't worry, it's on your side.
+However, it's being attacked by the red UCS (your enemy) and it would be
+good for you to help. While you do this, begin building your base. Build
+it Northeast of the friendly base so you won't have to worry about
+defending it. Build a LZ, 2 SPPs, 2 SBs, a ASD, and a HQ on Defense mode. 
+Get your mines extracting very quickly before the allied harvesters start
+digging them. Get all of your platoons to the MA, and look west of your
+base for a valley in the mountains. Have your platoons defend that area
+at all costs. Now you'll need guardians to help defend the allied base.
+Build many of them (more than 10) on the Southwest side of the UCS base,
+since there will be an injection at the South of the map. Have them built
+on the UCS defense grid so they can maximize damage while destroying
+enemy units. Arm them with hE and AAR, and build more Guardians (8 or
+more, depending on how are they doing) on the valley. mentioned before,
+with the same armament. At this time, all of the Crusher research should
+be complete, so build a platoon of 10 Crushers hR and start researching
+the Heavy Sonic cannon. Now just keep defending with your platoons until
+your Crushers are built. When they are, send them over the valley into
+the UCS base and start wrecking havoc. By now, the enemy won't have more
+resources, so your only problem will be the continuous unit injections.
+When attacking with the Crushers, save very frequently. There is a 50%
+probability that the injection will be on the enemy base, so if you have
+your Crushers there, they will suffer heavy casualties, no matter how
+many platoons are covering them. The only effective way to avoid this
+is to load the game about a minute before the injection, retreat behind 
+your defenses and let them be destroyed by them. After that, resume
+attack ASAP. After you destroyed some of the UCS base, the heavy sonic
+research should be complete, allowing the research of much deadlier
+weapon, the plasma artillery. Forget this for now, and research Super
+Fighters and arm them with AAR to easily stop those UCS bombers. After
+you finish researching Super Fighters, procced to plasma artillery.
+Continue your attacks while you wait for the research to complete.
+When it's done, build a platoon of Crions, the only chassis that can
+carry the artillery. Send them over to the MA and help your Crusher
+platoon finishing off the UCS base. Be careful not to stray too far
+South of the base or you'll encounter enemy stationary artillery. Use
+some Thunderers to take care of those. After that, you pretty much
+completed the mission. Sell your buildings and evac.
+
+Resources on Base: 264977
+Time Taken: 1:17:31
+
+
+===========================================================================
+                _____________________________________________
+          7.B6 [Mission 6: Operation "Hello America", USA (2)]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+---------------------------------------------------------------------------
+Before starting this mission, make sure you have a platoon of 10 Crions, a
+platoon of 10 Crushers hR, and a platoon of 10 Thunderers hR. Also have 1
+HP regenerator, 1 shield regenerator, 1 Detector and 1 Unit Transporter.
+---------------------------------------------------------------------------
+
+Dificulty Level: Easy
+
+Objectives:
+- Capture teleportation technology from UCS
+- Bring Salamander to your HQ
+- HQ must survive
+
+This mission is one of the easiest of the campaign. Build a XPP, a ASD, and
+some Guardians at the South. Build 4 mines on the resource deposit to your
+West. Note that you won't be attacked by aircraft, so maximize the
+Guardian's damage to ground. While you do this, bring the 10 Crushers
+platoon with 5 suppliers and some resources since that stuff i told you to
+build takes a lot of money. Now make a second trip with your Jupiter but
+this time bring your Thunderers and all those Phobos. Now you should have
+your defense ready. Note that your base already had a Phobos Detector, and
+that one should be left there with the HP and shield gens. Now bring your
+Crions and and the Unit Transporter to the MA. Have one of your 2 detectors
+to escort the Crion platoon. Send the Crions West to the water. Water is a
+safe place in this mission. Your Crions should come all the way to the
+Southwestern edge of the map with the detector following them. Now disperse
+the platoon and change their script to advanced battle unit. With your
+extra button, program them to fire at will and hold position. The reason
+why you're doing this is because the Crions have a very little firing
+angle. Now group the Crions back in a platoon and approach the enemy base
+in the direction of the salamander. The best firing distance is zooming out
+the camera and having the Crions on one side of the screen and the enemies
+on the other. Each time you have targets, disperse the platoon so your
+units can rotate. Since they are in hold position, they won't move,
+behaving much like a platoon. When all shore targets are destroyed, remake
+the platoon to advance. And doing this, slowly reach the salamander.
+When you are near it (remember to always stay on water) destroy all
+salamander AA and any turrets that can fire to air on the area. When you
+are doing this bring your Unit Transporter trough the same route as the
+Crions. If the Crions get UCS units attacking them, retreat to the
+water and use a ground unit to attack the North defenses of the UCS base,
+luring the UCS units away from the salamander. When every anti-air near
+the salamander is clear, get the Unit Transporter to pick it up and send
+it to the HQ trough the same route as it came. If you done this fast, the
+mines will still be extracting resources. Evacuate the Crions and hold the
+base until the resource extraction is complete. You will still have units
+coming at you. When there are no more resources in the MA, evacuate and
+sell everything quickly before the next attack.
+
+Resources on Base: 328456
+Time Taken: 54:57
+
+
+===========================================================================
+                _________________________________
+          7.B7 [Mission 7: Operation "ION", China]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Dificulty Level: Very Hard
+
+Objectives:
+- Destroy ED base protecting the Research Centers
+- Steal Ion Technology from Research Centers
+- Research Centers must remain intact until data is transfered
+
+This is one of those missions that makes me want to break the damn
+keyboard!! I never thought that ED with high-tech would be this annoying!
+And to make it even worse you can't make an LZ!!! And to make this mission
+pretty stupid if you capture the technology you still have to destroy the
+base! The enemy receives so many unit injections that i think i discovered
+the only way to pass this mission. I don't believe there's someone that
+was able to hold off that army. The only convinients of this mission are
+that you receive the Earthquake Generator and Artillery researches. Start
+by research Earthquake tech and Artillery from your Research Centers back
+in the MB. Build a XPP, 2 MMBs, and extract resources near your starting
+point and at the Southwest and Northwest edges of the map. While you wait
+for the researches to complete, build a Tunnel Gouger, about 3-5 Super
+Fighter AAR, a Phobos Detector and a Tunnel Entrance. About 5 minutes later
+after mission start, a Gronzy will fly trough your base and alert the ED.
+You can shoot him down if you want but he still alerts the ED so it's
+wasted rockets. Build at least 3 Crushers Earthquake Generators, more if
+possible, and send them down to the tunnels with the tunnel gouger. As for
+your Super Fighters and detector, send them to the Southwest corner, then
+to the Southeast corner and then to the East center border of the map.
+There should be some mountains there. Stay in there to be safe from the ED
+ground units and if some helicopters show up, your Super Fighters should
+make  short work of it, so your detecter is safe. Now for your base, sell
+everything before the ED destroys it. You need to have at least 15000-20000
+resources to ensure you will succed in completing the mission. From now
+on, your attacks will be based in destroying the ED base trough
+earthquakes. Welcome to the Underworld! Down here, the ED can't reach you
+so your Crushers are safe from any attack, since the AI doesn't build a
+tunnel entrance to flush you out of your hiding place. Now the tactic is
+to search for ED buildings with your Detector, and take them out with
+the Earthquake Generators. I can't really explain exactly how to do it so
+dig a tunnel until you reach the site where the detector is. Even before
+that, you should see some tunnel rooms. This means that there is a
+building on the surface of that position. Now slowly advance with your
+Phobos to West, where the base is and with the Earthquake generators attack
+the buildings. To attack them, don't click on them, that will make them
+look for an exit to the surface. Instead, manually order them to attack
+the tunnel position directly under the building. As the Phobos advances,
+helicopters will try to attack it. You can use your Super Fighters OR use
+your memory skills. To do this,save the game, throw all your air units to
+the base and choose a target. Now, see where's the tunnel location under
+it and memorize it. Now load the game. After loading, send the Crushers to
+the place you memorized and order them to attack. Wait a while and save
+again. Send the air units again to scout and see if the building has been
+destroyed. If not, load the game and wait more than the last time. If yes,
+choose another target, memorize its underground location and load the game,
+doing this process repeatedly. If the building has repairers all around it,
+choose a different location, although if you have many earthquake
+generators i think the repairers aren't fast enough. (i had 3 and the
+repairers were faster than me) Destroy as many buildings as you can in the
+base, and dig a tunnel to the Northeast corner of the map. Look for another
+ED tunnel room. When you find it, you are under the Research Centers and
+the artifact you need to steal. If you can't find it, use the Detector to
+locate it from above. Now the problem here is that the buildings are
+protected by small towers and the earthquakes can damage or even destroy
+the Research Centers. So dig a tunnel around the Research Centers 6 squares
+away from them. (the earthquake range is 5) Since the Small towers are
+nearer your tunnels they will be caught by the earthquake's range but not
+the Research Centers. Another problem you will have is that the ED units
+on the surface follow the Crushers everywhere. This is problematic for
+your Detector, since it can't see which buildings have been destroyed yet,
+so you will have to use the same Scout and Load strategy explained above.
+When you clear all towers, take the Crushers as far away as possible from
+that zone and build a Tunnel Entrance right next to the Research Centers.
+Get your Tunnel Gouger to the surface and capture the artifact quickly,
+returning to the tunnels and selling your tunnel entrance. Now 
+everything left to do is to destroy any remaining ED buildings, including
+the yellow Research Centers. There is a Small Tower column West of the
+Research Centers that must also be taken out. After that leave the Crushers
+where the artifacts were to get units away from their base. Now explore the
+ED base area and find the repairers group. It's very big as you can
+see. All those repairers must go down if you have less than 4 Crushers and
+maybe even with more you can't destroy the buildings. So it means that the
+repairers must disappear. How do you do it? Simple. At this time, you
+should have received a message ages ago saying that your artillery was
+ready. Let's put it to good use! Wait until 6:00 AM and accelerate time
+if needed. (if you don't know how, consult Controls Section) Pause the game
+and build a SPP on the Southwest corner of the map. Now build a Artillery
+North of the repairers position, on the mountains. (Doesn't really matter
+where, as long as you have range and there isn't a mountain on the way) Now
+unpause the game and wait for the SPP to land. Build 3 solar cells on it.
+Now you have power to the artillery until the sun sets down. Get one of
+your suppliers to spy the repairers group. It's possible to take it down
+with 3 shots, the exact ammo your artillery has. Try to fire this way:
+
+RRR
+RTR   R = Repairers
+RRR   T = Target
+
+If you fire to the the target, you destroy 9 repairers in 1 shot. There are
+22 repairers in total. Wait for them to repair themselves and pack again.
+Repeat the same strategy and take out another 9 repairers. There should
+only be 4 repairers left and 1 shot on your artillery. Wait for them to
+pack again and fire your last shot killing the last of the repairers. You
+can sell the buildings if you want. Now using the Crushers and the Scout
+and Load strategy, destroy the last buildings. Since you don't have LZ, you
+have to leave all units on site. I hope there are no more missions like
+this one.
+
+Resources on Base: 267303
+Time Taken: 5:22:20
+
+---------------------------------------------------------------------------
+____________________________________
+An alternative strategy sent by 0815
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+Hello Predator2150 (or whoever you are), I used your FAQ and Walktrough
+- it helped me a lot. Thank you for it.
+
+You described 'Mission 7: Operation "ION", China' as "Very Hard" - you can
+do this mission also "easy".
+
+You described so many unit injections - this need not to be:
+
+Map
+
+   2
+
+                       7
+     1
+
+-------4              --------6--
+        -------5-----  
+                         9
+   3                          8
+
+1: Start Point
+2: Ressources
+3: Ressources
+---- River
+7: Enemy Base
+
+Research Earthquake Generator (+update) and Artillery.
+You have not much time to waste at the beginning, build an XPP, a MBB and
+four Mines at Point 1, then build a Phobos Detector (I only call it 
+Detector now), send it immediately to Point 2.
+Build some other Detectors or other Air-units (which you send to Point 8).
+The MBB has to be armed with one AAR.
+
+If the Detector reaches Point 2, send it to Point 3 and build four Mines
+at Point 2. The Gronzy comes ...   ... and is destroyed (important!!!).
+The  Gronzy wants to look at the Points 1,2 and 3.
+
+If the Detector reaches Point 3, build there an XPP (or more). If the 
+Ressources at Point 1 are about 6000, begin sell MBB and XPP there, begin
+to sell  the Mines but let one there (for the enemy - I don't know if this
+really must be  but it seemed to help).
+The enemy comes there when Ressources are almost zero - do nothing - no 
+attack!!! No units there!
+Sell the Mines at point 2 if "empty" and build some MBBs, four Mines and 
+a Tunnel Entrance at Point 3. This will be your "Base".
+Build a Crion and destroy with it the bridges at Point 5 and 6!!!.
+Build a Moon E (enemy - follow! because of screamer) and send it to Point
+4 on the river.
+After a while, a Screamer-Don comes on the river - destroy it with the
+Moon! Otherwise this unit goes around over the Map and looks for your
+Base + units!
+
+Now you have time to build Tunnel Gougers, Crushers with  Earthquake-Gen.,
+Super Fighters AA, Detectors, Meteors MG (a fast "Detector" which has the 
+chance to flee from the rockets (I only tested it at the end of this
+mission but it is well).
+
+Ever keep in Mind not to attack military units (except the Air-units). 
+If you would do, more and more "Injections" will you get (and then you
+have no chance). I got no one.
+You don't need to protect your Base for attacks, only a Thunder SR  should
+stay there for the next Don which comes some time (destroy it).
+
+Build a Tunnel to the East-End of the Map, then to the North End. Send the
+Crushers EQG, Tunnel Diggers and some Crushers (for capturing the Artifact)
+in the Tunnel and switch off the power of the  Tunnel  Entrance. Better you
+should not send any units later in the tunnel. (I had 30 Crushers EQG and
+seven Diggers)
+
+In my Mission it came also some units who attacked little my Base (after 
+I had all credits and units) - started sell Buildings and they did nothing.
+At this point you would not need your base there.
+You can build a ASD and MBB south at Point 9.
+
+Start exploring the enemy base from east in save distance and make the 
+base down with the Crushers EQG, then slightly "go west" with this tactic.
+This is much more comfortable as your "save - memory - load - tactic". I 
+had really not wanted to do this.
+
+All Units have to be in "fire paused mode" (exept air) and only have to 
+fire when you tell it them. (attacking tunnel ground as you described it)
+
+There will be build new buildings - let a crusher attack this zone and 
+the Gruz builds a while on the same place.            ;-)
+
+Concentrate your doing on getting the artifact. After the base is in 
+general down, destroy the small towers around the yellow Research centers
+and "make place" there for and Tunnel Entrance. If this one is there, Some
+Crushers have to run to the Artifact (target destination of Tunnel
+Entrance on the Artifact). If this went well, destroy all buildings. The
+Gruz may build new on the Artifact-place - put an Crusher EQG under it and
+it is fixed little.
+
+Build an Artillery (I did in the small valley right south of the base) 
+and make down the Gruz and some Repairers.
+Make all buildings down.
+
+Recycle all Units and sell all.
+
+I had all ressources, some losses and at the end about 80000 credits 
+"win" from this mission. The Artillery was not attacked but if you fire
+on military units
+   ...
+
+
+Some general tips
+
+Use Macro-Recorder for:
+Tunnel building - make a big hall.
+Use Macro-Recorder for units, which come near to a sceamer. If they are 
+screamed you lose control. If they have a "way back or away" by macro,
+you have a chance to get them back.
+You can also do exploring the base with this - a Meteor in and out - 
+often faster than the rockets and less losses as on Detectors.
+
+If Repairers repair a building, you cannot destroy it (easy). Put a group
+of Crushers EQG under it, let repair the building to 100% (there must not 
+be any little Earthquake-damage which would hold them on it). Then the 
+repairers go away
+- attack with your group and the building is down!
+
+
+And a few things in addition:
+- I used the German Version with Patch 1.1 (from the beginning)
+- I played "easy" (but nevertheless this is enough for me)
+
+See this as an addition to your writing, some things you told yet.
+You may change this and add it to your Walkthough if you want.
+
+I hope you did not know this yet, but I think.
+
+
+Greetings from Germany
+
+---------------------------------------------------------------------------
+
+Comment:
+¯¯¯¯¯¯¯
+Using this strategy is much easier than the one i wrote, since you are 
+always able to have a base. Additionally, 0815 described a small attack on
+the base at point 3, although i was never attacked in that area on my try.
+Also, don't forget to recycle your units before finishing, since your money
+gets transported, your units don't.
+Using the strategy explained above, the mission ratings are very different:
+
+Dificulty Level: Easy
+Resources on Base: 410419
+Time Taken: 3:06:31
+
+
+===========================================================================
+                _______________________________
+          7.B8 [Mission 8: Operation "ION", USA]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+---------------------------------------------------------------------------
+Before starting this mission, make sure you have a platoon of 10 Super
+Fighters AAR.
+---------------------------------------------------------------------------
+
+Dificulty Level: Average
+
+Objectives:
+- Defend your Base for 5 days and 12 hours
+- Destroy the remaining UCS units
+
+This mission mostly consists of holding your base and destroying attackers
+much like Mission 1 for LC, although it's not as easy. This time it will
+be the UCS you're fighting and they will get a small base, although they
+can't develop it. Unit injections will come hard almost from any side and
+will include Grizzlies! Exactly, they will come from all the sides where
+you have MBBs and also from South. But one good thing about them is that
+they only attack with aircraft about 3 or 4 times, and you have a platoon
+of Super Fighters waiting for them, so you can concentrate on ground
+weapons. Get all your platoons to the battlefield as they will certainly
+be needed. Arm your MBBs with hE and P and build up your Southern flank
+with Guardians. You'll need Phobos Detectors, since there will be Shadows.
+Build up a tunnel entrance and send several units (Crions are the best) to
+underground. They will engage various platoons of EQGs. About the UCS base,
+it is only an outpost with ASDs to supply UCS units, and is very easy to
+destroy, but use EQGs or Thunderers hR to maximum effectiveness. However,
+BE SURE TO LEAVE SOME CONDORS ALIVE. I'll explain why later. Unit
+injections will start having shields after a while but concentrate hE fire
+or use Crions and you'll have no problems. Your MBBs will get slowly
+destroyed by the UCS but try to loose as less as possible. Always cover
+them with units! It's also good to use aircraft since the UCS tends to
+pursuit them, so when those Grenadiers with Rockets arrive, lure them to
+your defenses instead of letting them fire from a safe distance. As your
+defenses get destroyed, you may want to re-build them, but do it only if
+you are poor on units, to save resources. Just keep waiting until you are
+given the order to destroy the remaining UCS. Actually, you don't need to
+destroy all the remaining UCS units, just one. So go to where the UCS
+outpost was and destroy a Condor. The end mission icon should now appear.
+Don't have to worry with fast evacs since there won't be anymore UCS units,
+and be sure to sell the entire base as it is worth a fortune.
+
+Resources on Base: 449468
+Time Taken: 1:34:39
+
+
+===========================================================================
+                ___________________________________
+          7.B9 [Mission 9: Operation "ION", USA (2)]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+---------------------------------------------------------------------------
+Before starting this mission, make sure you have 2 platoons of Crions and
+1 platoon of Crushers EQG.
+---------------------------------------------------------------------------
+
+Dificulty Level: Very Hard
+
+Objectives:
+- The technician must survive
+- 1 Ion vehicle must survive
+- Do not damage Golan's HQ
+- Deactivate Golan's shield with an Ion vehicle
+- Take the technician to Golan
+
+Speed will be an important factor to complete this mission, as the sooner
+you start taking out the base, the less threats you will have to deal
+with. I recommend you do most of your actions paused, to save time. The
+UCS seems to have a huge resource supply and unit injections will be
+coming fast and hard. First things first, build an LZ, a tunnel entrance
+and an HQ as soon as you start. Send those Crions in while you arm all
+of your MBBs with hE and P. Protect you XPPs with Large shields, as they
+will be the Plasma MDW's main target, and get some Regenerators and
+shield Regenerators near them. Sell all of your Laser Walls if you start
+getting low on cash. As soon as the tunnel is open, send down your Ions
+and the technician down. Build or bring some Tunnel Gougers and start
+digging a large tunnel to the Southwest corner of the map. When the
+Crions arrive, send 1 platoon South and destroy the mining outpost.
+There is a similar one to the North, so send the other platoon there.
+Once these positions are clear, begin mining extraction. You'll
+probably start getting attacked by now. Don't forget that the UCS will
+use Shadow technology heavily so keep Detectors everywhere. Put your HQ
+on Defense mode if you haven't already. Just a few squares Southwest of
+your southern mining position there should be a choke point heading
+West. Follow it to find a bridge, and raze it. By doing this, you will
+only be attacked from West and North of your base. Be sure to keep your
+Mercury busy carring every military unit to the MA, and replace XPPs
+should they get destroyed by the long range plasma. By this time you
+should have many mines and are receiving resources very fast. Build a
+Guardian wall West of your base where the Defenders are, and arm it with
+hE P, since you won't get attacked by aircraft. Build 2 NESTs behind the
+wall, with regenerators for HP and shield. If you don't feel safe enough,
+build another wall of Guardians, you won't regret it. Also build even some
+more Guardians on the North choke point of your base, not many are needed
+but you will be attacked trough there some times. Now you should have all
+of your base entrances covered and many platoons defending inside. Take
+note that the Northern mining outpost does not need to be defended. You
+will soon see that your Guardians are starting to get hurt by increasing
+Grenade Launcher attacks. Use an aircraft squad to attack it. Since it
+has a Rocket Launcher it will follow your units and be lured to your
+defenses once you tell them to retreat. To help your Guardians, also use
+the Crions from earlier and even throw in some stationary artillery for
+good measure. Soon you'll start getting your own injections too! They
+always consist of 16 Jaguars P, and they are not bad at all. Have the
+first 2 injections protect your base and use the others to constantly
+attack the enemy. By now your tunnel gougers should be finished with
+their tasks. Bring those EQGs into the UCS underground complex and order
+a Phobos Detector to go to your North mining position, keep going West
+until you reach the end of the map and slowly go South until you start
+seeing UCS buildings. Now use your EQGs while you defend your base from
+increasing attacks. As you destroy strcutures, procced South until you
+reach the HQ. That might take some time, so be patient. Once you see it,
+you'll notice that it is heavily guarded by defense towers. Destroy any
+remaining Power Plants and call in the nearest battle unit. (Probably a
+Jaguar from an attack injection) Tell him to Hold Fire and use him to
+destroy the wall around Golan. Now call in a tunnel entrance and attack
+Golan with your Ion cannons, while you dig a ramp with a Tunnel Gouger.
+Now just tell the technician to approach the HQ. If you are having
+difficulties with the ramp just use a Unit Transporter. The End Mission
+icon will appear as soon as the technician is near the HQ. Since the next
+mission won't allow you to build and LZ, you can end the mission as soon
+as you see the icon and leave everything on site.
+
+
+Resources on Base: 804317
+Time Taken: 3:46:47
+
+
+===========================================================================
+                _____________________________________
+          7.B10[Mission 10: "PROTECT ESCAPE", Germany]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Dificulty Level: Hard
+
+Objectives:
+- Hold at least 1 base until the ED army arrives
+
+I expected something harder for the last mission of LC, especially after
+missions 7 and 9. Guess that's why they didn't allow the LZ, to make it
+harder. Actually, the only problem on this mission are the resources. You
+will have to fight for them harder than you ever did. Ok, let's get on
+with it. First of, the northen base can't be saved. Just sell as many
+buildings as you can, you'll need all the cash you can get. Start mining
+operations in your other 3 bases. The middle one has less resources and
+more chances of being attacked, so don't bother with defense on that one.
+The left one is never attacked. (Strange, i was probably lucky.) The
+right one, your main base, should have as many defenses as you can afford.
+Get those MBBs full of hE and P, and start building a small army of
+Crushers hE. No enemy aircraft one this one, so focus on anti-ground
+power. Get an HQ up, and when all your MBBs are fully armed, you will have
+a decent defense. Decent, not perfect, so keep pumping Crushers and build
+some Guardians for good measure. There's a bridge just North fo your base,
+don't know if it affects anything by destroying it, but do. Be advised
+that the UCS will have plasma MDWs and will constantly bomb out your power
+plants. Taking into account that your main defense are MBBs, it's
+absolutely imperative that you keep your power up at all times. Shielding
+the power plants will protect it for 1-2 more shots, but be sure to have
+regenerators nearby and replace any destroyed power plants. You will
+receive injections from the ED. They are good to attack the large nearby
+resource field, but they serve for a far better purpose. Their damage
+isn't very effective against the Jaguars, so get a small group of them in
+your base, and everytime you see an army approaching, (have detectors
+around your base) you'll notice that it stop just out of range of your
+turrets to re-group. Attack and retreat quickly with your ED units and the
+UCS will follow, still not re-grouped, and be slaghtered much more easily.
+I did not succed in re-capturing the resource field, but it cost me in the
+last day of the mission, where my resources almost ran out. However, if
+you use the above Hit 'n' run strategy with the ED units you should
+defeat wave after wave of UCS troops without too much effort. The only
+problem will be to keep the power up, especially if you are running out of
+money. One good tactic to conserve power is to shut down all buildings you
+don't currently need. For example, if you are not under attack why do you
+need Guardians consuming power? The last wave will be massive, but you
+should hold on just enough so the ED main army enters the area.
+And that's it! Another campaign complete! Two down, one to go! :)
+
+
+Resources on Mission: 20499
+Time Taken: 1:15:00
+
+
+===========================================================================
+                ______________
+          7.C  [UCS Walktrough]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+\\\\\\\\\\\\\\\\\\\\
+\UNDER CONSTRUCTION\
+\\\\\\\\\\\\\\\\\\\\
+
+
+===========================================================================
+                ___________
+          8.   [Multiplayer]
+                ¯¯¯¯¯¯¯¯¯¯¯
+E2150: LS Multiplayer isn't very different from other RTS games. Basically,
+it consists in crushing your opponents, although there are other game
+types.
+
+Game Types:
+
+Unlce Sam - Destroy opponents, get resource injections, no resource mining.
+
+Arena - Get a small group of units, frag enemies to win. Every time your
+group is killed, it respawns somewhere else.
+
+Capture the Flag - Build up your base, protect your flag, capture enemy
+flags.
+
+Destroy Structures with Weather - Similar to Destroy Structures, but
+sometimes natural disasters happen ramdomly on the map.
+
+Destroy Structures - Destroy enemy structures to win, while preventing the
+enemy from destroying yours. May or may not get resource injections.
+
+Tech War - Destroy opponents, start with all techs researched, resource
+injections.
+
+Earn Money - Mine resources to reach a defined quota. The first player to
+reach it wins.
+
+Kill 'em All - Destroy opponents, be the last player/team standing.
+
+---------------------------------------------------------------------------
+NOTE: With the most recent patch (v2.0), it's possible to have Lost Souls
+and Moon Project owners playing on the same game.
+---------------------------------------------------------------------------
+
+\\\\\\\\\\\\\\\\\\\\
+\UNDER CONSTRUCTION\
+\\\\\\\\\\\\\\\\\\\\
+
+
+===========================================================================
+                ___________________________
+          8.A  [Multiplayer Tips/Strategies]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+\\\\\\\\\\\\\\\\\\\\
+\UNDER CONSTRUCTION\
+\\\\\\\\\\\\\\\\\\\\
+
+
+===========================================================================
+                ___
+          8.B  [IPX]
+                ¯¯¯
+IPX is a connection that allows you to play with other players through
+LAN. (Local Area Network) You must have 2 or more pc's connected. It gives
+extremely low ping and is excelent to play if have various computers
+connected and someone to play with.
+To host a IPX session, go to "Multiplayer", select "IPX Connection for
+Directplay", write the session name and create the session. Pretty easy.
+To join the session, go to the same menu as to create, and select a session
+from the list and join it.
+
+
+===========================================================================
+                ________
+          8.C  [EarthNet]
+                ¯¯¯¯¯¯¯¯
+I remember having a though time trying to play Lost Souls over EarthNet.
+There were much more people playing Moon Project than Lost Souls. With the
+patch, it might be easier to play a game, but i tried to access EarthNet
+with no success.
+
+
+===========================================================================
+                ______
+          9.   [Editor]
+                ¯¯¯¯¯¯
+\\\\\\\\\\\\\\\\\\\\
+\UNDER CONSTRUCTION\
+\\\\\\\\\\\\\\\\\\\\
+
+
+===========================================================================
+                __________________________
+          10.  [Frequently Asked Questinos]
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Q: What are the system requirements for Earth 2150: Lost Souls?
+
+A: The following information is from the Lost Souls Manual.
+Minimum Requirements:
+IBM compatible Pentium™ Processor with 300 MHz
+at least 64 MB RAM
+350 MB free HDD space
+DirectX™ compatible graphics board
+Directx™ compatible sound card
+8X CD-ROM drive
+Mouse
+Windows™ 95/98/Me or Windows™ NT/2000/XP
+
+Recommended Requirements:
+IBM compatible Pentium™ Processor with 500 MHz
+at least 128 MB RAM
+900 MB free HDD space
+DirectX™ compatible graphics board with 16 MB
+Directx™ compatible sound card
+12X CD-ROM drive
+Mouse
+Windows™ 95/98/Me or Windows™ NT/2000/XP
+
+---------------------------------------------------------------------------
+
+Q: What games came before Earth 2150: Lost Souls?
+
+A: The complete list is:
+Earth 2140
+Earth 2150: Escape from the Blue Planet
+Earth 2150: Moon Project
+
+---------------------------------------------------------------------------
+
+Q: What are the Radars/Spider Radars/Detectors for?
+
+A: They allow you to detect cloaked units (STEALTH for ED,SHADOW for UCS)
+and can also be used around your base to detect incoming attacks.
+
+---------------------------------------------------------------------------
+
+Q: Why can't my units cloak?
+
+A: At night, your units must turn their lights off or they won't be able to
+cloak.
+
+---------------------------------------------------------------------------
+
+Q: What is the ED Noise Generator for?
+
+A: The noise generator disables the communication between the affected unit
+and player that owns it, effectively forcing the player loose control on
+it. The units will still fire and respond to threats by themselves, though.
+Another big use on it is the ability to act as a radar, detecting all
+cloaked units.
+
+---------------------------------------------------------------------------
+
+Q: What is the Banner for?
+
+A: The Banner increases experience by 2 points to all nearby units and
+buildings. It's sort of like morale.
+
+---------------------------------------------------------------------------
+
+Q: The enemy is on a hill and i can't reach him. How do i kill him?
+
+A: There are many ways of destroying an enemy which you don't have access
+to by ground. You can use massive destruction weapons, artillery,
+aircraft, units transporters, or you can dig a tunnel to its base. Just
+make sure you don't build the tunnel entrance right next to a defense
+emplacement! :)
+
+---------------------------------------------------------------------------
+
+Q: Are there any cheats for this game?
+
+A: I know, i know. The game is kinda hard, but cheating only ruins your
+fun of playing the game. For example, when i bought the original Earth 2150
+i was a newbie at RTS games, and at the 4th ED mission, i was already
+looking for cheats, and i made the whole ED campaign blowing up enemy bases
+with tons of meteors. I got so bored i stopped playing. Some months later,
+i spent some time in Skirmish mode and after many training i was able to
+win a game vs. 4 cpu's in average mode. After that i made all the campaigns
+using only the infinite unit limit cheat. (the unit limits were too short
+for me :) On Lost Souls, i was disapointed to see that the unit limits were
+very short too, but  it's only at the first 2 missions. I am now playing
+the ED and LC campaigns without any type of cheat and i'm doing just fine.
+What i want to say with all this is that cheating spoils the fun to any
+game, and this game isn't that hard if coordinate your forces stratigecaly.
+Afterall, that's why they call it a strategy game, you're not supposed to
+throw all of your units into the enemy base and excpect them to survive.
+But if for some reason you still want some cheats, you can find them at the
+GameFAQs website.
+
+
+===========================================================================
+                ____________
+          11.  [Bugs/Secrets]
+                ¯¯¯¯¯¯¯¯¯¯¯¯
+Bugs:
+
+- Between the movie and the cutscene there's a time where you can control
+your interface. There is, but the developers didn't thought of this. So if
+you succed in pausing you will want to start giving out orders, so while
+you watch the cutscene, your base will be built. The problem is that each
+time you give out an order, the time advances a bit. (half second, from
+what i was told) If you give multiple orders the time you have to control
+the interface will run out, activating the cutscene. Since you are paused,
+the cutscene would start paused too, but it wasn't designed to activate
+paused, and you don't even have control while watching. What happens now is
+that Lost Souls crashes, not knowing what to do. There's no way to avoid
+this crash. Thankfully, if you don't pause between the movie and the
+cutscene, you won't ever get it. Thanks to medial for telling me this.
+
+- In maps with many units moving, your game may crash to the desktop when
+you attempt to load a game. This happens even to computers that are way
+beyond recommended requirements. It happens when you try to load a game
+when your screen is full of moving units. To avoid this, get your camera to
+a empty zone or get it to underground. This probably has something to do
+with RAM overload, since you need it to load maps.
+
+Secrets:
+
+- The LC Crion research doesn't show up in the Research Tree. It only
+appears on the Research Center menu. Although not really a secret, some
+people miss it.
+
+
+===========================================================================
+                _______
+          12.  [Credits]
+                ¯¯¯¯¯¯¯
+I wish to thank to:
+
+Zuxxez Entertainment AG and Reality Pump - For developing this great game.
+
+MegaScore - For distributing this game with its magazine.
+
+All Sites where this FAQ is found at - For posting my FAQ.
+
+0185 - For providing a strategy for LC Mission 7.
+
+Mark Thompson - For helping me pass the 7th ED mission and for stating that
+resources left on mission are automatically transfered to the Main Base.
+
+Michael Lo - For giving me information on the Headquarters building.
+
+medial - For giving me information about a bug that makes the game crash.
+
+---------------------------------------------------------------------------

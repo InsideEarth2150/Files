@@ -1,0 +1,36 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<title>CallMoveAndLandToPointForce function</title>
+</head>
+
+<body>
+
+<p><a href="../object/index.htm">object</a> - <a href="../commandobject/index.htm">commandobject</a>
+- <a href="index.htm">unit</a> </p>
+
+<hr>
+
+<pre><big>void CallMoveAndLandToPointForce(int nX, int nY, int nZ)</big></pre>
+
+<p><strong>Scope</strong>: private</p>
+
+<p><strong>Parameters</strong><br>
+nX - X-coordinate of point to which we have to move.<br>
+nY - Y-coordinate of point to which we have to move.<br>
+nZ - Z-coordinate of point to which we have to move.</p>
+
+<p><strong>Return values</strong><br>
+none</p>
+
+<p><strong>Description</strong><br>
+This function begins moving to point (nX, nY, nZ).<br>
+If this point is occupied by other unit it will be withrawed and after stop we will not
+allow to withraw us.<br>
+If it is flying unit it will try to land on this point.</p>
+
+<p><strong>See also</strong><br>
+<a href="IsMoving.htm">IsMoving</a>, <a href="CallMoveToPoint.htm">CallMoveToPoint</a>, <a href="CallMoveToPointForce.htm">CallMoveToPointForce</a></p>
+</body>
+</html>

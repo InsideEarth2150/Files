@@ -1,0 +1,43 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<title>IsTargetInCannonRange function</title>
+</head>
+
+<body>
+
+<p><a href="../object/index.htm">object</a> - <a href="../commandobject/index.htm">commandobject</a>
+- <a href="index.htm">platoon</a>
+
+<hr>
+
+<pre><big>int IsTargetInCannonRange(int nUnit, int nCannonNum, unit uTarget))</big></pre>
+
+<p><strong>Scope</strong>: private</p>
+
+<p><strong>Parameters</strong><br>
+nUnit - unit number<br>
+nCannonNum - cannon number.<br>
+uTarget - checked target.</p>
+
+<p><strong>Return values</strong><br>
+Walue which says about target location relative to us (for cannon number nCannonNum):<br>
+notInRange - target out of range,<br>
+inRangeBadAngleAlpha - target in range, but bad alpha angle,<br>
+inRangeBadAngleBeta - target in range, but bad beta angle (e.g. plane is too high and
+barrel cant be turn in it direction),<br>
+inRangeBadHit - target in range and good angles, but there is something between cannon and
+target,<br>
+inRangeGoodHit - target in range and can be hit.</p>
+
+<p><strong>Description</strong><br>
+This function checks range to target uTarget for cannon number nCannonNum. If returns
+notInRange, inRangeBadAngleBeta or inRangeBadHit unit should movie to target direction, if
+returns inRangeBadAngleAlpha unit should turn to target direction, for inRangeGoodHit unit
+can start fire.</p>
+
+<p><strong>See also</strong></p>
+
+</body>
+</html>

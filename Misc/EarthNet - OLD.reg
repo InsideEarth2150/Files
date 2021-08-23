@@ -1,0 +1,7 @@
+REGEDIT4
+
+[HKEY_CURRENT_USER\Software\Topware\TheMoonProject\BaseGame\Network\EarthNet]
+"AddressIP"="\"EarthNet\"\"netserver.earth2150.com\"\"EarthNet\"\"netserver.earth2150.de\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Topware\TheMoonProject\BaseGame\Network\EarthNet]
+"AddressIP"="\"EarthNet\"\"netserver.earth2150.com\"\"EarthNet\"\"netserver.earth2150.de\""

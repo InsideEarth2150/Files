@@ -1,0 +1,39 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<title>FindFreePlaceToPutUnitFromHook function [MP]</title>
+</head>
+
+<body>
+
+<p><a href="../object/index.htm">object</a> - <a href="../commandobject/index.htm">commandobject</a>
+- <a href="../unit/index.htm">unit</a> - <a href="../tank/index.htm">tank</a> - <a href="index.htm">transporter</a></p>
+
+<hr>
+
+<pre><big>int FindFreePlaceToPutUnitFromHook(int nX, int nY, int nZ, int nSearchRange)</big></pre>
+
+<p><strong>Scope</strong>: private</p>
+
+<p><strong>Parameters</strong><br>
+nX - X-coordinate of point where we want to put unit.<br>
+nY - Y-coordinate of point where we want to put unit.<br>
+nZ - Z-coordinate of point where we want to put unit.<br>
+nSearchRange - range of looking for free place</p>
+
+<p><strong>Return values</strong><br>
+True if free place was found, false otherwise.</p>
+
+<p><strong>Description</strong><br>
+[MP]<br>
+This function searches for free place where unit from hook can be put, begining
+from point (nX, nY, nZ) and in range nSearchRange from this point. If there is
+no unit in hook then function returns false. Found point can be obtained be
+functions below.
+</p>
+
+<p><strong>See also</strong><br>
+<a href="GetFoundFreePlaceToPutUnitX.htm">GetFoundFreePlaceToPutUnitX</a>, <a href="GetFoundFreePlaceToPutUnitY.htm">GetFoundFreePlaceToPutUnitY</a>, <a href="GetFoundFreePlaceToPutUnitZ.htm">GetFoundFreePlaceToPutUnitZ</a></p>
+</body>
+</html>

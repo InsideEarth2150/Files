@@ -1,0 +1,31 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Topware\TheMoonProject\BaseGame\Graphics\Default]
+"Renderer"="display Direct3D HAL"
+"Width"=dword:00000780
+"Height"=dword:000004b0
+"BitDepth"=dword:00000020
+"RendererType"=dword:00000003
+"FullScreen"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Topware\TheMoonProject\BaseGame\Graphics\Enumeration]
+"Software"=dword:00000000
+"Direct3D"=dword:00000001
+"Hardware"=dword:00000001
+"Glide"=dword:00000001
+"OpenGL"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Topware\TheMoonProject\BaseGame\Graphics\Default]
+"Renderer"="display Direct3D HAL"
+"Width"=dword:00000780
+"Height"=dword:000004b0
+"BitDepth"=dword:00000020
+"RendererType"=dword:00000003
+"FullScreen"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Topware\TheMoonProject\BaseGame\Graphics\Enumeration]
+"Software"=dword:00000000
+"Direct3D"=dword:00000001
+"Hardware"=dword:00000001
+"Glide"=dword:00000001
+"OpenGL"=dword:00000001

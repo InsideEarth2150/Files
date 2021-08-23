@@ -1,0 +1,49 @@
+With the console command "Editor.LoadBmp filename.bmp"
+it is possible to import BMP images as a height map.
+
+However, the picture must meet some requirements:
+
+
+    72 dpi resolution
+
+    256 grayscale (8 bit)
+
+    Size: Extra large: 256 * 256 pixels, large: 192 * 256
+    Pixel, small: 92 * 92
+
+
+Warning: the accessible area is slightly smaller than that
+Map!
+
+You can use all the effects and aids that you have
+Photoshop offers. Guides are particularly useful, and the ability to
+To mirror things. When mirroring, you have to use layers
+copy, mirror and then reassemble the layers). The brighter
+the pixel is, the higher the corresponding point is later on the map.
+To produce staircases, you can do this very easily with the gradient tool
+or the blur filter. Just do the area where there is a staircase
+should select, then either draw a gradient or the Gaussian
+Apply blur.
+
+Having the basics of the card so very simple
+and done quickly, you save the image as a bitmap (BMP) in the TMP main folder.
+Then you start TMP and go to the editor. Here you open a new one
+Card with the dimension that corresponds to the size of the image. Now press
+to hit the enter key and type "Editor.LoadBmp filename.bmp"
+on. The editor should now load the heights from the image. Attention: with one
+successful loading of the image, the console remains "open" i.e. you
+could enter further commands (this can be recognized by a flashing line
+bottom left, top of the minimap). You can close this again with Escape.
+Now you can add textures, raw materials, starting points and other details.
+
+Mapping with an image editing program is natural
+also possible with programs other than Photoshop, it just has to be considered
+that the image is saved as an 8-bit grayscale BMP.
+
+
+
+Editor Tricks
+
+for Editing Singleplayer Maps = editor.singleplayer 1
+for larger Zoom Out = graph.zoom.max=500
+

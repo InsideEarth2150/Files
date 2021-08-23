@@ -1,0 +1,44 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<title>CreateUnit function</title>
+</head>
+
+<body>
+
+<p><a href="../object/index.htm">object</a> - <a href="index.htm">player</a>
+
+<hr>
+
+<pre><big>unitex CreateUnit(int nX, int nY, int nZ, string strScript, string strChasis, string strWeapon0, string strWeapon1, string strWeapon2, string strWeapon3)</big></pre>
+
+<p><strong>Scope</strong>: public</p>
+
+<p><strong>Parameters<br>
+</strong>nX - x-coordinate<br>
+nY - y-coordinate<br>
+nZ - 0 - ground/1 -tunnel<br>
+strScripts - unit script (can be null, or relative to Scrits\\Units path and
+without extension f.e. &quot;AdvancedTank&quot;, &quot;AI\\CivilEmpty&quot;)<br>
+strChassis - chassis<br>
+strWeapon0 - cannon 0<br>
+strWeapon1 - cannon 1 (if there is more than one cannon slot)<br>
+strWeapon2 - extra cannon possitioned on cannon 0 (if there is a slot)<br>
+strWeapon3 - extra cannon possitioned on cannon 1 (if there is a slot)<br>
+</p>
+
+<p><strong>Return values</strong><br>
+unitex pointer
+</p>
+
+<p><strong>Description</strong><br>
+Creates unit in specified location.
+</p>
+
+<p><strong>See also</strong><br>
+<a href="CreateUnitEx.htm">CreateUnitEx</a>, <a href="../main/identifiers.htm#Chasis and weapon identifiers">Chasis and weapon identifiers</a>
+</p>
+
+</body>
+</html>

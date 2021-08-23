@@ -1,0 +1,165 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<title>platoon object </title>
+</head>
+
+<body>
+
+<p><a href="../index.htm">Index</a>&nbsp;&nbsp;&nbsp; <a href="../main/hierarchy.htm">Objects
+hierarchy</a> </p>
+
+<hr>
+
+<p><big><strong>platoon</strong> object</big></p>
+
+<pre>object
+ +-- commandobject
+      +-- platoon
+</pre>
+
+<p><big>Description</big></p>
+
+<p>&nbsp;</p>
+
+<p><big>Functions</big></p>
+
+<pre>
+void <a href="SetAllCannons.htm">SetAllCannons</a>(unit uTarget)
+void <a
+href="SetCannon.htm">SetCannon</a>(int nUnit, int nCannonNum, unit uTarget)
+void <a
+href="NextCommand.htm">NextCommand</a>(int nPrevCommandStatus)
+int  <a
+href="GetSideColor.htm">GetSideColor</a>()
+int  <a href="GetPlayerSideColor.htm">GetPlayerSideColor</a>()
+int  <a
+href="IsEnemy.htm">IsEnemy</a>(unit uTarget)
+int  <a href="IsNeutral.htm">IsNeutral</a>(unit uTarget)
+int  <a
+href="IsAlliance.htm">IsAlliance</a>(unit uTarget)
+int  <a href="IsVisible.htm">IsVisible</a>(unit uTarget)
+int  <a
+href="GetWorldLeft.htm">GetWorldLeft</a>()
+int  <a href="GetWorldTop.htm">GetWorldTop</a>()
+int  <a
+href="GetWorldRight.htm">GetWorldRight</a>()
+int  <a href="GetWorldBottom.htm">GetWorldBottom</a>()
+int  <a
+href="DistanceTo.htm">DistanceTo</a>(int nX, int nY)
+int  <a href="HaveBanner.htm">HaveBanner</a>()
+int  <a
+href="HaveRadar.htm">HaveRadar</a>()
+int  <a href="HaveScreamer.htm">HaveScreamer</a>()
+int  <a
+href="HaveShadow.htm">HaveShadow</a>()
+unit <a href="FindTarget.htm">FindTarget</a>(int nUnit, int nTargetType, int nSideSelection, int nKindSelection, int nDestinationSelection)
+void <a
+href="BuildTargetsArray.htm">BuildTargetsArray</a>(int nUnit, int nTargetType, int nSideSelection, int nDestinationSelection)
+void <a
+href="SortFoundTargetsArray.htm">SortFoundTargetsArray</a>(int nUnit)
+int  <a
+href="GetTargetsCount.htm">GetTargetsCount</a>(int nUnit)
+int  <a
+href="StartEnumTargetsArray.htm">StartEnumTargetsArray</a>(int nUnit)
+unit <a
+href="GetNextTarget.htm">GetNextTarget</a>(int nUnit)
+void <a
+href="EndEnumTargetsArray.htm">EndEnumTargetsArray</a>(int nUnit)
+unit <a
+href="FindClosestEnemy.htm">FindClosestEnemy</a>(int nUnit)
+unit <a
+href="FindClosestEnemyEx.htm">FindClosestEnemyEx</a>(int nUnit, int nTargetType)
+void <a
+href="KeepFormation.htm">KeepFormation</a>(int nKeep)
+void <a href="Dispose.htm">Dispose</a>()
+int  <a
+href="GetCannonsCount.htm">GetCannonsCount</a>(int nUnit)
+int  <a href="GetCannonType.htm">GetCannonType</a>(int nUnit, int nCannonNum)
+int  <a
+href="GetCannonShootRange.htm">GetCannonShootRange</a>(int nUnit, int nCannonNum)
+int  <a
+href="GetCannonSightRange.htm">GetCannonSightRange</a>(int nUnit, int nCannonNum)
+void <a
+href="CannonFireToTarget.htm">CannonFireToTarget</a>(int nUnit, int nCannonNum, unit uTarget, int nShootCount)
+void <a
+href="CannonFireGround.htm">CannonFireGround</a>(int nUnit, int nCannonNum, int nX, int nY, int nZ, int nShootCount)
+int  <a
+href="IsTargetInCannonRange.htm">IsTargetInCannonRange</a>(int nUnit, int nCannonNum, unit uTarget)
+int  <a
+href="IsPointInCannonRange.htm">IsPointInCannonRange</a>(int nUnit, int nCannonNum, int nX, int nY, int nZ)
+void <a
+href="SetCannonFireMode.htm">SetCannonFireMode</a>(int nUnit, int nCannonNum, int nMode)
+void <a
+href="StopCannonFire.htm">StopCannonFire</a>(int nUnit, int nCannonNum)
+void <a
+href="SendSupplyRequest.htm">SendSupplyRequest</a>(int nUnit)
+void <a
+href="SetLightsMode.htm">SetLightsMode</a>(int nUnit, int nLightsMode)
+void <a
+href="AddUnitToPlatoon.htm">AddUnitToPlatoon</a>(unit uUnitToAdd)
+void <a
+href="RemoveUnitFromPlatoon.htm">RemoveUnitFromPlatoon</a>(unit uUnitToRemove)
+void <a
+href="CallMoveToPoint.htm">CallMoveToPoint</a>(int nX, int nY, int nZ)
+int  <a
+href="IsMoving.htm">IsMoving</a>()
+void <a href="CallStopMoving.htm">CallStopMoving</a>()
+void <a
+href="CallTurnToAngle.htm">CallTurnToAngle</a>(int nUnit, int nAngle)
+int  <a
+href="GetLocationX.htm">GetLocationX</a>()
+int  <a href="GetLocationY.htm">GetLocationY</a>()
+int  <a
+href="GetLocationZ.htm">GetLocationZ</a>()
+int  <a href="IsFrozen.htm">IsFrozen</a>()
+unit <a
+href="GetAttacker.htm">GetAttacker</a>(int nUnit)
+void <a href="ClearAttacker.htm">ClearAttacker</a>(int nUnit)
+int  <a
+href="GetCannonAngleToTarget.htm">GetCannonAngleToTarget</a>(int nUnit, int nCannonNum, unit uTarget)
+int  <a
+href="GetCannonAngleToPoint.htm">GetCannonAngleToPoint</a>(int nUnit, int nCannonNum, int nX, int nY, int nZ)
+int  <a
+href="GetUnitsCount.htm">GetUnitsCount</a>()
+punit <a href="GetUnit.htm">GetUnit</a>(int)
+void <a
+href="SetPosition.htm">SetPosition</a>(int nUnit, int nDx, int nDy)
+int  <a
+href="GetPositionX.htm">GetPositionX</a>(int nUnit)
+int  <a href="GetPositionY.htm">GetPositionY</a>(int nUnit)
+void <a
+href="SetLeader.htm">SetLeader</a>(int nUnit)
+int  <a href="InPlatoon.htm">InPlatoon</a>(unit uUnit)
+void <a
+href="EnableFeatures.htm">EnableFeatures</a>(int nFlags, int nEnable)
+void <a
+href="Turn.htm">Turn</a>(int nAngle)
+void <a href="SwapUnits.htm">SwapUnits</a>(int nOne, int nTwo)
+int  <a
+href="GetType.htm">GetType</a>()
+int  <a href="CannonRequiresSupply.htm">CannonRequiresSupply</a>(int nUnit, int nCannonNum)
+int  <a href="CanCannonFireToAircraft.htm">CanCannonFireToAircraft</a>(int nUnit, int nCannonNum)
+int  <a href="CanCannonFireToGround.htm">CanCannonFireToGround</a>(int nUnit, int nCannonNum)
+</pre>
+
+<p><big>Enums</big></p>
+
+<p>Platoon features: </p>
+
+<pre>
+platoonHQDefense
+platoonKeepFormation
+platoonFreeUnits
+</pre>
+
+<p>Platoon types: </p>
+
+<pre>
+typeHelicopters
+typeTanks
+typeShips
+</pre>
+</body>
+</html>

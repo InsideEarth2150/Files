@@ -1,0 +1,45 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<title>CreateUnitEx function</title>
+</head>
+
+<body>
+
+<p><a href="../object/index.htm">object</a> - <a href="index.htm">player</a> </p>
+
+<hr>
+
+<pre><big>unitex CreateUnitEx(int nX, int nY, int nZ, string strScript, string strChasis, string strWeapon0, string strWeapon1, string strWeapon2, string strWeapon3)</big>
+<big>unitex CreateUnitEx(int nX, int nY, int nZ, string strScript, string strChasis, string strWeapon0, string strWeapon1, string strWeapon2, string strWeapon3, int nShieldUpdateNum)</big></pre>
+
+<p><strong>Scope</strong>: public</p>
+
+<p><strong>Parameters<br>
+</strong>nX - x-coordinate<br>
+nY - y-coordinate<br>
+nZ - 0 - ground/1 -tunnel<br>
+strScripts - uniot script<br>
+strChassis - chassis<br>
+strWeapon0 - cannon 0<br>
+strWeapon1 - cannon 1 (if there is more than one cannon slot)<br>
+strWeapon2 - extra cannon possitioned on cannon 0 (if there is a slot)<br>
+strWeapon3 - extra cannon possitioned on cannon 1 (if there is a slot)<br>
+nShieldUpdateNr - Shield update -1(no shield),0,1,2
+</p>
+
+<p><strong>Return values</strong><br>
+unitex pointer
+</p>
+
+<p><strong>Description</strong><br>
+Creates unit in specified location
+</p>
+
+<p><strong>See also</strong><br>
+<a href="CreateUnit.htm">CreateUnit</a>, <a href="../main/identifiers.htm">Chasis and weapon identifiers</a>
+</p>
+
+</body>
+</html>

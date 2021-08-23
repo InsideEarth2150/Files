@@ -1,0 +1,37 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<title>SetCannonFireMode function</title>
+</head>
+
+<body>
+
+<p><a href="../object/index.htm">object</a> - <a href="../commandobject/index.htm">commandobject</a>
+- <a href="index.htm">platoon</a>
+
+<hr>
+
+<pre><big>void SetCannonFireMode(int nUnit, int nCannonNum, int nMode)</big></pre>
+
+<p><strong>Scope</strong>: private</p>
+
+<p><strong>Parameters</strong><br>
+nCannonNum - cannon number.<br>
+nFireMode - cannon working mode:<br>
+0 - cannon fires ony to target given by script,<br>
+1 - cannon itself searches for targets and fire to them.</p>
+
+<p><strong>Return values</strong><br>
+none</p>
+
+<p><strong>Description</strong><br>
+This function is used for setting or clearing automatic fire mode. In automatic mode when
+cannon will find target it's calling event <strong>OnCannonFoundTarget</strong> and if
+event return false cannon will fire to found target.<br>
+If nCannonNum == -1 then we change mode for all cannons on tank.</p>
+
+<p><strong>See also</strong></p>
+
+</body>
+</html>

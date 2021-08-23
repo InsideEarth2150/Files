@@ -1,0 +1,71 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Using LangC tool</title>
+</head>
+
+<body>
+
+<p><a href="../index.htm">Index</a></p>
+
+<hr>
+
+<h3>Using LangC tool</h3>
+<p>As you can see in examples included in this documentation scripts doesn't
+contains plain text but texts beginning with &quot;translateSomething&quot;.
+This strings are &quot;keys&quot; for language-dependent strings which are
+stored in '*.lan' files in 'Language' directory ('language.wd' file). Game takes
+this key finds value for it and uses translated string. If you want to
+distribute your scripts it's good idea to use the same way of using strings.
+Also you must use it to display f.e. formatted briefings in campaigns.
+LangC.exe&nbsp; is the tool&nbsp; used to create '*.lan' files. LangC requires
+three types of files: '*.idx' files with only &quot;translateSomething&quot;
+list, '*.txt' files with &quot;translateSomething&quot; keys and its values and
+'*.ini' file - configuration file for LangC. '*.lan' file created by LangC
+should be copied to Language directory, and can be places in the same '*.wd'
+file with scripts (or in separated '*.wd' file if will be translated later to
+other language). Don't create language.lan file becouse it's standard Earth
+file.</p>
+<p><u>Example of using LangC:<br>
+</u><i>LangC.exe C:\Games\EarthLang\MyLang.ini<br>
+copy C:\Games\EarthLang\MyLang.lan C:\Games\Earth\Language<br>
+</i><u>MyLang.ini contents:</u><br>
+[LangC] <i>- must be</i><br>
+Output=&quot;MyLang&quot; <i>- name of&nbsp; '*.lan'&nbsp; file</i><br>
+Index=&quot;C:\Games\EarthLang\&quot; <i>- directory which contains '*.idx'
+files for 'Input*' files</i><br>
+Input0=&quot;MyLang1&quot; <i>- '*.txt' file name</i><br>
+Input1=&quot;MyLang2&quot;<br>
+<u>MyLang1.idx contents:</u><br>
+translateMyCampaign<br>
+translateParams<br>
+<u>MyLang2.idx contents:</u><br>
+translateBriefing1<br>
+translateGoal1<br>
+<u>MyLang1.txt contents:</u><br>
+item translateMyCampaign &quot;My campaign title&quot;<br>
+//text below is example of text for functions with multi-parameters like
+AddBriefing or AddGoal<br>
+//you must pass the same count of parameters (2 here) (strings or numbers) to
+this function<br>
+item translateParams &quot;First param is &lt;%0&gt;, and second is
+&lt;%1&gt;&quot;<br>
+<u>MyLang2.txt contents:</u><br>
+//you can make comments like this one<br>
+//example of preformatted text below:<br>
+message formated translateBriefing1<br>
+{<br>
+This is multi-line<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; preformatted text<br>
+(without any quotas)<br>
+}<br>
+//multi-spaces below splited to one space<br>
+item translateGoal1 &quot;Earn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;%0&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CR&quot;</p>
+
+</body>
+
+</html>

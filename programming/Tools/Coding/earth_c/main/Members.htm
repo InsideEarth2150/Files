@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Class Members</title>
+</head>
+
+<body>
+
+<p><a href="../index.htm">Index</a>&nbsp;&nbsp;&nbsp; <a href="earthclanguage.htm">EarthC
+language</a></p>
+
+<hr>
+
+<p><b>Class Members</b></p>
+<p>possible members types:</p>
+<p>int (integer 32-bits signed)<br>
+enum (a set of strings)<br>
+unit<br>
+unitex (usually used in mission class)<br>
+punit (used only in platoon)<br>
+player<br>
+platoon<br>
+</p>
+<p>You can also use other classes but you never get a pointer to the object of
+this class so they are useless as members<br>
+aircraft<br>
+builder<br>
+carrier<br>
+civil<br>
+harvester<br>
+repairer<br>
+sapper<br>
+supplier<br>
+tank<br>
+campaign<br>
+mission</p>
+<p>Enums declarations:</p>
+<p>enum MemberIdentifier<br>
+{<br>
+&nbsp;&nbsp;&nbsp; &quot;string0&quot;,<br>
+&nbsp;&nbsp;&nbsp; &quot;string1&quot;,<br>
+multi:<br>
+&nbsp;&nbsp;&nbsp; &quot;stringmulti&quot;<br>
+}</p>
+<p>Variable declared as enum behaves like intiger but can additionaly be
+attached to Command (see <a href="Commands.htm">Commands</a>) and create
+multistate command button.</p>
+<p><i>examples:</i></p>
+<p><i>int m_nk;<br>
+unit m_uUnit;<br>
+</i><i>    enum lights<br>
+    {<br>
+&nbsp;&nbsp;&nbsp; &quot;Lights AUTO&quot;,<br>
+&nbsp;&nbsp;&nbsp; &quot;Lights ON&quot;,<br>
+&nbsp;&nbsp;&nbsp; &quot;Lights OFF&quot;,<br>
+multi:<br>
+&nbsp;&nbsp;&nbsp; &quot;Lights Mode&quot;<br>
+    }<br>
+</i></p>
+
+</body>
+
+</html>

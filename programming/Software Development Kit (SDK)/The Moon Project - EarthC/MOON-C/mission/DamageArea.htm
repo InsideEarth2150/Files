@@ -1,0 +1,35 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<title>DamageArea function</title>
+</head>
+
+<body>
+
+<p><a href="../object/index.htm">object</a> - <a href="../objectX/index.htm">objectX</a> -
+<a href="index.htm">mission</a> </p>
+
+<hr>
+
+<pre><big>void DamageArea(int nIFFMask, int nX, int nY, int nZ, int nRange)</big></pre>
+
+<p><strong>Scope</strong>: private</p>
+
+<p><strong>Parameters<br>
+</strong>nIFFMask - players to hit<br>
+nX,nY,nZ - location<br>
+nRange - range</p>
+
+<p><strong>Return values</strong><br>
+</p>
+
+<p><strong>Description</strong><br>
+Damage all units closer than nRange the specified point. nIFFMask contains bits
+representing players which will be affected by this command. (e.g. set it to 3 to damage
+units of players 0 and 1)</p>
+
+<p><strong>See also</strong><br>
+KillArea, HideArea, ShowArea</p>
+</body>
+</html>

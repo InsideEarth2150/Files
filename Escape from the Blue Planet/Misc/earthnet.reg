@@ -1,0 +1,13 @@
+REGEDIT4
+
+[HKEY_CURRENT_USER\SOFTWARE\Topware\Earth 2150\BaseGame\Network\EarthNet]
+"AddressIP"="\"EarthNet\"\"netserver.earth2150.com\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Topware\Earth 2150\BaseGame\Network\Enumeration]
+"EarthNet"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Topware\Earth 2150\BaseGame\Network\EarthNet]
+"AddressIP"="\"EarthNet\"\"netserver.earth2150.com\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Topware\Earth 2150\BaseGame\Network\Enumeration]
+"EarthNet"=dword:00000001

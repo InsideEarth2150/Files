@@ -1,0 +1,46 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<title>CreateArtefact function</title>
+</head>
+
+<body>
+
+<p><a href="../object/index.htm">object</a> - <a href="../objectX/index.htm">objectX</a> -
+<a href="index.htm">mission</a> </p>
+
+<hr>
+
+<pre><big>void CreateArtefact(string strArtefactID, int nX, int nY, int nZ, int nArtefactNumber, int nArtefactSpecialType)</big>
+<big>void CreateArtefact(string strArtefactID, int nX, int nY, int nZ, int nArtefactNumber, int nArtefactSpecialType, int nPlayerNum)</big>
+<big></big></pre>
+
+<p><strong>Scope</strong>: private</p>
+
+<p><strong>Parameters</strong></p>
+
+<p>strArtefactID - artefact idetifier<br>
+nX,nY,nZ -location (note that nZ specify weather artefact is placed in tunnels (nZ=1) or
+on the surface (nZ=0) not the altitude)<br>
+nArtefactNumber - unique artefact number use for identification purposes<br>
+nArtefactSpecialType - one of<br>
+&nbsp;&nbsp;&nbsp; artefactSpecialAIOther, <br>
+&nbsp;&nbsp;&nbsp; artefactSpecialAINewAreaLocation, <br>
+&nbsp;&nbsp;&nbsp; artefactSpecialAIEnemyMainBaseLocation.<br>
+nPlayerNum - optional number of player.</p>
+
+<p><strong>Return values</strong><br>
+none</p>
+
+<p><strong>Description</strong><br>
+Use this function to create artefact. If strArtefactID is special artefact ID
+then you will be notified whenever any unit of any player
+will visit this place. If parameter nPlayerNum is present then visibility of artefact
+behaves like visibility of building owned by player number nPlayerNum.</p>
+
+<p><strong>See also</strong><br>
+<a href="Artefact.htm">Artefact</a>, <a href="../main/identifiers.htm#Artifact identifiers">Artefact
+identifiers</a></p>
+</body>
+</html>

@@ -1,0 +1,13 @@
+REGEDIT4
+
+[HKEY_CURRENT_USER\Software\Topware\TheMoonProject\BaseGame\Network\EarthNet]
+"AddressIP"="\"EarthNet - TopWare\"\"netserver.earth2150.com:17101\"\"EarthNet - IEO\"\"earthnet2150.insideearth.info\""
+
+[HKEY_CURRENT_USER\Software\Topware\TheMoonProject\BaseGame\Network\Enumeration]
+"EarthNet"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Topware\TheMoonProject\BaseGame\Network\EarthNet]
+"AddressIP"="\"EarthNet - TopWare\"\"netserver.earth2150.com:17101\"\"EarthNet - IEO\"\"earthnet2150.insideearth.info\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Topware\TheMoonProject\BaseGame\Network\Enumeration]
+"EarthNet"=dword:00000001

@@ -1,0 +1,313 @@
+Changelog OPM v1.06 -> OPM v1.07
+
+
+-ED
+
+Chassis Pamir 1, 2 and 3 Researchtime decreased -1min each
+Chassis Kaukasus 1 Researchtime decreased -1min
+
+-LC
+
+Chassis Lunar 2 and 3 Researchtime decreased -1min each
+Chassis Moon 2 and 3 researchtime decreased -1min each
+Fixed a bug with small Rail
+Weapon Small Electro air 1 Researchtime increased +4min, Price increased +200cr
+Weapon Heavy Sonic 1 and 2 researchtime increased +1min each
+
+-UCS
+
+Chassis Tiger 2 and 3 Researchtime decreased -1min each
+Weapon mobile plasma artillery 1, 2 and 3 range decreased -1 on each
+
+
+-:IMPORTANT:-
+All the Scripts are GNU General Public Licence
+
+http://opensource.org/licenses/gpl-license
+
+Check www.surrim.de and http://sourceforge.net/projects/osmod/ for new stuff!
+
+Kudos to Surrim for the unit scripts
+
+-------------------------------------------------------------------------------
+
+Changelog OPM v1.05 -> OPM v1.06
+
+-General
+
+Building Static Artillery Research times increased +5 min
+
+-ED
+
+Wall Price decreased -150cr
+Chassis Ural 1 Researchtime decreased -4 min
+Chassis Ural 2 upg Researchtime increased +4 min
+Weapon Ion Destroyer Firespeed increased +15%, researchtime increased +2 min
+
+-LC
+
+Chassis Crusher 1 Researchtime decreased -3:30 min
+Chassis Crusher 2 and 3 Researchtime increased +1:45 min each
+Weapon Lightnight artillery Range decreased -3
+Weapon Heavy plasma beam 1,2 and 3 ammo increased +20
+Weapon Small Rail 1 and 2 Firespeed increased +33%, range increased +1
+
+-UCS
+
+Wall Price decreased -150cr
+Chassis Jaguar 1 and 2 Price decreased -200cr
+Weapon Heavy Grenade Launcher Range increased +3
+Weapon Small rocket launcher 1, 2 and 3 Damage increased +15%
+Weapon Heavy rocket launcher 1, 2 and 3 Damage increased +10%
+Weapon Small Grenade Launcher now on spider too
+Weapon Small Grenade Launcher 1 and 2 range increased +2
+Weapon Small Spider Cannon 1 and 2 price decreased -100cr, range increased +1
+
+-:IMPORTANT:-
+All the Scripts are GNU General Public Licence
+
+http://opensource.org/licenses/gpl-license
+
+Check www.surrim.de and http://sourceforge.net/projects/osmod/ for new stuff!
+
+Kudos to Surrim for the unit scripts
+
+
+-------------------------------------------------------------------------------
+
+Changelog OPM v1.04 -> OPM v1.05
+
+
+-General
+
+Weapon Heavy Rocket 1 Research position changed, now after small rockets 1
+Building Static Artillery Research times increased +2 min
+Chassis Hero now takes 3000, 6000 and 9000 shield
+
+-ED
+
+Chassis Katyusha researchtime decreased -1 min
+Weapon Rocket Artillery 1 Researchtime decreased -1min
+Weapon Long Range Cannon for chassis damage decreased -30 no ammo, -22 first ammo, -10 second ammo
+Weapon Long Range Cannon 1 Researchtime increased +1 min
+Weapon Small Air Rocket research now after small rocket 3, researchtime decreased -1 min in both
+Weapon Heavy Air Rocket research now after small air rocket 2, researchtime decreased -1 min in both
+Wall Model fixed
+Building PillBox Researchtime decreased -1min, Shield price fixed on 140cr 260cr and 360cr
+Building Factory Shield Price Fixed on 140cr 260cr and 360cr
+
+-LC 
+
+Chassis Crion Researchtime decreased -1min
+Weapon Small Air rocket researchs now after small rocket 3, researchtime decreased -1 min in both
+Weapon Heavy Air rocket researchs now after small air rocket 2, researchtime decreased -1 min in both
+Weapon AA rocket researchs now after small rocket 1
+Building Defensor armor increased +8%, HP increased +1000, price increased +500, Shield increased +1000
+Building Guardian Researchtime decreased -1:30 min, shield price fixed on 140cr 260cr and 360cr
+Building Pacemaker Researchtime decreased -2min, shield price fixed on 140cr 260cr and 360cr
+Building Weathercenter Researchtime increased +2min
+Building Factory Shield price fixed on 140cr 260cr and 360cr
+
+-UCS
+
+Chassis Lynx Researchtime decreased -1:30min
+Weapon Tarantula and Panther Heavy Cannon Buildtime increased +10 seconds
+Weapon Plasma Artyllery 1,2 and 3 range increased +4
+Weapon Rocket Artillery 1 Researchtime decreased -2 min
+Weapon Small air rocket researchs now after small rocket 3, researchtime decreased -1 min in both
+Weapon Heavy air rocket researchs now after small air rocket 2, researchtime decreased -1 min in both
+Building Fortress Researchtime Decreased -2 min, shield price fixed on 140cr 260cr and 360cr
+Building Factory Shield price fixed on 140cr 260cr and 360cr
+
+-:IMPORTANT:-
+All the Scripts are GNU General Public Licence
+
+http://opensource.org/licenses/gpl-license
+
+Check www.surrim.de and http://sourceforge.net/projects/osmod/ for new stuff!
+
+Kudos to Surrim for the unit scripts
+
+-------------------------------------------------------------------------------
+
+Changelog OPM v1.03 -> OPM v1.04
+
+-General
+
+SDI price increased + 4000
+Some unit's like hero's speed bug fixed
+
+-ED
+
+MDW Nuke research time decreased -1 min, energy needed per cannon decreased -200
+wall resistance increased +40%
+
+-LC
+
+MDW Sunlight Project research time decreased - 1 min, energy needed per cannon decreased -200
+Long Range Heavy Plasma beam 1 ammo increased +15, LRHPB 2 ammo increased +15, LRHPB 3 ammo increased +20
+Defense Long Range Heavy Plasma Beam damage increased + 21
+Long Range Heavy Plasma Beam aiming turn increased +20%
+Heavy Rail aiming turn decreased +30% on units
+Heavy Sonic range increased +3 for defense buildings
+Charon researchtime decreased -30sec
+
+-UCS
+
+MDW Plasma cannon researchtime decreased -1 min, energy needed per cannon decreased -200
+Harvester 2 researchtime decreased -1min
+Grizzly 1 researchtime decreased -1min
+Panther cannon aiming turn increased +75%
+wall resistance increased +40%
+
+-Bugs
+
+Fixed sonic hitting wall making crash
+
+-Scripts:
+-Scripts units:
+
+Upgraded surrim's harvester script
+
+-:IMPORTANT:-
+All the Scripts are GNU General Public Licence
+
+http://opensource.org/licenses/gpl-license
+
+Check www.surrim.de and http://sourceforge.net/projects/osmod/ for new stuff!
+
+-------------------------------------------------------------------------------
+
+Changelog OPM v1.02 -> OPM v1.03
+
+-GFX
+
+Main Menu photo changed to old 1.3 style
+
+-General
+
+All AA starts with 11 range
+Wall price decreased -100, Resistance x2
+Sdi range increased +5
+All Heavy Air laser sheild increased + 300
+Antirak ammo increased +12
+Fixed a bug with Ship's weapon slots wich causes async [need to test]*
+
+-ED
+
+Ural 1 and 2 Speed decreased -1
+Ural Sightrange Decreased -1
+Screamer 1 name build fixed
+Defense Very Heavy Rocket Launcher firespeed increased +30%, ammo increased +40
+Defense Very Heavy cannon firespeed increased +15%
+Mobile artillery price decreased -200
+Ship rocket launcher firespeed increased +15%
+Ship Cannon Artillery firespeed increased +15%
+Some Voices in Some tanks changed
+Fixed Screamer 1 and 2 Prices to 800cr
+
+-LC
+
+Crusher 1,2 and 3 Speed decreased -1
+Crusher Sightrange decreased -1
+Long range small plasma beam range increased +1
+Heavy long range plasma beam range increased +1
+Defensive small and heavy plasma beam firespeed increased +33%, ammo increased +10, range increased +1
+Added "Long Range" tag on plasma beam units and building buildmenu
+Superfighter cost increased +200
+Heavy ammo railgun researchtime increased +1 min
+
+-UCS
+
+
+Jaguar 1 researchtime decreased -1 min , Jaguar speed decreased -1
+Grizzly 1 Researchtime increased +2 min, Researchcost increased + 10.000, Grizzly 2 and 3 researchtime increased +1
+Grizzly 1,2 and 3 Speed decreased -1
+Jaguar and Grizzly sightrange decreased -1
+Plasma AA firespeed now same as land plasma
+Harvester 2 researchtime increased +1min 30 sec
+Land Harvester 3 removed, Now its Air Harvester 3 only.
+Air harvester 3 efficiency increases 50%[6 packets round], price increased +350
+Panther Cannon Damage increased +15 price fixed to 800cr
+Tarantula cannon price fixed to 800cr
+Heavy minigun on panther and tarantula price fixed to 600cr
+Heavy Nade cost increased +300
+Orca Missiles now affects shield
+Fortress Resistance against laser increased +75%
+
+-Scripts:
+        
+-Scripts Unit:
+
+Improved Builder
+Improved Advanced Tank
+Improved Advanced Tank Holdfire
+Improved Harvester
+Improved Simple Tank
+Improved Tank
+Improved Tank Hold Pos.
+Improved Tank Lights off
+
+Those improves are thanks to Surrim.
+
+
+-Scripts Gametype:
+
+Added new DES gametype thanks to Surrim
+
+Check http://sourceforge.net/p/osmod/news/ to see new DES changes
+
+
+-Scripts AI:
+
+Added new AI TD Bot for multi and singleplayer
+
+-:IMPORTANT:-
+All the Scripts are GNU General Public Licence
+
+http://opensource.org/licenses/gpl-license
+
+Check www.surrim.de and http://sourceforge.net/p/osmod/news/ for new stuff!
+
+-------------------------------------------------------------------------------
+
+Changelog OPM v1.01 -> OPM v1.02
+
+ED
+
+Ural 1,2 Price Increased +300, Researchtime increased +1min 30 sec, Speed decreased -2
+Heavy Cannon damage increased +3
+Long range cannon price decreased -100
+Added new radar 2 for units, upgraded after researching first radar
+Heavy shockwave price decreased -150
+Shockwave bomb sound fixed
+Heavy defense Laser cost fixed
+Heavy defense cannon cost fixed, range fixed
+Heavy defense rockets cost fixed
+
+Leviathan heavy gun slot improved
+Submarine nuke guns added, torpedo launchers fixed
+
+
+
+LC
+
+Crusher 1,2,3 Price Increased +400, Researchtime for each upg increased +1min, Speed decreased -2
+Crion Price increased +900
+Small electro price increased +150
+Heavy electro damage decreased -10, Price increased +150, Heavy electro 2 researchtime increased +3min
+Very Heavy electro defense increased +300
+Heavy Sonic damage decreased -15, Price increased +100
+Defense Heavy and Very Heavy Railgun now prices fixed 
+
+Beam is now a long range weapon:
+     Beam damage reduced 50% range increased +3
+
+UCS
+
+Grizzly 1,2,3 Price Increased +400, Researchtime increased +2min, Speed decreased -2
+Jaguar 1 Researchtime decreased -1min
+Heavy Minigun ammo upgraded research texture changed
+
+Hydra heavy gun slot improved
+Submarine nuke guns added, torpedo launchers fixed

@@ -1,0 +1,37 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<title>AddMinePoint function</title>
+</head>
+
+<body>
+
+<p><a href="../object/index.htm">object</a> - <a href="../commandobject/index.htm">commandobject</a>
+- <a href="../unit/index.htm">unit</a> - <a href="../tank/index.htm">tank</a> - <a href="index.htm">sapper</a></p>
+
+<hr>
+
+<pre><big>int AddMinePoint(int nX, int nY, int nZ)</big></pre>
+
+<p><strong>Scope</strong>: private</p>
+
+<p><strong>Parameters</strong><br>
+nX - X-coordinate of point.<br>
+nY - Y-coordinate of point.<br>
+nZ - Z-coordinate of point.</p>
+
+<p><strong>Return values</strong><br>
+True if point was added, false otherwise.</p>
+
+<p><strong>Description</strong><br>
+This function is used to add minning point (nX, nY, nZ). This function can be called many
+times, also can be conbined with function AddMineLine.<br>
+Function will return false if earlier one of functions <strong>AddMineAreaClose</strong>,
+<strong>AddMineAreaMedium</strong> or <strong>AddMineAreaFar</strong> added points for mine.</p>
+
+<p><strong>See also</strong><br>
+<a href="AddMineAreaClose.htm">AddMineAreaClose</a>, <a href="AddMineAreaMedium.htm">AddMineAreaMedium</a>, <a href="AddMineAreaFar.htm">AddMineAreaFar</a>,
+<a href="AddMineLine.htm">AddMineLine</a>, <a href="ResetMinePoints.htm">ResetMinePoints</a>, <a href="NextMinePoint.htm">NextMinePoint</a></p>
+</body>
+</html>

@@ -1,0 +1,377 @@
+Changes from OperationX Beta II to OperationX Beta III, NOT FROM 2.2 to Beta III
+
+ALL RESEARCHTIMES YOU FIND HERE ARE IN 1x RESEARCHSPEED WRITTEN
+ALL DAMAGE VALUES ARE WTIH FULL AMMO + WEAPON UPGRADE
+ALL HP VALUES ARE WITH FULL CHASsIS UPGRADE
+
+[General]
+
+ - New Menu Backgrounds
+ - New EarthNet Logo
+
+
+[ALL Races]
+
+ - Displaying of some Weapons/Units in Reseearch/Construction Menu changed
+ - AntiRocket dont shot Balistic Rockets
+ - Shield Prices Changed
+ - MG Cost -100cr BuildTime -5sec  ->now[200cr,5sec]
+ - Heavy R for Unit/Building can Shoot Air
+ - SupplyTransporters : Cost +400cr, BuildTime +15sec  ->now[800cr,30sec]
+ - Ammo Upgrade for Stationary Artillery Removed
+ - Stationary Artillery Bug Removed, and fixed to old shotstyle
+ - Stationary Artillery Damage -140, Range -10  ->now[460,45]
+ - All Buildings needs longer to get killed by Laser
+
+
+
+[ED]
+
+ - Tunnel Trenchspeed +15  ->now[20]
+ - All Fake Units Removed
+ - Researchcenter Cost -250cr  ->now[750cr]
+ - Building Radar Range +1  ->now[6]
+ - Lighthouse Cost +500cr, need no power  ->now[1000cr]
+
+ - AntiRocket ResearchTime +2min  ->now[7]
+ - Bomb-Bay Cost -200cr, Damage -80  ->ow[2400cr,880]
+ - Vehicle Radar Range +2  ->now[3]
+ - AntiRocket Cost +200cr  ->now[400cr]
+ - AA Gun Cost +100cr  ->now[300cr]
+ - Small Cannon Cost -100cr, Damage +8  ->now[300cr,61]
+ - Heavy Laser Range +1  ->now[8]
+ - AA Laser moved from Don to Pamir
+ - Heavy Air Rocketlauncher Range -2  ->now[10]
+ - Heavy Rocket Launcher Cost +100cr, BuildTime +10sec, Damage -25, Range -1, Ammo -30  ->now[700cr,1min,95,11,90]
+ - Heavy ION range +3  ->now[10]
+ - Bomb-Bay 1 Research +3min  ->now[7min]
+ - Stationary Artillery research +9 Min reearchtime, researchcost +20000cr
+ - "Mobile Artillery" for Katyusha renamed to "Stalin Orgel"
+ - Mobile Atrillery aviable when stationary Artillery is resaerched
+ - Mobile Atrillery Damage +176  ->now[226]
+ - Amphilia Transporter removed
+ - 2nd Upg for AA Gun removed
+ - 1st AA Laser Upgrade removed
+ - Heavy Cannon for Buildings have a small slot
+ - Mine Containers takes 3 sec's less to came out of the Mine ->now[2.2 value]
+ - Rasputin Research now after Pamir 100
+ - Builder can now from start on trench
+ - Builder upg Research removed
+ - New Weapon : Long Range Cannon, research behind Heavy Cannon Upg
+
+ - Heavy Cannon Range -2, Ammo -80  ->NOW[10,80]
+ - Balistic Rockets need to refill their Silos, 1 Rocket Cost 4500cr, Damage +1000  ->now[refill,4500cr,4000]
+ - Balistic Control Center Silo Costs -7500cr  ->now[7500cr]
+ - Mobile Balistic Rocketlauncher Cost +2000cr  ->now[8000cr]
+ - Heavy Shockwave Generator Damage -192, Cost +200cr, Slot for Banner added at UPG 2  ->now[240,800cr]
+ - Heavy Shockwave Generator for Building +100cr ->now[700cr]
+ - Small Shockwave Generator Damage -105 reduced 50 % ->now[105]
+ - Stalin Orgel Research behind small Rocket upg 2 as single Research
+ - Stalin Orgel Damage +490, range -5  ->now[560,20]
+ - Stalin Orgel Rockets follow the Target
+
+ - Minelayer Upgrade is not more Shadowed
+ - Katyusha Cost +1000cr, Armour -25%  -now[3500cr, 25%]
+ - ED Stealth Unit added
+ - Sibiria Armour +25%  ->now[50%]
+ - Kozak Cost +50cr  ->now[400cr]
+ - Odin HP -300, Cost -100cr  ->now[700,1500]
+ - Ataman Cost +150cr, HP +75, Armour +8%   ->now[600cr,450HP,33%]
+ - Altai Cost +250cr, HP +150  ->now[750cr,450HP]
+ - Thor BuildTime +10sec, -50HP, Speed -3, Armour -8% ->now[1min,450HP,25,25%]
+ - Banner for Kaukasus, Rasputin
+ - Zytomyr renamed to Rasputin
+ - Kaukasus Shield -200PSU  ->now[1600PSU]
+ - Rasputin HP -50, Shield -100PSU  ->now[1300cr,1050HP,2000PSU]
+ - Rasputin II ResearchTime -1min, Rasputin III Research -1min
+ - Kaukasus II ResearchTime -1min, Kaukasus III Research -1min
+ - Ural Cost +200cr  ->now[1400cr]
+ - Ural ResearchTime +2min
+ - Ural Research is aviable, when Kaukasus I and Rasputin I is researched
+
+
+ -->Kaukasus is better vs projectil weapons, Rasputin is better vs Energieweapons
+
+ - Weaponfactory Shield +900PSU  ->now[3600PSU]
+ - Civilfactory Shield -100PSU  ->now[2000PSU]
+ - Power Plant Shield -300PSU  ->now[1800PSU]
+ - Headquader Shield -300PSU  ->now[1800PSU]
+ - Big Tower -600PSU  ->now[3000PSU] 
+ - Heavy Tower +900PSU  ->now[3600PSU]
+ - Pill Box -1800PSU  ->now[4200PSU] 
+ - Artillery Shield +800PSU  ->now[2000PSU]
+ - Balistic Control Center Shield +300PSU  ->now[2400PSU]
+ - Lighthouse Shield +1200PSU  ->now[1800PSU]
+ - SDI Shield +600PSU  ->now[1800PSU]
+ - Recyler Shield -300PSU  ->now[1800PSU]
+ - Tunnel Shield +600PSU  ->now[1200PSU]
+ - Radar Tower Shield +1200PSU  ->now[1800PSU]
+ - small Tower Shield +900PSU  ->now[1200PSU]
+
+ - Renamed thinks like "Odin upg.1" to "Odin 45Z"
+ - Renamed thinks like "Katyusha upg.1" to "Katyusha 150"
+ - Renamed thinks like "Heavy Air Laser Cannon upg.1" to "Heavy Air Laser Cannon II"
+ - Renamed thinks like "Air Laser Cannon upg.1" to "Air Laser Cannon II"
+ - Renamed thinks like "AA Laser Cannon upg.1" to "AA Laser Cannon II"
+ - Renamed thinks like "Shockwave Generator upg.1" to "Shockwave Generator II"
+ - Renamed thinks like "Heavy Shockwave Generator upg.1" to "Heavy Shockwave Generator II"
+ - Renamed thinks like "Noise Generator" to "Radar"
+ - Renamed thinks like "Noise Generator upg.1" to "Screamer"
+
+
+
+
+[UCS]
+
+ - Lighthouse Cost +500cr, need no power  ->now[1000cr]
+ - Energytransmitter Engine Range +4  ->now[12]
+ - Energytransmitter HP +700, Armour +25%, Cost +100cr  ->now[1200HP,50%,200cr] 2.2 value
+ - Tunnel Trenchspeed +15  ->now[20]
+ - Harvester Upg needs to be researched
+ - Harvester I Cost -25cr, a small bit faster minning speed  ->now[675cr]
+ - Harvester III Replaced by Flying Harvester, Minning Speed slower, Cost +25cr, Speed +2  ->now[725cr]
+ - Resarchcenter Cost -250cr
+ - Teleport Cost +1000cr  ->now[2500cr]
+ - PowerPlant HP +400  ->now[4000HP]
+ - Building Radar Range +1  ->now[6]
+
+ - Vehicle Radar Range +1  ->now[3]
+ - AntiRocket Cost +200cr  ->now[400cr]
+ - Bomb-Bay Cost +2000cr, BuildTime +1min, Damage -600  ->now[2600cr,2min,600]
+ - Plasma Bomb III Research - 2min  ->now[3min]
+ - Bomb-bay Upgrade Research -3min  ->now[5min]
+ - Heavy Air Gatling Cost +200cr  ->now[800cr]
+ - AA Air Gatling Cost +100cr  ->now[300cr]
+ - AntiRocket Research +2min  ->now[7]
+ - Heavy Air Rocketlauncher Range -2  ->now[10]
+ - Heavy Rocketlauncher for Mech Slot Damage +20, Cost +100cr, Range -1, Ammo -30, Buildtime +10sec  ->now[116,700cr,11,90,1min]
+ - Heavy Rocketlauncher for Spider/Jaguar-Slot 2 Damage +20, Cost +50cr  ->now[96,650cr]
+ - Heavy Rocketlauncher for Tarantula Damage +20, Cost +150cr, Range -1, Ammo -30, Buildtime +10sec  ->now[116,700cr,11,90,1min]
+ - Small FlameThrower Cost +50cr, Range -2  ->now[350cr,5]
+ - Heavy FlameThrower For Mech Cost +250cr, BuildTime -5sec, HitRange +1, Range -2, Damage -34 ->now[850cr,65sec,3,6,246]
+ - Heavy FlameThrower For Tarantula Cost +250cr, Damage +22, BuildTime -5sec, HitRange +1, Range -2 ->now[850cr,246,65sec,3,6]
+ - Heavy FlameThrower for Building Cost -50cr  ->now[600cr]
+ - Heavy FlameThrower Ammo ResearchTime -3min
+ - Heavy FlameThrower for Mechs got a small Slot on top
+ - FlameThrower Tower Range +3, HP +100  ->now[13,1900HP]
+ - Plasma AA  Missle-Flyspeed +20, Range +1  ->now[240,9]
+ - Small Gatling GUn Damge +20  ->now[106]
+ - Heavy Gatling Gun dont Ignore Enemy Vehicle Armour anymore
+ - Heavy Gatling Gun for Mech Cost +100cr, Damage +73, Range -1  ->now[700cr,206,10]
+ - Heavy Gatling Gun for Tarantula Cost +100cr, Damage +59, Range -1  ->now[700cr,193,10]
+ - Heavy Gatling Gun for Building Cost -50cr  ->now[600cr]
+ - Bomb-Bay 1 Research +3min  ->now[7min]
+ - Stationary Artillery research +9 Min reearchtime, researchcost +20000cr
+ - 3rd Upg for small Plasma removed
+ - 3rd Upg for Plasma AA removed
+ - Small Grennade Launcher for Tiger from beginn on
+ - Mobile Plasma Atrillery is a single Research now
+ - Mobile Plasma Artillery Damage +320, Range -5 HitRange +1 ->now[350,17]
+ - Small Grenade Launcher Grenade flying faster
+ - Heavy Grenade Launcher Damage +23, Range-1  ->now[200,16]
+ - Heavy Grennade Launcher for Buildings Added
+
+ - Bat -50HP, Speed -3, Armour -8%  ->now[450HP,25,25%]
+ - Gargoil Cost +250cr, +150HP, Armour +8% ->now[600cr,450HP,33%]
+ - Observer Cost +250cr, HP +150  ->now[750cr,450HP]
+ - Manticore Cost +50cr, HP +125, Armour +8%   ->now[750cr,500HP,33%]
+ - Minelayer Upgrade is not more Shadowed
+ - Tiger BuildTime +5sec, Cost +25cr  ->now[30sec,300cr]
+ - Tiger's special equitment like shadow removed
+ - Tiger +40 HP  ->now[300]
+ - Shadow and Radar for Salamander added
+ - Amphilia Transporter removed
+ - Builder can now from start on trench
+ - Builder upg Research removed
+ - Salamander Research removed
+ - Salamander -200HP, Shield +300PSU  ->now[800HP,600PSU]
+ - Tarantula Research now after Spider 1
+ _ UCS got a new Monster : Grizzly
+ - Grizzly can put Big Weapons on the SmallSlot too, and the Bigslot fixed to Big Mechslot
+ - Grizzly Research behind Jaguar 2
+ - Grizzly Shield +600PSU, HP +1200, BuildTime +15sec, Cost +1100cr  ->now[2400PSU,2400HP,1Min30,1900cr]
+ - Grissly Walkspeed -5,HP selfrenegation 1  ->now[13] 
+ - Lynx Cost +1000cr  ->now[3500cr]
+ - Jaguar Cost +200cr  ->now[1300cr]
+ - Panther Cost +200cr, BuildTime +5sec, Shield -200PSU  ->now[1200cr, 1min, 1600PSU]
+ - Tarantula  Cost +200cr, Buildtime +10sec, Shield -100PSU  ->now[1200cr,1min,2000PSU]
+ - Tarantula can put Banner on it, and Heavy Grennade Launcher
+ - Spider Armour +35%  ->now[60]
+ - Spider I Research behind Tiger II, ResearchTime -1min, Cost -1000cr  ->now[1000cr]
+ - Tarantula I ResearchTime -1min ResearchCost -1000cr, Tarantula II ResearchTime -1min, Tarantula III Research -1min
+ - Panther II ResearchTime -1min, Panther III Research -1min
+ - Jaguar ResearchTime +2min
+
+
+ -->Panther is better vs projectil weapons, Tarantula is better vs Energieweapons
+
+ - Civilfactory Shield -400PSU  ->now[2000PSU]
+ - Power Plant Shield -600PSU  ->now[1800PSU]
+ - Energy Transmitter Shield +600PSU  ->now[900PSU]
+ - Big Tower -600PSU  ->now[3000PSU] 
+ - Heavy Tower +600PSU  ->now[3600PSU]
+ - Fortress -3300PSU  ->now[4200PSU]
+ - FlameThrower Tower -600PSU  ->now[3000PSU] 
+ - Artillery Shield +800PSU  ->now[2000PSU]
+ - Plasma Control Center Shield +600PSU  ->now[2400PSU]
+ - Lighthouse Shield +1200PSU  ->now[1800PSU]
+ - SDI Shield +600PSU  ->now[1800PSU]
+ - Recyler Shield -300PSU  ->now[1800PSU]
+ - Teleport Shield +500PSU  ->now[2000PSU]
+ - Shadow Tower Shield +1400PSU  ->now[2000PSU]
+ - Radar Tower Shield +1200PSU  ->now[1800PSU]
+ - small Tower Shield +900PSU  ->now[1200PSU]
+
+ - "Manticore" renamed to "Manticore (Stealth)"
+ - Renamed thinks like "Lynx upg.1" to "Lynx II"
+ - Renamed thinks like "Tarantula upg.1" to "Tarantula II"
+ - Renamed thinks like "Manticore UPG" to "Manticore II"
+ - Renamed thinks like "Heavy Rocket Launcher upg.1" to "Heavy Rocket Launcher II"
+ - Renamed thinks like "Heavy Plasma Cannon upg.1" to "Heavy Plasma Cannon II"
+ - Renamed thinks like "Plasma Cannon upg.1" to "Plasma Cannon Launcher II"
+ - Renamed thinks like "Heavy Gatling upg.1" to "Heavy Gatling Cannon II"
+ - Renamed thinks like "Heavy Air Gatling upg.1" to "Heavy Air Gatling Cannon II"
+ - Renamed thinks like "AA Gatling upg.1" to "AA Gatling II"
+ - Renamed thinks like "AA Air Gatling upg.1" to "AA Air Gatling II"
+ - Renamed thinks like "Gatling upg.1" to "Gatling II"
+ - Renamed thinks like "Flamethrower upg.1" to "Flamethrower II"
+ - Renamed thinks like "Heavy Flamethrower upg.1" to "Heavy Flamethrower II"
+ - Renamed thinks like "Napalm upg.1" to "Napalm II"
+ - Renamed thinks like "Black Napalm upg.1" to "Black Napalm II"
+ - Renamed thinks like "Radar upg.1" to "Radar II"
+
+
+[LC]
+
+ - Weather Control Center Cost -25000cr  ->now[25000cr]
+ - NEST has as Standard-weapon small Rocketlauncher, Shield +600PSU  ->now[1200PSU]
+ - Research Center Cost +300cr  ->now[1300cr]
+ - Added Building : Upgrade Mine Cost 1800cr
+ - Upgraded Mine need to be Resarched cost 2500cr, 2min
+ - Xylit Researchtime -1:30, Researchcost -8500cr  ->now[2min,4000cr]
+ - Mine Cost -100cr  ->now[1900cr]
+ - Project Sunlight Research Cost +1250cr, researchtime +5min  ->now[7500cr,20min]
+ - Project Sunlight Hitrange +1, 1 more Cannon Buildable  ->now[2]
+ - Solarcells Buildtime -50%
+ - Laserwall HP -500  ->now[2500HP] 2.2 value
+ - SolarPlant Cost +300cr, +2 Solarcells buildable, BuildTime -1sec  ->now[1000cr,12cells]
+ - Xylit Cost -500cr, BuildTime -2sec  ->now[2500cr] 2.2 value
+ - Factory Cost -500cr, -1500HP, Buildtime -2sec  ->now[2500cr,6500HP]
+
+ - AntiRocket Research behind small Rocketlauncher 3
+ - New Texture for small and heavy Railgun
+ - Ground Detector Cost -200cr, BuildTime -15sec  ->now[400cr,1min]
+ - Ground Shield Recharger Cost -400cr BuildTime -15sec  ->now[400cr,1min]
+ - Ground Regenerator Cost -400cr BuildTime -15sec  ->now[400cr,1min]
+ - AntiRocket Research -2min  ->now[3]
+ - AntiRocket Cost +100cr  ->now[400cr]
+ - Small Rocket Launcher Cost -150cr, BuildTime +5sec, Range -1, Damage +6  ->now[300cr,25sec,9,60]
+ - Small Sonic Cost -50cr, Damage -10  ->now[400cr,60]
+ - Small Electro Cost -150cr, Range -1, Damage -5  ->now[300,6,60]
+ - Detector Sight Range -1  ->now[5]
+ - Small Rocketlauncher 1 research not more needed
+ - Heavy Rocket Launcher Damage -29, Range -2, Cost -50cr, Buildtime +20sec, Ammo -30 ->now[115,11,700cr,1min,90]
+ - Heavy Air Rocketlauncher Range -2, Cost -100cr  ->now[10,800cr]
+ - Heavy Air Sonic Cost +100cr  ->now[1000cr]
+ - Heavy Air Electro Damage +73, Range +1, Cost -50cr  ->now[146,9,850cr]
+ - Heavy Railgun more Damage, Cost -200cr, Ammo -20  ->now[230,700cr,80]
+ - Heavy Sonic Cost -300cr, Damage -10, range-1, BuildTime -5sec  ->now[600cr,60,5,65sec]
+ - Heavy Electro Damage -4, Cost -250cr  ->now[146,650cr]
+ - AA Railgun 2nd Research removed
+ - AA Railgun Damage +34,Cost -100cr  ->now[300,350cr]
+ - AA Plasma Beam Projector Ammo +10, Range +1, Damage +428, Cost -100cr  ->now[20,9,742,350cr]
+ - small Railgun Damage +13, Cost -150cr, Range -1, Ammo -20  ->now[70,350cr,7,120]
+ - Mobile Lighting Generator ShootTime all 10 sec, Ammo +5  ->now[-10sec,15]
+ - Mobile Lighting Generator Damage -100, Range -7  ->now[900,23]
+ - Mobile Lighting Generator Generator Research behind Heavy Electro Upg
+ - Plasma Artillery Research behind Heavy Sonic Upg
+ - 3rd Upg for small Electro removed
+ - 3rd Upg for Heavy Electo removed
+ - 3rd Upg for small Sonic removed
+ - 3rd Upg for Heavy Sonic removed
+ - 3rd Upg for small Air Electro removed
+ - 3rd Upg for Heavy Air Electro removed
+ - 3rd Upg for Sonic Air removed
+ - 3rd Upg Plasma Beam AA removed
+ - 3rd Mobile Lighting Generator Upgrade removed
+ - 3rd Crion Plasma Art Upgrade removed
+ - Stationary Artillery research +9 Min reearchtime, researchcost +18750cr
+ - New Weapon : Plasma Beam Projector with 2.2 Values
+ - AA Plasma Beam Projector research now behind Plasma Beam Projector
+
+ - FatGirl -15 sec BuildTime  ->now[45sec]
+ - Phobos HP +270  ->now[300]
+ - TunnelDigger ( Mercury ) Upgrade can Trench
+ - Storm Cost -2600cr, Buildtime -30sec, Shield -1000PSU  ->now[1900cr,1min30,2000PSU]
+ - Storm Research behind Thunder I 
+ - Amphilia Transporter removed
+ - 3rd Upg for New Hope removed
+ - SuperFighter Cost -200cr  ->now[1200cr]
+ - New Hope Cost -500cr, BuildTime -20sec, Armour -42%, Shield +500PSU  ->now[250cr,20sec,33%,1000PSU]
+ - New Hope has now a Lunar Slot for Detector and more
+ - New Hope Research behind Lunar 3, ResearchCost -1250cr, ResearchTime -2min
+ - Moon 1 from beginn on
+ - Moon 2 research behind Lunar 2
+ - Charon as Research behind Moon 3
+ - Charon HP +350, Armour +33%, AA Weapons removed  ->now[750HP,66%]
+ - Charon +5 Sec BuildTime, Shield +700PSU, Cost +50cr  ->now[35sec,1500PSU,450cr]
+ - Lunar is at the Top of the Research Tree
+ - FatGirl as Single Research
+ - Fang Research behind Moon 2
+ - Thunder Cost -500cr, Buildtime +10sec  ->now[2500cr,1min10]
+ - Removed Bug : Unit "translateLCUSS1" got a Name yet : Charon, Drivespeed +22  ->now[25]
+ - Crion armour -25%, Cost +500cr  ->now[25%, 3000cr]
+ - Crion Research behind FatGirl 3
+ - Crusher Cost -500cr, HP -100, Shield +100PSU  ->now[1500cr,1400HP,1900PSU]
+ - Banner for Crater, Fang
+ - Crater Shield -1000PSU, Cost -400cr, HP -100, Armour +9%, BuildTime -15sec  ->now[1700PSU,1200cr,1100hp,75%,1min]
+ - Fang Armour -9%, Shield +300PSU, HP -200, Cost -400cr, BuildTime -15sec ->now[66%,2100PSU,1000HP,1200cr,1min]
+ - Crater II ResearchTime +1min, Crater III Research +1min
+ - Fang II ResearchTime -1min, Fang III Research -1min
+ - Crusher ResearchTime +2min
+ - Crusher Research is aviable, when Fang I and Crater I is researched
+
+
+ -->Crater is better vs projectil weapons, Fang is better vs Energieweapons
+
+ - Factory Shield -1800PSU  ->now[4200PSU]
+ - Xylit Shield -100PSU  ->now[2000PSU]
+ - Battery Shield -100PSU  ->now[2000PSU]
+ - Researchcenter Shield +200PSU  ->now[2000PSU]
+ - Headquader Shield -400PSU  ->now[2000PSU]
+ - Aero Supplier Shield -100PSU  ->now[2000PSU]
+ - Gurdian Shield -600PSU  ->now[4200PSU]
+ - PeaceMaker Shield -2700PSU  ->now[4800PSU]
+ - Artillery Shield +900PSU  ->now[2100PSU]
+ - Sunlight Project Shield +1200PSU  ->now[3000PSU]
+ - Weather Control Center Shield +1500PSU  ->now[2700PSU]
+ - Support Tower Shield +1400PSU  ->now[2000PSU]
+ - SDI Shield +800PSU  ->now[2000PSU]
+ - Recyler Shield -100PSU  ->now[2000PSU]
+ - Laserwall Shield -1000PSU  ->now[2000PSU]
+
+ - Renamed thinks like "New Hope upg.1" to "New Hope II"
+ - Renamed thinks like "Crion upg.1" to "Crion II"
+ - Renamed thinks like "Fang upg.1" to "Fang II"
+ - Renamed thinks like "SuperFighter upg.1" to "SuperFighter II"
+ - Renamed thinks like "Fang upg.1" to "Fang II"
+ - Renamed thinks like "Plasma Cannon upg.1" to "Plasma Cannon II"
+ - Renamed thinks like "Mobile Lightning Generator upg.1" to "Mobile Lightning Generator II"
+ - Renamed thinks like "Heavy Railgun upg.1" to "Heavy Railgun II"
+ - Renamed thinks like "Railgun upg.1" to "Railgun II"
+ - Renamed thinks like "AA Air Railgun upg.1" to "AA Air Railgun II"
+ - Renamed thinks like "AA Plasma Beam Projector upg.1" to "AA Plasma Beam Projector II"
+ - Renamed thinks like "AA Air Plasma Beam Projector upg.1" to "AA Air Plasma Beam Projector II"
+ - Renamed thinks like "Air Electro-Cannon upg.1" to "Air Electro-Cannon II"
+ - Renamed thinks like "Heavy Air Electro-Cannon upg.1" to "Heavy Air Electro-Cannon II"
+ - Renamed thinks like "Ammo Railgun upg.1" to "Ammo Railgun II"
+ - Renamed thinks like "Ammo Heavy Railgun upg.1" to "Ammo Heavy Railgun II"
+ - "Bitch" renamed to "Mercury"
+
+ Buildtimes :
+ - Factory -6sec
+ - Xylit -2sec
+ - SolarPlant -3sec
+ - Battery -4sec
+ - Stanadard Mine -3sec
+ - NEST -8sec

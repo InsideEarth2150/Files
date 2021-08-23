@@ -1,0 +1,2 @@
+A package of WD files that contain Polish subtitles and sounds (including Polish announcements).
+To install simply unzip the archive to the folder with the game (for order to WDFiles).

@@ -1,0 +1,239 @@
+##############################################################
+#         Changes from Open Beta V3 to Open Beta V4          #
+##############################################################
+
+[General]
+ 
+ - New Main Menu Background to show wich version you got
+ - DES Open Beta v4 Gametype v256
+ - Bounty Open Beta v4 Gametype v080
+ - Destroy Enemy Hero v4 Gametype v024
+ - Strikeforce 3.0 Scripts Bugs removed
+ - Hero Shields max 18000 PSU
+
+[ED]
+
+ - 2nd HERO Unit with Maximal 8 heavy Weapons added
+ - Katyusha Unit Model fixed : Weapon can Rotate now
+
+
+[LC]
+
+ - 2nd HERO Unit with Maximal 8 heavy Weapons added
+ - Heavy Plasma Beam Damage -5  ->now[135]
+
+
+[UCS]
+
+ - HERO has now the Mechslot
+ - 2nd HERO Unit with Maximal 6 heavy Weapons added
+ - Heavy Mech Cannon Damage +9  ->now[133]
+ - Heavy Tarantula Cannon Damage +6  ->now[130]
+ - Small Grenade Launcher has 2.2 values
+
+
+
+
+
+
+
+##############################################################
+# Complete OperationX Changelog from Beta 3 to 1.0 Open Beta #
+##############################################################
+
+[General]
+
+ - Bomberspeed platoonbug using removed
+ - Strikeforce Scripts to 3.0 upgraded
+ - Main Menu Credits changed
+ - New Destroy Structures Gamescript
+ - New Bounty Gamescript
+ - New AIplayer Scripts with ally function
+
+
+[All Races]
+
+ - SDI Cost +2000cr  ->now[4000cr]
+ - Earthquake Damage +10  ->now[40]
+
+
+[ED]
+
+ - New Unit: Goliath A3 ( HERO )
+ - New Unit : Spion
+ - New Weapon : Long Range Laser
+ - New Weapon : Heavy ION Destroyer
+ - New Weapon : Air AA Gun
+ - New weapon : Air AA Laser
+ - Oka Removed
+ - Small Air Laser I ResearchTime +1min  ->now[5min]
+ - Small Air Laser II ResearchTime +1min  ->now[5min]
+ - Small Air Laser III ResearchTime +1min  ->now[5min]
+ - AA Laser ShootTime reduced, Damage in case of this +360  ->now[600]
+ - Thor I & II Armour +8%, +50HP  ->now[400HP,500HP,33%]
+ - Han I & II Armour +10%, +50HP  ->now[700HP,800HP,60%]
+ - Stalin Orgel Ammo -5  ->now[15]
+ - Stalin Orgel Research behind Heavy Rocket Launcher III
+ - Stalin Orgel II ResearchTime -5min  ->now[5min]
+ - Katyusha Unit Model fixed : Weapon can Rotate now
+ - small Shockwave ignore Armour now ( like all Energy Weapons )
+ - small Shockwave Damage -18  ->now[87]
+ - Heavy Shockwave ignore Armour now ( like all Energy Weapons )
+ - Heavy Shockwave Damage -122  ->now[112]
+ - Mobile Artillery Damage +14  ->now[240]
+ - Mobile Artillery should make Area Damage now
+ - Heavy Rocket Launcher Damage -5  ->now[90]
+ - Small Rocketluncher ( pamir-, small slot ) Damage +2  ->now[49]
+ - Don I HP -50, Armour +15%  ->now[400HP,40%]
+ - Don II HP -50, Armour +25%  ->now[550HP,50%]
+ - Don III HP -50, Armour +35%  ->now[700HP,60%]
+ - Don I, II, III Shield +200PSU, 2x Shield  ->now[800PSU]
+ - Ural only 1 Research
+ - Pamir III Shield removed
+ - Altai BuildTime -15sec  ->now[15sec]
+ - AntiRocket Range +3, Missle fly faster  ->now[10]
+ - Artillery Ammo Reload Cost -7500cr  ->now[1500cr]
+ - Sibiria I Armour -17%  ->now[33%]
+ - Sibiria II Armour -5%  ->now[45%]
+ - Sibiria can wear AA Weapons
+ - Rasputin +150HP , -6% Armour  ->now[1200HP,60%]
+ - Removed Bug : Its not more possible to put Weapons on Taiga
+
+[Real Ingame Damage]
+
+ - Small Shockwave Generator show now the real ingame Damage : I 51, II 69, III 87
+ - Heavy Shockwave Generator show now the real ingame Damage : I 60, II 88, III 116
+
+
+
+
+[LC]
+
+ - New Unit : Pluto ( HERO )
+ - New Weapon : Heavy Plasma Beam Projector
+ - small Plasma Beam Projector as singleresarch
+ - Small Plasma Beam I Damage -22, Range -2, Cost -50cr  ->now[53,6,400cr]
+ - Small Plasma Beam II Range -1, Cost -50cr  ->now[,7,400cr]
+ - Fang HP Regeneration -2  ->now[1/sec]
+ - Meteor II can wear AA Weapons
+ - Crion Drivespeed -2  ->now[13]
+ - Crion II Research Removed
+ - Crion + 150 HP  ->now[900HP]
+ - Crion ResearchTime -1min  ->now[9min]
+ - Crion Plasma Artillery Cost -500cr  ->now[500cr]
+ - Crion Plasma Artillery ResearchTime -5min  ->now[3min]*
+ - Crion Plasma Artillery Research behind heavy Plasma Beam III
+ - Crion Plasma Artillery faster Missleflyspeed
+ - Crion Plasma Artillery Ammo +1, Damage +120  ->now[2,760]
+ - Mercury I  BuildTime +10sec  ->now[1min]
+ - Mercury II BuildTime +70sec  ->now[2min]
+ - Crusher only 1 Research
+ - Crusher ResearchTime -2min  ->now[12min]
+ - Artillery Ammo Reload Cost -3000cr  ->now[1500cr]
+ - AntiRocket Range +2, Missle fly faster  ->now[10]
+ - SupportTower Sighrange -3  ->now[3]
+ - Moon I -100 HP  ->now[300HP]
+ - Moon II -100 HP, + 12% Armour  ->now[400HP,45%]
+ - Moon III -100 HP, + 17% Armour  ->now[500HP,50%]
+ - Fang +150HP , -6% Armour  ->now[1150HP,60%]
+ - Crater +50HP  ->now[1150HP]
+ - Heavy Railgun Ammo -30  -now[50]
+ - Heavy Railgun Damage -50  ->now[180]
+ - Heavy Building Railgun Range -1  ->now[11]
+ - Charon Cost +50cr, -50 HP  ->now[500cr,700HP]
+ - Charon ResearchTime +2min  ->now[4min]
+ - 2nd New Hope Research removed
+ - New Hope Drivespeed +7  ->now[28]
+ - New Hope Cost -50cr, +40HP  ->now[200cr,400HP]
+ - Small Sonic Damage +8  ->now[68]
+ - Heavy Sonic Damage +5  ->now{65]
+ - Heavy Air Sonic Research behind Heavy Sonic II
+ - Storm Armour -9%  ->now[66%]
+ - Heavy Air Electro I ResearchTime +2min  ->now[7min]
+ - Heavy Air Electro II ResarchTime +1min  ->now[6min]
+ - Heavy Building Rocket Launcher Range -2  ->now[13]
+ - AA Plasma Beam Projector II Damage -49  ->now[693]
+ - AA Plasma Beam Projector I ResearchTime -1min  ->now[7min]*
+
+* ResearchTime Different to Beta 3, because Researchplace fixed
+
+
+
+
+[UCS]
+
+ - New Unit: Centipede ( HERO )
+ - New Weapon : Mobile Cannon Artillery
+ - New Weapon : Napalm BombBay
+ - Napalm BombBay Ammo behind heavy FlameThrower II
+ - Plasma BombBay Ammo behind heavy Plasma III
+ - Shark Removed
+ - Bat I & II Armour +8%, +50HP  ->now[400HP,500HP,33%]
+ - Dragon I & II Armour +10%, +50HP  ->now[650HP,800HP,60%]
+ - Manticore II Research removed
+ - Manticore I ResearchTime +1min  ->now[6min]
+ - Lynx DriveSpeed -2  ->now[14]
+ - Lynx +50 HP, - 25% Armour  ->now[900HP,25%]
+ - Radar II/Shadow I for Shadowtower ResearchTime -1min  ->now[2min]
+ - Radar III/Shadow II ResearchTime -1min  ->now[4min] 
+ - Shadow III ResearchTime -3min  ->now[2min]
+ - Shadow IV ResearchTime -3min  ->now[2min] 
+ - Harvester III Cost -75cr, HP +100  ->now[650cr,1000HP]
+ - Flying and Ground Harvester III aviable
+ - small Flamethrower Ammo is autoresearched when Heavy Ammo is researched
+ - small slot Flamethrower Damage +32  ->now[160]
+ --> now same value as Tiger Flamethrower
+ - FlamethrowerTower aviable when Heavy Flamethrower II is researched
+ - small Rocketluncher ( small slot ) Damage +7  ->now[49]
+ - Jaguar only 1 Research
+ - Jaguar Research aviable after Tarantula I and Panther I Research
+ - Spider I ResearchTime +1min  ->now[2min]
+ - Tarantula I ResearchTime -1min  ->now[2min]
+ - Observer BuildTime -15sec  ->now[15sec]
+ - 1st small Gatling Gun removed
+ - 2nd small Gatling Gun is now "small Minigun"
+ - Heavy Gatling Gun is now "Heavy Minigun"
+ - Heavy Minigun can shot Air
+ - small and heavy Minigun Research behind MG-Upgrade
+ - Air MG and heavy Air Minigun as singleresearch
+ - heavy Air Minigun Damage calculation fixed, heavy Air minigun more powerfull now
+ - Heavy Air Minigun Damage -68  ->now[92]
+ - heavy Minigun big/Tarantula slot Damage +7  ->now[200]
+ - heavy Minigun Mech slot Damage + 7  ->now[213]
+ - New(-old) Weapon added : Cannon with new Values
+ - Heavy Cannon for Buildings added
+ - Heavy Cannon for Tarantula added
+ - AA Plasma Missle follow the Target, Misslespeed reduced
+ - AA Plasma Damage -171  ->now[514]
+ - Artillery Ammo Reload Cost -3000cr  ->now[1500cr]
+ - AntiRocket Range +2, Missle fly faster   ->now[10]
+ - Heavy Building Rocket Launcher Range -2  ->now[13]
+ - Small Grenade Launcher aviable for Buildings
+ - Small Grenade Launcher has 2.2 values
+ - small Gatling Damage +7  ->now[113]
+ - Tiger III ReasearchTime +1 min  ->now[3min]
+ - Spider I Armour -27%  ->now[33%]
+ - Spider II Armour -15%  ->now[45%]
+ - Spider III Armour -10%  ->now[50%]
+ - Tarantula +150HP , -6% Armour  ->now[1200HP,60%]
+ - Jaguar Cost +100cr  ->now[1400cr]
+ - Cevil Production can wear Heavy Weapons
+ - Mobile Plasma Artillery Ammo -15, longer reload time  ->now[5]
+ - Mobile Plasma Artillery I Research +1min  ->now[11min]
+ - Mobile Plasma Artillery II Research +2min  ->now[12min]
+ - Plasma Control Center ReloadTime +30sec  ->now[3min]
+ - Plasma Control Center Cost +10000cr  ->now[20000cr]
+ - Air Plasma I Research +2min  ->now[9min]
+ - Air Plasma II Research +1min  ->now[6min]
+ - Heavy Plasma I Damage +50  ->now[250]
+ - Heavy Plasma II Damage -67  ->now[333]
+ - Heavy Plasma III for Tarantula / Building added
+ - Air Plasma I ResearchTime +2min  ->now[7min]
+ ---> now it makes more sense to research Heavy Plasma III with 400 Damage
+ - Removed Bug : Its not more possible to put Weapons on Salamander
+
+[Real Ingame Damage]
+
+ - Heavy Plasma I-III show now the real ingame Damage : I 60, II 90, III 100
+ - Small Plasma + Air I & II show now the real ingame Damage : I 25, II 50
+ - AA Plasma I & II show now the real ingame Damage : I 90, II 180

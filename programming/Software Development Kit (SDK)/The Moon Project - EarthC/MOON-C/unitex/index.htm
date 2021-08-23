@@ -1,0 +1,239 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<title>unitex object </title>
+</head>
+
+<body>
+
+<p><a href="../index.htm">Index</a>&nbsp;&nbsp;&nbsp; <a href="../main/hierarchy.htm">Objects
+hierarchy</a> </p>
+
+<hr>
+
+<p><big><strong>unitex</strong> object</big></p>
+
+<pre>object
+ +-- commandobject
+      +-- unit
+           +-- unitex
+</pre>
+
+<p><big>Description</big></p>
+
+<p>Object <strong>unitex</strong> is a special object used in mission and player scripts.
+Using this object you can give orders to units and f.e. restore it's HP All functions in this object are public.</p>
+
+<p><big>Functions</big></p>
+
+<pre>
+int  <a href="GetHP.htm">GetHP</a>()
+int  <a href="GetMaxHP.htm">GetMaxHP</a>()
+void <a
+href="RegenerateHP.htm">RegenerateHP</a>()
+int  <a href="GetAmmo.htm">GetAmmo</a>()
+int  <a
+href="GetMaxAmmo.htm">GetMaxAmmo</a>()
+void <a href="RegenerateAmmo.htm">RegenerateAmmo</a>()
+int  <a
+href="GetShield.htm">GetShield</a>()
+int  <a href="GetMaxShield.htm">GetMaxShield</a>()
+void <a
+href="RegenerateShield.htm">RegenerateShield</a>()
+int  <a href="GetElectronics.htm">GetElectronics</a>()
+int  <a
+href="GetMaxElectronics.htm">GetMaxElectronics</a>()
+void <a
+href="RegenerateElectronics.htm">RegenerateElectronics</a>()
+int  <a
+href="GetTemperature.htm">GetTemperature</a>()
+int  <a href="GetMaxTemperature.htm">GetMaxTemperature</a>()
+void <a
+href="RegenerateTemperature.htm">RegenerateTemperature</a>()
+int  <a href="IsInWorld.htm">IsInWorld</a>(int nWorldNum)
+void <a
+href="ChangePlayer.htm">ChangePlayer</a>(player pNewPlayer)
+void <a href="Repaint.htm">Repaint</a>(player pColorPlayer)
+void <a href="BeginRecord.htm">BeginRecord</a>()
+void <a href="EndRecord.htm">EndRecord</a>()
+void <a href="BeginQuickRecord.htm">BeginQuickRecord</a>()
+void <a href="EndQuickRecord.htm">EndQuickRecord</a>()
+void <a href="RepeatRecordExecution.htm">RepeatRecordExecution</a>()
+void <a href="ExecuteRecord.htm">ExecuteRecord</a>()
+void <a href="SetObjectRecyclePercent.htm">SetObjectRecyclePercent</a>(int nPercent)
+int  <a href="GetObjectRecyclePercent.htm">GetObjectRecyclePercent</a>()
+void <a href="LoadScript.htm">LoadScript</a>(string strNewScript)
+void <a
+href="CommandStop.htm">CommandStop</a>()
+void <a href="CommandLand.htm">CommandLand</a>()
+void <a
+href="CommandMove.htm">CommandMove</a>(int nX, int nY, int nZ)
+void <a
+href="CommandAttack.htm">CommandAttack</a>(unit uTarget)
+void <a
+href="CommandAttackOnPoint.htm">CommandAttackOnPoint</a>(int nX, int nY, int nZ)
+void <a
+href="CommandEscort.htm">CommandEscort</a>(unit uEscortTarget)
+void <a
+href="CommandHoldPosition.htm">CommandHoldPosition</a>()
+void <a href="CommandPatrol.htm">CommandPatrol</a>(int nX, int nY, int nZ)
+void <a
+href="CommandSetHarvestPoint.htm">CommandSetHarvestPoint</a>(int nX, int nY, int nZ)
+void <a
+href="CommandRepair.htm">CommandRepair</a>(unit uTarget)
+void <a href="CommandConvert.htm">CommandConvert</a>(unit uTarget)
+void <a
+href="CommandRepaint.htm">CommandRepaint</a>(unit uTarget)
+void <a
+href="CommandUpgrade.htm">CommandUpgrade</a>(unit uTarget)
+void <a
+href="CommandSetContainerSource.htm">CommandSetContainerSource</a>(unit uBuildingMine)
+void <a
+href="CommandGetSingleContainer.htm">CommandGetSingleContainer</a>(unit uContainer)
+void <a
+href="CommandSetContainerDestination.htm">CommandSetContainerDestination</a>(unit uRefineryOrTransportBase)
+void <a
+href="CommandEnter.htm">CommandEnter</a>(unit uBuildingOrUnitsTransporter)
+void <a
+href="CommandSendSupplyRequest.htm">CommandSendSupplyRequest</a>()
+void <a
+href="CommandFlyForSupply.htm">CommandFlyForSupply</a>()
+void <a
+href="CommandSetTransporterSupplyCenter.htm">CommandSetTransporterSupplyCenter</a>(unit uSupplyCenter)
+void <a
+href="CommandMoveToSupplyCenterForLoading.htm">CommandMoveToSupplyCenterForLoading</a>()
+void <a
+href="CommandUserNoParam.htm">CommandUserNoParam0</a>()
+void <a
+href="CommandUserNoParam.htm">CommandUserNoParam1</a>()
+void <a
+href="CommandUserNoParam.htm">CommandUserNoParam2</a>()
+void <a
+href="CommandUserNoParam.htm">CommandUserNoParam3</a>()
+void <a
+href="CommandUserNoParam.htm">CommandUserNoParam4</a>()
+void <a
+href="CommandUserNoParam.htm">CommandUserNoParam5</a>()
+void <a
+href="CommandUserNoParam.htm">CommandUserNoParam6</a>()
+void <a
+href="CommandUserNoParam.htm">CommandUserNoParam7</a>()
+void <a
+href="CommandUserNoParam.htm">CommandUserNoParam8</a>()
+void <a
+href="CommandUserNoParam.htm">CommandUserNoParam9</a>()
+void <a
+href="CommandUserObject.htm">CommandUserObject0</a>(unit uTarget)
+void <a
+href="CommandUserObject.htm">CommandUserObject1</a>(unit uTarget)
+void <a
+href="CommandUserObject.htm">CommandUserObject2</a>(unit uTarget)
+void <a
+href="CommandUserObject.htm">CommandUserObject3</a>(unit uTarget)
+void <a
+href="CommandUserObject.htm">CommandUserObject4</a>(unit uTarget)
+void <a
+href="CommandUserObject.htm">CommandUserObject5</a>(unit uTarget)
+void <a
+href="CommandUserObject.htm">CommandUserObject6</a>(unit uTarget)
+void <a
+href="CommandUserObject.htm">CommandUserObject7</a>(unit uTarget)
+void <a
+href="CommandUserObject.htm">CommandUserObject8</a>(unit uTarget)
+void <a
+href="CommandUserObject.htm">CommandUserObject9</a>(unit uTarget)
+void <a
+href="CommandUserPoint.htm">CommandUserPoint0</a>(int nX, int nY, int nZ)
+void <a
+href="CommandUserPoint.htm">CommandUserPoint1</a>(int nX, int nY, int nZ)
+void <a
+href="CommandUserPoint.htm">CommandUserPoint2</a>(int nX, int nY, int nZ)
+void <a
+href="CommandUserPoint.htm">CommandUserPoint3</a>(int nX, int nY, int nZ)
+void <a
+href="CommandUserPoint.htm">CommandUserPoint4</a>(int nX, int nY, int nZ)
+void <a
+href="CommandUserPoint.htm">CommandUserPoint5</a>(int nX, int nY, int nZ)
+void <a
+href="CommandUserPoint.htm">CommandUserPoint6</a>(int nX, int nY, int nZ)
+void <a
+href="CommandUserPoint.htm">CommandUserPoint7</a>(int nX, int nY, int nZ)
+void <a
+href="CommandUserPoint.htm">CommandUserPoint8</a>(int nX, int nY, int nZ)
+void <a
+href="CommandUserPoint.htm">CommandUserPoint9</a>(int nX, int nY, int nZ)
+void <a
+href="CommandUserLine.htm">CommandUserLine0</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserLine.htm">CommandUserLine1</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserLine.htm">CommandUserLine2</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserLine.htm">CommandUserLine3</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserLine.htm">CommandUserLine4</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserLine.htm">CommandUserLine5</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserLine.htm">CommandUserLine6</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserLine.htm">CommandUserLine7</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserLine.htm">CommandUserLine8</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserLine.htm">CommandUserLine9</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserDoubleLine.htm">CommandUserDoubleLine0</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserDoubleLine.htm">CommandUserDoubleLine1</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserDoubleLine.htm">CommandUserDoubleLine2</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserDoubleLine.htm">CommandUserDoubleLine3</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserDoubleLine.htm">CommandUserDoubleLine4</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserDoubleLine.htm">CommandUserDoubleLine5</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserDoubleLine.htm">CommandUserDoubleLine6</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserDoubleLine.htm">CommandUserDoubleLine7</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserDoubleLine.htm">CommandUserDoubleLine8</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserDoubleLine.htm">CommandUserDoubleLine9</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserArea.htm">CommandUserArea0</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserArea.htm">CommandUserArea1</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserArea.htm">CommandUserArea2</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserArea.htm">CommandUserArea3</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserArea.htm">CommandUserArea4</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserArea.htm">CommandUserArea5</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserArea.htm">CommandUserArea6</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserArea.htm">CommandUserArea7</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserArea.htm">CommandUserArea8</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a
+href="CommandUserArea.htm">CommandUserArea9</a>(int nX1, int nY1, int nZ1, int nX2, int nY2, int nZ2)
+void <a href="CommandBuildingTurnOnOff.htm">CommandBuildingBuildingTurnOnOff</a>(int nMode)
+void <a href="CommandBuildingSuperAttack.htm">CommandBuildingSuperAttack</a>(int nX, int nY, int nZ)
+void <a href="CommandBuildingAutodestruction.htm">CommandBuildingAutodestruction</a>()
+void <a href="CommandBuildingSold.htm">CommandBuildingSold</a>()
+void <a href="CommandBuildingCreateRain.htm">CommandBuildingCreateRain</a>(int nX, int nY, int nZ)
+void <a href="CommandBuildingCreateSnow.htm">CommandBuildingCreateSnow</a>(int nX, int nY, int nZ)
+void <a href="CommandBuildingCreateRainStorm.htm">CommandBuildingCreateRainStorm</a>(int nX, int nY, int nZ)
+void <a href="CommandBuildingCreateMeteorRain.htm">CommandBuildingCreateMeteorRain</a>(int nX, int nY, int nZ)
+void <a href="CommandBuildingCreateWind.htm">CommandBuildingCreateWind</a>(int nX, int nY, int nZ)
+void <a href="CommandBuildingRemoveCloud.htm">CommandBuildingRemoveCloud</a>(int nX, int nY, int nZ)
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,787 @@
+*************************************************************
+*                        Earth 2150                         *
+*               The Guide to being the best                 *
+*                                                           *
+*               [ Version 1.1b , 03/04/02 ]                 *
+*                     © David Wilson                        *
+*                 greatdane3k@yahoo.co.uk                   *
+*************************************************************
+
+This page is best veiwed with Courier New font size 10. If you
+have any coments please email them to greatdane3k@yahoo.co.uk
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+------------------------CONTENTS-----------------------------
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+(A) Copyright
+(AI)Version histroy
+(B) How to Play Earth 2150
+      1.Controls (Novice /newcomers to Earth 2150)
+      2.How to Play the game over the Internet
+      3.how to build an empire
+(C) The teams
+      1.Earth 2150 Prologue
+      2.ED
+      3.UCS
+      4.LC
+(D) Tips on Being the best
+(E) FAQ
+(F) Cheats
+(G) Credits
+
+                             (A)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+--------------------------COPYRIGHT--------------------------
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Copyright © 2000-2002 David Wilson
+If you Would like to modify this guide in Any type of way ,
+email me and ASK !(greatdane3k@yahoo.co.uk) Also ask me if
+you would like to put this guide on your site. I have spent
+alot of time writing this up on my own so if i let you modify
+it you still have to give alot of the credit to me , David
+Wilson for making this guide.If you want to ask a question
+feel free to email me and please put the subject as Earth 2150.
+Anyway enough naging lets get on with the game and I hope this
+guide makes you a better soldier !
+
+                            (AI)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+----------------------VERSION HISTORY------------------------
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Version 1.0 released 10/06/01
+First ever game guide, hope you like it. Did everything i could think of except
+teams because that meant alot of writing and i had my SATs coming up so sorry
+about the teams in version 1. When i get some more time i will right about the
+vehicles and buildings of each team.
+
+Version 1.1 released 03/08/01
+Current version, i have added quite alot  more towards the teams but school and
+my sister is getting in the way. Also have added a mini contents to each team as
+well as a reveiw ! i will continue to update this guide if i get a response by
+people.
+
+version 1.1b released 03/04/02
+I have not updated in a long long time ! I have deleted the mini contents because
+they just didn't suite the guide. Also i have deleted the "How to Play earth 2150
+over the Internet" because you used to be able to play it on the zone but now thats
+gone so i know nowhere that hosts Earth 2150. I have changed/modifed the LC review,
+some people kept emailing in saying i had been a bit harsh, so that has changed.
+I am trying to finish the vehicle guide and the Walkthrough wii come soon, maybe.
+
+
+                              (B)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+--------------------HOW TO PLAY EARTH 2150-------------------
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+************************************
+* B1) THE CONTROLS OF EARTH 2150   *
+************************************
+
+Earth 2150 Can be a very difficult game to play because there is
+so much stuff to do but here are some of the controls to the game.
+
+Default keyboard Buttons that are most used
+-------------------------------------------
+
+F1 - Brings up the construction window
+F2 - Brings up the Reseach screen
+F3 - Change the weapons of the selected building
+F9 - Show the range of the power on the selected power station
+F12 - Shows you the tunnels you have built
+Alt+F2 - Save your game
+Alt+F3 - Load a game
+
+Enter on keypad (Right side of Keyboard) - Rotate the building
+                                           before your about to
+                                           build them
+    0 on keypad (Right side of keyboard) - Centre the camera on your
+                                           selected unit
+
++ or (-)    - Change the game speed
+Number lock - Pause game
+, - select all the units in site
+. - select all air units in site
+/ - select all ground units in site
+; - select all miltay units in site
+
+Mouse buttons
+-------------
+
+ left mouse button - click it to select a unit or drag it to selct
+                     a number of units . Left click once on a button.
+Right mouse button - tell selected unit to go were you click .
+                     Hold and move the mouse to zoom in/out or hold
+                     it and move the muse left or right to rotate
+                     the veiw
+
+While in a game click on the menu button at the bottom of the srceen to bring up a
+number of things , save your game ,exit a game , load a game and alot more.
+
+**************************************************
+* B2) HOW TO PLAY EARTH 2150 OVER THE INTERNET   *
+**************************************************
+
+www.Zone.com , which used to host Earth 2150 has stopped hosting it now. So sorry
+guys but i have no idea if anyone hosts it now. If you find out that a websiet does
+host it please email me quick ! thanks
+
+********************************
+* B3) HOW TO BUILD AN EMPIRE   *
+********************************
+
+There are alot of thing you have to do just to win a simply game of Earth 2150.
+the first thing you need to know is how to build buildings . for the ED and UCS
+you will start the game with a machine which builds buildings for you . You simply
+click on the building you want to build and select were you want to build it .
+With the LC you click on build button near the bottom half of the screen and click
+on the area were you want to build your building . You can press Enter on the
+number pad to turn the building around . To build a unit first you have to build
+the building which build the unit (eg. To build Pammir you have to build a weapon
+production centre , sinmle realy ) . Another important issue in Earth 2150 is to
+supply your battle units with ammo . to do this you will need aerial centre and a
+supply ship to take the ammo to the units . the will be more info on the supply
+ships and and buildings later on in this guide . In most missons to get money you
+ill have to mine for ore . each Team has its own way of doing this , you can find
+about the mining vehicles later in this guide . The ED and UCS can also build
+tunnels and bridges . I think this is a great feature in this game and when you go
+these two teams you should use the tunnel building as a great defensive advantage .
+The bridges are also good because without them you could not get youre troops
+around the map . The reason For the Lc not having bridges is that all the units
+can fly ! and i don't know why they do not have tunnels .
+
+The main things to remeber are when you are gettting ore get it fast , there is
+not much ore on the map in that is your ownly source of money (unless your on
+Skirmish mode , in which you can just get given money) so get there before the
+enemy does . also if you are fighting for some ore take in consideration the
+amount of ore , is it really worth all the losses of your expesive machines if
+not just leave the dam stuff , if there's alot of ore in one place fight for it
+with your life , never give up ! Another friendly note , have lots of weapons
+centres , in this game there is no population limit and the enemy knows that ,
+you should to , in other words build lots of stuff .
+
+before you start the campaign i recommend that you stay on Skirmish for abit
+because the campaigns are hard , one mistake can cost you the whole game on
+the campaign so get better on Skirmish mode before you try the long hard
+campagin .
+NOTE : The campaign on this game is different to others because you always
+have a base were you have to send your ore to . So realy there is only 3
+campaigns in the game , one for each team , but there are long and take weeks
+to complete (unless you play on your computer continously)
+
+                             (C)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+--------------------THE TEAMS OF EARTH 2150------------------
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+There are 3 teams in Earth 2150 each having there special abilitys , they will
+be explained in detail but first the Earth 2150 Prologue.
+
+***************************
+* C1)EARTH 2150 PROLOGUE  *
+***************************
+
+The 21st Century was supposed to herald the dawn of a new age. The wars, famines
+and suffering of the last two millennia were to become a distant, fading memory,
+as scientific advances brought global peace and prosperity. Toward the end of
+the 20th century, a now forgotten US president even went as far as to officially
+proclaim the arrival of a new world order, in whih right, not wrong, would govern
+international relations.
+
+Unfortunately, this bright future was not to be. First came a meltdown of the
+international stock and currency exchanges. Then the major international
+conglomerates were dissolved in a vain attempt to stop the fiscal haemorrhage. By
+2012 the world enconomy had collasped. Poverty and hunger caused soial and
+political tensions to flare. As the crisis wore on, few were bold or naive enough
+to predict anything positive for the future. Mostrealised that the planet was on
+the verge of global conflict.
+
+During this time, the odd american organisation, NASA, were taken over by a new
+company called the Lunar Corporation. The LC, as it was known, saw a business
+opportunity in all this chaos, and began building a city in orbit. When it was
+completed, those who could afford it flocked to the newly opened Orbital City I.
+
+In 2048, the anticipated global conflict broke out with a level of violence that
+shook the planet to its core . All major centralised goverments were destroyed in
+the maelstrom. Europe and Eastern Asia bore the brunt of the devastation, as the
+entire urban centres, from Madrid to Moscow and from Seoul to Singapore were
+literally wiped off the map. The 20th-century dream for a better world ended in
+death and destruction. The population of Orbital City I, shocked by the horrors
+they were witnessing, emigrated to a newly constructed Lunar base to better
+protect themselves. The colony then severed all connections with earth and began
+to prosper as a separarte, selr-contained community.
+
+The human race has always been known for its resiliency. Within a dozen years,
+the Earth's inhabitants had begun to restore their old nationalities - with a
+few twists. Twelve states of the former United states joined together to form
+a new country, called the United Civilised States. The UCS citizens had
+essentially given up thier old roles as producers and leaders. Nearly all work
+was being performed  by robots which were controlled by expert computer systems.
+Not surprisingly, the human inhabitants of the UCS had become lazy and decadent.
+
+In the European and Asia territories, which suffered so terridly in the war, a
+new empire was created under the iron fist of the khans. Its pround name was
+meant to conjure up an ossociation with a glorious former age - The Eurasian
+Dynasty. With access to the military bases, weapons and technology of the former
+Soviet Union, the Khans were able to build up a formidable military state.
+Decadence is unheard og in the ED. The citizens are drilled from an early age
+to serve the state and be ready if so ordered. The regime is quick to eliminate
+any individualists and pleasure-seekers, not to mention those who are merely lazy
+or incompetent.
+
+As the only two organised powers, both the ED and the UCS were able to extend their
+borders very quickly, and soon possessed all remaing inhabitable areas. but two
+powerful empires can rarely live in harmony. Soon the ED army invaded the UCS
+territories. Thus began another horrendous war. During eight years of continuous
+conflict, the retreating ED army, desperate after suffering  a series of battlefeild
+defeats, attempted to turn the tide with nuclear weapons. A barrage was lunched
+against UCS positions near the North pole. The explosions unleashed were so violent
+that the Earth's orbital motion was effected. This was first noticed in 2150 by UCS
+scientists and the almost forgotten colonists on the moon. Soon, the infomation also
+reached ED headquaters. The scientists' calculations became cause for serious alarm.
+The distance between the Earth and the Sun wouls shrink by nearly 17% over the next
+few years. The implications became clear, even to the thick-headed ED commanders -
+the Earth and the moon are headed for a terrible cosmic disater.
+
+The only hope for salvation is to escape the doomed planet. But building an evacuation
+fleet of such size requires immense natural resorces and these are to be found only in
+a few selected regions. This means only one thing - Whichever side emerges victorious
+in the battle for these territories wil escape Armageddon. The next war will truly be
+the last our eart will ever see...
+
+--------------
+**************
+* C2)   ED   *
+**************
+
+FULL NAME : THE EURASIAN DYNASTY
+
+The ED is the most undated team, it still has tanks and cannons and hasn't changed
+much since this century. But don't let that put you off they are still a very good
+team as they have alot of units. Also they have nuclear bombs and ballistic missiles,
+whats is wrong with that! This is my favorite team (my view only) as the units make
+fast, they have laser cannons which are good and there buildings look nice : ) Also
+the helecopters which they have are boss. If you do the campaigns i would start off
+with this team because the units are cheap but effective.
+
+
+*****************
+* C2.1) Rating  *
+*****************
+
+Weapons...........9 - they have some very good weapons ,
+                      like the bomb bays, nuclear ballistics
+                      missiles, lasers and alot more. They all
+                      are very effective and you can upgrade
+                      them about 50 times which is good but
+                      takes alot of reseaching time, but thats
+                      a small price to pay for what you get
+                      out of it.
+Buildings.........7 - Some nice buildings that look also they
+                      are all guite small which come in handy
+                      when you only have a small space to work
+                      in. The best defence is prety poor
+                      because it can only hold one weapon but
+                      it pays up by having very high HP. Plus
+                      they have walls which are good and can
+                      take quite a bit of battering , overall
+                      very good and nice.
+units.............9 - very good units, very cheap and
+                      effective and they you alot of choice .
+                      The ED's even have anpibous vehicles
+                      which are very good and again cheap.
+                      There main attack vehicle the kruszchev
+                      is very armoured and can carry and good
+                      load of weapons, again they are cheap
+                      and best of all they are quick to make.
+technolgoys.......8 - Some good technolgys such as the laser
+                      and heavy rockets and cannons make this
+                      team the best . Also you can make the
+                      rockets guided which is useful and there
+                      are a great deal of upgrades for every
+                      weapon . They also have repairers which
+                      are usefull in times of need.
+Total ........33/40 - a good overall team and a good score ,
+                      go them and you will most likley win
+                      (well, i do). Good, cheap, devastating,
+                      nuclear , there is no prblem with this
+                      team it is almost perfect, the best team
+                      in the game from my point of veiw.
+
+(Please remember this is my veiw only, don't get annoyed or
+ angry with me if you think different)
+
+Tunnels?.........YES
+Bridges?.........YES
+
+*****************
+* C2.2) Units   *
+*****************
+
+Gruz - This is a heavy costruction vehicle equipped with frony mounted excavation
+buckets. It is used for constructing building, digging ditches and tunnels, and
+levelling ground.A rear mounted construction module contains most componets needed
+to build important structures. You must always have one of these if you want to
+live. It is the first and only unit you start off with on skirmish mode.
+
+Taiga - This is a heavy transportation vehicle used originally for cutting trees
+in the Taiga forests. The ZK Taiga is currently assigned to hauling containers
+between mines and refineries. A powerful genartor enables add-on systems, such as
+laser weapons, or other equipment to be attached. With these attachments , it is
+often used as a support unit. You start the game with these already reseached.
+These are good for a varitey of things, there good at the start beacuse they can
+have sheild generators and can carry large weapons like the laser while the pamir
+cannot.
+
+Siberia - The Sibera model was designed during adaptation of the ZK series for
+military purposes. The sibera is armoured, but unlike the ZK Taiga, is also fast
+and light. The reduction in weight was possible because the ZT 100 sibera was not
+intended to be used as a transportation unit. The powerful generator remains
+unchanged, enabling the user to attach the usual extra equipment. The ZT series is
+the mainstay of the ED support units. You have to resaech the siberia. I don't
+realy use this much, altough it is faster than the Taiga it is not as strong
+and durable.
+
+Minelayer - After war broke out in 2140, construction began on a vehicle that would
+be able to mine large area in a short time. This led to the development of the
+minelayer. During the development process, however, the scientists luckily stumbled
+across a design for a laser mine detector, which they immediately incorporated into
+the minlayers. This detector finds mines quickly and detonates them from a safe
+distance.You have to reseach the minelayer. These can become very usefull as it only
+takes one to mine a whole area, and if the enemy goes over a mine it will certainly
+do alot of damage.
+
+Boyar - This light, speedy helicopter is used as a supply unit. Its main task is to
+resupply front-line units with ammunition. These are essential in the game as you
+always need to resupply your units or they will be out of ammo and will not fire at
+the enemy. You start of the game with Boyar's already reseached. You don't realy
+need many of these it depends on how many units you have, the more unts you have
+the more of these you will need.
+
+Pamir - The TT model ("Pamir") was developed from the american Abrams M1A1 tank.
+To adapt the design to 22nd Century demands, scientists modified its equipment so
+that one man can operate it. The steering stand is situated inside the chassis right
+beneath the turret, giving the operator better protection. A targeting computer
+installed in the turret controls the firing. Although it isn't a particularly large
+unit, it comes with high-quality armour enabling it to take part in very dangerous
+operations. It can also travel over most types of terrain. Unfortunatly the genertor
+is not powerful enough for a laser weapon.This is the standard unit of the ED army
+and you start of with it from the begining of the game. UIt is not realy very good
+except for its speed and the cannon it can have on. Don't get many of these, i would
+advise you just to reseach the Kruszchev staight away and use them instead.
+
+Kruszchev - An upgrade of the Pamir, HT 400 Kruszchev tanks were constructed as defence
+vehicles. Their to most significant features are low speed and very heavy armour. The ED
+mainly uses them to repulse enemy attacks. Their heavy armour (and boy they have alot of
+it!) makes them extremely resistant and they can inflict appreciable losses on any
+opponent. Its fighting prowess can be tremendously increased by attaching add on
+equipment. You first have to upgrade the Pamir to reseach these beuties. I think these
+are the best things in this game, they are gorgeous and powerfull. Just put on a heavy
+cannon with rockets on top and watch them destroy your enemy. There HP is great and they
+can carry every ED weapons.
+
+Ural - Although the Ural has less armour and strength then the Kruszchev, it makes up
+for its lack of armour with greater firepower. The Ural is the ED's hardest hitting ground
+unit and has two hardpoints for weapons. Often used as a command vehicle, the Ural can
+carry a banner or noise generator and still caryy up to two other weapon systems. Yes it
+is good for its attack power but thats all, its HP is less than harve compared to the
+Kruszchev and there are prety exspensive for an ED unit. It is just better and cheaper to
+get two Kruszchev's than to get one of these.
+
+Caspian - The ED army needed an amphibious vehicle capable of oparating in swamps and f
+looded areas. So they developed the TK101 Caspian from an armoured infantry transporter.
+The transporter bed was replaced with a higly efficient generator, giving it more than
+enough energy to power any special add-ons. On solid ground, the vehicle uses all-wheel
+drive; on water, it is driven by rear and front-mounted propellars, giving it tremendous
+speed and manoeuvrability. The TK101 is lightly armoured. When equipped with a light
+weapons system, it is often deployed in rough terrain as a reconnaissance vehicle.You
+have to reseach the Caspian as you do not start of with it. These are good to play around
+with as they can go neary everywere on a map.The bad point is that they can't have sheild
+generators and cannot have many weapons but on them. O well.
+
+Volga - When the scientists at the Kurtchatov Reseach centre started work on an amphibious
+tank, the first thing they did was reduce the armour. The TL 70 model is the result of
+these experiments, which were partially successful. The TL 70 can operate in water but is
+very slow and cumbersome. So the engineers came up with a better idea - to use it as a
+mobile ballistic rocket launcher. You will first have to reseach and upgrade the Caspian
+before you can reseach the Volga.
+
+Irkutsk - The Irkutsk is a lightly armoured patrol boat used for reconnaissance and
+strike operations. Its main function is battling heavy enemy ships. The unit's enormous
+speed enables it to strike like a cobra and quickly withdraw beyond enemy range. It can
+also defend ships of the Leviathan class. You start off the game with the first version
+of the Irkutsk. Good scouting ship but has lame armour.
+
+Leviathan - This heavily armoured ship id the ED navy's main strike unit . It has an
+extended firing range, meaning that its rockets can hit targets  situated far inland.
+Various upgrades of the leviathan allow it to mount more weapon systems. You first have
+to reseach and upgrade the Ifkutsk before you get the chance to reseach the Leviathan.
+These are realy great if you upgrade them to the best they can go, as they are strong and
+can carry a heavity amount of weapons, bad point, they break your bank acount.
+
+Cossack - This small helicopter, equipped with machine guns, is perfectly suited for
+reconnaissance operation. With its tremendous speed and manoeuvrability, it can easily
+dodge enemy rockets, while its special ammunition helps it destroy light enemy units.
+You need to reseach this. It is avalible to reseach at the start of the game. These
+little things are crap, sorry but they can get destoyed by anythink. They are nippy
+which is good in someways (like running)
+
+Gronzy - Due to heavy losses of MI 106 Cossacks during the early part of the war, ED
+scientists were forced to develop a new helicopter that would be strong enough to
+withstand a direct hit from a surface-to-air-rocket. The needed breakthrough was
+reached when the scientists developed new composite armour. This enabled them to
+construct an assault helicopter, the "Gronzy" with much more armour than the Cossack.
+However, the increase in protection came at the expense of overall flying speed. You
+can get the Gronzy after you have reseached the Cossack. These are farily good but they
+cannot have any 'heavy' weapons, but their good to start of with.
+
+Thor - The Thor is a heavily armoured helicopter used to carry out air raids. Able to
+carry either heavt rocket launchers or bomb bays, the Thor is capable of delivering a
+deadly payload to the enemy. The Thor is also versatile since it can be equipped with
+a container hook. When equipped with a hook, Thors can lift and transport ore containers.
+You have to reseach the gronzy before you can reseach the Thor. These look nicer than the
+Hans and can do juat as good job as well as carry ore containers, good in the late stages
+of the game.
+
+Han - Similar in design to the Thor, the Han is a dedicated heavy weapons platform. The
+Han is much tougher than the Thor and carries more armour. This additional protection
+prevents the Han from using container hooks, but allows it to deliver its deadly payloads
+with a much higher degree of sucess.You first have to reseach and upgrade the Thor before
+you can get the Han. Nearl the same as the thor realy, maybe they have a liitle bit more
+HP, but thats all.
+
+Ukraine (game only, not in skirmish mode) - The Ukraine is a heavy transport craft used
+to ferry units and resouces from mission areas to the main ED base. It can carry up to
+10 units and 5,000 credits simultaneously. You can't make these and you start of the game
+with one of them.
+
+Lenin (game only, not in skirmish mode) - The lenin is a heavy transpot helicopter used
+for hauling ore betwwen transport bases and the space port. You can not build these, or
+control them, they just come and take the ore the the space port automaticly.
+
+Fake units - fake tank units are used by the ED to mask thir numbers and make their
+armies seem larger. These units are basically mockups of tanks and can fool an enemy
+into thinking he faces more opponents than he actually does. I never use these because
+you cannot fool the  computer : ) Good over te internet because you can scare alot of
+your enemys.
+
+---------------
+****************
+* C3)   UCS    *
+****************
+
+FULL NAME : UNITED CIVILISED STATES
+
+This team is very futrastic and very good to. The main part of this army is walking
+vehicles. They have good weapons and good technologys. They even have a telepotation
+machine which is very good. The other good thing is there power because you can run
+power cable type things around your base instead of having power stations everywhere.
+If you don't know what i mean there are like pylons now, they spread power into places
+with no power, if you get me : ) The only bad part about them is that there units are
+very exspensive for what they are.
+
+
+*****************
+* C3.1) Rating  *
+*****************
+
+Weapons...........7 - some good weapons but not a large
+                      variety. These don't have cannons or
+                      lasers. They do have plasma cannons but
+                      these aren't as good as the lasers. The
+                      plasma bomb on the other hand is a great
+                      invension and can destroy even the
+                      tougthest units but crap against a
+                      building.
+Buildings.........9 - This teams has good buildings. The
+                      fortification is the tougthest  thing in
+                      the entire game and can't be destoyed by
+                      a load of nuclear bombs plus it can hold
+                      4 weapons at a time making it another
+                      record breaker in the game. Also you
+                      good add nuclear reactors to their power
+                      statons. Also the can have them power
+                      pylons which talked about before. They
+                      didn't get ten because of the tank
+                      barriers What are them things for ?
+                      Overall Good buildings, thumbs up if you
+                      like to build.
+units.............7 - Their units are'nt great but just quite
+                      good. The main bad thins is the shear
+                      cost of even a little crapy tiger can
+                      cost you more than the ED's entire army
+                      ! Also they are slow and for some reason
+                      none of their units have wheels (ever
+                      noticed that?)
+technolgoys.......9 - The UCS's technolgy is much like the
+                      ED's. But they also have the teleporter
+                      which is very good to get around the map
+                      if you have two bases.
+Total ........32/40 - Just not as good as the ED's but near
+                      the top. The main thing which lets them
+                      down is the cost of their things. In a
+                      game were you have to mine you just
+                      can't get very far even if you mine the
+                      whole map.
+
+(Please remember this is my veiw only, don't get annoyed or
+ angry with me if you think different)
+
+Tunnels?........YES
+Bridges?........YES
+
+
+*****************
+* C3.2) Units   *
+*****************
+
+Mammoth - This versatile, heavy robot is used for building constuction,
+ditch/tunnel digging, and levelling ground. You need to watch your mammoth
+closely as it is very slow and has a hard time evading enimes. This is just
+the same as the ED's Gruz , they are very important so don't loose them. You
+will start of with one on most missions and on the skirmish mode. Remember
+protect it well don't let it die young : )
+
+Tiger - This is the basic robot of the UCS army. With good armour and the
+capability to hold various weapons, the tiger is fast off the assembly line
+and can cause trouble to opposing forces in large numbers. Its weak spot is
+low resistance against projectile weapons.
+Well thses are ok against pamirs and small stuff but later in the game they
+will die. They cannot carry generators so if the ED's come with lasers and you
+have a host of these, well your pretty f**ked .
+
+Spider - This 6-legged chassis can support equipment add-ons, making it a favorite
+support unit in the UCS army. The spider chassis can also be equiped with a shield
+generator to give it good protection against energy weapons. Its weak spot is poor
+armour against weapons such as rockets and cannons. These are like the taiga. You
+can get them at the start of the game, they can have sheild generators and can carry
+plasma cannons, use them.
+
+Panther - A 2-legged chassis deployed as a main striking force, the Pnather packs a
+real wallop with its ability to carry heavy weapon systems and sheilds. The greater
+the amount of armour on this unit does take away from its speed but the panther just
+plods along, killing all in its way. A nice strong unit and probally the best unit to
+use if you go the UCS. not as dear as the Jaguar and it doesn't take 20 years for it
+to make .
+
+Jaguar - This 2-legged chassis, a modified version of the panther, is eguiped with an
+add on weapon system. This add on weapon system allows for greater damage as the jaguar
+can lay down twice the amount of firepower of the Panther. Due to the extra equipment
+and armour on the unit, it takes alot longer to make, beleave me, you will probaly only
+make about 10 of them a game! Also its prety slow. Go for the Panther its better, faster
+and easier to make, by the time you make one of these you will have 3 panthers made.
+
+Minelayer - A caterpillar vehicle deployed either for mine-laying or quickly clearing
+large mined areas,it can locate and detonate enemy mines at a distance. This is due
+to an electromagnetic feild detector connected to a radio transmitter. The rear-mounted
+mine bay can quickly lay mines over an entire battlefield. Basic models carry a maximum
+of 10 mines , each of which can destroy an enemy vehicle. Higly effective i must say,
+are these, a good defense is to have a large minefield in front of your base. They can
+destroy the toughest of enemys, but the LC are not effected by the mines due to there
+floating vehicles, good against ED.
+
+--------------
+**************
+* C4)   LC   *
+**************
+
+FULL NAME : LUNAR CORPORATION
+
+A very futuristic team that went to live on the moon, They consist mainly of floating
+vehicles, so no boats. There units are fairly low cost. They have the usual cannons,
+along with some weird ones such as the electro cannon and the sonic cannon, also they
+have a weather changing system. The main advantige of these guys is they can build
+anywhere that you have explored, good for the mining. The units aren't that strong but
+they have two units which are probally the best in the game, explanied more below.
+
+
+*****************
+* C4.1) Rating  *
+*****************
+
+Weapons...........6 - Well these weapons are completely
+                      different compared to the other teams
+                      ones (except the rockets) The have some
+                      type of sonic thing which has no effect
+                      on anythink unless you put it on the
+                      thunderer were it beats the crap out of
+                      any living thing. These do have weapons
+                      but they don't seem to harm anythink much
+                      But just customize the weapons and you will
+                      soon find some firepoer in them.
+Buildings.........6 - There buildings are strange and the
+                      power plants are impossible to use. You
+                      have to build giant battaries and little
+                      solar panels around a giant genartor,
+                      what the hell is going on, are the
+                      enviromently friendly to the earth
+                      because the not pumping out gas, its
+                      going to explode and disintergrate
+                      anyway so why don't they just use gas
+                      ,ahhh ! Also there walls stop nothing as
+                      you just destroy one of the generators
+                      and the whole laser wall goes out. On to
+                      the good point, they only have one base
+                      which builds civilian and military units
+                      plus it hold 4 guns , why isn't this
+                      there defence, is good enough. They do have
+                      some good buildings, not many...
+units.............7 - most of them are crap, what else can i say
+                      except they have one realy good, no two
+                      realy good units, the thunderer with the
+                      sonic cannons on is one of the best weapons
+                      in the game and the test vehicle which fires
+                      out a strange blue blob
+technolgoys.......7 - you can't get repairers like the other
+                      team and you can't build tunnels or have
+                      any fancy giant bombs which is not very
+                      nice. The good point is they have a
+                      weather changing system but again that
+                      is crap because all it doas is maybe
+                      send down a few drops of rain .
+Total ........31/40 - only go against these, don't go them. O
+                      yes one important thing they can build
+                      anywere which is realy good . Maybe i
+                      can give them an extra couple of marks
+                      for that ,
+
+(Please remember this is my veiw only, don't get annoyed or
+ angry with me if you think different)
+
+Tunnels?........NO
+Bridges?........NO
+
+*****************
+* C3.2) Units   *
+*****************
+
+
+
+                            (D)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+-------------------TIPS ON BEING THE BEST--------------------
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Here are some useful hints to make the game easier.
+
+* At the start of each game , try and think of a strategy to use,
+  you either concentrate all your reseach on offensive stuff, like
+  units if you want to attack the enemy at the start or you go for
+  the deffensive things like buildings and repair technolgys if you
+  want to attack the enemy later.
+* If you have hard or multipe enemy i would avise you to build up your
+  defence first. Then later when you are fully armed you can attack them
+  without worring to much about your base.
+* Always protect your powerplants, if they get destroyed its very hard
+  to get going again.
+* Always  keep your builders (applies only for UCS and ED) protected.
+* Explore the map quickly and get to the biggest mine feilds before
+  the enemy does.
+* Don't get destroyed !
+* Always watch your money and keep abit spare incase of an emergancy.
+* remember that the UCS and ED can build tunnels, keep that in mind in
+  the case of an emergancy
+* the enemy can get down your tunnels so don't let the enemy see you
+  go down because the will chase after you. (fuuny to watch though)
+
+                            (E)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+----------------------------FAQ------------------------------
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+If you want to ask ant other questions email me at greatdane3k@yahoo.co.uk ,
+you should get a reply in the next to days of sending it. Will you also put
+the subject as Earth 2150 please, thanks.
+
+Q: Can i build a tunnel entrance starting from under ground ?
+A: Yes you can start to build a tunnel from the underground, this is usefull
+to know and at the start i did not realise it. Just build a building like you
+normaly do and it will start to build it underground. Also the tunnel entrance
+does not need a powerplant to run so you con go up straight away.
+
+Q: Who do you think is the best team ?
+A: I think all of the teams are good in different ways. But i would say that
+in my persenal veiw that the ED are the best because they have a good lay out
+of weaponsand units. They are also good/quick miners which can make alot of differance.
+They do not have the best technolgy but the lasers and the rocket launchers together
+pack a good punch.
+
+Q: What do you think is the worst team ?
+A: I think that the worst team in this game is... nobody, there all good. Well truly
+i would probably say the LC because the have no hire powered weapons such as nuclear
+ bombs and thier power system is very annoying with all the solar pannels and batterys,
+its not worth it. But o the missions at the start they are good because you have one
+very good unit, but they need it , plus they can't get any boats, the defence is crap,
+they don't  have tunnels and their wall is easily destroyed, the only real good point
+about them is that they can build anywere. Which i must say does come in handy.
+
+Q: Is there any cheats for the game ?
+A: Yes there is and i have put them below. I don't know if they work or not because
+i hate cheating on this game, it seems to spoil the fun of destroying the enemy in an
+act of rage and insanity, why use cheats, there is no point there is no unit limit so
+you don't need good units if you build thousands of them. But for people who take the
+joy out of life there arecheats below in section F.
+
+Q: What is the best unit in the game ?
+A: Now thats a hard one. all of the units are very good in some way. And i cannot pick
+an absolute favorite or best. But i can for each team. I would say the ED best unit is
+the Ural with 2 nuclear ballistic rocket launchers on the back of it. If not that probally
+the Kruszchev because that has more armour than the Ural. Also it is good with a double
+heavy cannon and rocket launchers on top of that. For the UCS i think the jaguar with
+rocket launchers and a plasma cannon on it is good, also the Dragon is very good with
+bombs or rockets on it.For the LC i think the only two good things they have is the
+Crion which is some big secret thing which fires out a large blob which instantly
+destoyers alot of units. And the thunderer with a sonic cannon on can be very devastating
+if it hits units without sheilds on.
+
+                            (F)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+---------------------------CHEATS----------------------------
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Here are the earth 1250 cheats i know. If anybody knows anymore please email me and
+tell me and i will put them on.
+
+First press ENTER during the game, then type in : I_wanna_cheat. Next hold the left
+SHIFT and 0 on the keypad (right side of the keyboard) and press ENTER(the one on the
+right side of the keyboard) at the same time. Finally hit ENTER, type in one of the
+following cheats and hit ENTER again.
+
+NOTE : these cheats have not been tested, i don't cheat and refuse to test them so
+       they might not work
+
+x-mas_pack.......................Full repair and reload ammo
+firework.........................Mines
+i_love_this_game*................Give*CR
+i_hate_limits*...................Set*unit CR limit
+einstein 1.......................Fast explore on
+the_hammer_of_thor...............Kills all enemys
+massacre.........................Kills all objects
+see_you_next_life................Destroy selected unit
+hasta_la_vista_enemigos..........Destroy all viible units
+bad_time_bad_plac................Damage all units
+eagle_eye........................see all
+let_be_darkness..................Fog
+no_one_hides.....................See all units
+no_more_secrets..................Full map
+armageddon.......................Meteor shower
+
+* - put i number instead of the *.
+
+                           (G)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+-------------------------CREDITS-----------------------------
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+David Wilson (greatdane3k) - the only maker of this guide will help from
+the Earth 2150 booklet
+SSI - the makers of the great game of Earth 2150 make a second Earth 2150
+guys !
+email me at greatdane3k@yahoo.co.uk
+You Guys for reading this guide
+Copyright © 2000-2002 David Wilson
+
+Restore Page
