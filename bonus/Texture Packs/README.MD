@@ -2,12 +2,12 @@
 
 ## ED
 
-![](/ED/ED Steel.jpg)
-![](/ED/ED Camouflage)
-![](/ED/ED Laser)
+![](/ED/ED%20Steel.jpg)
+![](/ED/ED%20Camouflage.jpg)
+![](/ED/ED%20Laser.jpg)
 
 ## LC
 
-![](/LC/LC Laser Red.jpg)
-![](/LC/LC Laser Green.jpg)
-![](/LC/LC Laser Yellow.jpg)
+![](/LC/LC%20Laser%20Red.jpg)
+![](/LC/LC%20Laser%20Green.jpg)
+![](/LC/LC%20Laser%20Yellow.jpg)
