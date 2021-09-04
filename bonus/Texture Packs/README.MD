@@ -1,4 +1,4 @@
-## Instalation
+## Installation
 
 1. For WD Files, simply create a new folder in the root of the game directory called "CustomWDFiles" and place them in there.
 2. For .tex files, create a new folder in the root of the game directory called "Textures" and place them in there.
