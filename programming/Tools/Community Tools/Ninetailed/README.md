@@ -38,6 +38,6 @@ This is a proof-of-concept that turns TEX files into PNG images. Requires PIL: `
 
 Don't actually use this. Other modders have done this better, I just independently reversed the format to satisfy my own curiosity.
 
-Credit: Ninetailed
-Web Source: https://ninetailed.net/reverse-engineering-earth-2150.html
-Git Source: https://git.ninetailed.net/terrana/earth-2150
+* Credit: Ninetailed
+* Web Source: https://ninetailed.net/reverse-engineering-earth-2150.html
+* Git Source: https://git.ninetailed.net/terrana/earth-2150
