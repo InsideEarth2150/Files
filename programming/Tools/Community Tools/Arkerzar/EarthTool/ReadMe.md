@@ -14,5 +14,5 @@ Download current release and run `EarthTool.exe --help` for available options.
 
 Or build it yourself.
 
-Credit: Arkerzar
-Git Source: https://github.com/Arkezar/EarthTool
+* Credit: Arkerzar
+* Git Source: https://github.com/Arkezar/EarthTool
