@@ -1,0 +1,35 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<title>FindResource function</title>
+</head>
+
+<body>
+
+<p><a href="../object/index.htm">object</a> - <a href="../commandobject/index.htm">commandobject</a>
+- <a href="../unit/index.htm">unit</a> - <a href="../tank/index.htm">tank</a> - <a href="index.htm">harvester</a></p>
+
+<hr>
+
+<pre><big>int FindResource()</big></pre>
+
+<p><strong>Scope</strong>: private</p>
+
+<p><strong>Parameters</strong><br>
+none</p>
+
+<p><strong>Return values</strong><br>
+True if some point with resurces were found, false otherwise.</p>
+
+<p><strong>Description</strong><br>
+This function is used to search for closest point with resources. If such a point were
+found then function returns true, point is stored in static variable and can be obtained
+with functions <strong>GetFoundResourceX</strong>, <strong>GetFoundResourceY</strong> and
+<strong>GetFoundResourceZ</strong>.<br>
+Search is performed on the whole level (without fog).</p>
+
+<p><strong>See also</strong><br>
+<a href="GetFoundResourceX.htm">GetFoundResourceX</a>, <a href="GetFoundResourceY.htm">GetFoundResourceY</a>, <a href="GetFoundResourceZ.htm">GetFoundResourceZ</a></p>
+</body>
+</html>

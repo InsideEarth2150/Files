@@ -1,0 +1,295 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<title>unit object </title>
+</head>
+
+<body>
+
+<p><a href="../index.htm">Index</a>&nbsp;&nbsp;&nbsp; <a href="../main/hierarchy.htm">Objects
+hierarchy</a> </p>
+
+<hr>
+
+<p><big><strong>unit</strong> object</big></p>
+
+<pre>object
+ +-- commandobject
+      +-- unit
+</pre>
+
+<p><big>Description</big></p>
+
+<p>Object <strong>unit</strong> is base object for units of different types (like tanks,
+builders, harvesters etc.). This object implements functions common for all types of
+units.<br>
+Usually functions which are returning pointer to objects are returning <strong>unit</strong>
+type (at least in objects derived from <strong>unit</strong>).<br>
+<strong>Unit</strong> is not base type for user unit scripts. You should use particular
+objects like <strong>civil</strong>, <strong>tank</strong>, <strong>repairer</strong> etc.</p>
+
+<p><big>Functions</big></p>
+
+<pre>
+int  <a href="GetIFF.htm">GetIFF</a>()
+int  <a href="GetIFFNumber.htm">GetIFFNumber</a>()
+int  <a
+href="IsBuilding.htm">IsBuilding</a>()
+int  <a href="IsLandTarget.htm">IsLandTarget</a>()
+int  <a
+href="IsLandUnit.htm">IsLandUnit</a>()
+int  <a href="IsHelicopter.htm">IsHelicopter</a>()
+int  <a
+href="IsBuilder.htm">IsBuilder</a>()
+int  <a href="IsCarrier.htm">IsCarrier</a>()
+int  <a
+href="IsHarvester.htm">IsHarvester</a>()
+int  <a href="IsRepairer.htm">IsRepairer</a>()
+int  <a
+href="IsSapper.htm">IsSapper</a>()
+int  <a href="IsSupplier.htm">IsSupplier</a>()
+int  <a href="IsTransporter.htm">IsTransporter</a>()
+int  <a
+href="IsPassive.htm">IsPassive</a>()
+int  <a href="GetIBuildingType.htm">GetBuildingType</a>()
+void <a
+href="CallFreeze.htm">CallFreeze</a>(int nFreezeTicks)
+int  <a href="IsFroozen.htm">IsFroozen</a>()
+void <a
+href="NextCommand.htm">NextCommand</a>(int nPrevCommandStatus)
+int  <a
+href="HaveEmptyCall.htm">HaveEmptyCall</a>()
+int  <a href="GetSideColor.htm">GetSideColor</a>()
+int  <a
+href="GetPlayerSideColor.htm">GetPlayerSideColor</a>()
+int  <a href="IsBlackFog.htm">IsBlackFog</a>(int nX, int nY, int nZ)
+int  <a
+href="IsResourceInPoint.htm">IsResourceInPoint</a>(int nX, int nY, int nZ)
+int  <a
+href="GetResourcesCount.htm">GetResourcesCount</a>(int nX, int nY, int nZ)
+int  <a
+href="IsContainerInPoint.htm">IsContainerInPoint</a>(int nX, int nY, int nZ)
+int  <a
+href="IsEnemy.htm">IsEnemy</a>(unit uTarget)
+int  <a href="IsNeutral.htm">IsNeutral</a>(unit uTarget)
+int  <a
+href="IsAlliance.htm">IsAlliance</a>(unit uTarget)
+int  <a href="IsVisible.htm">IsVisible</a>(unit uTarget)
+int  <a
+href="GetWorldLeft.htm">GetWorldLeft</a>()
+int  <a href="GetWorldTop.htm">GetWorldTop</a>()
+int  <a
+href="GetWorldRight.htm">GetWorldRight</a>()
+int  <a href="GetWorldBottom.htm">GetWorldBottom</a>()
+int  <a
+href="DistanceTo.htm">DistanceTo</a>(int nX, int nY)
+void <a href="CallMoveToPoint.htm">CallMoveToPoint</a>(int nX, int nY, int nZ)
+void <a
+href="CallMoveToPointForce.htm">CallMoveToPointForce</a>(int nX, int nY, int nZ)
+void <a
+href="CallMoveAndLandToPointForce.htm">CallMoveAndLandToPointForce</a>(int nX, int nY, int nZ)
+void <a
+href="CallMoveLowToPoint.htm">CallMoveLowToPoint</a>(int nX, int nY, int nZ)
+void <a
+href="CallMoveLowToPointForce.htm">CallMoveLowToPointForce</a>(int nX, int nY, int nZ)
+void <a
+href="CallMoveOneField.htm">CallMoveOneField</a>(int nX, int nY, int nZ)
+void <a
+href="CallMoveCountFields.htm">CallMoveCountFields</a>(int nX, int nY, int nZ, int nCount)
+void <a
+href="CallMoveInsideObject.htm">CallMoveInsideObject</a>(unit uTarget)
+void <a
+href="CallStopMoving.htm">CallStopMoving</a>()
+void <a href="CallLand.htm">CallLand</a>()
+void <a
+href="CallTurnToAngle.htm">CallTurnToAngle</a>(int nAlphaAngle)
+void <a
+href="CallGetFlyingSupply.htm">CallGetFlyingSupply</a>()
+int  <a href="IsMoving.htm">IsMoving</a>()
+int  <a
+href="IsGettingSupply.htm">IsGettingSupply</a>()
+int  <a href="IsLive.htm">IsLive</a>()
+int  <a
+href="IsDisabled.htm">IsDisabled</a>()
+int  <a href="GetHP.htm">GetHP</a>()
+int  <a
+href="GetMaxHP.htm">GetMaxHP</a>()
+int  <a href="GetLocationX.htm">GetLocationX</a>()
+int  <a
+href="GetLocationY.htm">GetLocationY</a>()
+int  <a href="GetLocationZ.htm">GetLocationZ</a>()
+int  <a
+href="GetAlphaAngle.htm">GetAlphaAngle</a>()
+int  <a href="GetMoveLocationX.htm">GetMoveLocationX</a>()
+int  <a
+href="GetMoveLocationY.htm">GetMoveLocationY</a>()
+int  <a href="GetMoveLocationZ.htm">GetMoveLocationZ</a>()
+int  <a
+href="GetMoveLocationAngle.htm">GetMoveLocationAngle</a>()
+void <a href="SetLightsMode.htm">SetLightsMode</a>(int nMode)
+int  <a
+href="IsFreePoint.htm">IsFreePoint</a>(int nX, int nY, int nZ)
+int  <a href="IsOnGround.htm">IsOnGround</a>()
+void <a
+href="SendSupplyRequest.htm">SendSupplyRequest</a>()
+unit <a href="GetAttacker.htm">GetAttacker</a>()
+void <a
+href="ClearAttacker.htm">ClearAttacker</a>()
+void <a href="SetTargetObject.htm">SetTargetObject</a>(unit uTarget)
+int  <a
+href="GetAngleToTarget.htm">GetAngleToTarget</a>(unit uTarget)
+int  <a
+href="GetAngleToPoint.htm">GetAngleToPoint</a>(int nX, int nY, int nZ)
+unit <a
+href="FindTarget.htm">FindTarget</a>(int nTargetType, int nSideSelection, int nKindSelection, int nDestinationSelection)
+void <a
+href="BuildTargetsArray.htm">BuildTargetsArray</a>(int nTargetType, int nSideSelection, int nDestinationSelection)
+void <a
+href="BuildTargetsArray_1.htm">BuildTargetsArray</a>(int nTargetType, int nSideSelection, int nDestinationSelection, int nXFrom, int nYFrom, int nZFrom, int nRange)
+void <a
+href="SortFoundTargetsArray.htm">SortFoundTargetsArray</a>()
+int  <a
+href="GetTargetsCount.htm">GetTargetsCount</a>()
+int  <a href="StartEnumTargetsArray.htm">StartEnumTargetsArray</a>()
+unit <a
+href="GetNextTarget.htm">GetNextTarget</a>()
+void <a href="EndEnumTargetsArray.htm">EndEnumTargetsArray</a>()
+unit <a
+href="FindClosestEnemy.htm">FindClosestEnemy</a>()
+unit <a href="FindClosestEnemyEx.htm">FindClosestEnemyEx</a>(int nTargetType)
+unit <a
+href="FindClosestEnemyUnitOrBuilding.htm">FindClosestEnemyUnitOrBuilding</a>(int nTargetType)
+int  <a
+href="FindArtefact.htm">FindArtefact</a>(int nArtefactMask)
+int  <a
+href="FindArtefact_1.htm">FindArtefact</a>(int nArtefactMask, int nFindRange)
+int  <a
+href="GetFoundArtefactX.htm">GetFoundArtefactX</a>()
+int  <a
+href="GetFoundArtefactY.htm">GetFoundArtefactY</a>()
+int  <a
+href="GetFoundArtefactZ.htm">GetFoundArtefactZ</a>()
+void <a
+href="AllowScriptWithdraw.htm">AllowScriptWithdraw</a>(int nAllow)
+int  <a
+href="IsAllowingWithdraw.htm">IsAllowingWithdraw</a>()
+int  <a
+href="FindSupplyCenterPlace.htm">FindSupplyCenterPlace</a>()
+int  <a
+href="GetFoundSupplyCenterPlaceX.htm">GetFoundSupplyCenterPlaceX</a>()
+int  <a
+href="GetFoundSupplyCenterPlaceY.htm">GetFoundSupplyCenterPlaceY</a>()
+int  <a
+href="GetFoundSupplyCenterPlaceZ.htm">GetFoundSupplyCenterPlaceZ</a>()
+int  <a
+href="GetCurrSupplyCenterAssemblyPositionX.htm">GetCurrSupplyCenterAssemblyPositionX</a>()
+int  <a
+href="GetCurrSupplyCenterAssemblyPositionY.htm">GetCurrSupplyCenterAssemblyPositionY</a>()
+int  <a
+href="GetCurrSupplyCenterAssemblyPositionZ.htm">GetCurrSupplyCenterAssemblyPositionZ</a>()
+int  <a
+href="IsOnWorkingSupplyCenter.htm">IsOnWorkingSupplyCenter</a>()
+int  <a
+href="IsWorkingSupplyCenterInPoint.htm">IsWorkingSupplyCenterInPoint</a>(int nX, int nY, int nZ)
+int  <a
+href="HaveBanner.htm">HaveBanner</a>()
+int  <a href="HaveRadar.htm">HaveRadar</a>()
+int  <a
+href="HaveScreamer.htm">HaveScreamer</a>()
+int  <a href="HaveShadow.htm">HaveShadow</a>()
+void <a
+href="MessageTalk.htm">MessageTalk</a>(int nMessageNum)
+int  <a href="InPlatoon.htm">InPlatoon</a>()
+int  <a
+href="IsPlayer.htm">IsPlayer</a>(int nIFFNum)
+int  <a
+href="CanBeTransported.htm">CanBeTransported</a>()
+int  <a
+href="IsTransported.htm">IsTransported</a>()
+int  <a
+href="SetUnitName.htm">SetUnitName</a>(string sName)
+string <a
+href="GetUnitName.htm">GetUnitName</a>()
+</pre>
+
+<p><big>Events</big></p>
+
+<pre>
+int  <a href="OnHit.htm">OnHit</a>()
+int  <a href="OnCannonLowAmmo.htm">OnCannonLowAmmo</a>(int nCannonNum)
+int  <a
+href="OnCannonNoAmmo.htm">OnCannonNoAmmo</a>(int nCannonNum)
+int  <a
+href="OnCannonFoundTarget.htm">OnCannonFoundTarget</a>(int nCannonNum, unit uTarget)
+int  <a
+href="OnCannonEndFire.htm">OnCannonEndFire</a>(int nCannonNum, int nEndStatus)
+int  <a
+href="OnFreezeForSupplyOrRepair.htm">OnFreezeForSupplyOrRepair</a>(int nFreezeTicks)
+int  <a
+href="OnTransportedToNewWorld.htm">OnTransportedToNewWorld</a>()
+int  <a
+href="OnConvertedToNewPlayer.htm">OnConvertedToNewPlayer</a>()
+int  <a
+href="OnKilledSupplyCenterBuilding.htm">OnKilledSupplyCenterBuilding</a>()
+</pre>
+
+<p><big>Enums</big></p>
+
+<p>Building types: </p>
+
+<pre>buildingNormal
+buildingPowerPlant
+buildingSolarPower
+buildingEnergyTransmitter
+buildingEnergyBattery
+buildingBase
+buildingFactory
+buildingWaterBase
+buildingSupplyCenter
+buildingMine
+buildingRefinery
+buildingResourceTransportBase
+buildingResearchCenter
+buildingHeadquater
+buildingBBC
+buildingPlasmaControl
+buildingTeleport
+buildingSDIDefence
+buildingShadowTower
+buildingRadar
+buildingSilos
+buildingPlasmaCannon
+buildingGenerator
+buildingSolarBattery
+buildingWeatherControl
+buildingTunnelEntrance
+buildingCopula
+buildingLaserWall
+buildingSpaceStation
+buildingTransportCenter
+buildingRecycleCenter [MP]
+buildingMinningRefinery
+buildingMinningResourceTransportBase
+buildingBaseFactory (LC)
+buildingBadRaceBuilding
+buildingWaitingForCopulaOpen
+buildingTransportedDown
+
+<p>Artefact masks [MP]: </p>
+
+<pre>
+artefactRegenerateHP
+artefactRegenerateTemperature
+artefactRegenerateElectronics
+artefactRegenerateShield
+artefactRegenerateExternalAmmo
+artefactRegenerateEnergyAmmo
+artefactGiveShieldGenerator
+artefactGiveMoney
+artefactShowMap
+artefactSpecialAI
+</pre>
+</pre>
+</body>
+</html>

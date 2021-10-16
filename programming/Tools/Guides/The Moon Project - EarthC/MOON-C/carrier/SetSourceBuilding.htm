@@ -1,0 +1,37 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<title>SetSourceBuilding function</title>
+</head>
+
+<body>
+
+<p><a href="../object/index.htm">object</a> - <a href="../commandobject/index.htm">commandobject</a>
+- <a href="../unit/index.htm">unit</a> - <a href="../tank/index.htm">tank</a> - <a href="index.htm">carrier</a></p>
+
+<hr>
+
+<pre><big>int SetSourceBuilding(unit uBuilding)</big></pre>
+
+<p><strong>Scope</strong>: private</p>
+
+<p><strong>Parameters</strong><br>
+uBuilding - pointer to Mine building, null if we are clearing this pointer.</p>
+
+<p><strong>Return values</strong><br>
+True if uBuilding were set as source building, false otherwise.</p>
+
+<p><strong>Description</strong><br>
+This function is used to set Mine building from which we will be now get containers. Point
+&quot;Take&quot; of this building can be obtainer by functions
+<strong>GetSourceBuildingTakeLocationX</strong>, <strong>GetSourceBuildingTakeLocationY</strong> and
+<strong>GetSourceBuildingTakeLocationZ</strong>.<br>
+If we will call this function second time with the same parameters then point
+&quot;Take&quot; will change (not for flying Harvester).</p>
+
+<p><strong>See also</strong><br>
+<a href="GetSourceBuilding.htm">GetSourceBuilding</a>, <a href="GetSourceBuildingTakeLocationX.htm">GetSourceBuildingTakeLocationX</a>,
+<a href="GetSourceBuildingTakeLocationY.htm">GetSourceBuildingTakeLocationY</a>, <a href="GetSourceBuildingTakeLocationZ.htm">GetSourceBuildingTakeLocationZ</a></p>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<title>tank object </title>
+</head>
+
+<body>
+
+<p><a href="../index.htm">Index</a>&nbsp;&nbsp;&nbsp; <a href="../main/hierarchy.htm">Objects
+hierarchy</a> </p>
+
+<hr>
+
+<p><big><strong>tank</strong> object</big></p>
+
+<pre>object
+ +-- commandobject
+      +-- unit
+           +-- tank
+</pre>
+
+<p><big>Description</big></p>
+
+<p>Scripts of type <strong>tank</strong> are attached to units with some cannons. If
+chasis have attached cannon and radar it have <strong>tank</strong> type. If chasis have
+attached cannon and special equipment (like carrier or repairer) it have type depend on
+special equipment type (<strong>carrier</strong> or <strong>repairer</strong>). If special
+chasis (like sapper chasis) have attached cannon it still have special chasis type (<strong>sapper</strong>).</p>
+
+<p><big>Functions</big></p>
+
+<pre>
+int  <a href="GetCannonsCount.htm">GetCannonsCount</a>()
+int  <a
+href="GetCannonType.htm">GetCannonType</a>(int nCannonNum)
+int  <a
+href="GetCannonShootRange.htm">GetCannonShootRange</a>(int nCannonNum)
+int  <a
+href="GetCannonSightRange.htm">GetCannonSightRange</a>(int nCannonNum)
+void <a
+href="CannonFireToTarget.htm">CannonFireToTarget</a>(int nCannonNum, unit uTarget, int nShootCount)
+void <a
+href="CannonFireGround.htm">CannonFireGround</a>(int nCannonNum, int nX, int nY, int nZ, int nShootCount)
+int  <a
+href="IsTargetInCannonRange.htm">IsTargetInCannonRange</a>(int nCannonNum, unit uTarget)
+int  <a
+href="IsPointInCannonRange.htm">IsPointInCannonRange</a>(int nCannonNum, int nX, int nY, int nZ)
+void <a
+href="SetCannonFireMode.htm">SetCannonFireMode</a>(int nCannonNum, int nFireMode)
+void <a
+href="StopCannonFire.htm">StopCannonFire</a>(int nCannonNum)
+int  <a
+href="CannonRequiresSupply.htm">CannonRequiresSupply</a>(int nCannonNum)
+int  <a
+href="CanCannonFireToAircraft.htm">CanCannonFireToAircraft</a>(int nCannonNum)
+int  <a
+href="CanCannonFireToGround.htm">CanCannonFireToGround</a>(int nCannonNum)
+int  <a
+href="GetCannonAngleToTarget.htm">GetCannonAngleToTarget</a>(int nCannonNum, unit uTarget)
+int  <a
+href="GetCannonAngleToPoint.htm">GetCannonAngleToPoint</a>(int nCannonNum, int nX, int nY, int nZ)
+int  <a
+href="CanCannonTurnFullAngle.htm">CanCannonTurnFullAngle</a>(int nCannonNum)
+int  <a
+href="HaveCannonsMissingAmmo.htm">HaveCannonsMissingAmmo</a>()
+int  <a
+href="GetAmmoCount.htm">GetAmmoCount</a>()
+</pre>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<title>CannonRequiresSupply function</title>
+</head>
+
+<body>
+
+<p><a href="../object/index.htm">object</a> - <a href="../commandobject/index.htm">commandobject</a>
+- <a href="../unit/index.htm">unit</a> - <a href="index.htm">tank</a></p>
+
+<hr>
+
+<pre><big>int CannonRequiresSupply(int nCannonNum)</big></pre>
+
+<p><strong>Scope</strong>: public</p>
+
+<p><strong>Parameters</strong><br>
+nCannonNum - cannon number.</p>
+
+<p><strong>Return values</strong><br>
+True if cannon number nCannonNum requires external ammo supply, false otherwise.</p>
+
+<p><strong>Description</strong><br>
+Result of this function dosn't depend on current ammo count.<br>
+If nCannonNum == -1 then function returns true if at least one of cannons requires
+external ammo supply.</p>
+
+<p><strong>See also</strong><br>
+<a href="../unit/SendSupplyRequest.htm">SendSupplyRequest</a></p>
+</body>
+</html>

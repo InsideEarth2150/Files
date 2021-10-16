@@ -1,0 +1,52 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Commands</title>
+</head>
+
+<body>
+
+<p><a href="../index.htm">Index</a>&nbsp;&nbsp;&nbsp; <a href="earthclanguage.htm">EarthC
+language</a></p>
+
+<hr>
+
+<p><b>Commands</b></p>
+<p>Command structure&nbsp;</p>
+<p><b>command</b> CommandName(parameters) [<b>button</b> EnumName|&quot;ButtonName&quot;] [<b>description</b>
+&quot;DescriptionText&quot;] [<b>priority</b> number] [<b>hotkey</b>] [<b>hidden</b>]</p>
+<p><b>{</b></p>
+<p>&nbsp;&nbsp;&nbsp; [...]</p>
+<p><b>}</b></p>
+<p>CommandName - see <a href="../commandobject/index.htm">CommandObject</a>&nbsp;</p>
+<p>priority - controls order of buttons in game interface (0-255)<br>
+hotkey - use hotkey for this button<br>
+hidden - don't display button on interface</p>
+<p><i>examples</i></p>
+<p><i>command Attack(unit uTarget) button &quot;Attack&quot;<br>
+{<br>
+}</i></p>
+<p><i>//-----------------------------------------------------------</i></p>
+<p>&nbsp;</p>
+<p>    enum m_eLights<br>
+    {<br>
+&quot;Lights AUTO&quot;,<br>
+&quot;Lights ON&quot;,<br>
+&quot;Lights OFF&quot;,<br>
+multi:<br>
+&quot;Lights Mode&quot;<br>
+    }</p>
+<p>[...]</p>
+<p>//depend on value of m_eLight one of Lights auto(0)/on(1)/off(2) or
+mode(enything else then 0,1 or 2) will be displayed on game pannel.</p>
+<p>    command SetLights(int nMode) button m_eLights priority 204<br>
+    {<br>
+    }<br>
+</p>
+
+</body>
+
+</html>

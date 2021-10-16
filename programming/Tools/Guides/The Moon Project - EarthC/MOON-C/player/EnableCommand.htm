@@ -1,0 +1,39 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<title>EnableCommand function [MP]</title>
+</head>
+
+<body>
+
+<p><a href="../object/index.htm">object</a> - <a href="index.htm">player</a>
+
+<hr>
+
+<pre><big>void EnableCommand(int nCommand, int bEnable)</big></pre>
+
+<p><strong>Scope</strong>: public</p>
+
+<p><strong>Parameters</strong><br>
+nCommand - command number (see enums in player).<br>
+bEnable - true if enabling command nCommand, false if this command is disabled.
+</p>
+
+<p><strong>Return values</strong><br>
+none
+</p>
+
+<p><strong>Description</strong><br>
+[MP]<br>
+This function is used to enable or disable commands. If some command is disabled then this command
+isn't provided to user (is not displayed in pannel) so can not be executed. This function works only for
+human player not for AI players.<br>
+By default all commands are enabled, exept [MP] commands: commandSoldBuildingSold and commandBuildingSpyPlayer*.
+</p>
+
+<p><strong>See also</strong><br>
+</p>
+
+</body>
+</html>

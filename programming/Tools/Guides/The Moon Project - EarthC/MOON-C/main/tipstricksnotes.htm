@@ -1,0 +1,127 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Tips&Tricks&various notes</title>
+</head>
+
+<body>
+
+<p><a href="../index.htm">Index</a></p>
+
+<hr>
+
+<h3><font color="#000000">Tips&amp;Tricks&amp;various notes</font></h3>
+<p><font color="#000000">If you want to create your own scripts you should read
+this notes to avoid some surprices, artifacts or game crashes.</font></p>
+<ul>
+  <li><b>&quot;The Moon Project&quot;:<br>
+    &nbsp;</b>New functions and objects from &quot;The Moon Project&quot;
+    included in this documentation are signed with symbol [MP].<br>
+    Compiled scripts for &quot;The Moon Project&quot; must have extension
+    'ecoMP' not 'eco'.<br>
+    In The Moon Project there is a special research "RES_MISSION_PACK1_ONLY" 
+    used as a preceding research for all "MP" researches. This research must 
+    be added at begin of game for each player to enable new "MP" researches.<br>
+    Some scripts for The Moon Project are located in f.e. 'MP-ED' or 'MP' directory, but
+    compiled scripts must be copied to the same directories as for other scripts.</li>
+  <li>EarthC and other tools in this package were designed for developer use
+    only. It means that these tools are not very error-resistant. For example
+    you can write script which is compiled without errors but game will crash
+    when this script is used. Before writing your own scripts you should study
+    included script sources, and if some bugs in your scripts occurs try to
+    compare it with our scripts - some functions must be used in some specific
+    order or with other functions.</li>
+  <li>Scripts compiled with included EarthCMP.exe tool are working only with The Moon
+    Project version 1.0 and can crash while used in older game versions.</li>
+  <li>Test your scripts well before you publish them. We are not resposible for
+    psychical/physical damages made by your buggy scripts :).</li>
+  <li>Don't be surprised if you will see some strange comments in scripts. It's
+    Polish. (And BTW sorry for poor and buggy English in this
+    documentation)&nbsp;</li>
+  <li><font color="#000000">Don't copy this documentation to The Moon Project game
+    directory. At startup Earth scans this directory and read headers of all
+    files, so doing this operation with large amount of files takes a lot of
+    time.</font></li>
+  <li><font color="#000000">Use WDCreator tool - its comfortable becouse it creates
+    one file instead of many files in many directories.</font></li>
+  <li><font color="#000000">In multiplayer game all missing files like
+    non-standard levels, user banners or scripts (gametypes, AI players, unit
+    scripts) are downloaded before game starts (in session configuration
+    dialog). If such a file is placed in '*.wd' file then whole '*.wd' file is
+    downloaded. So don't make too big '*.wd' files (f.e. don't put 100
+    multiplayer levels into single file) becouse it take too much time to
+    download it.</font></li>
+  <li><font color="#000000">You don't need to copy '*.wd' files to 'WDFiles'
+    directory. It's good idea to copy this files to f.e. 'CustomWDFiles'
+    directory.</font></li>
+  <li><font color="#000000">If you will modify some standard Earth files (like
+    levels or scripts) save it under other name (otherwise it will cover
+    standard file from '*.wd' file).</font></li>
+  <li><font color="#000000">Many EarthC functions uses values called
+    &quot;tick&quot;. Tick is one game simulation step. For default game speed
+    game makes 20 ticks per second (5 for minimum, 50 for maximum game
+    speed).&nbsp; But if game have a lot to calculate and a lot to display (f.e.
+    battle displayed in maximum zoom out) than (especially at maximum game
+    speed) game can slow down and make leess ticks per second than it should do.</font></li>
+  <li><font color="#000000">File names for mission levels should start with char
+    '!' (f.e. !234.lnd, !234.mis). Such a files are not displayed in
+    skirmish/multiplayer configuration dialog. To load such a file in editor
+    (which normally don't display files begining with '!') use console command
+    'editor.singleplayer 1' (in editor press Enter, type: editor.singleplayer 1
+    and press Enter again). If you are bored doing it all the time you can put
+    this line in file 'autoexec.con' in main The Moon Project directory. Using
+    'editor.singleplayer' command you can open all levels from standard Earth
+    campaigns.</font></li>
+  <li><font color="#000000">Use LangC and &quot;translate*&quot; strings in
+    scripts instead of putting plain text. It looks much better, don't cost a
+    lot of time and your scripts can be easy translated to other language.</font></li>
+  <li><font color="#000000">Scripts of all types are stored in saves, and when
+    save is loaded game uses scripts stored in save file. So if you want for
+    example to test changed mission script you must start this mission again (choose it in
+    choose mission dialog). If you have changed campaign script you must start
+    the whole campaign again.</font></li>
+  <li><font color="#000000">You can debug your scripts. To do that use script
+    function TraceD with parameter string or number. To see this traces you must
+    turn on display with console command: 'display.show 1'.</font></li>
+  <li><font color="#000000">Game type scripts (for skirmish and multiplayer),
+    are stored in two directories. Scripts for multiplayer games are stored in
+    'Scripts\Gametypes' directory and scripts for skirmish are stored in
+    'Scripts\Gametypes\single' directory.</font></li>
+  <li><font color="#000000">In unit and mission scripts delete any reference
+    members (of type unit, tank, etc) in command Uninitialize. It's very
+    important, otherwise game can crash after exiting campaign mission.)</font></li>
+  <li>
+Your campaign script name must begin with CampaignED (CampaignUCS, CampaignLC or
+    TutorialED, TutorialUCS, TutorialLC for tutorial campaigns)&nbsp; f.e.: CampaignEDSomeExtension.ecoMP
+    (or TutorialEDSomeExt.ecoMP for tutorial) and must
+be placed in directory Scripts\Campaigns\ED (or UCS, LC for other races). If
+your campaign name (in first line of script) have name f.e. &quot;translateCampaignEDMySuperCamp&quot;
+then you can add string with &quot;Description&quot; suffix (&quot;translateCampaignEDMySuperCampDescription&quot;) -
+with short description of your campaign. This string will be displayed in the text
+box in 'Choose campaign' dialog.</li>
+  <li>If you have added some custom campaign (or tutorial) you should see
+    'Choose campaign' dialog after pressing 'Start new game' or 'Tutorial'
+    button. If this dialog is not displayed (and game start immediately) it
+    means that your campaign script have bad file name, or is placed in bad
+    directory.</li>
+  <li>If you are testing your campaign you can use console command
+    'ai.allmissions 1' - then you can select any mission in 'Choose mission'
+    dialog.</li>
+  <li>In any campaign mission you can use console command 'world.endmission 1' -
+    then button 'End mission' appears immediatelly.</li>
+  <li>You can switch to any AI player in game to see if it works properly and as
+    you expect it to work. To do this type console command 'ai.local n' where n
+    is an 'IFF number' (slot in which player is placed - numbered from 0 to 15).
+    In this case you must first enable cheats with command 'I_wanna_cheat'. Note
+    that you will play as AI player but AI in this player is still functioning
+    and doing its job.</li>
+  <li>Note that you can't add any custom levels or scripts to Demo version of
+    The Moon Project.</li>
+</ul>
+
+</body>
+
+</html>

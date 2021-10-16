@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<title>transporter object [MP]</title>
+</head>
+
+<body>
+
+<p><a href="../index.htm">Index</a>&nbsp;&nbsp;&nbsp; <a href="../main/hierarchy.htm">Objects
+hierarchy</a> </p>
+
+<hr>
+
+<p><big><strong>transporter</strong> object [MP]</big></p>
+
+<pre>object
+ +-- commandobject
+      +-- unit
+           +-- tank
+                +-- transporter
+</pre>
+
+<p><big>Description</big></p>
+
+<p>Scripts of type <strong>transporter</strong> are attached to Transporter
+units - used to transport other objects.</p>
+
+<p><big>Functions</big></p>
+
+<pre>
+void <a href="CallGetUnit.htm">CallGetUnit</a>(int nX, int nY, int nZ)
+void <a href="CallPutUnit.htm">CallPutUnit</a>(int nX, int nY, int nZ)
+void <a href="CallDropUnit.htm">CallDropUnit</a>(int nX, int nY, int nZ)
+int <a href="IsGettingUnit.htm">IsGettingUnit</a>()
+int <a href="IsPuttingUnit.htm">IsPuttingUnit</a>()
+int <a href="IsDroppingUnit.htm">IsDroppingUnit</a>()
+int <a href="HaveUnitOnHook.htm">HaveUnitOnHook</a>()
+int <a href="CanPutUnitFromHookInPoint.htm">CanPutUnitFromHookInPoint</a>(int nX, int nY, int nZ)
+int <a href="IsUnitToGetInPoint.htm">IsUnitToGetInPoint</a>(int nX, int nY, int nZ)
+int <a href="FindFreePlaceToPutUnitFromHook.htm">FindFreePlaceToPutUnitFromHook</a>(int nX, int nY, int nZ, int nSearchRange)
+int <a href="GetFoundFreePlaceToPutUnitX.htm">GetFoundFreePlaceToPutUnitX</a>()
+int <a href="GetFoundFreePlaceToPutUnitY.htm">GetFoundFreePlaceToPutUnitY</a>()
+int <a href="GetFoundFreePlaceToPutUnitZ.htm">GetFoundFreePlaceToPutUnitZ</a>()
+void <a href="SetAutoGetPoint.htm">SetAutoGetPoint</a>(int nX, int nY, int nZ)
+void <a href="InvalidateAutoGetPoint.htm">InvalidateAutoGetPoint</a>()
+void <a href="SetAutoPutPoint.htm">SetAutoPutPoint</a>(int nX, int nY, int nZ)
+void <a href="InvalidateAutoPutPoint.htm">InvalidateAutoPutPoint</a>()
+</pre>
+</body>
+</html>

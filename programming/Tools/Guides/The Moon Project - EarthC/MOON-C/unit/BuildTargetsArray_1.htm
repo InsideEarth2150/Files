@@ -1,0 +1,63 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<title>BuildTargetsArray function [MP]</title>
+</head>
+
+<body>
+
+<p><a href="../object/index.htm">object</a> - <a href="../commandobject/index.htm">commandobject</a>
+- <a href="index.htm">unit</a> </p>
+
+<hr>
+
+<pre><big>void BuildTargetsArray(int nTargetType, int nSideSelection, int nDestinationSelection, int nXFrom, int nYFrom, int nZFrom, int nRange)</big></pre>
+
+<p><strong>Scope</strong>: private</p>
+
+<p><strong>Parameters</strong><br>
+nTargetType - combination of following values:<br>
+findTargetWaterUnit - ship,<br>
+findTargetFlyingUnit - flying unit,<br>
+findTargetNormalUnit - land unit,<br>
+findTargetBuildingUnit - building,<br>
+findTargetAnyUnit - any of aboves,<br>
+findTargetWall - wall ED or UCS,<br>
+findTargetBuildingRuin - building ruin.<br>
+nSideSelection - one of following values:<br>
+findEnemyUnit - enemy unit,<br>
+findAllyUnit - ally unit,<br>
+findNeutralUnit - neutral unit,<br>
+findOurUnit - our unit.<br>
+nDestinationSelection - combination of following values:<br>
+findDestinationCivilUnit - civil unit,<br>
+findDestinationArmedUnit - armored unit,<br>
+findDestinationRepairerUnit - Repairer,<br>
+findDestinationSupplyUnit - Supplier,<br>
+findDestinationAnyUnit - any of aboves.<br>
+nXFrom - X-coordinate of point where to search for targets.<br>
+nYFrom - Y-coordinate of point where to search for targets.<br>
+nZFrom - Z-coordinate of point where to search for targets.<br>
+nRange - range of searching for targets.</p>
+
+<p><strong>Return values</strong><br>
+none</p>
+
+<p><strong>Description</strong><br>
+[MP]<br>
+This function is used for finding objects in units range of view by conditions put in
+parameters.<br>
+All found objects are stored in internal static table. Count of found objects can be
+obtained by function <strong>GetTargetsCount</strong>,
+and particular units can be obtained by call <strong>StartEnumTargetsArray</strong>, next <strong>GetNextTarget</strong>
+to get following objects and <strong>EndEnumTargetsArray</strong> at end of using results.<br>
+This function searches for targets in range nRange from point (nXFrom, nYFrom,
+nZFrom).</p>
+
+<p><strong>See also</strong><br>
+<a href="FindTarget.htm">FindTarget</a>, <a href="SortFoundTargetsArray.htm">SortFoundTargetsArray</a>,
+<a href="GetTargetsCount.htm">GetTargetsCount</a>, <a href="StartEnumTargetsArray.htm">StartEnumTargetsArray</a>,
+<a href="GetNextTarget.htm">GetNextTarget</a>, <a href="EndEnumTargetsArray.htm">EndEnumTargetsArray</a></p>
+</body>
+</html>

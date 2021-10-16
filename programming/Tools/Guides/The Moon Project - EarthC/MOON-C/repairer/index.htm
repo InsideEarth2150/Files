@@ -1,0 +1,82 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<title>repairer object </title>
+</head>
+
+<body>
+
+<p><a href="../index.htm">Index</a>&nbsp;&nbsp;&nbsp; <a href="../main/hierarchy.htm">Objects
+hierarchy</a> </p>
+
+<hr>
+
+<p><big><strong>repairer</strong> object</big></p>
+
+<pre>object
+ +-- commandobject
+      +-- unit
+           +-- tank
+                +-- repairer
+</pre>
+
+<p><big>Description</big></p>
+
+<p>Scripts of type <strong>repairer</strong> are attached to Repaier units (chasis with
+repairer equipment).</p>
+
+<p><big>Functions</big></p>
+
+<pre>
+void <a href="CallRepair.htm">CallRepair</a>(unit uTarget)
+void <a
+href="CallConvert.htm">CallConvert</a>(unit uTarget)
+void <a href="CallRepaint.htm">CallRepaint</a>(unit uTarget)
+void <a
+href="CallUpgrade.htm">CallUpgrade</a>(unit uTarget)
+int  <a href="IsRepairing.htm">IsRepairing</a>()
+int  <a
+href="IsConverting.htm">IsConverting</a>()
+int  <a href="IsRepainting.htm">IsRepainting</a>()
+int  <a
+href="IsUpgrading.htm">IsUpgrading</a>()
+int  <a href="CanRepairTanks.htm">CanRepairTanks</a>()
+int  <a
+href="CanRepairBuildings.htm">CanRepairBuildings</a>()
+int  <a href="CanConvertTanks.htm">CanConvertTanks</a>()
+int  <a
+href="CanConvertBuildings.htm">CanConvertBuildings</a>()
+int  <a href="CanConvertHealthyTanks.htm">CanConvertHealthyTanks</a>()
+int  <a
+href="CanConvertHealthyBuildings.htm">CanConvertHealthyBuildings</a>()
+int  <a href="CanRepaint.htm">CanRepaint</a>()
+int  <a
+href="CanUpgrade.htm">CanUpgrade</a>()
+int  <a href="CanBeRepaired.htm">CanBeRepaired</a>(unit uTarget)
+int  <a
+href="CanBeConverted.htm">CanBeConverted</a>(unit uTarget)
+int  <a
+href="CanBeRepainted.htm">CanBeRepainted</a>(unit uTarget)
+int  <a href="CanBeUpgraded.htm">CanBeUpgraded</a>(unit uTarget)
+int  <a
+href="IsInGoodPointForOperateOnTarget.htm">IsInGoodPointForOperateOnTarget</a>(unit uTarget)
+int  <a
+href="IsGoodPointForOperateOnTarget.htm">IsGoodPointForOperateOnTarget</a>(unit uTarget, int nX, int nY, int nZ)
+int  <a
+href="GetOperateOnTargetLocationX.htm">GetOperateOnTargetLocationX</a>(unit uTarget)
+int  <a
+href="GetOperateOnTargetLocationY.htm">GetOperateOnTargetLocationY</a>(unit uTarget)
+int  <a
+href="GetOperateOnTargetLocationZ.htm">GetOperateOnTargetLocationZ</a>(unit uTarget)
+int  <a
+href="SetRepaintSideColor.htm">SetRepaintSideColor</a>(int nSideColor)
+void <a
+href="SetUpgradeWeapons.htm">SetUpgradeWeapons</a>(int nNotUpgrade)
+void <a
+href="SetUpgradeChasis.htm">SetUpgradeChasis</a>(int nNotUpgrade)
+void <a
+href="SetUpgradeShield.htm">SetUpgradeShield</a>(int nNotUpgrade)
+</pre>
+</body>
+</html>
