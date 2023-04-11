@@ -1,10 +1,10 @@
 REGEDIT4
 
 [HKEY_CURRENT_USER\Software\Topware\Earth 2150\BaseGame\Network\EarthNet]
-"AddressIP"="\"EarthNet - IE\"\"netserver.insideearth.info\"\"EarthNet - IE - VPN\"\"vpnnetserver.insideearth.info\""
+"AddressIP"="\"EarthNet - IE - VPN\"\"vpnnetserver.insideearth.info\""
 
 [HKEY_CURRENT_USER\Software\Topware\TheMoonProject\BaseGame\Network\EarthNet]
-"AddressIP"="\"EarthNet - IE\"\"netserver.insideearth.info\"\"EarthNet - IE - VPN\"\"vpnnetserver.insideearth.info\""
+"AddressIP"="\"EarthNet - IE - VPN\"\"vpnnetserver.insideearth.info\""
 
 [HKEY_CURRENT_USER\Software\Reality Pump\LostSouls\BaseGame\Network\EarthNet]
-"AddressIP"="\"EarthNet - IE\"\"netserver.insideearth.info\"\"EarthNet - IE - VPN\"\"vpnnetserver.insideearth.info\""
+"AddressIP"="\"EarthNet - IE - VPN\"\"vpnnetserver.insideearth.info\""
