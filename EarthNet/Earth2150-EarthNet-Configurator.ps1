@@ -96,8 +96,15 @@ Set-Service -Name $ServiceName -StartupType $StartupTypeNew
 write-host "  '$ServiceName' with startup setting '$StartupTypeOLD' successfully updated to '$StartupTypeNEW'."
 };
 
+##
 write-host ""
+Write-Host ">>>> Press any key when you have connected to IE-VPN <<<<"
+$null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown');
+write-host "== Checking DNS resolution and connectivity to EarthNet =="
+ping vpnnetserver.insideearth.info
+
+write-host " = Configuration & Tests Completed"
 write-host ""
-Write-Host "If no errors (in RED) shown above, all configurations completed successfully"
+Write-Host ">>>> If no errors (in RED) shown above, all configurations completed successfully <<<<"
 Write-Host -NoNewLine 'Press any key to close.';
 $null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown');
