@@ -5,8 +5,10 @@ if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
   Break
 }
 
-powershell -c "New-NetFirewallRule -DisplayName "DirectPlay_Earth2150_TCP" -Direction Inbound -Action Allow -EdgeTraversalPolicy Allow -Protocol TCP -LocalPort 47624,2300-2400"
-powershell -c "New-NetFirewallRule -DisplayName "DirectPlay_Earth2150_UDP" -Direction Inbound -Action Allow -EdgeTraversalPolicy Allow -Protocol UDP -LocalPort 47624,2300-2400"
+powershell -c "New-NetFirewallRule -DisplayName "Earth2150_DirectPlay__TCP" -Direction Inbound -Action Allow -Protocol TCP -LocalPort 47624,2300-2400"
+powershell -c "New-NetFirewallRule -DisplayName "Earth2150_DirectPlay__UDP" -Direction Inbound -Action Allow -Protocol UDP -LocalPort 47624,2300-2400"
+##powershell -c "New-NetFirewallRule -DisplayName "Earth2150_DirectPlay_TCP" -Direction Inbound -Action Allow -EdgeTraversalPolicy Allow -Protocol TCP -LocalPort 47624,2300-2400"
+##powershell -c "New-NetFirewallRule -DisplayName "Earth2150_DirectPlay_UDP" -Direction Inbound -Action Allow -EdgeTraversalPolicy Allow -Protocol UDP -LocalPort 47624,2300-2400"
 ##powershell -c "Get-NetConnectionProfile -InterfaceAlias "Ethernet*" | Set-NetConnectionProfile -NetworkCategory Private"
 ##powershell -c "Get-NetConnectionProfile -InterfaceAlias "OpenVPN*" | Set-NetConnectionProfile -NetworkCategory Private"
 powershell -c "Stop-Service -Name upnphost"
