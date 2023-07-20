@@ -85,7 +85,7 @@ $StartupTypeOLD = "Automatic"
 $StartupTypeNew = "Disabled"
 
 write-host "  Checking for '$ServiceName' startup setting now...."
-if ($(Get-Service -Name $ServiceName | Where { $_.Status -eq $StartupTypeNEW }))
+if ($(Get-Service -Name $ServiceName | Where { $_.starttype -eq $StartupTypeNEW }))
 {
 write-host "  '$ServiceName' with startup setting '$StartupTypeNew' found, not adjusting"
 }
@@ -99,5 +99,5 @@ write-host "  '$ServiceName' with startup setting '$StartupTypeOLD' successfully
 write-host ""
 write-host ""
 Write-Host "If no errors (in RED) shown above, all configurations completed successfully"
-Write-Host "This window will close in 5 seconds"
-Start-Sleep -Seconds 5
+Write-Host -NoNewLine 'Press any key to close.';
+$null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown');
