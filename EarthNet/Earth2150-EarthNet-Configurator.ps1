@@ -19,7 +19,7 @@ write-host "  Firewall rule for '$firewallRuleNameTCP' with '$firewallProtocolTC
 else
 {
 write-host "  Firewall rule for '$firewallRuleNameTCP' with '$firewallProtocolTCP' Protocol does not already exist, creating new rule now..."
-New-NetFirewallRule -DisplayName $firewallRuleNameTCP -Direction Inbound -Profile Domain,Private,Public -Action Allow -Protocol $firewallProtocolTCP -LocalPort 47624,2300-2400 -RemoteAddress Any
+New-NetFirewallRule -DisplayName $firewallRuleNameTCP -Direction Inbound -Profile Domain,Private,Public -Action Allow -Protocol $firewallProtocolTCP -LocalPort $firewallProtocolTCP -RemoteAddress Any
 write-host "  Firewall rule for '$firewallRuleNameTCP' with '$firewallProtocolTCP' Protocol created successfully"
 };
 
@@ -35,7 +35,7 @@ write-host "  Firewall rule for '$firewallRuleNameUDP' with '$firewallProtocolUD
 else
 {
 write-host "  Firewall rule for '$firewallRuleNameUDP' with '$firewallProtocolUDP' Protocol does not already exist, creating new rule now..."
-New-NetFirewallRule -DisplayName $firewallRuleNameUDP -Direction Inbound -Profile Domain,Private,Public -Action Allow -Protocol $firewallProtocolUDP -LocalPort 47624,2300-2400 -RemoteAddress Any
+New-NetFirewallRule -DisplayName $firewallRuleNameUDP -Direction Inbound -Profile Domain,Private,Public -Action Allow -Protocol $firewallProtocolUDP -LocalPort $firewallPortUDP -RemoteAddress Any
 write-host "  Firewall rule for '$firewallRuleNameUDP' with '$firewallProtocolUDP' Protocol created successfully"
 };
 
