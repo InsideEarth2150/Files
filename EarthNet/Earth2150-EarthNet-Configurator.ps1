@@ -6,9 +6,9 @@ if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
 }
 
 ##
-write-host "== Checking Firewall Rules=="
+write-host "== Checking Firewall Rules =="
 $firewallProtocolTCP = "TCP"
-$firewallPortTCP = "47624,2300-2400"
+$firewallPortTCP = @('47624','2300-2400')
 $firewallRuleNameTCP = "Earth2150_DirectPlay_TCP"
 
 write-host "  Checking for '$firewallRuleNameTCP' firewall rule with protocol '$firewallProtocolTCP' now...."
@@ -19,12 +19,12 @@ write-host "  Firewall rule for '$firewallRuleNameTCP' with '$firewallProtocolTC
 else
 {
 write-host "  Firewall rule for '$firewallRuleNameTCP' with '$firewallProtocolTCP' Protocol does not already exist, creating new rule now..."
-New-NetFirewallRule -DisplayName $firewallRuleNameTCP -Direction Inbound -Profile Domain,Private,Public -Action Allow -Protocol $firewallProtocolTCP -LocalPort $firewallProtocolTCP -RemoteAddress Any
+New-NetFirewallRule -DisplayName $firewallRuleNameTCP -Direction Inbound -Profile Domain,Private,Public -Action Allow -Protocol $firewallProtocolTCP -LocalPort $firewallPortTCP -RemoteAddress Any
 write-host "  Firewall rule for '$firewallRuleNameTCP' with '$firewallProtocolTCP' Protocol created successfully"
 };
 
 $firewallProtocolUDP = "UDP"
-$firewallPortUDP = "47624,2300-2400"
+$firewallPortUDP = @('47624','2300-2400')
 $firewallRuleNameUDP = "Earth2150_DirectPlay_UDP"
 
 write-host "  Checking for '$firewallRuleNameUDP' firewall rule with protocol '$firewallProtocolUDP' now...."
