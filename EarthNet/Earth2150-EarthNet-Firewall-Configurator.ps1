@@ -55,3 +55,17 @@ else
     New-NetFirewallRule -DisplayName $firewallRuleNameICMP -Direction Inbound -Action Allow -Protocol ICMPv4 -RemoteAddress 10.21.0.0/23
     write-host "  Firewall rule for '$firewallRuleNameICMP' created successfully"
 }
+
+# DirectPlay Helper Firewall Rule
+$firewallRuleNameDPS = "Allow dplaysvr Inbound"
+write-host "  Checking for '$firewallRuleNameDPS' firewall rule now...."
+if ($(Get-NetFirewallRule -DisplayName $firewallRuleNameDPS }))
+{
+    write-host "  Firewall rule for '$firewallRuleNameDPS' already exists, not creating new rule"
+}
+else
+{
+    write-host "  Firewall rule for '$firewallRuleNameDPS' does not already exist, creating new rule now..."
+    New-NetFirewallRule -DisplayName $firewallRuleNameDPS -Direction Inbound -Program "%windir%\syswow64\dplaysvr.exe" -Profile Private,Public -Action Allow
+    write-host "  Firewall rule for '$firewallRuleNameDPS' created successfully"
+}
