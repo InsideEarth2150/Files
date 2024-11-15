@@ -59,7 +59,7 @@ else
 # DirectPlay Helper Firewall Rule
 $firewallRuleNameDPS = "Allow dplaysvr Inbound"
 write-host "  Checking for '$firewallRuleNameDPS' firewall rule now...."
-if ($(Get-NetFirewallRule -DisplayName $firewallRuleNameDPS }))
+if ($(Get-NetFirewallRule -DisplayName $firewallRuleNameDPS ))
 {
     write-host "  Firewall rule for '$firewallRuleNameDPS' already exists, not creating new rule"
 }
