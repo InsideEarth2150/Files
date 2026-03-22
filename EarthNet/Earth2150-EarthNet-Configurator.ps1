@@ -42,8 +42,8 @@ else
     write-host "  Firewall rule for '$firewallRuleNameUDP' with '$firewallProtocolUDP' Protocol created successfully"
 }
 
-# ICMP Firewall Rule for 10.21.0.0/23
-$firewallRuleNameICMP = "EarthNet_Allow_ICMP_from_10.21.0.0/23"
+# ICMP Firewall Rule for 10.21.50.0/24
+$firewallRuleNameICMP = "EarthNet_Allow_ICMP_from_10.21.50.0/24"
 write-host "  Checking for '$firewallRuleNameICMP' firewall rule now...."
 if ($(Get-NetFirewallRule -DisplayName $firewallRuleNameICMP | Where { $_.Protocol -eq "ICMPv4" }))
 {
@@ -52,7 +52,7 @@ if ($(Get-NetFirewallRule -DisplayName $firewallRuleNameICMP | Where { $_.Protoc
 else
 {
     write-host "  Firewall rule for '$firewallRuleNameICMP' does not already exist, creating new rule now..."
-    New-NetFirewallRule -DisplayName $firewallRuleNameICMP -Direction Inbound -Action Allow -Protocol ICMPv4 -RemoteAddress 10.21.0.0/23
+    New-NetFirewallRule -DisplayName $firewallRuleNameICMP -Direction Inbound -Action Allow -Protocol ICMPv4 -RemoteAddress 10.21.50.0/24
     write-host "  Firewall rule for '$firewallRuleNameICMP' created successfully"
 }
 
