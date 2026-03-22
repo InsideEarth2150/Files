@@ -132,7 +132,7 @@ write-host ""
 Write-Host ">>>> Press any key when you have connected to IE-VPN <<<<"
 $null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown');
 write-host "== Checking DNS resolution and connectivity to EarthNet =="
-ping vpnnetserver.insideearth.info
+ping vpnnetserver2150.insideearth.info
 
 write-host " = Configuration & Tests Completed"
 write-host ""
