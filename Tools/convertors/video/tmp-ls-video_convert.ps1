@@ -75,7 +75,10 @@ if (-not (Test-Path $ffmpegPath)) {
 Write-Host 
 Write-Host "[3/4] Testing Hardware Acceleration Support..." -ForegroundColor Cyan
 
-$supportedEncoders = & $ffmpegPath -encoders 2>$null
+$oldPreference = $ErrorActionPreference
+$ErrorActionPreference = 'SilentlyContinue'
+$supportedEncoders = & $ffmpegPath -hide_banner -encoders 2>$null
+$ErrorActionPreference = $oldPreference
 $gpus = Get-CimInstance Win32_VideoController | Select-Object -ExpandProperty Name
 $selectedEncoder = $null
 $selectedPixelFormat = "yuv420p"
