@@ -4,6 +4,8 @@
 
 # Requires -Version 5.1
 
+clear
+
 # Display Banner First
 Write-Host 
 Write-Host "===================================================" -ForegroundColor Green
