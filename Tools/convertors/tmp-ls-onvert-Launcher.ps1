@@ -2,13 +2,8 @@
 #    InsideEARTH - Earth 2150 TMP/LS Converter Launcher
 # =====================================================================
 
-$scriptDir = $PSScriptRoot
-if (-not $scriptDir) {
-    $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
-}
-if (-not $scriptDir) { 
-    $scriptDir = Get-Location 
-}
+# Always default to current working directory where the script was invoked from
+$scriptDir = (Get-Location).Path
 
 # 1. Validate Game Root Directory
 $validExe1 = Join-Path $scriptDir "TheMoonProject.exe"
@@ -16,8 +11,8 @@ $validExe2 = Join-Path $scriptDir "LostSouls.exe"
 
 if (-not (Test-Path $validExe1) -and -not (Test-Path $validExe2)) {
     Write-Host "Error: Neither 'TheMoonProject.exe' nor 'LostSouls.exe' was found in this folder." -ForegroundColor Red
-    Write-Host "Current checked path: $scriptDir" -ForegroundColor Yellow
-    Write-Host "Please place and run this script from the game root directory." -ForegroundColor Red
+    Write-Host "Current checked folder: $scriptDir" -ForegroundColor Yellow
+    Write-Host "Please run this script or batch file directly from the game root directory." -ForegroundColor Red
     Write-Host
     Read-Host "Press Enter to exit..."
     exit 1
@@ -77,11 +72,15 @@ try {
     exit 1
 }
 
-# 4. Execute Downloaded Converter Script and Pass Game Root Path
+# 4. Execute Downloaded Converter Script inside Subfolder
 Write-Host "Starting $subFolder conversion process..." -ForegroundColor Cyan
 Write-Host
 
-& $targetScriptPath -GameRoot $scriptDir
+Set-Location -Path $targetDir
+& $targetScriptPath
+
+# Return to Root Directory
+Set-Location -Path $scriptDir
 
 Write-Host
 Read-Host "Press Enter to exit..."
