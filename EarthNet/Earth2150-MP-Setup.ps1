@@ -38,7 +38,7 @@ $Repo            = 'InsideEarth2150/Files'
 $Ref             = 'refs/heads/main'
 
 # Construct the formatted registry string for IP checking
-$addressIpFormatted = "`"EarthNet - InsideEARTH`"`"`"$ServerHost`:$IEPort`"`"`"EarthNet - TopWare`"`"`"netserver.earth2150.com:$TWPort`"`""
+$addressIpFormatted = "`"EarthNet - InsideEARTH`"`"$ServerHost`:$IEPort`"`"EarthNet - TopWare`"`"netserver.earth2150.com:$TWPort`"
 
 # Display Banner First
 Write-Host 
