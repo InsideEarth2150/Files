@@ -1,17 +1,4 @@
-# =====================================================================
-#   InsideEARTH - Earth 2150 Levels Downloader
-# =====================================================================
-
 # Requires -Version 5.1
-
-clear
-
-# Display Banner First
-Write-Host 
-Write-Host "===================================================" -ForegroundColor Green
-Write-Host "    InsideEARTH - Earth 2150 Levels Downloader" -ForegroundColor Green
-Write-Host "===================================================" -ForegroundColor Green
-Write-Host
 
 $ErrorActionPreference = 'Stop'
 
@@ -35,6 +22,8 @@ $games = @(
 )
 
 $downloadUrl = "https://github.com/InsideEarth2150/Levels/archive/refs/heads/main.zip"
+$galleryUrl  = "https://insideearth2150.github.io/Levels-Gallery/"
+
 $tempZipPath = Join-Path $env:TEMP "Earth2150_Levels_$(Get-Random).zip"
 $tempExtractPath = Join-Path $env:TEMP "Earth2150_Levels_Extract_$(Get-Random)"
 
@@ -71,24 +60,31 @@ try {
         return
     }
 
-    # Prompt user to select a game without displaying file paths
+    # Prompt user to select an option
     Write-Host "`nFound the following installed games:" -ForegroundColor Green
     for ($i = 0; $i -lt $installedGames.Count; $i++) {
         Write-Host " [$($i + 1)] $($installedGames[$i].Name)"
     }
 
+    # Add space and Option 4 for Levels Gallery
+    Write-Host ""
+    $galleryOptionIndex = $installedGames.Count + 1
+    Write-Host " [$galleryOptionIndex] View Levels Gallery" -ForegroundColor Yellow
+
     $selection = 0
-    if ($installedGames.Count -eq 1) {
-        $selectedIndex = 0
-        Write-Host "`nAuto-selected: $($installedGames[0].Name)" -ForegroundColor Yellow
-    } else {
-        while ($selection -lt 1 -or $selection -gt $installedGames.Count) {
-            $inputVal = Read-Host "`nSelect a game to install levels into (1-$($installedGames.Count))"
-            [int]::TryParse($inputVal, [ref]$selection) | Out-Null
-        }
-        $selectedIndex = $selection - 1
+    while ($selection -lt 1 -or $selection -gt $galleryOptionIndex) {
+        $inputVal = Read-Host "`nSelect an option (1-$galleryOptionIndex)"
+        [int]::TryParse($inputVal, [ref]$selection) | Out-Null
     }
 
+    # Handle Levels Gallery option
+    if ($selection -eq $galleryOptionIndex) {
+        Write-Host "`nOpening Levels Gallery in default browser..." -ForegroundColor Cyan
+        Start-Process $galleryUrl
+        return
+    }
+
+    $selectedIndex = $selection - 1
     $targetGame = $installedGames[$selectedIndex]
     $targetLevelsFolder = Join-Path $targetGame.RootPath "Levels"
 
@@ -130,12 +126,17 @@ catch {
 }
 finally {
     # 3. Cleanup temporary files
-    Write-Host "`nCleaning up temporary files..." -ForegroundColor Cyan
-    if (Test-Path $tempZipPath) {
-        Remove-Item -Path $tempZipPath -Force -ErrorAction SilentlyContinue
+    $hasZip = Test-Path $tempZipPath
+    $hasExt = Test-Path $tempExtractPath
+
+    if ($hasZip -or $hasExt) {
+        Write-Host "`nCleaning up temporary files..." -ForegroundColor Cyan
+        if ($hasZip) {
+            Remove-Item -Path $tempZipPath -Force -ErrorAction SilentlyContinue
+        }
+        if ($hasExt) {
+            Remove-Item -Path $tempExtractPath -Recurse -Force -ErrorAction SilentlyContinue
+        }
+        Write-Host "Cleanup complete." -ForegroundColor Green
     }
-    if (Test-Path $tempExtractPath) {
-        Remove-Item -Path $tempExtractPath -Recurse -Force -ErrorAction SilentlyContinue
-    }
-    Write-Host "Cleanup complete." -ForegroundColor Green
 }
