@@ -104,12 +104,12 @@ if ($InstallOpenVPN) {
         if (Test-Path $ovpnCli) {
             Write-Host " - Importing profile into OpenVPN Connect..." -ForegroundColor Yellow
             
-            # Delete existing profile if present to force clean overwrite
+            # Delete existing profile first and pipe everything to Out-Null
             $profileName = "vpn-2150.insideearth.info [IE-2150-VPN-TCP]"
-            & "$ovpnCli" --delete-profile="$profileName" *>$null
+            & "$ovpnCli" --delete-profile="$profileName" 2>&1 | Out-Null
 
-            # Import profile with all console streams completely suppressed
-            & "$ovpnCli" --import-profile="$ovpnPath" *>$null
+            # Import new profile and completely discard any resulting text
+            & "$ovpnCli" --import-profile="$ovpnPath" 2>&1 | Out-Null
 
             Write-Host " - OpenVPN profile imported successfully." -ForegroundColor Green
         } else {
