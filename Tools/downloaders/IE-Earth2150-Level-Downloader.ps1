@@ -7,7 +7,6 @@
 clear
 
 # Display Banner First
-Write-Host 
 Write-Host "===================================================" -ForegroundColor Green
 Write-Host "    InsideEARTH - Earth 2150 Levels Downloader" -ForegroundColor Green
 Write-Host "===================================================" -ForegroundColor Green
