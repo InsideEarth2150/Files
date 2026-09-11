@@ -99,16 +99,21 @@ if ($InstallOpenVPN) {
         Write-Host " - Downloading OpenVPN profile configuration..." -ForegroundColor Yellow
         Invoke-WebRequest -Uri $ovpnUrl -OutFile $ovpnPath -UseBasicParsing
 
-        # Import into OpenVPN Connect CLI with strict stream suppression
+        # Import into OpenVPN Connect CLI
         $ovpnCli = "${env:ProgramFiles}\OpenVPN Connect\openvpnconnect.exe"
         if (Test-Path $ovpnCli) {
-            Write-Host " - Importing profile into OpenVPN Connect..." -ForegroundColor Yellow
+            Write-Host " - Checking and updating profile in OpenVPN Connect..." -ForegroundColor Yellow
             
-            $profileName = "vpn-2150.insideearth.info [IE-2150-VPN-TCP]"
-            
-            # Wrap execution in assignment to absorb all output handles
-            $null = & "$ovpnCli" --delete-profile="$profileName"
-            $null = & "$ovpnCli" --import-profile="$ovpnPath"
+            # Query existing profiles and look for matching name/ID
+            $profileListJson = & "$ovpnCli" --list-profiles 2>$null | Out-String
+            if ($profileListJson -match '"id":\s*"([^"]+)"') {
+                $existingId = $matches[1]
+                # Remove profile using OpenVPN CLI's --remove-profile flag via cmd /c redirect to capture raw C-level stdout/stderr
+                cmd.exe /c "`"$ovpnCli`" --remove-profile=$existingId >nul 2>&1"
+            }
+
+            # Import new profile and suppress raw stdout/stderr output entirely
+            cmd.exe /c "`"$ovpnCli`" --import-profile=`"$ovpnPath`" >nul 2>&1"
 
             Write-Host " - OpenVPN profile imported successfully." -ForegroundColor Green
         } else {
