@@ -220,7 +220,7 @@ if (-not $needsFwUpdate) {
 # ---------- 4) DirectPlay Handling (Install / Skip / Remove) -----------
 
 Write-Host 
-Write-Host " [4/4] DirectPlay Replacement Installation..." -ForegroundColor Cyan
+Write-Host " [4/4] DirectPlay Handling..." -ForegroundColor Cyan
 
 # Check if DirectPlay replacement DLL is currently registered
 $dpClsidKey = 'HKCU:\Software\Classes\WOW6432Node\CLSID\{286F484D-375E-4458-A272-B138E2F80A6A}'
@@ -240,12 +240,10 @@ if ($env:MP_REMOVE -eq '1') {
         $removeInput = Read-Host " - DirectPlay replacement is already installed. Do you wish to Remove it? (y/N)"
         $Remove = ($removeInput -eq 'y' -or $removeInput -eq 'yes')
         if (-not $Remove) {
-            # User wants to keep the existing installation
             $SkipDP = $true
         }
     } else {
         $installInput = Read-Host " - Do you wish to Install the DirectPlay replacement? (Y/n)"
-        # Default to Yes if user presses Enter or types 'y'/'yes'
         $InstallDP = ($installInput -eq '' -or $installInput -eq 'y' -or $installInput -eq 'yes')
         $SkipDP = (-not $InstallDP)
     }
@@ -258,7 +256,24 @@ if ($Remove) {
         if (Test-Path $parent) { Remove-Item $parent -Recurse -Force; Write-Host " - Removed $($Clsids[$id])" -ForegroundColor Green }
     }
 } elseif ($SkipDP) {
-    Write-Host " - Skipped per selection." -ForegroundColor DarkGray
+    Write-Host " - Replacement skipped." -ForegroundColor DarkGray
+    
+    # Check native Windows DirectPlay Optional Feature as a fallback
+    if (-not $isDpInstalled) {
+        Write-Host " - Checking Windows Optional Feature: DirectPlay..." -ForegroundColor Cyan
+        try {
+            $dpFeature = Get-WindowsOptionalFeature -Online -FeatureName DirectPlay -ErrorAction Stop
+            if ($dpFeature.State -ne 'Enabled') {
+                Write-Host " - DirectPlay feature is disabled. Enabling Windows DirectPlay..." -ForegroundColor Yellow
+                Enable-WindowsOptionalFeature -Online -FeatureName DirectPlay -All -NoRestart | Out-Null
+                Write-Host " - Windows DirectPlay feature enabled successfully." -ForegroundColor Green
+            } else {
+                Write-Host " - Windows DirectPlay feature is already enabled." -ForegroundColor DarkGray
+            }
+        } catch {
+            Write-Host " ! Failed to verify/enable Windows DirectPlay feature: $_" -ForegroundColor Red
+        }
+    }
 } else {
     try {
         New-Item -ItemType Directory -Force -Path $DllDir | Out-Null
