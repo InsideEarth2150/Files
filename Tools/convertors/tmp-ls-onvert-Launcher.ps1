@@ -77,15 +77,11 @@ try {
     exit 1
 }
 
-# 4. Execute Downloaded Converter Script Inside its Subfolder
+# 4. Execute Downloaded Converter Script and Pass Game Root Path
 Write-Host "Starting $subFolder conversion process..." -ForegroundColor Cyan
 Write-Host
 
-Set-Location -Path $targetDir
-& $targetScriptPath
-
-# Return to Root Directory on completion
-Set-Location -Path $scriptDir
+& $targetScriptPath -GameRoot $scriptDir
 
 Write-Host
 Read-Host "Press Enter to exit..."
