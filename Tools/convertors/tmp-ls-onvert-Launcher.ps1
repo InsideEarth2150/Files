@@ -3,7 +3,12 @@
 # =====================================================================
 
 $scriptDir = $PSScriptRoot
-if (-not $scriptDir) { $scriptDir = Get-Location }
+if (-not $scriptDir) {
+    $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
+}
+if (-not $scriptDir) { 
+    $scriptDir = Get-Location 
+}
 
 # 1. Validate Game Root Directory
 $validExe1 = Join-Path $scriptDir "TheMoonProject.exe"
@@ -11,6 +16,7 @@ $validExe2 = Join-Path $scriptDir "LostSouls.exe"
 
 if (-not (Test-Path $validExe1) -and -not (Test-Path $validExe2)) {
     Write-Host "Error: Neither 'TheMoonProject.exe' nor 'LostSouls.exe' was found in this folder." -ForegroundColor Red
+    Write-Host "Current checked path: $scriptDir" -ForegroundColor Yellow
     Write-Host "Please place and run this script from the game root directory." -ForegroundColor Red
     Write-Host
     Read-Host "Press Enter to exit..."
