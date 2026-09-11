@@ -2,6 +2,8 @@
 #   InsideEARTH - Earth 2150 TMP/LS Video Convertor
 # =====================================================================
 
+clear
+
 Write-Host 
 Write-Host " ===================================================" -ForegroundColor Green
 Write-Host "   InsideEARTH - Earth 2150 TMP/LS Video Convertor" -ForegroundColor Green

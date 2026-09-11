@@ -2,6 +2,8 @@
 #   InsideEARTH - Earth 2150 TMP/LS Audio Convertor
 # =====================================================================
 
+clear
+
 # Display Banner First
 Write-Host 
 Write-Host " ===================================================" -ForegroundColor Green
