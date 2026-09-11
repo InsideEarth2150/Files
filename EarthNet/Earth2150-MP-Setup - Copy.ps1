@@ -77,11 +77,6 @@ Write-Host
 Write-Host " [1/4] OpenVPN Setup..." -ForegroundColor Cyan
 if ($InstallOpenVPN) {
     try {
-        # Ensure OpenVPN is not running during profile import
-        Write-Host " - Stopping OpenVPN processes if running..." -ForegroundColor Yellow
-        Stop-Process -Name "openvpnconnect", "openvpn" -Force -ErrorAction SilentlyContinue
-        Start-Sleep -Seconds 1
-
         # Check if OpenVPN Connect is already installed
         $isInstalled = winget list --id OpenVPNTechnologies.OpenVPNConnect --exact 2>$null | Out-String
         if ($isInstalled -match 'OpenVPNConnect') {
@@ -99,11 +94,11 @@ if ($InstallOpenVPN) {
         Write-Host " - Downloading OpenVPN profile configuration..." -ForegroundColor Yellow
         Invoke-WebRequest -Uri $ovpnUrl -OutFile $ovpnPath -UseBasicParsing
 
-        # Import into OpenVPN Connect CLI and suppress JSON output using Out-Null
+        # Import into OpenVPN Connect CLI
         $ovpnCli = "${env:ProgramFiles}\OpenVPN Connect\openvpnconnect.exe"
         if (Test-Path $ovpnCli) {
             Write-Host " - Importing profile into OpenVPN Connect..." -ForegroundColor Yellow
-            Start-Process -FilePath $ovpnCli -ArgumentList "--import-profile=`"$ovpnPath`"" -NoNewWindow -Wait -PassThru | Out-Null
+            Start-Process -FilePath $ovpnCli -ArgumentList "--import-profile=`"$ovpnPath`"" -NoNewWindow -Wait
             Write-Host " - OpenVPN profile imported successfully." -ForegroundColor Green
         } else {
             Write-Host " - Profile downloaded to: $ovpnPath (Import manually in OpenVPN Connect)." -ForegroundColor Yellow
