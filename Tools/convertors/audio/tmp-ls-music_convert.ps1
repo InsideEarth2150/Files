@@ -37,6 +37,8 @@ if (-not (Test-Path $sevenZipExe)) {
 
     Remove-Item -Path $7zZipPath -Force
     Remove-Item -Path $7zExtractPath -Recurse -Force
+} else {
+    Write-Host "7za.exe found locally." -ForegroundColor Green
 }
 
 # ---------- 2) Automatic FFmpeg Downloader & Installer -----------------

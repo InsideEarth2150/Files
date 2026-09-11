@@ -40,11 +40,13 @@ do {
         "1" {
             $subFolder = "Music"
             $scriptName = "tmp-ls-music_convert.ps1"
+            $apiPath    = "Tools/convertors/audio/tmp-ls-music_convert.ps1"
             $downloadUrl = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/convertors/audio/tmp-ls-music_convert.ps1"
         }
         "2" {
             $subFolder = "Video"
             $scriptName = "tmp-ls-video_convert.ps1"
+            $apiPath    = "Tools/convertors/video/tmp-ls-video_convert.ps1"
             $downloadUrl = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/convertors/video/tmp-ls-video_convert.ps1"
         }
         "3" {
@@ -53,38 +55,70 @@ do {
         }
         default {
             Write-Host "Invalid selection. Press Enter to try again..." -ForegroundColor Red
-            Read-Host
+            Start-Sleep -Seconds 2
             continue
         }
     }
 
-    # 3. Target Folder Verification & Script Download
+    # 3. Target Folder Verification & Hash Setup
     $targetDir = Join-Path $scriptDir $subFolder
     if (-not (Test-Path $targetDir)) {
         New-Item -ItemType Directory -Path $targetDir | Out-Null
     }
 
     $targetScriptPath = Join-Path $targetDir $scriptName
+    $hashFileName     = "$([System.IO.Path]::GetFileNameWithoutExtension($scriptName)).sha"
+    $hashPath         = Join-Path $env:TEMP $hashFileName
+    $apiUrl           = "https://api.github.com/repos/InsideEarth2150/Files/commits?path=$apiPath&page=1&per_page=1"
 
-    Write-Host
-    Write-Host "Downloading latest $subFolder script from GitHub..." -ForegroundColor Yellow
-    try {
-        Invoke-WebRequest -Uri $downloadUrl -OutFile $targetScriptPath -UseBasicParsing
-        Write-Host "Download complete: $targetScriptPath" -ForegroundColor Green
-    } catch {
-        Write-Host "Failed to download the script from GitHub: $_" -ForegroundColor Red
-        Read-Host "Press Enter to return to main menu..."
-        continue
+    $needsDownload = $true
+
+    # 4. SHA Comparison & Conditional Download
+    if ((Test-Path $targetScriptPath) -and (Test-Path $hashPath)) {
+        try {
+            $remoteHash = (Invoke-RestMethod -Uri $apiUrl -UseBasicParsing)[0].sha
+            $localHash  = (Get-Content $hashPath -Raw).Trim()
+
+            if ($remoteHash.Trim() -eq $localHash) {
+                $needsDownload = $false
+            }
+        } catch {
+            # Default to running existing file if API rate limit or network check fails
+            $needsDownload = $false
+        }
     }
 
-    # 4. Execute Downloaded Converter Script inside Subfolder
+    if ($needsDownload) {
+        Write-Host
+        Write-Host "Downloading latest $subFolder script from GitHub..." -ForegroundColor Cyan
+        try {
+            Invoke-WebRequest -Uri $downloadUrl -OutFile $targetScriptPath -UseBasicParsing
+            
+            try {
+                $latestHash = (Invoke-RestMethod -Uri $apiUrl -UseBasicParsing)[0].sha
+                Set-Content -Path $hashPath -Value $latestHash -Force
+            } catch {}
+
+            Write-Host "Download complete: $targetScriptPath" -ForegroundColor Green
+        } catch {
+            Write-Host "Failed to download the script from GitHub: $_" -ForegroundColor Red
+            Start-Sleep -Seconds 3
+            continue
+        }
+    } else {
+        Write-Host
+        Write-Host "$subFolder script is up to date." -ForegroundColor Green
+    }
+
+    # 5. Execute Downloaded Converter Script inside Subfolder
     Write-Host "Starting $subFolder conversion process..." -ForegroundColor Cyan
     Write-Host
 
     Set-Location -Path $targetDir
     & $targetScriptPath
 
-    # Prompt user before looping back to main menu
+    # Reset location and prompt before looping back
+    Set-Location -Path $scriptDir
     Write-Host
     Read-Host "Process completed. Press Enter to return to main menu..."
 
