@@ -2,7 +2,6 @@
 #   InsideEARTH - Earth 2150 TMP/LS Video Convertor
 # =====================================================================
 
-# Display Banner First
 Write-Host 
 Write-Host " ===================================================" -ForegroundColor Green
 Write-Host "   InsideEARTH - Earth 2150 TMP/LS Video Convertor" -ForegroundColor Green
@@ -16,7 +15,7 @@ $sevenZipExe = Join-Path $scriptDir "7za.exe"
 
 # ---------- 1) Dynamic 7-Zip CLI Downloader Setup -----------------
 Write-Host 
-Write-Host "[1/3] 7-Zip Prerequisite..." -ForegroundColor Cyan
+Write-Host "[1/4] 7-Zip Prerequisite..." -ForegroundColor Cyan
 if (-not (Test-Path $sevenZipExe)) {
     Write-Host "7-Zip CLI not found. Downloading standalone 7za.exe..." -ForegroundColor Yellow
     $7zUrl = "https://www.7-zip.org/a/7za920.zip"
@@ -43,7 +42,7 @@ if (-not (Test-Path $sevenZipExe)) {
 
 # ---------- 2) Automatic FFmpeg Downloader & Installer -----------------
 Write-Host 
-Write-Host "[2/3] FFmpeg Prerequisite..." -ForegroundColor Cyan
+Write-Host "[2/4] FFmpeg Prerequisite..." -ForegroundColor Cyan
 if (-not (Test-Path $ffmpegPath)) {
     Write-Host "ffmpeg.exe not found. Downloading FFmpeg Essentials (.7z)..." -ForegroundColor Yellow
     $7zUrl = "https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-essentials.7z"
@@ -70,18 +69,54 @@ if (-not (Test-Path $ffmpegPath)) {
     Write-Host "ffmpeg.exe found locally." -ForegroundColor Green
 }
 
-# ---------- 3) Parallel Video Conversion -----------------
+# ---------- 3) Detect GPU Capabilities -----------------
 Write-Host 
-Write-Host "[3/3] Running Parallel Video Conversion..." -ForegroundColor Cyan
+Write-Host "[3/4] Testing Hardware Acceleration Support..." -ForegroundColor Cyan
 
-# Setup "Original" directory
+$supportedEncoders = & $ffmpegPath -encoders 2>$null
+$gpus = Get-CimInstance Win32_VideoController | Select-Object -ExpandProperty Name
+$selectedEncoder = $null
+$selectedPixelFormat = "yuv420p"
+
+$gpuCandidates = @()
+foreach ($gpu in $gpus) {
+    if ($gpu -match "NVIDIA" -and $supportedEncoders -match "h264_nvenc") { $gpuCandidates += "h264_nvenc" }
+    elseif ($gpu -match "AMD|Radeon" -and $supportedEncoders -match "h264_amf") { $gpuCandidates += "h264_amf" }
+    elseif ($gpu -match "Intel" -and $supportedEncoders -match "h264_qsv") { $gpuCandidates += "h264_qsv" }
+}
+
+$dummyOutput = Join-Path $scriptDir "gpu_test.avi"
+$dummyLog = Join-Path $scriptDir "gpu_test.log"
+
+foreach ($candidate in $gpuCandidates) {
+    $testArgs = "-f lavfi -i testsrc=duration=1:size=256x192:rate=15 -vf `"pad=ceil(iw/16)*16:ceil(ih/16)*16`" -c:v $candidate -pix_fmt yuv420p -f avi -y `"$dummyOutput`""
+    $p = Start-Process -FilePath $ffmpegPath -ArgumentList $testArgs -NoNewWindow -Wait -PassThru -RedirectStandardError $dummyLog
+    
+    if ($p.ExitCode -eq 0 -and (Test-Path $dummyOutput) -and ((Get-Item $dummyOutput).Length -gt 0)) {
+        $selectedEncoder = $candidate
+        Write-Host "GPU hardware acceleration test PASSED ($selectedEncoder)." -ForegroundColor Green
+        break
+    }
+}
+
+if (Test-Path $dummyOutput) { Remove-Item $dummyOutput -Force -ErrorAction SilentlyContinue }
+if (Test-Path $dummyLog) { Remove-Item $dummyLog -Force -ErrorAction SilentlyContinue }
+
+if (-not $selectedEncoder) {
+    $selectedEncoder = "cinepak"
+    $selectedPixelFormat = "rgb24"
+    Write-Host "GPU encoding test failed or unsupported. Falling back to CPU encoding ($selectedEncoder)." -ForegroundColor Yellow
+}
+
+# ---------- 4) High-Speed Direct Video Conversion -----------------
+Write-Host 
+Write-Host "[4/4] Running Direct Video Conversion..." -ForegroundColor Cyan
+
 $originalDir = Join-Path $scriptDir "Original"
 if (-not (Test-Path $originalDir)) {
     New-Item -ItemType Directory -Path $originalDir | Out-Null
 }
 
-# Parallel Video Conversion Logic (.wd1 files)
-$MaxJobs = [Environment]::ProcessorCount
 $files = Get-ChildItem -Path (Join-Path $scriptDir "*") -Include *.wd1, *.WD1 -File
 
 if ($files.Count -eq 0) {
@@ -89,52 +124,45 @@ if ($files.Count -eq 0) {
     exit
 }
 
-Write-Host "Found $($files.Count) .wd1 files. Starting parallel video conversion..." -ForegroundColor Cyan
+Write-Host "Found $($files.Count) .wd1 files. Processing sequentially at maximum GPU burst speed..." -ForegroundColor Cyan
 
 foreach ($file in $files) {
-    while ((Get-Job -State Running).Count -ge $MaxJobs) {
-        Start-Sleep -Milliseconds 200
+    $baseName = $file.BaseName
+    $fixedFile = Join-Path $file.DirectoryName "${baseName}_fixed.avi"
+    $logFile = Join-Path $file.DirectoryName "${baseName}_error.log"
+
+    if (Test-Path $fixedFile) { Remove-Item $fixedFile -Force }
+    if (Test-Path $logFile) { Remove-Item $logFile -Force }
+
+    # Attempt 1: NVENC/GPU with automatic macroblock padding (prevents silent NVENC resolution rejections)
+    if ($selectedEncoder -ne "cinepak") {
+        $ffmpegArgs = "-i `"$($file.FullName)`" -vf `"pad=ceil(iw/16)*16:ceil(ih/16)*16`" -c:v $selectedEncoder -pix_fmt $selectedPixelFormat -c:a pcm_s16le -f avi -y `"$fixedFile`""
+    } else {
+        $ffmpegArgs = "-i `"$($file.FullName)`" -c:v cinepak -pix_fmt rgb24 -c:a pcm_s16le -f avi -y `"$fixedFile`""
     }
 
-    Start-Job -ScriptBlock {
-        param($filePath, $ffmpegExe, $backupFolder)
-        $file = Get-Item $filePath
-        $baseName = $file.BaseName
-        $fixedFile = Join-Path $file.DirectoryName "${baseName}_fixed.avi"
+    $process = Start-Process -FilePath $ffmpegPath -ArgumentList $ffmpegArgs -NoNewWindow -Wait -PassThru -RedirectStandardError $logFile
 
-        # Re-encode video using Cinepak + PCM audio format (output redirected to $null)
-        & $ffmpegExe -i $file.FullName -c:v cinepak -pix_fmt rgb24 -c:a pcm_s16le -f avi -y $fixedFile *>$null
-
-        if ($LASTEXITCODE -eq 0 -and (Test-Path $fixedFile)) {
-            # Move original .wd1 file into the "Original" folder
-            Move-Item -Path $file.FullName -Destination (Join-Path $backupFolder $file.Name) -Force
-            # Rename output .avi file back to original filename
-            Rename-Item -Path $fixedFile -NewName $file.Name -Force
-
-            return "SUCCESS: $($file.Name)"
-        } else {
-            return "FAILED: $($file.Name)"
+    # Attempt 2: Instant Cinepak CPU fallback if NVENC fails on specific file
+    if ($process.ExitCode -ne 0 -or -not (Test-Path $fixedFile) -or ((Get-Item $fixedFile).Length -eq 0)) {
+        if ($selectedEncoder -ne "cinepak") {
+            if (Test-Path $fixedFile) { Remove-Item $fixedFile -Force }
+            $cpuArgs = "-i `"$($file.FullName)`" -c:v cinepak -pix_fmt rgb24 -c:a pcm_s16le -f avi -y `"$fixedFile`""
+            $process = Start-Process -FilePath $ffmpegPath -ArgumentList $cpuArgs -NoNewWindow -Wait -PassThru -RedirectStandardError $logFile
         }
-    } -ArgumentList $file.FullName, $ffmpegPath, $originalDir | Out-Null
-}
-
-# Monitor jobs and print status directly to console
-while (Get-Job -State Running) {
-    $completedJobs = Get-Job -State Completed
-    foreach ($job in $completedJobs) {
-        $result = Receive-Job -Job $job
-        if ($result -like "SUCCESS*") {
-            Write-Host $result -ForegroundColor Green
-        } else {
-            Write-Host $result -ForegroundColor Red
-        }
-        Remove-Job -Job $job
     }
-    Start-Sleep -Milliseconds 500
-}
 
-Get-Job | Receive-Job | Out-Null
-Get-Job | Remove-Job
+    # Verify and finalize
+    if ($process.ExitCode -eq 0 -and (Test-Path $fixedFile) -and ((Get-Item $fixedFile).Length -gt 0)) {
+        Move-Item -Path $file.FullName -Destination (Join-Path $originalDir $file.Name) -Force
+        Rename-Item -Path $fixedFile -NewName $file.Name -Force
+        if (Test-Path $logFile) { Remove-Item $logFile -Force }
+        Write-Host "SUCCESS: $($file.Name)" -ForegroundColor Green
+    } else {
+        if (Test-Path $fixedFile) { Remove-Item $fixedFile -Force }
+        Write-Host "FAILED: $($file.Name) -> Check $logFile" -ForegroundColor Red
+    }
+}
 
 Write-Host 
 Write-Host " ===================================================" -ForegroundColor Green
