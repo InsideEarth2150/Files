@@ -1,11 +1,11 @@
 # =====================================================================
-#   InsideEARTH - Earth 2150 TMP/LS Video Convertor
+#   InsideEARTH - Earth 2150 TMP/LS Audio Convertor
 # =====================================================================
 
 # Display Banner First
 Write-Host 
 Write-Host " ===================================================" -ForegroundColor Green
-Write-Host "   InsideEARTH - Earth 2150 TMP/LS Video Convertor" -ForegroundColor Green
+Write-Host "   InsideEARTH - Earth 2150 TMP/LS Audio Convertor" -ForegroundColor Green
 Write-Host " ===================================================" -ForegroundColor Green
 Write-Host
 
@@ -153,7 +153,7 @@ Write-Host "All audio conversions completed! Originals moved to 'Original'." -Fo
 
 Write-Host 
 Write-Host " ===================================================" -ForegroundColor Green
-Write-Host "   All Video Conversions Completed!" -ForegroundColor Green
+Write-Host "   All Audio Conversions Completed!" -ForegroundColor Green
 Write-Host "   Original files moved to the subfolder 'Original'" -ForegroundColor Green
 Write-Host " ===================================================" -ForegroundColor Green
 Write-Host
