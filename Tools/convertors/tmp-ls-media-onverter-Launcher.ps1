@@ -75,7 +75,6 @@ while ($true) {
     Write-Host "`nFound the following installed games:" -ForegroundColor Green
     for ($i = 0; $i -lt $installedGames.Count; $i++) {
         Write-Host " [$($i + 1)] $($installedGames[$i].Name)"
-        Write-Host "     Path: $($installedGames[$i].RootPath)" -ForegroundColor DarkGray
     }
 
     $exitOptionIndex = $installedGames.Count + 1
