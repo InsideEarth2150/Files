@@ -27,15 +27,6 @@ if (-not $isAdmin) {
     Exit
 }
 
-# Display Banner First
-Write-Host 
-Write-Host " ===================================================" -ForegroundColor Green
-Write-Host "   InsideEARTH - Earth 2150 MP community server setup" -ForegroundColor Green
-Write-Host "   Server: $Name" -ForegroundColor Green
-Write-Host "   Host: $ServerHost" -ForegroundColor Green
-Write-Host " ===================================================" -ForegroundColor Green
-Write-Host
-
 # Variable Definitions
 $Name            = 'InsideEARTH 2150 Community Server'
 $ServerHost      = 'vpnnetserver2150.insideearth.info'
@@ -45,6 +36,18 @@ $TWPort          = 17101
 $InstallOpenVPN  = $true
 $Repo            = 'InsideEarth2150/Files'
 $Ref             = 'refs/heads/main'
+
+# Construct the formatted registry string for IP checking
+$addressIpFormatted = "`"EarthNet - InsideEARTH`"`"`"$ServerHost`:$IEPort`"`"`"EarthNet - TopWare`"`"`"netserver.earth2150.com:$TWPort`"`""
+
+# Display Banner First
+Write-Host 
+Write-Host " ===================================================" -ForegroundColor Green
+Write-Host "   InsideEARTH - Earth 2150 MP community server setup" -ForegroundColor Green
+Write-Host "   Server: $Name" -ForegroundColor Green
+Write-Host "   Host: $ServerHost" -ForegroundColor Green
+Write-Host " ===================================================" -ForegroundColor Green
+Write-Host
 
 # Registry paths to back up prior to modification
 $RegistryBackupPaths = @(
@@ -59,9 +62,6 @@ $GameRegistryPaths = @(
     'HKCU:\SOFTWARE\Topware\TheMoonProject\BaseGame\Network\EarthNet',
     'HKCU:\SOFTWARE\Reality Pump\LostSouls\BaseGame\Network\EarthNet'
 )
-
-# Construct the formatted registry string for IP checking
-$addressIpFormatted = "`"EarthNet - InsideEARTH`"`"`"$ServerHost`:$IEPort`"`"`"EarthNet - TopWare`"`"`"netserver.earth2150.com:$TWPort`"`""
 
 # DirectPlay8 CLSIDs
 $Clsids = [ordered]@{
@@ -285,3 +285,5 @@ Write-Host " ===================================================" -ForegroundCol
 Write-Host "   Setup complete. Launch Earth 2150 and Enjoy!" -ForegroundColor Green
 Write-Host " ===================================================" -ForegroundColor Green
 Write-Host
+
+Read-Host "Press Enter to exit..."
