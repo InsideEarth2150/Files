@@ -217,8 +217,7 @@ if (-not $needsFwUpdate) {
     }
 }
 
-# ---------- 4) DirectPlay Handling (Install / Skip / Remove) -----------
-
+# ---------- 4) DirectPlay Replacement & Optional Feature Handling -----------
 Write-Host 
 Write-Host " [4/4] DirectPlay Handling..." -ForegroundColor Cyan
 
@@ -258,7 +257,7 @@ if ($Remove) {
 } elseif ($SkipDP) {
     Write-Host " - Replacement skipped." -ForegroundColor DarkGray
     
-    # Check native Windows DirectPlay Optional Feature as a fallback
+    # Check/enable native Windows DirectPlay ONLY if replacement DLL was skipped and isn't installed
     if (-not $isDpInstalled) {
         Write-Host " - Checking Windows Optional Feature: DirectPlay..." -ForegroundColor Cyan
         try {
@@ -275,6 +274,7 @@ if ($Remove) {
         }
     }
 } else {
+    # Installing DirectPlay replacement - Native Windows DirectPlay feature check is skipped here
     try {
         New-Item -ItemType Directory -Force -Path $DllDir | Out-Null
         Invoke-WebRequest -Uri $DllUrl -OutFile $Dll -UseBasicParsing
