@@ -143,4 +143,4 @@ Write-Host "   Original files moved to the subfolder 'Original'" -ForegroundColo
 Write-Host " ===================================================" -ForegroundColor Green
 Write-Host
 
-Read-Host "Press Enter to exit..."
+Start-Sleep -Seconds 2
