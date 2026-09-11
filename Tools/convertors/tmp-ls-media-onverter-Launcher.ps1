@@ -11,7 +11,7 @@ $ErrorActionPreference = 'Stop'
 # Define supported games and their registry paths
 $games = @(
     @{
-        Name     = "Earth 2150: Escape from the Blue Planet"
+        Name     = "Earth 2150: Escape from the Blue Planet (DO NOT USE)"
         RegPath  = "HKCU:\Software\Topware\Earth 2150\BaseGame\FileSystem"
         RegValue = "datapath"
         ExeName  = "Earth2150.exe"
