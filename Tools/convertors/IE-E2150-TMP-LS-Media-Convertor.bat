@@ -12,7 +12,7 @@ title InsideEarth - Earth 2150 TMP-LS Media Convertor
 for /F "delims=" %%a in ('echo prompt $E^|cmd') do set "ESC=%%a"
 
 echo %ESC%[92m ===================================================%ESC%[0m
-echo %ESC%[92m    InsideEARTH - Earth 2150 TMP/LS Media Converter%ESC%[0m
+echo %ESC%[92m   InsideEARTH - Earth 2150 TMP/LS Media Converter%ESC%[0m
 echo %ESC%[92m ===================================================%ESC%[0m
 echo.
 
