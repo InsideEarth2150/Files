@@ -92,18 +92,25 @@ if ($InstallOpenVPN) {
             Write-Host " - OpenVPN installation completed." -ForegroundColor Green
         }
 
-        # Download and import the VPN profile
-        $ovpnUrl = 'https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/EarthNet/IE-2150-VPN-TCP.ovpn'
+        # Download the VPN profile
+        $ovpnUrl  = 'https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/EarthNet/IE-2150-VPN-TCP.ovpn'
         $ovpnPath = Join-Path $env:TEMP 'IE-2150-VPN-TCP.ovpn'
 
         Write-Host " - Downloading OpenVPN profile configuration..." -ForegroundColor Yellow
         Invoke-WebRequest -Uri $ovpnUrl -OutFile $ovpnPath -UseBasicParsing
 
-        # Import into OpenVPN Connect CLI and suppress JSON output using Out-Null
+        # Import into OpenVPN Connect CLI
         $ovpnCli = "${env:ProgramFiles}\OpenVPN Connect\openvpnconnect.exe"
         if (Test-Path $ovpnCli) {
             Write-Host " - Importing profile into OpenVPN Connect..." -ForegroundColor Yellow
-            Start-Process -FilePath $ovpnCli -ArgumentList "--import-profile=`"$ovpnPath`"" -NoNewWindow -Wait -PassThru | Out-Null
+            
+            # Delete existing profile if present to force clean overwrite
+            $profileName = "vpn-2150.insideearth.info [IE-2150-VPN-TCP]"
+            & "$ovpnCli" --delete-profile="$profileName" *>$null
+
+            # Import profile with all console streams completely suppressed
+            & "$ovpnCli" --import-profile="$ovpnPath" *>$null
+
             Write-Host " - OpenVPN profile imported successfully." -ForegroundColor Green
         } else {
             Write-Host " - Profile downloaded to: $ovpnPath (Import manually in OpenVPN Connect)." -ForegroundColor Yellow
