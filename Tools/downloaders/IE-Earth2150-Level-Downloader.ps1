@@ -1,5 +1,5 @@
 # =====================================================================
-#   InsideEARTH - Earth 2150 TMP/LS Video Convertor
+#   InsideEARTH - Earth 2150 Levels Downloader
 # =====================================================================
 
 # Requires -Version 5.1
