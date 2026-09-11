@@ -105,7 +105,7 @@ while ($true) {
         Clear-Host
 
         Write-Host " ===================================================" -ForegroundColor Green
-        Write-Host "    InsideEARTH - Earth 2150 Media Converter" -ForegroundColor Green
+        Write-Host "   InsideEARTH - Earth 2150 Media Converter" -ForegroundColor Green
         Write-Host " ===================================================" -ForegroundColor Green
         Write-Host " Target Game: $($targetGame.Name)" -ForegroundColor Yellow
         Write-Host " Directory:   $scriptDir" -ForegroundColor DarkGray
