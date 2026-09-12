@@ -11,6 +11,8 @@ if (-not $MaxJobs -or $MaxJobs -lt 1) { $MaxJobs = [Environment]::ProcessorCount
 
 clear
 
+$host.ui.RawUI.WindowTitle = "InsideEARTH - Earth 2150 Video Convertor"
+
 Write-Host 
 Write-Host " ===================================================" -ForegroundColor Green
 Write-Host "   InsideEARTH - Earth 2150 Video Convertor v1.0" -ForegroundColor Green
