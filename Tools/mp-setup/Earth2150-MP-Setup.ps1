@@ -37,7 +37,7 @@ $addressIpFormatted = "`"EarthNet - InsideEARTH`"`"$ServerHost`:$IEPort`"`"Earth
 # Display Banner First
 Write-Host 
 Write-Host " ===================================================" -ForegroundColor Green
-Write-Host "   InsideEARTH - Earth 2150 Multiplayer Setup" -ForegroundColor Green
+Write-Host "   InsideEARTH - Earth 2150 Multiplayer Setup v1.0" -ForegroundColor Green
 Write-Host " ===================================================" -ForegroundColor Green
 Write-Host
 

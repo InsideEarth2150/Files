@@ -1,5 +1,5 @@
 # =====================================================================
-#   InsideEARTH - Earth 2150 Levels Downloader
+#   InsideEARTH - Earth 2150 Levels Downloader v1.0
 # =====================================================================
 
 # Requires -Version 5.1
@@ -39,7 +39,7 @@ while ($true) {
 
     # Display Banner First
     Write-Host "===================================================" -ForegroundColor Green
-    Write-Host "    InsideEARTH - Earth 2150 Levels Downloader" -ForegroundColor Green
+    Write-Host "  InsideEARTH - Earth 2150 Levels Downloader v1.0" -ForegroundColor Green
     Write-Host "===================================================" -ForegroundColor Green
     Write-Host
 

@@ -1,5 +1,5 @@
 # =====================================================================
-#    InsideEARTH - Earth 2150 TMP/LS Video Convertor
+#    InsideEARTH - Earth 2150 Video Convertor v1.0
 # =====================================================================
 
 # Toggle GPU Acceleration (Default: $false because Earth 2150 engine requires Cinepak CPU codec)
@@ -13,7 +13,7 @@ clear
 
 Write-Host 
 Write-Host " ===================================================" -ForegroundColor Green
-Write-Host "    InsideEARTH - Earth 2150 TMP/LS Video Convertor" -ForegroundColor Green
+Write-Host "   InsideEARTH - Earth 2150 Video Convertor v1.0" -ForegroundColor Green
 Write-Host " ===================================================" -ForegroundColor Green
 Write-Host " Detected CPU Threads: $MaxJobs (Parallel Jobs: $MaxJobs)" -ForegroundColor Yellow
 Write-Host

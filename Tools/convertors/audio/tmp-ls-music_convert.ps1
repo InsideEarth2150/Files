@@ -1,5 +1,5 @@
 # =====================================================================
-#   InsideEARTH - Earth 2150 TMP/LS Audio Convertor
+#   InsideEARTH - Earth 2150 Audio Convertor v1.0
 # =====================================================================
 
 clear
@@ -7,7 +7,7 @@ clear
 # Display Banner First
 Write-Host 
 Write-Host " ===================================================" -ForegroundColor Green
-Write-Host "   InsideEARTH - Earth 2150 TMP/LS Audio Convertor" -ForegroundColor Green
+Write-Host "   InsideEARTH - Earth 2150 Audio Convertor v1.0" -ForegroundColor Green
 Write-Host " ===================================================" -ForegroundColor Green
 Write-Host
 
