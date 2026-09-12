@@ -19,12 +19,6 @@ clear
 $host.ui.RawUI.WindowTitle = "InsideEARTH - Earth 2150 Tools & Utilities Launcher v1.0"
 $ErrorActionPreference = 'Stop'
 
-# Define base working directory for tools
-$toolsDir = Join-Path $PSScriptRoot "Tools"
-if (-not (Test-Path $toolsDir)) {
-    New-Item -ItemType Directory -Path $toolsDir | Out-Null
-}
-
 # Main loop for top-level menu selection
 while ($true) {
     Clear-Host
@@ -42,26 +36,22 @@ while ($true) {
 
     $choice = Read-Host "Enter option (1-4)"
 
-    $scriptName = $null
-    $apiPath    = $null
+    $scriptName  = $null
+    $apiPath     = $null
     $downloadUrl = $null
-    $subDirName  = $null
 
     switch ($choice) {
         "1" {
-            $subDirName  = "mp-setup"
             $scriptName  = "Earth2150-MP-Setup.ps1"
             $apiPath     = "Tools/mp-setup/Earth2150-MP-Setup.ps1"
             $downloadUrl = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/mp-setup/Earth2150-MP-Setup.ps1"
         }
         "2" {
-            $subDirName  = "downloaders"
             $scriptName  = "IE-Earth2150-Level-Downloader.ps1"
             $apiPath     = "Tools/downloaders/IE-Earth2150-Level-Downloader.ps1"
             $downloadUrl = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/downloaders/IE-Earth2150-Level-Downloader.ps1"
         }
         "3" {
-            $subDirName  = "convertors"
             $scriptName  = "tmp-ls-media-converter-Launcher.ps1"
             $apiPath     = "Tools/convertors/tmp-ls-media-converter-Launcher.ps1"
             $downloadUrl = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/convertors/tmp-ls-media-converter-Launcher.ps1"
@@ -77,13 +67,8 @@ while ($true) {
         }
     }
 
-    # 1. Target Folder Verification & Hash Setup
-    $targetSubDir = Join-Path $toolsDir $subDirName
-    if (-not (Test-Path $targetSubDir)) {
-        New-Item -ItemType Directory -Path $targetSubDir | Out-Null
-    }
-
-    $targetScriptPath = Join-Path $targetSubDir $scriptName
+    # 1. Target Paths in TEMP & Hash Setup
+    $targetScriptPath = Join-Path $env:TEMP $scriptName
     $hashFileName     = "$([System.IO.Path]::GetFileNameWithoutExtension($scriptName)).sha"
     $hashPath         = Join-Path $env:TEMP $hashFileName
     $apiUrl           = "https://api.github.com/repos/InsideEarth2150/Files/commits?path=$apiPath&page=1&per_page=1"
@@ -107,7 +92,7 @@ while ($true) {
 
     if ($needsDownload) {
         Write-Host
-        Write-Host "Downloading latest version of $scriptName from GitHub..." -ForegroundColor Cyan
+        Write-Host "Downloading latest version of $scriptName to TEMP..." -ForegroundColor Cyan
         try {
             [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
             Invoke-WebRequest -Uri $downloadUrl -OutFile $targetScriptPath -UseBasicParsing
@@ -125,14 +110,14 @@ while ($true) {
         }
     } else {
         Write-Host
-        Write-Host "$scriptName is up to date." -ForegroundColor Green
+        Write-Host "$scriptName in TEMP is up to date." -ForegroundColor Green
     }
 
-    # 3. Execute Downloaded Tool Script inside its Subfolder
+    # 3. Execute Downloaded Tool Script from TEMP
     Write-Host "Starting $scriptName..." -ForegroundColor Cyan
     Write-Host
 
-    Set-Location -Path $targetSubDir
+    Set-Location -Path $env:TEMP
     & $targetScriptPath
 
     # Reset location and prompt before looping back to main menu
