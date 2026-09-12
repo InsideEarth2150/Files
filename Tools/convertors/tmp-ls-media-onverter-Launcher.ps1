@@ -209,7 +209,7 @@ while ($true) {
         Set-Location -Path $targetDir
         & $targetScriptPath
 
-        # 6. Cleanup unused files and binaries after execution
+        # 6. Cleanup unused files, binaries, and logs after execution
         Write-Host
         Write-Host "Cleaning up temporary files, binaries, and logs..." -ForegroundColor Cyan
 
@@ -218,16 +218,16 @@ while ($true) {
             Remove-Item -Path $targetScriptPath -Force -ErrorAction SilentlyContinue
         }
 
-        # Remove local helper tools (7za.exe, ffmpeg.exe) if left in the target directory
-        $binariesToClean = @("7za.exe", "ffmpeg.exe")
-        foreach ($bin in $binariesToClean) {
-            $binPath = Join-Path $targetDir $bin
-            if (Test-Path $binPath) {
-                Remove-Item -Path $binPath -Force -ErrorAction SilentlyContinue
+        # Remove helper tools and logs (7za.exe, ffmpeg.exe, convert_log.txt) if left in the target directory
+        $filesToClean = @("7za.exe", "ffmpeg.exe", "convert_log.txt")
+        foreach ($file in $filesToClean) {
+            $filePath = Join-Path $targetDir $file
+            if (Test-Path $filePath) {
+                Remove-Item -Path $filePath -Force -ErrorAction SilentlyContinue
             }
         }
 
-        # Remove any log files left in the target directory
+        # Remove any other log files left in the target directory
         Get-ChildItem -Path $targetDir -Filter "*.log" -ErrorAction SilentlyContinue | Remove-Item -Force -ErrorAction SilentlyContinue
 
         # Reset location and prompt before looping back
