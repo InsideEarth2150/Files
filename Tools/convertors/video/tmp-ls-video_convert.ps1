@@ -5,12 +5,17 @@
 # Toggle GPU Acceleration (Default: $false because Earth 2150 engine requires Cinepak CPU codec)
 $EnableGPU = $false
 
+# Auto-detect max CPU threads (logical cores) to determine optimal parallel jobs
+$MaxJobs = (Get-CimInstance Win32_Processor | Measure-Object -Property NumberOfLogicalProcessors -Sum).Sum
+if (-not $MaxJobs -or $MaxJobs -lt 1) { $MaxJobs = [Environment]::ProcessorCount }
+
 clear
 
 Write-Host 
 Write-Host " ===================================================" -ForegroundColor Green
-Write-Host "   InsideEARTH - Earth 2150 TMP/LS Video Convertor" -ForegroundColor Green
+Write-Host "    InsideEARTH - Earth 2150 TMP/LS Video Convertor" -ForegroundColor Green
 Write-Host " ===================================================" -ForegroundColor Green
+Write-Host " Detected CPU Threads: $MaxJobs (Parallel Jobs: $MaxJobs)" -ForegroundColor Yellow
 Write-Host
 
 $scriptDir = $PSScriptRoot
@@ -123,9 +128,9 @@ if (-not $selectedEncoder) {
     }
 }
 
-# ---------- 4) Direct Video Conversion -----------------
+# ---------- 4) Parallel Video Conversion -----------------
 Write-Host 
-Write-Host "[4/4] Running Direct Video Conversion..." -ForegroundColor Cyan
+Write-Host "[4/4] Running Parallel Video Conversion ($MaxJobs slots)..." -ForegroundColor Cyan
 
 $originalDir = Join-Path $scriptDir "Original"
 if (-not (Test-Path $originalDir)) {
@@ -139,7 +144,9 @@ if ($files.Count -eq 0) {
     exit
 }
 
-Write-Host "Found $($files.Count) .wd1 files. Processing sequentially..." -ForegroundColor Cyan
+Write-Host "Found $($files.Count) .wd1 files. Processing in parallel..." -ForegroundColor Cyan
+
+$runningProcesses = @()
 
 foreach ($file in $files) {
     $baseName = $file.BaseName
@@ -149,39 +156,68 @@ foreach ($file in $files) {
     if (Test-Path $fixedFile) { Remove-Item $fixedFile -Force }
     if (Test-Path $logFile) { Remove-Item $logFile -Force }
 
-    # Attempt 1: NVENC/GPU with automatic macroblock padding (if enabled)
+    # Set FFmpeg arguments based on selected encoder
     if ($selectedEncoder -ne "cinepak") {
         $ffmpegArgs = "-i `"$($file.FullName)`" -vf `"pad=ceil(iw/16)*16:ceil(ih/16)*16`" -c:v $selectedEncoder -pix_fmt $selectedPixelFormat -c:a pcm_s16le -f avi -y `"$fixedFile`""
     } else {
         $ffmpegArgs = "-i `"$($file.FullName)`" -c:v cinepak -pix_fmt rgb24 -c:a pcm_s16le -f avi -y `"$fixedFile`""
     }
 
-    $process = Start-Process -FilePath $ffmpegPath -ArgumentList $ffmpegArgs -NoNewWindow -Wait -PassThru -RedirectStandardError $logFile
+    # Throttle parallel execution to $MaxJobs active workers
+    while (($runningProcesses | Where-Object { -not $_.Process.HasExited }).Count -ge $MaxJobs) {
+        Start-Sleep -Milliseconds 100
+    }
 
-    # Attempt 2: Instant Cinepak CPU fallback if GPU conversion fails
-    if ($process.ExitCode -ne 0 -or -not (Test-Path $fixedFile) -or ((Get-Item $fixedFile).Length -eq 0)) {
+    $proc = Start-Process -FilePath $ffmpegPath -ArgumentList $ffmpegArgs -NoNewWindow -PassThru -RedirectStandardError $logFile
+    
+    $runningProcesses += [PSCustomObject]@{
+        Process   = $proc
+        File      = $file
+        FixedFile = $fixedFile
+        LogFile   = $logFile
+    }
+
+    Write-Host "Started conversion: $($file.Name)" -ForegroundColor Gray
+}
+
+# Wait for all parallel background workers to complete
+Write-Host "`nWaiting for background conversions to finish..." -ForegroundColor Cyan
+
+foreach ($item in $runningProcesses) {
+    $item.Process.WaitForExit()
+
+    $proc = $item.Process
+    $file = $item.File
+    $fixedFile = $item.FixedFile
+    $logFile = $item.LogFile
+
+    # CPU Fallback check if GPU mode was attempted and failed
+    if ($proc.ExitCode -ne 0 -or -not (Test-Path $fixedFile) -or ((Get-Item $fixedFile).Length -eq 0)) {
         if ($selectedEncoder -ne "cinepak") {
             if (Test-Path $fixedFile) { Remove-Item $fixedFile -Force }
             $cpuArgs = "-i `"$($file.FullName)`" -c:v cinepak -pix_fmt rgb24 -c:a pcm_s16le -f avi -y `"$fixedFile`""
-            $process = Start-Process -FilePath $ffmpegPath -ArgumentList $cpuArgs -NoNewWindow -Wait -PassThru -RedirectStandardError $logFile
+            $fallbackProc = Start-Process -FilePath $ffmpegPath -ArgumentList $cpuArgs -NoNewWindow -Wait -PassThru -RedirectStandardError $logFile
         }
     }
 
     # Verify and finalize
-    if ($process.ExitCode -eq 0 -and (Test-Path $fixedFile) -and ((Get-Item $fixedFile).Length -gt 0)) {
-        Move-Item -Path $file.FullName -Destination (Join-Path $originalDir $file.Name) -Force
-        Rename-Item -Path $fixedFile -NewName $file.Name -Force
-        if (Test-Path $logFile) { Remove-Item $logFile -Force }
-        Write-Host "SUCCESS: $($file.Name)" -ForegroundColor Green
-    } else {
-        if (Test-Path $fixedFile) { Remove-Item $fixedFile -Force }
-        Write-Host "FAILED: $($file.Name) -> Check $logFile" -ForegroundColor Red
+    if (Test-Path $fixedFile) {
+        if ((Get-Item $fixedFile).Length -gt 0) {
+            Move-Item -Path $file.FullName -Destination (Join-Path $originalDir $file.Name) -Force
+            Rename-Item -Path $fixedFile -NewName $file.Name -Force
+            if (Test-Path $logFile) { Remove-Item $logFile -Force }
+            Write-Host "SUCCESS: $($file.Name)" -ForegroundColor Green
+            continue
+        }
     }
+
+    if (Test-Path $fixedFile) { Remove-Item $fixedFile -Force }
+    Write-Host "FAILED: $($file.Name) -> Check $logFile" -ForegroundColor Red
 }
 
 Write-Host 
 Write-Host " ===================================================" -ForegroundColor Green
-Write-Host "    All Video Conversions Completed!" -ForegroundColor Green
+Write-Host "    All Parallel Video Conversions Completed!" -ForegroundColor Green
 Write-Host "    Original files moved to subfolder 'Original'" -ForegroundColor Green
 Write-Host " ===================================================" -ForegroundColor Green
 Write-Host
