@@ -170,11 +170,13 @@ if (-not $needsRegUpdate) {
 Write-Host 
 Write-Host " [3/4] Configuring Windows Firewall Rules..." -ForegroundColor Cyan
 
+$Subnet = '10.21.50.0/24'
+
 $fwRules = @(
-    @{ Name = 'Earth2150 - DirectPlay Control (TCP 47624)'; Protocol = 'TCP'; LocalPort = '47624' },
-    @{ Name = 'Earth2150 - DirectPlay Range (TCP 2300-2400)'; Protocol = 'TCP'; LocalPort = '2300-2400' },
-    @{ Name = 'Earth2150 - DirectPlay Range (UDP 2300-2400)'; Protocol = 'UDP'; LocalPort = '2300-2400' },
-    @{ Name = 'Earth2150 - ICMPv4 Allow Subnet'; Protocol = 'ICMPv4'; RemoteAddress = '10.21.50.0/24' }
+    @{ Name = 'Earth2150 - DirectPlay Control (TCP 47624)'; Protocol = 'TCP'; LocalPort = '47624'; RemoteAddress = $Subnet },
+    @{ Name = 'Earth2150 - DirectPlay Range (TCP 2300-2400)'; Protocol = 'TCP'; LocalPort = '2300-2400'; RemoteAddress = $Subnet },
+    @{ Name = 'Earth2150 - DirectPlay Range (UDP 2300-2400)'; Protocol = 'UDP'; LocalPort = '2300-2400'; RemoteAddress = $Subnet },
+    @{ Name = 'Earth2150 - ICMPv4 Allow Subnet'; Protocol = 'ICMPv4'; RemoteAddress = $Subnet }
 )
 
 $applyFwScript = {
@@ -183,20 +185,20 @@ $applyFwScript = {
         Get-NetFirewallRule -DisplayName $r.Name -ErrorAction SilentlyContinue | Remove-NetFirewallRule -ErrorAction SilentlyContinue
         
         $params = @{
-            DisplayName = $r.Name
-            Direction   = 'Inbound'
-            Action      = 'Allow'
-            Protocol    = $r.Protocol
-            Profile     = 'Any'
+            DisplayName   = $r.Name
+            Direction     = 'Inbound'
+            Action        = 'Allow'
+            Protocol      = $r.Protocol
+            Profile       = 'Any'
+            RemoteAddress = $r.RemoteAddress
         }
-        if ($r.LocalPort)     { $params['LocalPort']     = $r.LocalPort }
-        if ($r.RemoteAddress) { $params['RemoteAddress'] = $r.RemoteAddress }
+        if ($r.LocalPort) { $params['LocalPort'] = $r.LocalPort }
 
         New-NetFirewallRule @params | Out-Null
     }
 }
 
-# Check if all firewall rules exist and are enabled
+# Check if rules exist, are enabled, AND match the target subnet scope
 $needsFwUpdate = $false
 foreach ($r in $fwRules) {
     $existingRule = Get-NetFirewallRule -DisplayName $r.Name -ErrorAction SilentlyContinue
@@ -204,29 +206,25 @@ foreach ($r in $fwRules) {
         $needsFwUpdate = $true
         break
     }
+    
+    $existingScope = $existingRule | Get-NetFirewallAddressFilter
+    if ($existingScope.RemoteAddress -ne $r.RemoteAddress) {
+        $needsFwUpdate = $true
+        break
+    }
 }
 
 if (-not $needsFwUpdate) {
-    Write-Host " - All firewall rules are already configured correctly. Skipping." -ForegroundColor DarkGray
+    Write-Host " - All firewall rules and subnet scopes are already configured correctly. Skipping." -ForegroundColor DarkGray
 } else {
-    $isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
-
-    $applyFwScript = {
-        param($rules)
-        foreach ($r in $rules) {
-            Get-NetFirewallRule -DisplayName $r.Name -ErrorAction SilentlyContinue | Remove-NetFirewallRule -ErrorAction SilentlyContinue
-            New-NetFirewallRule -DisplayName $r.Name -Direction Inbound -Action Allow -Protocol $r.Protocol -LocalPort $r.LocalPort -Profile Any | Out-Null
-        }
-    }
-
     try {
         if ($isAdmin) {
             & $applyFwScript $fwRules
-            Write-Host " - Firewall rules set successfully." -ForegroundColor Green
+            Write-Host " - Firewall rules and subnet scope applied successfully." -ForegroundColor Green
         } else {
             Write-Host " - Requesting Admin permissions for Firewall configuration..." -ForegroundColor Yellow
             $jsonRules = $fwRules | ConvertTo-Json -Compress
-            $innerCmd = "`$rules = '$jsonRules' | ConvertFrom-Json; foreach (`$r in `$rules) { Get-NetFirewallRule -DisplayName `$r.Name -ErrorAction SilentlyContinue | Remove-NetFirewallRule -ErrorAction SilentlyContinue; New-NetFirewallRule -DisplayName `$r.Name -Direction Inbound -Action Allow -Protocol `$r.Protocol -LocalPort `$r.LocalPort -Profile Any | Out-Null }"
+            $innerCmd = "`$rules = '$jsonRules' | ConvertFrom-Json; foreach (`$r in `$rules) { Get-NetFirewallRule -DisplayName `$r.Name -ErrorAction SilentlyContinue | Remove-NetFirewallRule -ErrorAction SilentlyContinue; `$p = @{ DisplayName = `$r.Name; Direction = 'Inbound'; Action = 'Allow'; Protocol = `$r.Protocol; Profile = 'Any'; RemoteAddress = `$r.RemoteAddress }; if (`$r.LocalPort) { `$p['LocalPort'] = `$r.LocalPort }; New-NetFirewallRule @`$p | Out-Null }"
             $encCmd = [Convert]::ToBase64String([Text.Encoding]::Unicode.GetBytes($innerCmd))
             Start-Process powershell -Verb RunAs -Wait -ArgumentList '-NoProfile','-WindowStyle','Hidden','-EncodedCommand',$encCmd
             Write-Host " - Firewall rules applied." -ForegroundColor Green
