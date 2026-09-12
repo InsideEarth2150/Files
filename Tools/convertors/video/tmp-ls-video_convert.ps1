@@ -1,6 +1,9 @@
 # =====================================================================
-#   InsideEARTH - Earth 2150 TMP/LS Video Convertor
+#    InsideEARTH - Earth 2150 TMP/LS Video Convertor
 # =====================================================================
+
+# Toggle GPU Acceleration (Default: $false because Earth 2150 engine requires Cinepak CPU codec)
+$EnableGPU = $false
 
 clear
 
@@ -75,45 +78,52 @@ if (-not (Test-Path $ffmpegPath)) {
 Write-Host 
 Write-Host "[3/4] Testing Hardware Acceleration Support..." -ForegroundColor Cyan
 
-$oldPreference = $ErrorActionPreference
-$ErrorActionPreference = 'SilentlyContinue'
-$supportedEncoders = & $ffmpegPath -hide_banner -encoders 2>$null
-$ErrorActionPreference = $oldPreference
-$gpus = Get-CimInstance Win32_VideoController | Select-Object -ExpandProperty Name
 $selectedEncoder = $null
 $selectedPixelFormat = "yuv420p"
 
-$gpuCandidates = @()
-foreach ($gpu in $gpus) {
-    if ($gpu -match "NVIDIA" -and $supportedEncoders -match "h264_nvenc") { $gpuCandidates += "h264_nvenc" }
-    elseif ($gpu -match "AMD|Radeon" -and $supportedEncoders -match "h264_amf") { $gpuCandidates += "h264_amf" }
-    elseif ($gpu -match "Intel" -and $supportedEncoders -match "h264_qsv") { $gpuCandidates += "h264_qsv" }
-}
+if ($EnableGPU) {
+    $oldPreference = $ErrorActionPreference
+    $ErrorActionPreference = 'SilentlyContinue'
+    $supportedEncoders = & $ffmpegPath -hide_banner -encoders 2>$null
+    $ErrorActionPreference = $oldPreference
+    $gpus = Get-CimInstance Win32_VideoController | Select-Object -ExpandProperty Name
 
-$dummyOutput = Join-Path $scriptDir "gpu_test.avi"
-$dummyLog = Join-Path $scriptDir "gpu_test.log"
-
-foreach ($candidate in $gpuCandidates) {
-    $testArgs = "-f lavfi -i testsrc=duration=1:size=256x192:rate=15 -vf `"pad=ceil(iw/16)*16:ceil(ih/16)*16`" -c:v $candidate -pix_fmt yuv420p -f avi -y `"$dummyOutput`""
-    $p = Start-Process -FilePath $ffmpegPath -ArgumentList $testArgs -NoNewWindow -Wait -PassThru -RedirectStandardError $dummyLog
-    
-    if ($p.ExitCode -eq 0 -and (Test-Path $dummyOutput) -and ((Get-Item $dummyOutput).Length -gt 0)) {
-        $selectedEncoder = $candidate
-        Write-Host "GPU hardware acceleration test PASSED ($selectedEncoder)." -ForegroundColor Green
-        break
+    $gpuCandidates = @()
+    foreach ($gpu in $gpus) {
+        if ($gpu -match "NVIDIA" -and $supportedEncoders -match "h264_nvenc") { $gpuCandidates += "h264_nvenc" }
+        elseif ($gpu -match "AMD|Radeon" -and $supportedEncoders -match "h264_amf") { $gpuCandidates += "h264_amf" }
+        elseif ($gpu -match "Intel" -and $supportedEncoders -match "h264_qsv") { $gpuCandidates += "h264_qsv" }
     }
-}
 
-if (Test-Path $dummyOutput) { Remove-Item $dummyOutput -Force -ErrorAction SilentlyContinue }
-if (Test-Path $dummyLog) { Remove-Item $dummyLog -Force -ErrorAction SilentlyContinue }
+    $dummyOutput = Join-Path $scriptDir "gpu_test.avi"
+    $dummyLog = Join-Path $scriptDir "gpu_test.log"
+
+    foreach ($candidate in $gpuCandidates) {
+        $testArgs = "-f lavfi -i testsrc=duration=1:size=256x192:rate=15 -vf `"pad=ceil(iw/16)*16:ceil(ih/16)*16`" -c:v $candidate -pix_fmt yuv420p -f avi -y `"$dummyOutput`""
+        $p = Start-Process -FilePath $ffmpegPath -ArgumentList $testArgs -NoNewWindow -Wait -PassThru -RedirectStandardError $dummyLog
+        
+        if ($p.ExitCode -eq 0 -and (Test-Path $dummyOutput) -and ((Get-Item $dummyOutput).Length -gt 0)) {
+            $selectedEncoder = $candidate
+            Write-Host "GPU hardware acceleration test PASSED ($selectedEncoder)." -ForegroundColor Green
+            break
+        }
+    }
+
+    if (Test-Path $dummyOutput) { Remove-Item $dummyOutput -Force -ErrorAction SilentlyContinue }
+    if (Test-Path $dummyLog) { Remove-Item $dummyLog -Force -ErrorAction SilentlyContinue }
+}
 
 if (-not $selectedEncoder) {
     $selectedEncoder = "cinepak"
     $selectedPixelFormat = "rgb24"
-    Write-Host "GPU encoding test failed or unsupported. Falling back to CPU encoding ($selectedEncoder)." -ForegroundColor Yellow
+    if ($EnableGPU) {
+        Write-Host "GPU encoding test failed or unsupported. Falling back to CPU encoding ($selectedEncoder)." -ForegroundColor Yellow
+    } else {
+        Write-Host "GPU encoding skipped via script configuration. Using game-compatible CPU encoding ($selectedEncoder)." -ForegroundColor Cyan
+    }
 }
 
-# ---------- 4) High-Speed Direct Video Conversion -----------------
+# ---------- 4) Direct Video Conversion -----------------
 Write-Host 
 Write-Host "[4/4] Running Direct Video Conversion..." -ForegroundColor Cyan
 
@@ -129,7 +139,7 @@ if ($files.Count -eq 0) {
     exit
 }
 
-Write-Host "Found $($files.Count) .wd1 files. Processing sequentially at maximum GPU burst speed..." -ForegroundColor Cyan
+Write-Host "Found $($files.Count) .wd1 files. Processing sequentially..." -ForegroundColor Cyan
 
 foreach ($file in $files) {
     $baseName = $file.BaseName
@@ -139,7 +149,7 @@ foreach ($file in $files) {
     if (Test-Path $fixedFile) { Remove-Item $fixedFile -Force }
     if (Test-Path $logFile) { Remove-Item $logFile -Force }
 
-    # Attempt 1: NVENC/GPU with automatic macroblock padding (prevents silent NVENC resolution rejections)
+    # Attempt 1: NVENC/GPU with automatic macroblock padding (if enabled)
     if ($selectedEncoder -ne "cinepak") {
         $ffmpegArgs = "-i `"$($file.FullName)`" -vf `"pad=ceil(iw/16)*16:ceil(ih/16)*16`" -c:v $selectedEncoder -pix_fmt $selectedPixelFormat -c:a pcm_s16le -f avi -y `"$fixedFile`""
     } else {
@@ -148,7 +158,7 @@ foreach ($file in $files) {
 
     $process = Start-Process -FilePath $ffmpegPath -ArgumentList $ffmpegArgs -NoNewWindow -Wait -PassThru -RedirectStandardError $logFile
 
-    # Attempt 2: Instant Cinepak CPU fallback if NVENC fails on specific file
+    # Attempt 2: Instant Cinepak CPU fallback if GPU conversion fails
     if ($process.ExitCode -ne 0 -or -not (Test-Path $fixedFile) -or ((Get-Item $fixedFile).Length -eq 0)) {
         if ($selectedEncoder -ne "cinepak") {
             if (Test-Path $fixedFile) { Remove-Item $fixedFile -Force }
@@ -171,8 +181,8 @@ foreach ($file in $files) {
 
 Write-Host 
 Write-Host " ===================================================" -ForegroundColor Green
-Write-Host "   All Video Conversions Completed!" -ForegroundColor Green
-Write-Host "   Original files moved to the subfolder 'Original'" -ForegroundColor Green
+Write-Host "    All Video Conversions Completed!" -ForegroundColor Green
+Write-Host "    Original files moved to subfolder 'Original'" -ForegroundColor Green
 Write-Host " ===================================================" -ForegroundColor Green
 Write-Host
 
