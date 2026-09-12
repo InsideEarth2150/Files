@@ -21,6 +21,8 @@ if (-not $isAdmin) {
 
 clear
 
+$host.ui.RawUI.WindowTitle = "InsideEARTH - Earth 2150 Multiplayer Setup"
+
 # Variable Definitions
 $Name            = 'InsideEARTH 2150 Community Server'
 $ServerHost      = 'vpnnetserver2150.insideearth.info'
