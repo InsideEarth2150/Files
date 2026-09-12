@@ -4,6 +4,8 @@
 
 clear
 
+$host.ui.RawUI.WindowTitle = "InsideEARTH - Earth 2150 Video Convertor"
+
 # Display Banner First
 Write-Host 
 Write-Host " ===================================================" -ForegroundColor Green
