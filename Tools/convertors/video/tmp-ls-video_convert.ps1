@@ -2,14 +2,26 @@
 #    InsideEARTH - Earth 2150 Video Convertor v1.0
 # =====================================================================
 
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+# Self-elevation check
+$isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+
+if (-not $isAdmin) {
+    Write-Host "Requesting Administrator privileges..." -ForegroundColor Yellow
+    # Relaunches the current script with elevated privileges and keeps the window open
+    Start-Process powershell -Verb RunAs -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`""
+    Exit
+}
+
+clear
+
 # Toggle GPU Acceleration (Default: $false because Earth 2150 engine requires Cinepak CPU codec)
 $EnableGPU = $false
 
 # Auto-detect max CPU threads (logical cores) to determine optimal parallel jobs
 $MaxJobs = (Get-CimInstance Win32_Processor | Measure-Object -Property NumberOfLogicalProcessors -Sum).Sum
 if (-not $MaxJobs -or $MaxJobs -lt 1) { $MaxJobs = [Environment]::ProcessorCount }
-
-clear
 
 $host.ui.RawUI.WindowTitle = "InsideEARTH - Earth 2150 Video Convertor"
 
