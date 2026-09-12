@@ -28,7 +28,7 @@ while ($true) {
     Write-Host " ===================================================" -ForegroundColor Green
     Write-Host
     Write-Host " Select an option to download and run:" -ForegroundColor Cyan
-    Write-Host "   [1] Earth 2150 Multiplayer Setup"
+    Write-Host "   [1] Earth 2150 Multiplayer Setup (TMP Only)"
     Write-Host "   [2] Earth 2150 Levels Downloader"
     Write-Host "   [3] Earth 2150 Media Converter Launcher"
     Write-Host "   [4] Exit"
