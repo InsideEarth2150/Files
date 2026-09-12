@@ -1,16 +1,8 @@
 # =====================================================================
-#   InsideEARTH - Earth 2150 Multiplayer - one-click setup
-#
-#   Two steps, no admin, no manual input
-#     1) adds the community server to the game's server list
-#        (per-user registry HKCU, makes a .reg backup first)
-#     2) installs + activates the MP DirectPlay8 replacement DLL
-#        (per-user COM registration under WOW6432Node - no admin), so the
-#        game's multiplayer sessions no longer depend on the flaky Windows
-#        DirectPlay component.
+#   InsideEARTH - Earth 2150 Multiplayer
 #
 #   Meant to be fetched from GitHub and run
-#     powershell -ExecutionPolicy Bypass -Command iex (irm https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/EarthNet/Earth2150-MP-Setup.ps1)
+#     powershell -ExecutionPolicy Bypass -Command iex (irm https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/mp-setup/Earth2150-MP-Setup.ps1)
 #   or just double-click IE-E2150-MP-Setup.bat.
 #
 # =====================================================================
@@ -26,6 +18,8 @@ if (-not $isAdmin) {
     Start-Process powershell -Verb RunAs -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`""
     Exit
 }
+
+clear
 
 # Variable Definitions
 $Name            = 'InsideEARTH 2150 Community Server'
@@ -43,9 +37,7 @@ $addressIpFormatted = "`"EarthNet - InsideEARTH`"`"$ServerHost`:$IEPort`"`"Earth
 # Display Banner First
 Write-Host 
 Write-Host " ===================================================" -ForegroundColor Green
-Write-Host "   InsideEARTH - Earth 2150 MP community server setup" -ForegroundColor Green
-Write-Host "   Server: $Name" -ForegroundColor Green
-Write-Host "   Host: $ServerHost" -ForegroundColor Green
+Write-Host "   InsideEARTH - Earth 2150 Multiplayer Setup" -ForegroundColor Green
 Write-Host " ===================================================" -ForegroundColor Green
 Write-Host
 
@@ -62,15 +54,6 @@ $GameRegistryPaths = @(
     'HKCU:\SOFTWARE\Topware\TheMoonProject\BaseGame\Network\EarthNet',
     'HKCU:\SOFTWARE\Reality Pump\LostSouls\BaseGame\Network\EarthNet'
 )
-
-# DirectPlay8 CLSIDs
-$Clsids = [ordered]@{
-    '{286F484D-375E-4458-A272-B138E2F80A6A}' = 'DirectPlay8Peer'
-    '{934A9523-A3CA-4BC5-ADA0-D6D95D979421}' = 'DirectPlay8Address'
-}
-$DllDir = Join-Path $env:LOCALAPPDATA 'MP'
-$Dll    = Join-Path $DllDir 'dpnetreplace.dll'
-$DllUrl = "https://raw.githubusercontent.com/$Repo/$Ref/directplay-replace/dpnetreplace.dll"
 
 # ---------- 1) OpenVPN Installation & Profile Setup -----------------
 Write-Host 
@@ -233,81 +216,26 @@ if (-not $needsFwUpdate) {
     }
 }
 
-# ---------- 4) DirectPlay Replacement & Optional Feature Handling -----------
+# ---------- 4) Configure DirectPlay ------------------------------
 Write-Host 
-Write-Host " [4/4] DirectPlay Handling..." -ForegroundColor Cyan
+Write-Host " [4/4] Configuring DirectPlay..." -ForegroundColor Cyan
 
-# Check if DirectPlay replacement DLL is currently registered
-$dpClsidKey = 'HKCU:\Software\Classes\WOW6432Node\CLSID\{286F484D-375E-4458-A272-B138E2F80A6A}'
-$isDpInstalled = Test-Path $dpClsidKey
-
-# Interactive Prompts
-$Remove = $false
-$SkipDP = $false
-
-if ($env:MP_REMOVE -eq '1') {
-    $Remove = $true
-    $SkipDP = $true
-} elseif ($env:MP_SKIP_DIRECTPLAY -eq '1') {
-    $SkipDP = $true
-} else {
-    if ($isDpInstalled) {
-        $removeInput = Read-Host " - DirectPlay replacement is already installed. Do you wish to Remove it? (y/N)"
-        $Remove = ($removeInput -eq 'y' -or $removeInput -eq 'yes')
-        if (-not $Remove) {
-            $SkipDP = $true
-        }
-    } else {
-        $installInput = Read-Host " - Do you wish to Install the DirectPlay replacement? (Y/n)"
-        $InstallDP = ($installInput -eq '' -or $installInput -eq 'y' -or $installInput -eq 'yes')
-        $SkipDP = (-not $InstallDP)
-    }
-}
-
-if ($Remove) {
-    Write-Host " - Removing DirectPlay Replacement..." -ForegroundColor Yellow
-    foreach ($id in $Clsids.Keys) {
-        $parent = "HKCU:\Software\Classes\WOW6432Node\CLSID\$id"
-        if (Test-Path $parent) { Remove-Item $parent -Recurse -Force; Write-Host " - Removed $($Clsids[$id])" -ForegroundColor Green }
-    }
-} elseif ($SkipDP) {
-    Write-Host " - Replacement skipped." -ForegroundColor DarkGray
+try {
+    # Query the DirectPlay feature state
+    $dpFeature = Get-WindowsOptionalFeature -Online -FeatureName DirectPlay -ErrorAction Stop
     
-    # Check/enable native Windows DirectPlay ONLY if replacement DLL was skipped and isn't installed
-    if (-not $isDpInstalled) {
-        Write-Host " - Checking Windows Optional Feature: DirectPlay..." -ForegroundColor Cyan
-        try {
-            $dpFeature = Get-WindowsOptionalFeature -Online -FeatureName DirectPlay -ErrorAction Stop
-            if ($dpFeature.State -ne 'Enabled') {
-                Write-Host " - DirectPlay feature is disabled. Enabling Windows DirectPlay..." -ForegroundColor Yellow
-                Enable-WindowsOptionalFeature -Online -FeatureName DirectPlay -All -NoRestart | Out-Null
-                Write-Host " - Windows DirectPlay feature enabled successfully." -ForegroundColor Green
-            } else {
-                Write-Host " - Windows DirectPlay feature is already enabled." -ForegroundColor DarkGray
-            }
-        } catch {
-            Write-Host " ! Failed to verify/enable Windows DirectPlay feature: $_" -ForegroundColor Red
-        }
+    if ($dpFeature.State -ne 'Enabled') {
+        Write-Host " - DirectPlay is disabled. Enabling Windows DirectPlay..." -ForegroundColor Yellow
+        
+        # Enable DirectPlay without forcing a restart
+        Enable-WindowsOptionalFeature -Online -FeatureName DirectPlay -All -NoRestart | Out-Null
+        
+        Write-Host " - DirectPlay feature enabled successfully." -ForegroundColor Green
+    } else {
+        Write-Host " - DirectPlay feature is already enabled." -ForegroundColor DarkGray
     }
-} else {
-    # Installing DirectPlay replacement - Native Windows DirectPlay feature check is skipped here
-    try {
-        New-Item -ItemType Directory -Force -Path $DllDir | Out-Null
-        Invoke-WebRequest -Uri $DllUrl -OutFile $Dll -UseBasicParsing
-        $len = (Get-Item $Dll).Length
-        if ($len -lt 4096) { throw "DLL download invalid ($len bytes)" }
-        try { Unblock-File -Path $Dll -ErrorAction SilentlyContinue } catch {}
-
-        foreach ($id in $Clsids.Keys) {
-            $key = "HKCU:\Software\Classes\WOW6432Node\CLSID\$id\InprocServer32"
-            if (-not (Test-Path $key)) { New-Item $key -Force | Out-Null }
-            Set-ItemProperty $key -Name '(default)'      -Value $Dll
-            Set-ItemProperty $key -Name 'ThreadingModel' -Value 'Both'
-            Write-Host " - Registered $($Clsids[$id])" -ForegroundColor Green
-        }
-    } catch {
-        Write-Host " ! DLL Replacement failed: $_" -ForegroundColor Red
-    }
+} catch {
+    Write-Host " ! Failed to verify or enable DirectPlay: $_" -ForegroundColor Red
 }
 
 # ---------- Complete -------------------------------------------------
