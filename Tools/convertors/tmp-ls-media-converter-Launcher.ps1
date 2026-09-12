@@ -1,5 +1,5 @@
 # =====================================================================
-#    InsideEARTH - Earth 2150 TMP/LS Converter Launcher
+#   InsideEARTH - Earth 2150 Media Converter Launcher v1.0"
 # =====================================================================
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -15,6 +15,8 @@ if (-not $isAdmin) {
 }
 
 clear
+
+$host.ui.RawUI.WindowTitle = "Earth 2150 Media Converter Launcher v1.0"
 
 $ErrorActionPreference = 'Stop'
 
