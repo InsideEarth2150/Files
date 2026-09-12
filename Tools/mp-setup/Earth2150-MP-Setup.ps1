@@ -171,10 +171,31 @@ Write-Host
 Write-Host " [3/4] Configuring Windows Firewall Rules..." -ForegroundColor Cyan
 
 $fwRules = @(
-    @{ Name = 'Earth2150 - DirectPlay Control (TCP 47624)'; Protocol = 'TCP'; LocalPort = '47624' },
-    @{ Name = 'Earth2150 - DirectPlay Range (TCP 2300-2400)'; Protocol = 'TCP'; LocalPort = '2300-2400' },
-    @{ Name = 'Earth2150 - DirectPlay Range (UDP 2300-2400)'; Protocol = 'UDP'; LocalPort = '2300-2400' }
+    @{ Name = 'Earth2150 - DirectPlay Control (TCP 47624)'; Protocol = 'TCP'; LocalPort = '47624'; RemotePort = $null },
+    @{ Name = 'Earth2150 - DirectPlay Range (TCP 2300-2400)'; Protocol = 'TCP'; LocalPort = '2300-2400'; RemotePort = $null },
+    @{ Name = 'Earth2150 - DirectPlay Range (UDP 2300-2400)'; Protocol = 'UDP'; LocalPort = '2300-2400'; RemotePort = $null },
+    @{ Name = 'Earth2150 - ICMPv4 Allow Subnet'; Protocol = 'ICMPv4'; LocalPort = $null; RemoteAddress = '10.21.50.0/24' }
 )
+
+# Application logic handling optional RemoteAddress and RemotePort parameters
+$applyFwScript = {
+    param($rules)
+    foreach ($r in $rules) {
+        Get-NetFirewallRule -DisplayName $r.Name -ErrorAction SilentlyContinue | Remove-NetFirewallRule -ErrorAction SilentlyContinue
+        
+        $params = @{
+            DisplayName = $r.Name
+            Direction   = 'Inbound'
+            Action      = 'Allow'
+            Protocol    = $r.Protocol
+            Profile     = 'Any'
+        }
+        if ($r.LocalPort)    { $params['LocalPort']    = $r.LocalPort }
+        if ($r.RemoteAddress) { $params['RemoteAddress'] = $r.RemoteAddress }
+
+        New-NetFirewallRule @params | Out-Null
+    }
+}
 
 # Check if all firewall rules exist and are enabled
 $needsFwUpdate = $false
