@@ -6,6 +6,8 @@
 
 clear
 
+$host.ui.RawUI.WindowTitle = "InsideEARTH - Earth 2150 Levels Downloader"
+
 $ErrorActionPreference = 'Stop'
 
 # Define supported games and their registry paths
