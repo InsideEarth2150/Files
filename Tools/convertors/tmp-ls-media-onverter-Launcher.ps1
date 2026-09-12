@@ -209,6 +209,27 @@ while ($true) {
         Set-Location -Path $targetDir
         & $targetScriptPath
 
+        # 6. Cleanup unused files and binaries after execution
+        Write-Host
+        Write-Host "Cleaning up temporary files, binaries, and logs..." -ForegroundColor Cyan
+
+        # Remove the downloaded converter script
+        if (Test-Path $targetScriptPath) {
+            Remove-Item -Path $targetScriptPath -Force -ErrorAction SilentlyContinue
+        }
+
+        # Remove local helper tools (7za.exe, ffmpeg.exe) if left in the target directory
+        $binariesToClean = @("7za.exe", "ffmpeg.exe")
+        foreach ($bin in $binariesToClean) {
+            $binPath = Join-Path $targetDir $bin
+            if (Test-Path $binPath) {
+                Remove-Item -Path $binPath -Force -ErrorAction SilentlyContinue
+            }
+        }
+
+        # Remove any log files left in the target directory
+        Get-ChildItem -Path $targetDir -Filter "*.log" -ErrorAction SilentlyContinue | Remove-Item -Force -ErrorAction SilentlyContinue
+
         # Reset location and prompt before looping back
         Set-Location -Path $scriptDir
         Write-Host
