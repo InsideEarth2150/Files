@@ -16,7 +16,7 @@ if (-not $isAdmin) {
 
 clear
 
-$host.ui.RawUI.WindowTitle = "InsideEARTH - Earth 2150 Tools & Utilities Launcher v1.1"
+$host.ui.RawUI.WindowTitle = "InsideEARTH - Earth 2150 Tools & Utilities Launcher v1.3"
 $ErrorActionPreference = 'Stop'
 
 # Main loop for top-level menu selection
