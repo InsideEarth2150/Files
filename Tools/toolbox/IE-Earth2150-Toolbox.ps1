@@ -1,5 +1,5 @@
 # =====================================================================
-#   InsideEARTH - Earth 2150 Tools & Utilities Launcher v1.2
+#   InsideEARTH - Earth 2150 Tools & Utilities Launcher v1.3
 # =====================================================================
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -29,9 +29,9 @@ while ($true) {
     Write-Host
     Write-Host " Select an option to download and run:" -ForegroundColor Cyan
     Write-Host "   [1] System Information"
-    Write-Host "   [2] Earth 2150 Multiplayer Setup (TMP Only)"
-    Write-Host "   [3] Earth 2150 Levels Downloader"
-    Write-Host "   [4] Earth 2150 Media Converter"
+    Write-Host "   [2] Multiplayer Setup"
+    Write-Host "   [3] evels Downloader"
+    Write-Host "   [4] Media Converter (TMP/LS ONLY)"
     Write-Host "   [5] Registry Editor"
     Write-Host "   [6] Exit"
     Write-Host
