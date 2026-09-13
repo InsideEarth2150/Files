@@ -1,5 +1,5 @@
 # =====================================================================
-#   InsideEARTH - Earth 2150 Tools & Utilities Launcher v1.1
+#   InsideEARTH - Earth 2150 Tools & Utilities Launcher v1.2
 # =====================================================================
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -16,7 +16,7 @@ if (-not $isAdmin) {
 
 clear
 
-$host.ui.RawUI.WindowTitle = "InsideEARTH - Earth 2150 Tools & Utilities Launcher v1.0"
+$host.ui.RawUI.WindowTitle = "InsideEARTH - Earth 2150 Tools & Utilities Launcher v1.1"
 $ErrorActionPreference = 'Stop'
 
 # Main loop for top-level menu selection
@@ -32,10 +32,11 @@ while ($true) {
     Write-Host "   [2] Earth 2150 Multiplayer Setup (TMP Only)"
     Write-Host "   [3] Earth 2150 Levels Downloader"
     Write-Host "   [4] Earth 2150 Media Converter"
-    Write-Host "   [5] Exit"
+    Write-Host "   [5] Registry Editor"
+    Write-Host "   [6] Exit"
     Write-Host
 
-    $choice = Read-Host "Enter option (1-5)"
+    $choice = Read-Host "Enter option (1-6)"
 
     $scriptName  = $null
     $apiPath     = $null
@@ -63,6 +64,11 @@ while ($true) {
             $downloadUrl = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/convertors/tmp-ls-media-converter-Launcher.ps1"
         }
         "5" {
+            $scriptName  = "regedit.ps1"
+            $apiPath     = "Tools/registry/editor/regedit.ps1"
+            $downloadUrl = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/registry/editor/regedit.ps1"
+        }
+        "6" {
             Write-Host "`nExiting..." -ForegroundColor Yellow
             exit 0
         }
