@@ -1,5 +1,5 @@
 # =====================================================================
-#   InsideEARTH - Earth 2150 Tools & Utilities Launcher v1.0
+#   InsideEARTH - Earth 2150 Tools & Utilities Launcher v1.1
 # =====================================================================
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -28,13 +28,14 @@ while ($true) {
     Write-Host " ===================================================" -ForegroundColor Green
     Write-Host
     Write-Host " Select an option to download and run:" -ForegroundColor Cyan
-    Write-Host "   [1] Earth 2150 Multiplayer Setup (TMP Only)"
-    Write-Host "   [2] Earth 2150 Levels Downloader"
-    Write-Host "   [3] Earth 2150 Media Converter"
-    Write-Host "   [4] Exit"
+    Write-Host "   [1] System Information"
+    Write-Host "   [2] Earth 2150 Multiplayer Setup (TMP Only)"
+    Write-Host "   [3] Earth 2150 Levels Downloader"
+    Write-Host "   [4] Earth 2150 Media Converter"
+    Write-Host "   [5] Exit"
     Write-Host
 
-    $choice = Read-Host "Enter option (1-4)"
+    $choice = Read-Host "Enter option (1-5)"
 
     $scriptName  = $null
     $apiPath     = $null
@@ -42,21 +43,26 @@ while ($true) {
 
     switch ($choice) {
         "1" {
+            $scriptName  = "system-information.ps1"
+            $apiPath     = "Tools/system/system-information.ps1"
+            $downloadUrl = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/system/system-information.ps1"
+        }
+        "2" {
             $scriptName  = "Earth2150-MP-Setup.ps1"
             $apiPath     = "Tools/mp-setup/Earth2150-MP-Setup.ps1"
             $downloadUrl = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/mp-setup/Earth2150-MP-Setup.ps1"
         }
-        "2" {
+        "3" {
             $scriptName  = "IE-Earth2150-Level-Downloader.ps1"
             $apiPath     = "Tools/downloaders/IE-Earth2150-Level-Downloader.ps1"
             $downloadUrl = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/downloaders/IE-Earth2150-Level-Downloader.ps1"
         }
-        "3" {
+        "4" {
             $scriptName  = "tmp-ls-media-converter-Launcher.ps1"
             $apiPath     = "Tools/convertors/tmp-ls-media-converter-Launcher.ps1"
             $downloadUrl = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/convertors/tmp-ls-media-converter-Launcher.ps1"
         }
-        "4" {
+        "5" {
             Write-Host "`nExiting..." -ForegroundColor Yellow
             exit 0
         }
