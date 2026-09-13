@@ -30,7 +30,7 @@ while ($true) {
     Write-Host " Select an option to download and run:" -ForegroundColor Cyan
     Write-Host "   [1] System Information"
     Write-Host "   [2] Multiplayer Setup"
-    Write-Host "   [3] evels Downloader"
+    Write-Host "   [3] Levels Downloader"
     Write-Host "   [4] Media Converter (TMP/LS ONLY)"
     Write-Host "   [5] Registry Editor"
     Write-Host "   [6] Exit"
