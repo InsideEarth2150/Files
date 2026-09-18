@@ -1,7 +1,6 @@
-<#
-.SYNOPSIS
-    Self-elevating script to gather OS/hardware specs and side-by-side game registry graphics settings with missing value highlights.
-#>
+# =====================================================================
+#   InsideEARTH - System Information v1.0
+# =====================================================================
 
 # Self-elevation check
 if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
@@ -161,6 +160,11 @@ foreach ($key in $keysToRead) {
     Write-Host ""
 }
 
+# 4. Powershell Information
+Write-SectionHeader "POWERSHELL INFORMATION"
+$powershell = $PSVersionTable.PSVersion
+
+Write-ReportItem "Powershell Version" $powershell
 Write-Host "`n"
 Write-Host ("=" * 78) -ForegroundColor Green
 Write-Host " Script execution completed successfully." -ForegroundColor Green
