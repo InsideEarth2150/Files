@@ -88,7 +88,7 @@ if (-not (Test-Path $ffmpegPath)) {
 
 # ---------- 3) Parallel Audio Conversion -----------------
 Write-Host 
-Write-Host "[3/3] Running Parallel Video Conversion..." -ForegroundColor Cyan
+Write-Host "[3/3] Running Parallel Audio Conversion..." -ForegroundColor Cyan
 
 # Clean old log
 $mainLog = Join-Path $scriptDir "convert_log.txt"
