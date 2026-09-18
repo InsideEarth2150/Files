@@ -12,7 +12,7 @@ if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
 
 clear
 
-$host.ui.RawUI.WindowTitle = "InsideEARTH - Earth 2150 Registry Editor v1.0"
+$host.ui.RawUI.WindowTitle = "InsideEARTH - Earth 2150 Tools & Utilities Launcher v1.0"
 $ErrorActionPreference = 'Stop'
 
 # Define game configurations with both HKCU and HKLM paths
@@ -20,22 +20,22 @@ $games = @(
     @{ 
         Name = "Earth 2150"; 
         Paths = @(
-            "HKCU:\Software\Topware\TheMoonProject\BaseGame\FileSystem",
-            "HKLM:\SOFTWARE\WOW6432Node\Topware\TheMoonProject\BaseGame\FileSystem"
+            "HKCU:\Software\Topware\Earth 2150\BaseGame\FileSystem",
+            "HKLM:\Software\WOW6432Node\Topware\Earth 2150\BaseGame\FileSystem"
         ) 
     },
     @{ 
         Name = "The Moon Project"; 
         Paths = @(
             "HKCU:\Software\Topware\TheMoonProject\BaseGame\FileSystem",
-            "HKLM:\SOFTWARE\WOW6432Node\Topware\TheMoonProject\BaseGame\FileSystem"
+            "HKLM:\Software\WOW6432Node\Topware\TheMoonProject\BaseGame\FileSystem"
         ) 
     },
     @{ 
         Name = "Lost Souls"; 
         Paths = @(
             "HKCU:\Software\Reality Pump\LostSouls\BaseGame\FileSystem",
-            "HKLM:\SOFTWARE\WOW6432Node\Reality Pump\LostSouls\BaseGame\FileSystem"
+            "HKLM:\Software\WOW6432Node\Reality Pump\LostSouls\BaseGame\FileSystem"
         ) 
     }
 )
@@ -43,14 +43,15 @@ $games = @(
 function Show-GameMenu {
     Clear-Host
     Write-Host "=====================================================================" -ForegroundColor Green
-    Write-Host "   InsideEARTH - Earth 2150 Registry Editor v1.0" -ForegroundColor Green
+    Write-Host "   InsideEARTH - Earth 2150 Tools & Utilities Menu" -ForegroundColor Green
     Write-Host "=====================================================================" -ForegroundColor Green
     Write-Host ""
-    Write-Host "Select an option to configure registry paths:" -ForegroundColor Cyan
+    Write-Host "Select an option to configure registry paths:" -ForegroundColor White
     for ($i = 0; $i -lt $games.Count; $i++) {
         Write-Host "   [$($i + 1)]$($games[$i].Name)" -ForegroundColor White
     }
-    Write-Host "   [$($games.Count + 1)] Exit" -ForegroundColor White
+    Write-Host ""
+    Write-Host "   [$($games.Count + 1)]Exit" -ForegroundColor Red
     Write-Host ""
 }
 
@@ -66,21 +67,26 @@ function Edit-RegistryValues {
     Write-Host "=====================================================================" -ForegroundColor Green
     Write-Host ""
 
-    # Display current information from the first path as a reference
-    $referencePath =$RegPaths[0]
-    if (-not (Test-Path $referencePath)) {
-        New-Item -Path $referencePath -Force | Out-Null
+    Write-Host "Current Registry Information (HKCU & HKLM):" -ForegroundColor Cyan
+    
+    foreach ($path in $RegPaths) {
+        Write-Host "  [$path]" -ForegroundColor DarkGray
+        try {
+            if (-not (Test-Path $path)) {
+                New-Item -Path $path -Force | Out-Null
+            }
+            $currentDatapath = (Get-ItemProperty -Path $path -Name "datapath" -ErrorAction SilentlyContinue).datapath
+            $currentOutputDir = (Get-ItemProperty -Path $path -Name "OutputDir" -ErrorAction SilentlyContinue).OutputDir
+
+            Write-Host "    datapath  : $(if ($currentDatapath) {$currentDatapath } else { '(not set)' })" -ForegroundColor White
+            Write-Host "    OutputDir : $(if ($currentOutputDir) {$currentOutputDir } else { '(not set)' })" -ForegroundColor White
+        } catch {
+            Write-Host "    [!] Could not access or create registry path: $_" -ForegroundColor Red
+        }
     }
-
-    $currentDatapath = (Get-ItemProperty -Path$referencePath -Name "datapath" -ErrorAction SilentlyContinue).datapath
-    $currentOutputDir = (Get-ItemProperty -Path$referencePath -Name "OutputDir" -ErrorAction SilentlyContinue).OutputDir
-
-    Write-Host "Current Registry Information (Reference):" -ForegroundColor Cyan
-    Write-Host "  datapath  : $(if ($currentDatapath) {$currentDatapath } else { '(not set)' })" -ForegroundColor White
-    Write-Host "  OutputDir : $(if ($currentOutputDir) {$currentOutputDir } else { '(not set)' })" -ForegroundColor White
     Write-Host ""
 
-    $choice = Read-Host "Do you wish to update these values for all registry locations? (y/n)"
+    $choice = Read-Host "Do you wish to edit these values for both locations? (y/n)"
     if ($choice -eq 'y' -or$choice -eq 'Y') {
         Write-Host ""
         $fullPath = Read-Host "Enter the full file path (e.g., G:\Games\Steam\steamapps\common\GameName)"
@@ -90,26 +96,27 @@ function Edit-RegistryValues {
         $newDatapath = "$cleanPath\>"
         $newOutputDir =$cleanPath
 
-        foreach ($RegPath in $RegPaths) {
-            Write-Host "Processing path: $RegPath" -ForegroundColor DarkGray
-            
-            # Ensure registry path exists
-            if (-not (Test-Path $RegPath)) {
-                New-Item -Path $RegPath -Force | Out-Null
-            }
+        foreach ($path in $RegPaths) {
+            try {
+                if (-not (Test-Path $path)) {
+                    New-Item -Path $path -Force | Out-Null
+                }
 
-            # Apply changes for datapath
-            if (Get-ItemProperty -Path $RegPath -Name "datapath" -ErrorAction SilentlyContinue) {
-                Set-ItemProperty -Path $RegPath -Name "datapath" -Value $newDatapath
-            } else {
-                New-ItemProperty -Path $RegPath -Name "datapath" -Value $newDatapath -PropertyType String | Out-Null
-            }
+                # Apply changes for datapath
+                if (Get-ItemProperty -Path $path -Name "datapath" -ErrorAction SilentlyContinue) {
+                    Set-ItemProperty -Path $path -Name "datapath" -Value $newDatapath
+                } else {
+                    New-ItemProperty -Path $path -Name "datapath" -Value $newDatapath -PropertyType String | Out-Null
+                }
 
-            # Apply changes for OutputDir
-            if (Get-ItemProperty -Path $RegPath -Name "OutputDir" -ErrorAction SilentlyContinue) {
-                Set-ItemProperty -Path $RegPath -Name "OutputDir" -Value $newOutputDir
-            } else {
-                New-ItemProperty -Path $RegPath -Name "OutputDir" -Value $newOutputDir -PropertyType String | Out-Null
+                # Apply changes for OutputDir
+                if (Get-ItemProperty -Path $path -Name "OutputDir" -ErrorAction SilentlyContinue) {
+                    Set-ItemProperty -Path $path -Name "OutputDir" -Value $newOutputDir
+                } else {
+                    New-ItemProperty -Path $path -Name "OutputDir" -Value $newOutputDir -PropertyType String | Out-Null
+                }
+            } catch {
+                Write-Host "    [!] Failed to update $path :$_" -ForegroundColor Red
             }
         }
 
@@ -128,13 +135,13 @@ function Edit-RegistryValues {
 # Main loop
 do {
     Show-GameMenu
-    $maxOption = $games.Count + 1
+    $maxOption =$games.Count + 1
     $selection = Read-Host "Enter option (1-$maxOption)"
     
     switch ($selection) {
-        '1' { Edit-RegistryValues -GameName $games[0].Name -RegPaths$games[0].Paths }
-        '2' { Edit-RegistryValues -GameName $games[1].Name -RegPaths$games[1].Paths }
-        '3' { Edit-RegistryValues -GameName $games[2].Name -RegPaths$games[2].Paths }
+        '1' { Edit-RegistryValues -GameName $games[0].Name -RegPaths @($games[0].Paths) }
+        '2' { Edit-RegistryValues -GameName $games[1].Name -RegPaths @($games[1].Paths) }
+        '3' { Edit-RegistryValues -GameName $games[2].Name -RegPaths @($games[2].Paths) }
         '4' { exit }
         default { 
             Write-Host ""
