@@ -1,5 +1,5 @@
 # =====================================================================
-#   InsideEARTH - Earth 2150 Tools & Utilities Launcher v1.3
+#   InsideEARTH - Earth 2150 Tools & Utilities Launcher v1.4
 # =====================================================================
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -33,7 +33,7 @@ while ($true) {
     Write-Host "   [3] Levels Downloader"
     Write-Host "   [4] Media Converter (TMP/LS ONLY)"
     Write-Host "   [5] Registry Editor"
-    Write-Host
+    Write-Host ""
     Write-Host "   [6] Exit" -ForegroundColor Red
     Write-Host
 
