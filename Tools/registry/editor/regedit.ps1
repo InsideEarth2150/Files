@@ -90,7 +90,7 @@ function Edit-RegistryValues {
         $newDatapath = "$cleanPath\>"
         $newOutputDir =$cleanPath
 
-        foreach ($RegPath in$RegPaths) {
+        foreach ($RegPath in $RegPaths) {
             Write-Host "Processing path: $RegPath" -ForegroundColor DarkGray
             
             # Ensure registry path exists
@@ -128,7 +128,8 @@ function Edit-RegistryValues {
 # Main loop
 do {
     Show-GameMenu
-    $maxOption = $games.Count + 1$selection = Read-Host "Enter option (1-$maxOption)"
+    $maxOption = $games.Count + 1
+    $selection = Read-Host "Enter option (1-$maxOption)"
     
     switch ($selection) {
         '1' { Edit-RegistryValues -GameName $games[0].Name -RegPaths$games[0].Paths }
