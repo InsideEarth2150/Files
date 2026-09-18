@@ -86,7 +86,19 @@ while ($true) {
     # Prompt user to select a detected game
     Write-Host "`nFound the following installed games:" -ForegroundColor Green
     for ($i = 0; $i -lt $installedGames.Count; $i++) {
-        Write-Host " [$($i + 1)] $($installedGames[$i].Name)"
+        $fullName = $installedGames[$i].Name
+        
+        # Check if the game name contains the warning string
+        if ($fullName -like "*(DO NOT USE)*") {
+            # Split the string right before "(DO NOT USE)"
+            $baseName = $fullName -replace '\s*\(DO NOT USE\)', ''
+            
+            Write-Host " [$($i + 1)] " -NoNewline
+            Write-Host "$baseName " -NoNewline
+            Write-Host "(DO NOT USE)" -ForegroundColor Red
+        } else {
+            Write-Host " [$($i + 1)] $fullName"
+        }
     }
 
     $exitOptionIndex = $installedGames.Count + 1
