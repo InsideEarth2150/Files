@@ -1,10 +1,5 @@
 # =====================================================================
-#   InsideEARTH - Earth 2150 Multiplayer
-#
-#   Meant to be fetched from GitHub and run
-#     powershell -ExecutionPolicy Bypass -Command iex (irm https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/mp-setup/Earth2150-MP-Setup.ps1)
-#   or just double-click IE-E2150-MP-Setup.bat.
-#
+#   InsideEARTH - Earth 2150 Multiplayer Setup v1.0
 # =====================================================================
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -62,15 +57,13 @@ Write-Host
 Write-Host " [1/4] OpenVPN Setup..." -ForegroundColor Cyan
 if ($InstallOpenVPN) {
     try {
-        # Ensure OpenVPN is not running during profile import
-        Write-Host " - Stopping OpenVPN processes if running..." -ForegroundColor Yellow
-        Stop-Process -Name "openvpnconnect", "openvpn" -Force -ErrorAction SilentlyContinue
-        Start-Sleep -Seconds 1
-
         # Check if OpenVPN Connect is already installed
         $isInstalled = winget list --id OpenVPNTechnologies.OpenVPNConnect --exact 2>$null | Out-String
+        
         if ($isInstalled -match 'OpenVPNConnect') {
-            Write-Host " - OpenVPN Connect is already installed. Skipping installation." -ForegroundColor DarkGray
+            Write-Host " - OpenVPN Connect is already installed. Stopping running instances..." -ForegroundColor Yellow
+            Stop-Process -Name "openvpnconnect", "openvpn" -Force -ErrorAction SilentlyContinue
+            Start-Sleep -Seconds 1
         } else {
             Write-Host " - Installing OpenVPN Connect silently..." -ForegroundColor Yellow
             winget install OpenVPNTechnologies.OpenVPNConnect --accept-source-agreements --accept-package-agreements --silent | Out-Null
