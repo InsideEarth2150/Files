@@ -1,5 +1,5 @@
 # =====================================================================
-#    InsideEARTH - Earth 2150 Registry Editor v1.3
+#    InsideEARTH - Earth 2150 Registry Tools v1.4
 # =====================================================================
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
