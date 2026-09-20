@@ -1,5 +1,5 @@
 # =====================================================================
-#   InsideEARTH - Earth 2150 Registry Editor v1.1
+#    InsideEARTH - Earth 2150 Registry Editor v1.2
 # =====================================================================
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -10,29 +10,29 @@ if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
     exit
 }
 
-clear
+Clear-Host
 
-$host.ui.RawUI.WindowTitle = "InsideEARTH - Earth 2150 Tools & Utilities Launcher v1.0"
+$host.UI.RawUI.WindowTitle = "InsideEARTH - Earth 2150 Tools & Utilities Launcher v1.1"
 $ErrorActionPreference = 'Stop'
 
 # Define game configurations with both HKCU and HKLM paths
 $games = @(
     @{ 
-        Name = "Earth 2150"; 
+        Name  = "Earth 2150"
         Paths = @(
             "HKCU:\Software\Topware\Earth 2150\BaseGame\FileSystem",
             "HKLM:\Software\WOW6432Node\Topware\Earth 2150\BaseGame\FileSystem"
         ) 
     },
     @{ 
-        Name = "The Moon Project"; 
+        Name  = "The Moon Project"
         Paths = @(
             "HKCU:\Software\Topware\TheMoonProject\BaseGame\FileSystem",
             "HKLM:\Software\WOW6432Node\Topware\TheMoonProject\BaseGame\FileSystem"
         ) 
     },
     @{ 
-        Name = "Lost Souls"; 
+        Name  = "Lost Souls"
         Paths = @(
             "HKCU:\Software\Reality Pump\LostSouls\BaseGame\FileSystem",
             "HKLM:\Software\WOW6432Node\Reality Pump\LostSouls\BaseGame\FileSystem"
@@ -43,15 +43,15 @@ $games = @(
 function Show-GameMenu {
     Clear-Host
     Write-Host "=====================================================================" -ForegroundColor Green
-    Write-Host "  InsideEARTH - Earth 2150 Tools & Utilities Menu" -ForegroundColor Green
+    Write-Host "   InsideEARTH - Earth 2150 Tools & Utilities Menu" -ForegroundColor Green
     Write-Host "=====================================================================" -ForegroundColor Green
     Write-Host ""
     Write-Host "Select an option to configure registry paths:" -ForegroundColor White
     for ($i = 0; $i -lt $games.Count; $i++) {
-        Write-Host "   [$($i + 1)]$($games[$i].Name)" -ForegroundColor White
+        Write-Host "    [$($i + 1)]$($games[$i].Name)" -ForegroundColor White
     }
     Write-Host ""
-    Write-Host "   [$($games.Count + 1)] Exit" -ForegroundColor Red
+    Write-Host "    [$($games.Count + 1)] Exit" -ForegroundColor Red
     Write-Host ""
 }
 
@@ -63,7 +63,7 @@ function Edit-RegistryValues {
 
     Clear-Host
     Write-Host "=====================================================================" -ForegroundColor Green
-    Write-Host "  InsideEARTH - $GameName Registry Configuration" -ForegroundColor Green
+    Write-Host "   InsideEARTH - $GameName Registry Configuration" -ForegroundColor Green
     Write-Host "=====================================================================" -ForegroundColor Green
     Write-Host ""
 
@@ -72,7 +72,7 @@ function Edit-RegistryValues {
     foreach ($path in$RegPaths) {
         Write-Host "  [$path]" -ForegroundColor DarkGray
         try {
-            if (Test-Path $path) {
+            if (Test-Path -Path $path) {
                 $currentDatapath = (Get-ItemProperty -Path$path -Name "datapath" -ErrorAction SilentlyContinue).datapath
                 $currentOutputDir = (Get-ItemProperty -Path$path -Name "OutputDir" -ErrorAction SilentlyContinue).OutputDir
             } else {
@@ -93,21 +93,27 @@ function Edit-RegistryValues {
         Write-Host ""
         $fullPath = Read-Host "Enter the full file path (e.g., G:\Games\Steam\steamapps\common\GameName)"
         
-        # Clean trailing slashes to format properly matching the expected pattern
-        $cleanPath =$fullPath.TrimEnd('/').TrimEnd('\')
+        if ([string]::IsNullOrWhiteSpace($fullPath)) {
+            Write-Host "Path cannot be empty." -ForegroundColor Red
+            Start-Sleep -Seconds 2
+            return
+        }
+
+        # Clean trailing slashes and append required Earth 2150 datapath suffix
+        $cleanPath =$fullPath.TrimEnd('/', '\')
         $newDatapath = "$cleanPath\>"
         $newOutputDir =$cleanPath
 
         foreach ($path in$RegPaths) {
             try {
-                # Create the key folder ONLY if it does not exist yet
-                if (-not (Test-Path $path)) {
-                    New-Item -Path $path -Force | Out-Null
+                # Create registry key folder hierarchy ONLY if it does not exist yet
+                if (-not (Test-Path -Path $path)) {
+                    $null = New-Item -Path$path -Force
                 }
 
-                # Set-ItemProperty updates existing keys or creates them if missing, leaving all other values intact
-                Set-ItemProperty -Path $path -Name "datapath" -Value $newDatapath -Force
-                Set-ItemProperty -Path $path -Name "OutputDir" -Value $newOutputDir -Force
+                # Target ONLY datapath and OutputDir explicitly
+                Set-ItemProperty -Path $path -Name "datapath" -Value $newDatapath -Type String -Force
+                Set-ItemProperty -Path $path -Name "OutputDir" -Value $newOutputDir -Type String -Force
 
             } catch {
                 Write-Host "    [!] Failed to update $path :$_" -ForegroundColor Red
@@ -135,7 +141,7 @@ do {
         '1' { Edit-RegistryValues -GameName $games[0].Name -RegPaths$games[0].Paths }
         '2' { Edit-RegistryValues -GameName $games[1].Name -RegPaths$games[1].Paths }
         '3' { Edit-RegistryValues -GameName $games[2].Name -RegPaths$games[2].Paths }
-        '4' { exit }
+        "$maxOption" { exit }
         default { 
             Write-Host ""
             Write-Host "Invalid selection. Press any key to try again..." -ForegroundColor Red
