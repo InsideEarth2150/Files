@@ -74,39 +74,8 @@ if ($installed.Count -eq 0) {
     $installed += [pscustomobject]@{ Name = 'Manual folder'; Path = $manual }
 }
 
-# Choose which install(s) to process (menu always includes an Exit option)
-$exitOption = $installed.Count + 2
-$allOption  = $installed.Count + 1
-$targets = $null
-while (-not $targets) {
-    Write-Host
-    Write-Host "Select which game to convert:" -ForegroundColor White
-    for ($i = 0; $i -lt $installed.Count; $i++) {
-        Write-Host "    [$($i + 1)] $($installed[$i].Name)  " -ForegroundColor White -NoNewline
-        Write-Host "($($installed[$i].Path))" -ForegroundColor Green
-    }
-    if ($installed.Count -gt 1) {
-        Write-Host "    [$allOption] All of the above" -ForegroundColor White
-    }
-    Write-Host
-    Write-Host "    [$exitOption] Exit" -ForegroundColor Red
-    Write-Host
-
-    $pick = Read-Host "Enter option (1-$exitOption)"
-    $n = 0
-    if (-not [int]::TryParse($pick, [ref]$n)) {
-        Write-Host "Invalid selection." -ForegroundColor Red
-    } elseif ($n -eq $exitOption) {
-        Write-Host "Exiting without converting anything." -ForegroundColor Yellow
-        exit 0
-    } elseif ($n -ge 1 -and $n -le $installed.Count) {
-        $targets = @($installed[$n - 1])
-    } elseif ($installed.Count -gt 1 -and $n -eq $allOption) {
-        $targets = $installed
-    } else {
-        Write-Host "Invalid selection." -ForegroundColor Red
-    }
-}
+# Single-game script: no menu, convert the detected install straight away
+$targets = $installed
 
 # ---------- 1) 7-Zip CLI -----------------
 Write-Host
