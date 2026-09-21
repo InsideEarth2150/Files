@@ -1,5 +1,5 @@
 # =====================================================================
-#   InsideEARTH - Earth 2150 Media Converter Launcher v1.0"
+#   InsideEARTH - Earth 2150 Media Converter Launcher v1.3
 # =====================================================================
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -14,33 +14,45 @@ if (-not $isAdmin) {
     Exit
 }
 
-clear
+Clear-Host
 
-$host.ui.RawUI.WindowTitle = "Earth 2150 Media Converter Launcher v1.0"
+$host.ui.RawUI.WindowTitle = "Earth 2150 Media Converter Launcher v1.1"
 
 $ErrorActionPreference = 'Stop'
 
-# Define supported games and their registry paths
+# GitHub locations for the converter scripts
+$RawBase = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/"
+$ApiRepo = "https://api.github.com/repos/InsideEarth2150/Files/commits"
+
+# Define supported games.
+#   RegSub      = registry key below \Software (or \Software\WOW6432Node) that holds the game settings
+#   AudioScript = audio converter script used for THIS game
+#   VideoScript = video converter script used for this game ($null = not available)
 $games = @(
     @{
-        Name     = "Earth 2150: Escape from the Blue Planet (DO NOT USE)"
-        RegPath  = "HKCU:\Software\Topware\Earth 2150\BaseGame\FileSystem"
-        RegValue = "datapath"
-        ExeName  = "Earth2150.exe"
+        Name        = "Earth 2150: Escape from the Blue Planet (DO NOT USE)"
+        RegSub      = "Topware\Earth 2150"
+        ExeName     = "Earth2150.exe"
+        AudioScript = "eftbp-music_convert.ps1"
+        VideoScript = $null
     },
     @{
-        Name     = "Earth 2150: The Moon Project"
-        RegPath  = "HKCU:\Software\Topware\TheMoonProject\BaseGame\FileSystem"
-        RegValue = "datapath"
-        ExeName  = "TheMoonProject.exe"
+        Name        = "Earth 2150: The Moon Project"
+        RegSub      = "Topware\TheMoonProject"
+        ExeName     = "TheMoonProject.exe"
+        AudioScript = "tmp-music_convert.ps1"
+        VideoScript = "tmp-ls-video_convert.ps1"
     },
     @{
-        Name     = "Earth 2150: Lost Souls"
-        RegPath  = "HKCU:\Software\Reality Pump\LostSouls\BaseGame\FileSystem"
-        RegValue = "datapath"
-        ExeName  = "LostSouls.exe"
+        Name        = "Earth 2150: Lost Souls"
+        RegSub      = "Reality Pump\LostSouls"
+        ExeName     = "LostSouls.exe"
+        AudioScript = "ls-music_convert.ps1"
+        VideoScript = "tmp-ls-video_convert.ps1"
     }
 )
+
+$regRoots = @('HKCU:\Software', 'HKLM:\Software\WOW6432Node', 'HKLM:\Software')
 
 # Main loop for game selection and execution
 while ($true) {
@@ -51,27 +63,39 @@ while ($true) {
     Write-Host " ===================================================" -ForegroundColor Green
     Write-Host
 
-    # 1. Detect installed games via registry
+    # 1. Detect installed games via registry (HKCU + HKLM, OutputDir + datapath)
     Write-Host "Detecting installed Earth 2150 games via registry..." -ForegroundColor Cyan
     $installedGames = @()
 
     foreach ($game in $games) {
-        if (Test-Path $game.RegPath) {
-            $rawPath = (Get-ItemProperty -Path $game.RegPath -Name $game.RegValue -ErrorAction SilentlyContinue).$($game.RegValue)
-            
-            if ($rawPath) {
-                # Strip null bytes, invalid characters, quotes, and trailing slashes
-                $cleanPath = $rawPath -replace '[^\x20-\x7E]', ''
+        $found = $null
+        foreach ($root in $regRoots) {
+            $key = "$root\$($game.RegSub)\BaseGame\FileSystem"
+            if (-not (Test-Path -LiteralPath $key)) { continue }
+            $props = Get-ItemProperty -LiteralPath $key -ErrorAction SilentlyContinue
+
+            foreach ($rawPath in @($props.OutputDir, $props.datapath)) {
+                if (-not $rawPath) { continue }
+                # Strip null bytes, invalid characters (incl. the trailing "/>"), quotes, and trailing slashes
+                $cleanPath = ([string]$rawPath) -replace '[^\x20-\x7E]', ''
                 $cleanPath = $cleanPath -replace '[><|?"*]', ''
                 $cleanPath = $cleanPath.Trim().Trim('"').Trim("'").TrimEnd('\', '/')
 
-                if (-not [string]::IsNullOrWhiteSpace($cleanPath) -and (Test-Path -Path $cleanPath)) {
-                    $installedGames += [PSCustomObject]@{
-                        Name     = $game.Name
-                        RootPath = $cleanPath
-                        ExeName  = $game.ExeName
-                    }
+                if (-not [string]::IsNullOrWhiteSpace($cleanPath) -and (Test-Path -LiteralPath $cleanPath -PathType Container)) {
+                    $found = $cleanPath
+                    break
                 }
+            }
+            if ($found) { break }
+        }
+
+        if ($found) {
+            $installedGames += [PSCustomObject]@{
+                Name        = $game.Name
+                RootPath    = $found
+                ExeName     = $game.ExeName
+                AudioScript = $game.AudioScript
+                VideoScript = $game.VideoScript
             }
         }
     }
@@ -87,12 +111,12 @@ while ($true) {
     Write-Host "`nFound the following installed games:" -ForegroundColor Green
     for ($i = 0; $i -lt $installedGames.Count; $i++) {
         $fullName = $installedGames[$i].Name
-        
+
         # Check if the game name contains the warning string
         if ($fullName -like "*(DO NOT USE)*") {
             # Split the string right before "(DO NOT USE)"
             $baseName = $fullName -replace '\s*\(DO NOT USE\)', ''
-            
+
             Write-Host " [$($i + 1)] " -NoNewline
             Write-Host "$baseName " -NoNewline
             Write-Host "(DO NOT USE)" -ForegroundColor Red
@@ -143,37 +167,49 @@ while ($true) {
 
         $choice = Read-Host "Enter option (1-4)"
 
+        # Reset per-iteration state so nothing stale carries over
+        $proceed     = $false
+        $subFolder   = $null
+        $scriptName  = $null
+        $apiPath     = $null
+        $downloadUrl = $null
+
         switch ($choice) {
             "1" {
-                $subFolder = "Music"
-                $scriptName = "tmp-ls-music_convert.ps1"
-                $apiPath    = "Tools/convertors/audio/tmp-ls-music_convert.ps1"
-                $downloadUrl = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/convertors/audio/tmp-ls-music_convert.ps1"
+                # Audio script depends on the selected game
+                $subFolder   = "Music"
+                $scriptName  = $targetGame.AudioScript
+                $apiPath     = "Tools/convertors/audio/$scriptName"
+                $downloadUrl = "$RawBase/$apiPath"
+                $proceed     = $true
             }
             "2" {
-                $subFolder = "Video"
-                $scriptName = "tmp-ls-video_convert.ps1"
-                $apiPath    = "Tools/convertors/video/tmp-ls-video_convert.ps1"
-                $downloadUrl = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/convertors/video/tmp-ls-video_convert.ps1"
+                if (-not $targetGame.VideoScript) {
+                    Write-Host "Video conversion is not available for this game." -ForegroundColor Yellow
+                    Start-Sleep -Seconds 2
+                } else {
+                    $subFolder   = "Video"
+                    $scriptName  = $targetGame.VideoScript
+                    $apiPath     = "Tools/convertors/video/$scriptName"
+                    $downloadUrl = "$RawBase/$apiPath"
+                    $proceed     = $true
+                }
             }
             "3" {
                 $backToGameMenu = $true
-                break
             }
             "4" {
                 Write-Host "Exiting." -ForegroundColor Yellow
                 exit 0
             }
             default {
-                Write-Host "Invalid selection. Press Enter to try again..." -ForegroundColor Red
+                Write-Host "Invalid selection. Please try again..." -ForegroundColor Red
                 Start-Sleep -Seconds 2
-                continue
             }
         }
 
-        if ($backToGameMenu) {
-            break
-        }
+        if ($backToGameMenu) { break }
+        if (-not $proceed)   { continue }
 
         # 3. Target Folder Verification & Hash Setup
         $targetDir = Join-Path $scriptDir $subFolder
@@ -184,7 +220,7 @@ while ($true) {
         $targetScriptPath = Join-Path $targetDir $scriptName
         $hashFileName     = "$([System.IO.Path]::GetFileNameWithoutExtension($scriptName)).sha"
         $hashPath         = Join-Path $env:TEMP $hashFileName
-        $apiUrl           = "https://api.github.com/repos/InsideEarth2150/Files/commits?path=$apiPath&page=1&per_page=1"
+        $apiUrl           = "${ApiRepo}?path=$apiPath&page=1&per_page=1"
 
         $needsDownload = $true
 
@@ -205,11 +241,11 @@ while ($true) {
 
         if ($needsDownload) {
             Write-Host
-            Write-Host "Downloading latest $subFolder script from GitHub..." -ForegroundColor Cyan
+            Write-Host "Downloading latest $subFolder script ($scriptName) from GitHub..." -ForegroundColor Cyan
             try {
                 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
                 Invoke-WebRequest -Uri $downloadUrl -OutFile $targetScriptPath -UseBasicParsing
-                
+
                 try {
                     $latestHash = (Invoke-RestMethod -Uri $apiUrl -UseBasicParsing)[0].sha
                     Set-Content -Path $hashPath -Value $latestHash -Force
@@ -223,7 +259,7 @@ while ($true) {
             }
         } else {
             Write-Host
-            Write-Host "$subFolder script is up to date." -ForegroundColor Green
+            Write-Host "$subFolder script ($scriptName) is up to date." -ForegroundColor Green
         }
 
         # 5. Execute Downloaded Converter Script inside Subfolder
