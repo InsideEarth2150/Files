@@ -12,113 +12,287 @@ if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
 
 Clear-Host
 
-$host.UI.RawUI.WindowTitle = "InsideEARTH - Earth 2150 Tools & Utilities Launcher v1.3"
+$host.UI.RawUI.WindowTitle = "InsideEARTH - Earth 2150 Tools & Utilities Launcher v1.4"
 $ErrorActionPreference = 'Stop'
 
 # Suffix appended to the game folder to form the 'datapath' value
-$DataPathSuffix = '\>'
+$DataPathSuffix = '/>'
 
-# Define game configurations. Each game has a HKCU root and a HKLM (WOW6432Node) root.
+# ---------------------------------------------------------------------
+#  DEFAULT REGISTRY SETTINGS - one block per game
+#
+#  Edit the values inside a game's block to change what 'Registry Default'
+#  writes for THAT game only. Each block has:
+#    HKCU = settings under the current user hive
+#    HKLM = settings under the machine hive (WOW6432Node)
+#  Format:   'Key\Path' = [ordered]@{ ValueName = value }
+#    - whole numbers (1920, 1, 0) are written as DWORD
+#    - text in quotes ('like this') is written as a String
+#  '(root)' means the game's top-level key.
+#  Install path (datapath / OutputDir) is NOT set here; it is preserved
+#  or asked for when you run Registry Default.
+# ---------------------------------------------------------------------
+
+# ===== Earth 2150 =====
+$Defaults_Earth2150 = @{
+        HKCU = [ordered]@{
+            '(root)'                       = [ordered]@{}
+            'BaseGame'                     = [ordered]@{}
+            'BaseGame\Graphics'            = [ordered]@{ GammaCorrection = 1 }
+            'BaseGame\Graphics\Default'   = [ordered]@{
+                Renderer     = 'display Direct3D HAL'
+                Width        = 1920
+                Height       = 1080
+                BitDepth     = 32
+                RendererType = 3
+                FullScreen   = 1
+            }
+            'BaseGame\Graphics\Direct3D'  = [ordered]@{ UseTrueColorTextures = 0 }
+            'BaseGame\Graphics\Enumeration' = [ordered]@{
+                Glide    = 1
+                Direct3D = 1
+                Software = 0
+                Hardware = 1
+                OpenGL   = 1
+            }
+            'BaseGame\Graphics\Setup'     = [ordered]@{
+                ButtonTestAll       = 1
+                AllowWindowedScreen = 1
+            }
+            'BaseGame\Graphics\Textures'  = [ordered]@{ ManualAdjust = 0 }
+            'BaseGame\Interface'           = [ordered]@{
+                AllFontsAtStart  = 1
+                Charset          = 1
+                TranslateNumKeys = 1
+            }
+            'BaseGame\Intro'               = [ordered]@{ ShowOnStart = 0 }
+            'BaseGame\Intro\Setup'        = [ordered]@{ IntroButton = 1 }
+            'BaseGame\Network'             = [ordered]@{}
+            'BaseGame\Network\DPLobby'    = [ordered]@{}
+            'BaseGame\Network\EarthNet'   = [ordered]@{
+                AddressIP = '"EarthNet - InsideEARTH""vpnnetserver2150.insideearth.info:17171""EarthNet - TopWare""netserver.earth2150.com:17101"'
+            }
+            'BaseGame\Network\Enumeration' = [ordered]@{
+                Serial   = 1
+                Modem    = 1
+                'TCP/IP' = 1
+                EarthNet = 1
+                DPLobby  = 1
+            }
+            'BaseGame\Network\Serial'     = [ordered]@{ BaudRate = '14400;19200;38400;56000;57600;115200;128000;256000' }
+            'BaseGame\Processor'           = [ordered]@{ Katmai = 1 }
+            'BaseGame\Sound'               = [ordered]@{
+                SoundType                = 2
+                Frequency                = 22050
+                HardwareChannels         = 16
+                SoftwareChannels         = 16
+                EnumerateEmulatedDrivers = 1
+                MixerType                = 0
+            }
+            'BaseGame\Sound\Setup'        = [ordered]@{ AllowHardware = 0 }
+        }
+        HKLM = [ordered]@{
+            '(root)' = [ordered]@{ NotStartAutorun = '1' }
+            'BaseGame' = [ordered]@{}
+            'BaseGame\Graphics' = [ordered]@{}
+            'BaseGame\Graphics\Default' = [ordered]@{}
+            'BaseGame\Graphics\Direct3D' = [ordered]@{}
+            'BaseGame\Graphics\Enumeration' = [ordered]@{}
+            'BaseGame\Graphics\Setup' = [ordered]@{}
+            'BaseGame\Graphics\Textures' = [ordered]@{}
+            'BaseGame\Interface' = [ordered]@{}
+            'BaseGame\Intro' = [ordered]@{}
+            'BaseGame\Intro\Setup' = [ordered]@{}
+            'BaseGame\Network' = [ordered]@{}
+            'BaseGame\Network\DPLobby' = [ordered]@{}
+            'BaseGame\Network\Enumeration' = [ordered]@{}
+            'BaseGame\Network\Serial' = [ordered]@{}
+            'BaseGame\Processor' = [ordered]@{}
+            'BaseGame\Sound' = [ordered]@{}
+            'BaseGame\Sound\Setup' = [ordered]@{}
+        }
+}
+
+# ===== The Moon Project =====
+$Defaults_MoonProject = @{
+        HKCU = [ordered]@{
+            '(root)'                       = [ordered]@{}
+            'BaseGame'                     = [ordered]@{}
+            'BaseGame\Graphics'            = [ordered]@{ GammaCorrection = 1 }
+            'BaseGame\Graphics\Default'   = [ordered]@{
+                Renderer     = 'display Direct3D HAL'
+                Width        = 1920
+                Height       = 1080
+                BitDepth     = 32
+                RendererType = 3
+                FullScreen   = 1
+            }
+            'BaseGame\Graphics\Direct3D'  = [ordered]@{ UseTrueColorTextures = 0 }
+            'BaseGame\Graphics\Enumeration' = [ordered]@{
+                Glide    = 1
+                Direct3D = 1
+                Software = 0
+                Hardware = 1
+                OpenGL   = 1
+            }
+            'BaseGame\Graphics\Setup'     = [ordered]@{
+                ButtonTestAll       = 1
+                AllowWindowedScreen = 1
+            }
+            'BaseGame\Graphics\Textures'  = [ordered]@{ ManualAdjust = 0 }
+            'BaseGame\Interface'           = [ordered]@{
+                AllFontsAtStart  = 1
+                Charset          = 1
+                TranslateNumKeys = 1
+            }
+            'BaseGame\Intro'               = [ordered]@{ ShowOnStart = 0 }
+            'BaseGame\Intro\Setup'        = [ordered]@{ IntroButton = 1 }
+            'BaseGame\Network'             = [ordered]@{}
+            'BaseGame\Network\DPLobby'    = [ordered]@{}
+            'BaseGame\Network\EarthNet'   = [ordered]@{
+                AddressIP = '"EarthNet - InsideEARTH""vpnnetserver2150.insideearth.info:17171""EarthNet - TopWare""netserver.earth2150.com:17101"'
+            }
+            'BaseGame\Network\Enumeration' = [ordered]@{
+                Serial   = 1
+                Modem    = 1
+                'TCP/IP' = 1
+                EarthNet = 1
+                DPLobby  = 1
+            }
+            'BaseGame\Network\Serial'     = [ordered]@{ BaudRate = '14400;19200;38400;56000;57600;115200;128000;256000' }
+            'BaseGame\Processor'           = [ordered]@{ Katmai = 1 }
+            'BaseGame\Sound'               = [ordered]@{
+                SoundType                = 2
+                Frequency                = 22050
+                HardwareChannels         = 16
+                SoftwareChannels         = 16
+                EnumerateEmulatedDrivers = 1
+                MixerType                = 0
+            }
+            'BaseGame\Sound\Setup'        = [ordered]@{ AllowHardware = 0 }
+        }
+        HKLM = [ordered]@{
+            '(root)' = [ordered]@{ NotStartAutorun = '1' }
+            'BaseGame' = [ordered]@{}
+            'BaseGame\Graphics' = [ordered]@{}
+            'BaseGame\Graphics\Default' = [ordered]@{}
+            'BaseGame\Graphics\Direct3D' = [ordered]@{}
+            'BaseGame\Graphics\Enumeration' = [ordered]@{}
+            'BaseGame\Graphics\Setup' = [ordered]@{}
+            'BaseGame\Graphics\Textures' = [ordered]@{}
+            'BaseGame\Interface' = [ordered]@{}
+            'BaseGame\Intro' = [ordered]@{}
+            'BaseGame\Intro\Setup' = [ordered]@{}
+            'BaseGame\Network' = [ordered]@{}
+            'BaseGame\Network\DPLobby' = [ordered]@{}
+            'BaseGame\Network\Enumeration' = [ordered]@{}
+            'BaseGame\Network\Serial' = [ordered]@{}
+            'BaseGame\Processor' = [ordered]@{}
+            'BaseGame\Sound' = [ordered]@{}
+            'BaseGame\Sound\Setup' = [ordered]@{}
+        }
+}
+
+# ===== Lost Souls =====
+$Defaults_LostSouls = @{
+        HKCU = [ordered]@{
+            '(root)'                       = [ordered]@{}
+            'BaseGame'                     = [ordered]@{}
+            'BaseGame\Graphics'            = [ordered]@{ GammaCorrection = 1 }
+            'BaseGame\Graphics\Default'   = [ordered]@{
+                Renderer     = 'display Direct3D HAL'
+                Width        = 1920
+                Height       = 1080
+                BitDepth     = 32
+                RendererType = 3
+                FullScreen   = 1
+            }
+            'BaseGame\Graphics\Direct3D'  = [ordered]@{ UseTrueColorTextures = 0 }
+            'BaseGame\Graphics\Enumeration' = [ordered]@{
+                Glide    = 1
+                Direct3D = 1
+                Software = 0
+                Hardware = 1
+                OpenGL   = 1
+            }
+            'BaseGame\Graphics\Setup'     = [ordered]@{
+                ButtonTestAll       = 1
+                AllowWindowedScreen = 1
+            }
+            'BaseGame\Graphics\Textures'  = [ordered]@{ ManualAdjust = 0 }
+            'BaseGame\Interface'           = [ordered]@{
+                AllFontsAtStart  = 1
+                Charset          = 1
+                TranslateNumKeys = 1
+            }
+            'BaseGame\Intro'               = [ordered]@{ ShowOnStart = 0 }
+            'BaseGame\Intro\Setup'        = [ordered]@{ IntroButton = 1 }
+            'BaseGame\Network'             = [ordered]@{}
+            'BaseGame\Network\DPLobby'    = [ordered]@{}
+            'BaseGame\Network\EarthNet'   = [ordered]@{
+                AddressIP = '"EarthNet - InsideEARTH""vpnnetserver2150.insideearth.info:17171""EarthNet - TopWare""netserver.earth2150.com:17101"'
+            }
+            'BaseGame\Network\Enumeration' = [ordered]@{
+                Serial   = 1
+                Modem    = 1
+                'TCP/IP' = 1
+                EarthNet = 1
+                DPLobby  = 1
+            }
+            'BaseGame\Network\Serial'     = [ordered]@{ BaudRate = '14400;19200;38400;56000;57600;115200;128000;256000' }
+            'BaseGame\Processor'           = [ordered]@{ Katmai = 1 }
+            'BaseGame\Sound'               = [ordered]@{
+                SoundType                = 2
+                Frequency                = 22050
+                HardwareChannels         = 16
+                SoftwareChannels         = 16
+                EnumerateEmulatedDrivers = 1
+                MixerType                = 0
+            }
+            'BaseGame\Sound\Setup'        = [ordered]@{ AllowHardware = 0 }
+        }
+        HKLM = [ordered]@{
+            '(root)' = [ordered]@{ NotStartAutorun = '1' }
+            'BaseGame' = [ordered]@{}
+            'BaseGame\Graphics' = [ordered]@{}
+            'BaseGame\Graphics\Default' = [ordered]@{}
+            'BaseGame\Graphics\Direct3D' = [ordered]@{}
+            'BaseGame\Graphics\Enumeration' = [ordered]@{}
+            'BaseGame\Graphics\Setup' = [ordered]@{}
+            'BaseGame\Graphics\Textures' = [ordered]@{}
+            'BaseGame\Interface' = [ordered]@{}
+            'BaseGame\Intro' = [ordered]@{}
+            'BaseGame\Intro\Setup' = [ordered]@{}
+            'BaseGame\Network' = [ordered]@{}
+            'BaseGame\Network\DPLobby' = [ordered]@{}
+            'BaseGame\Network\Enumeration' = [ordered]@{}
+            'BaseGame\Network\Serial' = [ordered]@{}
+            'BaseGame\Processor' = [ordered]@{}
+            'BaseGame\Sound' = [ordered]@{}
+            'BaseGame\Sound\Setup' = [ordered]@{}
+        }
+}
+
+# Define game configurations. Each game has a HKCU root, a HKLM (WOW6432Node) root and its own defaults.
 $games = @(
     @{
         Name     = "Earth 2150"
         HkcuBase = "HKCU:\Software\Topware\Earth 2150"
         HklmBase = "HKLM:\Software\WOW6432Node\Topware\Earth 2150"
+        Defaults = $Defaults_Earth2150
     },
     @{
         Name     = "The Moon Project"
         HkcuBase = "HKCU:\Software\Topware\TheMoonProject"
         HklmBase = "HKLM:\Software\WOW6432Node\Topware\TheMoonProject"
+        Defaults = $Defaults_MoonProject
     },
     @{
         Name     = "Lost Souls"
         HkcuBase = "HKCU:\Software\Reality Pump\LostSouls"
         HklmBase = "HKLM:\Software\WOW6432Node\Reality Pump\LostSouls"
+        Defaults = $Defaults_LostSouls
     }
-)
-
-# ---------------------------------------------------------------------
-#  Default registry data (taken from a stock Earth 2150 install export)
-#  Entry format:  Sub = key path below the game root
-#                 Values = name -> @(Type, Value)
-#  BaseGame\FileSystem is handled separately (machine specific paths).
-# ---------------------------------------------------------------------
-$DefaultsHKCU = @(
-    @{ Sub = '';                          Values = [ordered]@{} },
-    @{ Sub = 'BaseGame';                  Values = [ordered]@{} },
-    @{ Sub = 'BaseGame\Graphics';         Values = [ordered]@{ GammaCorrection = @('DWord', 1) } },
-    @{ Sub = 'BaseGame\Graphics\Default'; Values = [ordered]@{
-            Renderer     = @('String', 'display Direct3D HAL')
-            Width        = @('DWord', 1920)
-            Height       = @('DWord', 1080)
-            BitDepth     = @('DWord', 32)
-            RendererType = @('DWord', 3)
-            FullScreen   = @('DWord', 1)
-    } },
-    @{ Sub = 'BaseGame\Graphics\Direct3D';     Values = [ordered]@{ UseTrueColorTextures = @('DWord', 0) } },
-    @{ Sub = 'BaseGame\Graphics\Enumeration';  Values = [ordered]@{
-            Glide    = @('DWord', 1)
-            Direct3D = @('DWord', 1)
-            Software = @('DWord', 0)
-            Hardware = @('DWord', 1)
-            OpenGL   = @('DWord', 1)
-    } },
-    @{ Sub = 'BaseGame\Graphics\Setup';        Values = [ordered]@{
-            ButtonTestAll       = @('DWord', 1)
-            AllowWindowedScreen = @('DWord', 1)
-    } },
-    @{ Sub = 'BaseGame\Graphics\Textures';     Values = [ordered]@{ ManualAdjust = @('DWord', 0) } },
-    @{ Sub = 'BaseGame\Interface';             Values = [ordered]@{
-            AllFontsAtStart  = @('DWord', 1)
-            Charset          = @('DWord', 1)
-            TranslateNumKeys = @('DWord', 1)
-    } },
-    @{ Sub = 'BaseGame\Intro';                 Values = [ordered]@{ ShowOnStart = @('DWord', 0) } },
-    @{ Sub = 'BaseGame\Intro\Setup';           Values = [ordered]@{ IntroButton = @('DWord', 1) } },
-    @{ Sub = 'BaseGame\Network';               Values = [ordered]@{} },
-    @{ Sub = 'BaseGame\Network\DPLobby';       Values = [ordered]@{} },
-    @{ Sub = 'BaseGame\Network\EarthNet';      Values = [ordered]@{
-            AddressIP = @('String', '"EarthNet - InsideEARTH""vpnnetserver2150.insideearth.info:17171""EarthNet - TopWare""netserver.earth2150.com:17101"')
-    } },
-    @{ Sub = 'BaseGame\Network\Enumeration';   Values = [ordered]@{
-            Serial    = @('DWord', 1)
-            Modem     = @('DWord', 1)
-            'TCP/IP'  = @('DWord', 1)
-            EarthNet  = @('DWord', 1)
-            DPLobby   = @('DWord', 1)
-    } },
-    @{ Sub = 'BaseGame\Network\Serial';        Values = [ordered]@{ BaudRate = @('String', '14400;19200;38400;56000;57600;115200;128000;256000') } },
-    @{ Sub = 'BaseGame\Processor';             Values = [ordered]@{ Katmai = @('DWord', 1) } },
-    @{ Sub = 'BaseGame\Sound';                 Values = [ordered]@{
-            SoundType                = @('DWord', 2)
-            Frequency                = @('DWord', 22050)
-            HardwareChannels         = @('DWord', 16)
-            SoftwareChannels         = @('DWord', 16)
-            EnumerateEmulatedDrivers = @('DWord', 1)
-            MixerType                = @('DWord', 0)
-    } },
-    @{ Sub = 'BaseGame\Sound\Setup';           Values = [ordered]@{ AllowHardware = @('DWord', 0) } }
-)
-
-$DefaultsHKLM = @(
-    @{ Sub = '';                               Values = [ordered]@{ NotStartAutorun = @('String', '1') } },
-    @{ Sub = 'BaseGame';                       Values = [ordered]@{} },
-    @{ Sub = 'BaseGame\Graphics';              Values = [ordered]@{} },
-    @{ Sub = 'BaseGame\Graphics\Default';      Values = [ordered]@{} },
-    @{ Sub = 'BaseGame\Graphics\Direct3D';     Values = [ordered]@{} },
-    @{ Sub = 'BaseGame\Graphics\Enumeration';  Values = [ordered]@{} },
-    @{ Sub = 'BaseGame\Graphics\Setup';        Values = [ordered]@{} },
-    @{ Sub = 'BaseGame\Graphics\Textures';     Values = [ordered]@{} },
-    @{ Sub = 'BaseGame\Interface';             Values = [ordered]@{} },
-    @{ Sub = 'BaseGame\Intro';                 Values = [ordered]@{} },
-    @{ Sub = 'BaseGame\Intro\Setup';           Values = [ordered]@{} },
-    @{ Sub = 'BaseGame\Network';               Values = [ordered]@{} },
-    @{ Sub = 'BaseGame\Network\DPLobby';       Values = [ordered]@{} },
-    @{ Sub = 'BaseGame\Network\Enumeration';   Values = [ordered]@{} },
-    @{ Sub = 'BaseGame\Network\Serial';        Values = [ordered]@{} },
-    @{ Sub = 'BaseGame\Processor';             Values = [ordered]@{} },
-    @{ Sub = 'BaseGame\Sound';                 Values = [ordered]@{} },
-    @{ Sub = 'BaseGame\Sound\Setup';           Values = [ordered]@{} }
 )
 
 # ---------------------------------------------------------------------
@@ -153,14 +327,14 @@ function Write-RegistryEntries {
         [string]$Base,
         $Entries
     )
-    foreach ($entry in $Entries) {
-        $keyPath = if ($entry.Sub) { "$Base\$($entry.Sub)" } else { $Base }
+    foreach ($sub in $Entries.Keys) {
+        $keyPath = if ($sub -eq '(root)') { $Base } else { "$Base\$sub" }
         if (-not (Test-Path -LiteralPath $keyPath)) {
             $null = New-Item -Path $keyPath -Force
         }
-        foreach ($name in $entry.Values.Keys) {
-            $type  = $entry.Values[$name][0]
-            $value = $entry.Values[$name][1]
+        foreach ($name in $Entries[$sub].Keys) {
+            $value = $Entries[$sub][$name]
+            $type  = if ($value -is [int]) { 'DWord' } else { 'String' }
             Set-ItemProperty -LiteralPath $keyPath -Name $name -Value $value -Type $type -Force
         }
     }
@@ -183,7 +357,7 @@ function Show-ActionMenu {
     Write-Host "Select an action:" -ForegroundColor White
     Write-Host "    [1] Registry Editor   (set game install path)" -ForegroundColor White
     Write-Host "    [2] Registry Default  (install default registry settings)" -ForegroundColor White
-    Write-Host "    [3] Registry Backup   (backup game registry settings)" -ForegroundColor White
+    Write-Host "    [3] Registry Backup   (HKCU + HKLM into a single .reg file)" -ForegroundColor White
     Write-Host ""
     Write-Host "    [4] Back" -ForegroundColor Red
     Write-Host ""
@@ -308,8 +482,8 @@ function Install-DefaultRegistry {
         }
 
         # Write the defaults
-        Write-RegistryEntries -Base $Game.HkcuBase -Entries $DefaultsHKCU
-        Write-RegistryEntries -Base $Game.HklmBase -Entries $DefaultsHKLM
+        Write-RegistryEntries -Base $Game.HkcuBase -Entries $Game.Defaults.HKCU
+        Write-RegistryEntries -Base $Game.HklmBase -Entries $Game.Defaults.HKLM
 
         # Restore/create the install path values in both hives
         if ($keepDatapath -and $keepOutputDir) {
