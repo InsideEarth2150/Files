@@ -1,5 +1,5 @@
 # =====================================================================
-#   InsideEARTH - Earth 2150 Tools & Utilities Launcher v1.4
+#   InsideEARTH - Earth 2150 Tools & Utilities Launcher v1.0
 # =====================================================================
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -9,14 +9,13 @@ $isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIden
 
 if (-not $isAdmin) {
     Write-Host "Requesting Administrator privileges..." -ForegroundColor Yellow
-    # Relaunches the current script with elevated privileges and keeps the window open
     Start-Process powershell -Verb RunAs -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`""
     Exit
 }
 
 clear
 
-$host.ui.RawUI.WindowTitle = "InsideEARTH - Earth 2150 Tools & Utilities Launcher v1.3"
+$host.ui.RawUI.WindowTitle = "InsideEARTH - Earth 2150 Tools & Utilities Launcher"
 $ErrorActionPreference = 'Stop'
 
 # Main loop for top-level menu selection
@@ -45,29 +44,29 @@ while ($true) {
 
     switch ($choice) {
         "1" {
-            $scriptName  = "system-information.ps1"
-            $apiPath     = "Tools/system/system-information.ps1"
-            $downloadUrl = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/system/system-information.ps1"
+            $scriptName  = "IE2150-System-Information.ps1"
+            $apiPath     = "Tools/toolbox/modules/system/IE2150-System-Information.ps1"
+            $downloadUrl = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/toolbox/modules/system/IE2150-System-Information.ps1"
         }
         "2" {
-            $scriptName  = "Earth2150-MP-Setup.ps1"
-            $apiPath     = "Tools/mp-setup/Earth2150-MP-Setup.ps1"
-            $downloadUrl = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/mp-setup/Earth2150-MP-Setup.ps1"
+            $scriptName  = "IE2150-MP-Setup.ps1"
+            $apiPath     = "Tools/toolbox/modules/mp-setup/IE2150-MP-Setup.ps1"
+            $downloadUrl = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/toolbox/modules/mp-setup/IE2150-MP-Setup.ps1"
         }
         "3" {
-            $scriptName  = "IE-Earth2150-Level-Downloader.ps1"
-            $apiPath     = "Tools/downloaders/IE-Earth2150-Level-Downloader.ps1"
-            $downloadUrl = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/downloaders/IE-Earth2150-Level-Downloader.ps1"
+            $scriptName  = "IE2150-Level-Downloader.ps1"
+            $apiPath     = "Tools/toolbox/modules/downloaders/IE2150-Level-Downloader.ps1"
+            $downloadUrl = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/toolbox/modules/downloaders/IE2150-Level-Downloader.ps1"
         }
         "4" {
-            $scriptName  = "tmp-ls-media-converter-Launcher.ps1"
-            $apiPath     = "Tools/convertors/tmp-ls-media-converter-Launcher.ps1"
-            $downloadUrl = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/convertors/tmp-ls-media-converter-Launcher.ps1"
+            $scriptName  = "IE2150-Media-Converter-Launcher.ps1"
+            $apiPath     = "Tools/toolbox/modules/convertors/IE2150-Media-Converter-Launcher.ps1"
+            $downloadUrl = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/toolbox/modules/convertors/IE2150-Media-Converter-Launcher.ps1"
         }
         "5" {
-            $scriptName  = "regedit.ps1"
-            $apiPath     = "Tools/registry/editor/regedit.ps1"
-            $downloadUrl = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/registry/editor/regedit.ps1"
+            $scriptName  = "IE2150-Registry-Editor.ps1"
+            $apiPath     = "Tools/toolbox/modules/registry/editor/IE2150-Registry-Editor.ps1"
+            $downloadUrl = "https://raw.githubusercontent.com/InsideEarth2150/Files/refs/heads/main/Tools/toolbox/modules/registry/editor/IE2150-Registry-Editor.ps1"
         }
         "6" {
             Write-Host "`nExiting..." -ForegroundColor Yellow
@@ -109,7 +108,7 @@ while ($true) {
         try {
             [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
             Invoke-WebRequest -Uri $downloadUrl -OutFile $targetScriptPath -UseBasicParsing
-            
+
             try {
                 $latestHash = (Invoke-RestMethod -Uri $apiUrl -UseBasicParsing)[0].sha
                 Set-Content -Path $hashPath -Value $latestHash -Force
